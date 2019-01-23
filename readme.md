@@ -1,6 +1,6 @@
 ## How to clone my project
 <p>git clone https://github.com/longly151/hugo</p>
-<p>composer install</p>
+<p style="font-style:italic">composer install</p>
 <p>Copy .env.example and rename it to “.env”</p>
 <p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo/storage (use your own project link instead of this example)</p>
 <p>chmod -R 777 ./logs</p>
