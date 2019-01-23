@@ -1,3 +1,15 @@
+## How to clone my project
+#git clone https://github.com/longly151/hugo
+#composer install
+#Copy .env.example and rename it to “.env”
+#cd /Applications/XAMPP/xamppfiles/htdocs/hugo/storage
+#chmod -R 777 ./logs
+#chmod -R 777 ./framework
+#php artisan key:generate
+
+## That's it
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
