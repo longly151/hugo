@@ -6,6 +6,9 @@
 <p>chmod -R 777 ./logs</p>
 <p>chmod -R 777 ./framework</p>
 <p>php artisan key:generate</p>
+<p>Create database name "hugo"</p>
+<p>php artisan migrate</p>
+<p>php artisan db:seed</p>
 
 ## That's it
 
