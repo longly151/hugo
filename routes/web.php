@@ -183,3 +183,10 @@ Route::get('/schema/create', function(){
 //     Schema::dropIfExists('users');
 //     Schema::dropIfExists('posts');
 // });
+
+// Route::get('model/select-all',function() {
+//     $data = App\Role::find(2)->firstOrFail()->toArray();
+//     echo "<pre>";
+//     print_r($data);
+//     echo "</pre>";
+// });
