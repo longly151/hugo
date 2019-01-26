@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -28,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin/login';
 
     /**
      * Create a new controller instance.
@@ -61,12 +63,66 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+    protected function validateRegister(Request $request) {
+        $this->validate($request,[
+            'fullname'   => [
+                'required',
+                'min:3',
+                'regex:/(^[a-zaáàảãạâấầẩẫậăắằẳẵặeéèẻẽẹêếềểễệiíìỉĩịoóòỏõọôốồổỗộơớờởỡợuúùủũụưứừửữựyýỳỷỹỵđ ]+)+$/i'
+            ],
+            'username' => [
+                'required',
+                'min:3',
+                'unique:users,email',
+                'regex:/^(\w)+$/i',
+            ],
+            'email' => 'required|email|unique:users,email',
+            'phoneNumber' => [
+                'required',
+                'regex:/^(0|\+84|84)(16[^01][0-9]{7}$|12[0-9]{8}$|18[68][0-9]{7}$|19[9][0-9]{7}$|8[689][0-9]{7}$|9[^5][0-9]{7}$)/',
+            ],
+            'password'   => 'required|min:3|max:32',
+            'rePassword'   => [
+                'required',
+                'regex:/^([\w!@#$%\^&*()-_+={}|:;"\'<>,.\/\? ])+$/i',
+                'same:password'
+            ]
+        ],[
+            'fullname.required'   =>    'Name cannot be blank',
+            'fullname.min'        =>    'Name must be at least 3 characters',
+            'fullname.regex'      =>    'Invalid name',
+            
+            'username.required'   =>    'Username cannot be blank',
+            'username.min'        =>    'Username must be at least 3 characters',
+            'username.regex'      =>    'Invalid Username',
+            'unique'              =>    'Username already exists',
+
+            'email.required'      =>    'Email cannot be blank',
+            'email.email'         =>    'Invalid Email',
+            'unique'              =>    'Email already exists',
+
+            'phoneNumber.required'=>    'Phone Number cannot be blank',
+            'phoneNumber.regex'   =>    'Invalid Phone Number',
+
+            'password.required'   =>    'Password cannot be blank',
+            'password.min'        =>    'Password must be at least 3 characters',
+            'password.min'        =>    'Password must cannot exceed 32 characters',
+            'password.regex'      =>    'Invalid Password',
+
+            'rePassword.required' =>    'Please re-enter the password',
+            'rePassword.same'     =>    'Password does not match',
         ]);
+    }
+
+    protected function getRegister() {
+        return view('admin.body.auth.register');
+    }
+    protected function postRegister(Request $request)
+    {
+        $this->validateRegister($request);
+        $user = $request->all();
+        $user['password'] = bcrypt($request->password);
+        $user['role_id'] = 3;
+        return User::create($user);
     }
 }

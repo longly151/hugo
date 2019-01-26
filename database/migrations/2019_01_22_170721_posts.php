@@ -22,8 +22,7 @@ class Posts extends Migration
             $table->integer('author');
             $table->string('avatar');
             $table->string('status');
-            $table->dateTime('created_at')->useCurrent();
-            $table->dateTime('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamps();
             $table->dateTime('deleted_at')->nullable();
         });
     }

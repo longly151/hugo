@@ -10,129 +10,102 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('client.body.home');
-});
-Route::get('/post', function () {
-    return view('client.body.post');
-});
-Route::get('/gallery', function () {
-    return view('client.body.gallery');
-});
-Route::get('/contact', function () {
-    return view('client.body.contact');
-});
-Route::get('/about', function () {
-    return view('client.body.about');
-});
-Route::get('/404', function () {
-    return view('client.body.404');
-});
-
-
-
-
-
-
-Route::get('admin', function () {
-    return view('admin.body.home');
-});
-
-Route::get('admin/login', function () {
-    return view('admin.body.auth.login');
-});
-
-Route::get('admin/register', function () {
-    return view('admin.body.auth.register');
-});
-
-Route::post('admin/register','AdminController@register');
-Route::post('admin/login','AdminController@login');
-
-
-
-
-
-
-Route::get('admin/post/add', function () {
-    return view('admin.body.post.add');
-});
-Route::get('admin/post/manage', function () {
-    return view('admin.body.post.manage');
-});
-Route::get('admin/post/manage-by-author', function () {
-    return view('admin.body.post.manage-by-author');
-});
-Route::get('admin/post/bin', function () {
-    return view('admin.body.post.recycle_bin');
+Route::group(['prefix' => '/'], function () {
+    Route::get('/', function () {
+        return view('client.body.home');
+    });
+    Route::get('/post', function () {
+        return view('client.body.post');
+    });
+    Route::get('/gallery', function () {
+        return view('client.body.gallery');
+    });
+    Route::get('/contact', function () {
+        return view('client.body.contact');
+    });
+    Route::get('/about', function () {
+        return view('client.body.about');
+    });
+    Route::get('/404', function () {
+        return view('client.body.404');
+    });    
 });
 
 
+Route::group(['prefix' => 'admin','namespace' => 'Auth'], function () {
+    Route::get('login','LoginController@getLogin');
+    Route::post('login','LoginController@postLogin');
 
+    Route::get('register','RegisterController@getRegister');
+    Route::post('register','RegisterController@postRegister');
 
-
-Route::get('admin/category/add', function () {
-    return view('admin.body.category.add');
+    Route::get('logout','LoginController@logout');
 });
-Route::get('admin/category/manage', function () {
-    return view('admin.body.category.manage');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', function () {
+        return view('admin.body.home');
+    });
+    Route::group(['prefix' => 'post'], function() {
+        Route::get('add', function () {
+            return view('admin.body.post.add');
+        });
+        Route::get('manage', function () {
+            return view('admin.body.post.manage');
+        });
+        Route::get('manage-by-author', function () {
+            return view('admin.body.post.manage-by-author');
+        });
+        Route::get('bin', function () {
+            return view('admin.body.post.recycle_bin');
+        });
+    });
+    Route::group(['prefix' => 'category'], function() {
+        Route::get('add', function () {
+            return view('admin.body.category.add');
+        });
+        Route::get('manage', function () {
+            return view('admin.body.category.manage');
+        });
+        Route::get('bin', function () {
+            return view('admin.body.category.recycle_bin');
+        });
+    });
+    Route::group(['prefix' => 'tag'], function() {
+        Route::get('add', function () {
+            return view('admin.body.tag.add');
+        });
+        Route::get('manage', function () {
+            return view('admin.body.tag.manage');
+        });
+        Route::get('bin', function () {
+            return view('admin.body.tag.recycle_bin');
+        });
+    });
+    Route::group(['prefix' => 'profile'], function() {
+        Route::get('/', function () {
+            return view('admin.body.profile.profile');
+        });
+    });
+    Route::group(['prefix' => 'error'], function() {
+        Route::get('400', function () {
+            return view('admin.body.error.400');
+        });
+        Route::get('403', function () {
+            return view('admin.body.error.403');
+        });
+        Route::get('404', function () {
+            return view('admin.body.error.404');
+        });
+        Route::get('500', function () {
+            return view('admin.body.error.500');
+        });
+        Route::get('503', function () {
+            return view('admin.body.error.503');
+        });
+    });
 });
-Route::get('admin/category/bin', function () {
-    return view('admin.body.category.recycle_bin');
-});
 
 
-
-
-
-Route::get('admin/tag/add', function () {
-    return view('admin.body.tag.add');
-});
-Route::get('admin/tag/manage', function () {
-    return view('admin.body.tag.manage');
-});
-Route::get('admin/tag/bin', function () {
-    return view('admin.body.tag.recycle_bin');
-});
-
-
-
-
-Route::get('admin/user/manage', function () {
-    return view('admin.body.user.manage');
-});
-Route::get('admin/user/inactive', function () {
-    return view('admin.body.user.inactive');
-});
-Route::get('admin/user/bin', function () {
-    return view('admin.body.user.recycle_bin');
-});
-
-
-
-Route::get('admin/profile', function () {
-    return view('admin.body.profile.profile');
-});
-
-
-
-
-Route::get('admin/error/400', function () {
-    return view('admin.body.error.400');
-});
-Route::get('admin/error/403', function () {
-    return view('admin.body.error.403');
-});
-Route::get('admin/error/404', function () {
-    return view('admin.body.error.404');
-});
-Route::get('admin/error/500', function () {
-    return view('admin.body.error.500');
-});
-Route::get('admin/error/503', function () {
-    return view('admin.body.error.503');
-});
 
 Route::get('/schema/create', function(){
     Schema::create('roles',function($table){
@@ -185,7 +158,11 @@ Route::get('/schema/create', function(){
 // });
 
 // Route::get('model/select-all',function() {
-//     $data = App\Role::find(2)->firstOrFail()->toArray();
+//     $data = App\Role::find(2)->firstOrFail()->select('name')->get()->toArray();
+//     // $data = App\Role::all()->last();
+//     // $data->name ='a';
+//     // $data->save();
+//     // $data->destroy();
 //     echo "<pre>";
 //     print_r($data);
 //     echo "</pre>";

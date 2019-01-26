@@ -84,37 +84,6 @@ class AdminController extends Controller
         //
     }
 
-    public function register(Request $request){
-        $user = $request->except(['_token','passwordConfirm']);
-        $user['password'] = md5($user['password']);
-        $user['roleId'] = 1;
-        DB::table('users')->insert($user);
-        // $data = DB::table('roles')->get();
-        // echo "<pre>";
-        // print_r($data);
-        // echo "</pre>";
-        return redirect('admin/login');
-    }
-    public function login(Request $request){
-        $user = $request->except(['_token']);
-        $data = DB::table('users')
-        ->where('username',$user['username'])->first();
-        // echo "<pre>";
-        // var_dump($data->password);
-        // echo "</pre>";
-        if(!$data) {
-            // echo "user is not exist";
-            $errors = ['errUser' => 'User is not exist'];
-            return view('admin.body.auth.login',compact('errors'));
-        } else {
-            if(!Hash::check($user['password'],$data->password)){
-                $errors = ['errPassword' => 'Password is not correct'];
-                return view('admin.body.auth.login',compact('errors'));
-            }
-            else {
-                return redirect('admin');
-            }
-        }
 
-    }
+    
 }

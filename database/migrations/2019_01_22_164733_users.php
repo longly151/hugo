@@ -22,10 +22,10 @@ class Users extends Migration
             $table->string('password');
             $table->string('avatar')->default('http://s3.amazonaws.com/37assets/svn/765-default-avatar.png');
             $table->string('status')->default('active');
-            $table->integer('roleId')->unsigned();
-            $table->foreign('roleId')->references('id')->on('roles')->onDelete('CASCADE');
-            $table->dateTime('created_at')->useCurrent();
-            $table->dateTime('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->integer('role_id')->unsigned();
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('CASCADE');
+            $table->rememberToken();
+            $table->timestamps();
             $table->dateTime('deleted_at')->nullable();
         });
     }

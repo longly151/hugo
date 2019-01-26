@@ -6,32 +6,62 @@
         <h3 class="box-title m-b-20">Sign Up</h3>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" required="" placeholder="Full Name" name="fullname">
+                <input class="form-control" type="text" placeholder="Full Name" name="fullname">
+                @if($errors->has('fullname'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('fullname')}}
+                </small>
+                @endif
             </div>
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" required="" placeholder="Username" name="username">
+                <input class="form-control" type="text" placeholder="Username" name="username">
+                @if($errors->has('username'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('username')}}
+                </small>
+                @endif
             </div>
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" required="" placeholder="Email" name="email">
+                <input class="form-control" type="text" placeholder="Email" name="email">
+                @if($errors->has('email'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('email')}}
+                </small>
+                @endif
             </div>
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" required="" placeholder="Phone Number" name="phoneNumber">
+                <input class="form-control" type="text" placeholder="Phone Number" name="phoneNumber">
+                @if($errors->has('phoneNumber'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('phoneNumber')}}
+                </small>
+                @endif
             </div>
         </div>
         <div class="form-group ">
             <div class="col-xs-12">
-                <input class="form-control" type="password" required="" placeholder="Password" name="password">
+                <input class="form-control" type="password" placeholder="Password" name="password">
+                @if($errors->has('password'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('password')}}
+                </small>
+                @endif
             </div>
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="password" required="" placeholder="Confirm Password" name="passwordConfirm">
+                <input class="form-control" type="password" placeholder="Confirm Password" name="rePassword">
+                @if($errors->has('rePassword'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('rePassword')}}
+                </small>
+                @endif
             </div>
         </div>
         <div class="form-group row">

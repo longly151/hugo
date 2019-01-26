@@ -4,20 +4,35 @@
     <form class="form-horizontal form-material" id="loginform" action="{{ url('admin/login') }}" method="POST">
         {{ csrf_field() }}
         <h3 class="box-title m-b-20">Sign In</h3>
-        @if (count($errors)>0)
-        @foreach ($errors as $error)
+
+        @if(session('deny')) 
+            <h5>{{session('deny')}}</h5>
+        @endif
+        @if(session('login_error'))
         <div class="alert alert-danger" role="alert">
-            {{ $error }}
+            {{ session('login_error') }}
         </div>
-        @endforeach
         @endif
         <div class="form-group ">
             <div class="col-xs-12">
-                <input class="form-control" type="text" required="" placeholder="Username" name="username"> </div>
+                <input class="form-control" type="text" placeholder="Username" name="username">
+                @if($errors->has('username'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('username')}}
+                </small>
+                @endif
+                
+            </div>
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="password" required="" placeholder="Password" name="password"> </div>
+                <input class="form-control" type="password" placeholder="Password" name="password">
+                @if($errors->has('password'))
+                <small class="form-control-feedback text-danger">
+                    {{$errors->first('password')}}
+                </small>
+                @endif
+            </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12 font-14">
