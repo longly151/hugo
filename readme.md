@@ -1,11 +1,16 @@
 ## How to clone my project
 <p>git clone https://github.com/longly151/hugo</p>
 <p>composer install</p>
-<p>Copy .env.example and rename it to “.env”</p>
+<p>#Copy .env.example and rename it to “.env”</p>
+------- For MacOS -------
 <p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo/storage (use your own project link instead of this example)</p>
 <p>chmod -R 777 ./logs</p>
 <p>chmod -R 777 ./framework</p>
+-------------------------
 <p>php artisan key:generate</p>
+<p>#Create database name "hugo"</p>
+<p>php artisan migrate</p>
+<p>php artisan db:seed</p>
 
 ## That's it
 
