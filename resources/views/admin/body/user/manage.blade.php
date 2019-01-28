@@ -57,11 +57,11 @@
                                     <td>{{$user->role->name}}</td>
                                     <td>
                                         <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fas fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fas fa-pencil"></i> Edit </a>
+                                            <i class="fa fa-save"></i> Save </a>
+                                        <a href="#" class="btn btn-warning btn-xs">
+                                            <i class="fa fa-ban"></i> Ban </a>
                                         <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fas fa-trash-o"></i> Delete </button>
+                                            <i class="far fa-trash-alt"></i> Delete </button>
                                     </td>
                                 </tr>
                                 @endforeach 

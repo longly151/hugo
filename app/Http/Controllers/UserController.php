@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::where(['status' => 'active','deleted_at' => NULL])->paginate(8);
+        $users = User::where(['status' => 'active','deleted_at' => NULL])->paginate(5);
         return view('admin.body.user.manage',['users' => $users]);
     }
 
