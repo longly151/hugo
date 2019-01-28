@@ -63,6 +63,7 @@ class LoginController extends Controller
                 $request->session()->put(
                     'client',
                     [
+                        'fullname' => Auth::user()->fullname,
                         'username' => Auth::user()->username,
                         'id' => Auth::user()->id,
                         'avatar' => Auth::user()->avatar,
@@ -73,8 +74,12 @@ class LoginController extends Controller
                 $request->session()->put(
                     'admin',
                     [
-                        'username' => Auth::user()->username,
                         'id' => Auth::user()->id,
+                        'fullname' => Auth::user()->fullname,
+                        'username' => Auth::user()->username,
+                        'email' => Auth::user()->email,
+                        'phoneNumber' => Auth::user()->phoneNumber,
+                        'address' => Auth::user()->address,
                         'avatar' => Auth::user()->avatar,
                         'role' => Auth::user()->role()->select('name as role')->get()->first()->role,
                     ]);

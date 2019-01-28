@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Role;
 class UserController extends Controller
 {
     /**
@@ -14,8 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::where(['status' => 'active','deleted_at' => NULL])->paginate(5);
-        return view('admin.body.user.manage',['users' => $users]);
+        $users = User::where(['status' => 'active',['role_id','!=','1'],'deleted_at' => NULL])->paginate(5);
+        $roles = Role::where('name','!=','admin')->get();
+        return view('admin.body.user.manage',['users' => $users,'roles' => $roles]);
     }
 
     /**

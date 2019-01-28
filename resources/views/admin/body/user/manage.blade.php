@@ -28,7 +28,6 @@
     <!-- ============================================================== -->
     <div class="row">
         <div class="col-12">
-
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Manage User</h4>
@@ -38,10 +37,8 @@
                             <thead>
                                 <tr>
                                     <th>Fullname</th>
-                                    <th>Username</th>
                                     <th>Email</th>
                                     <th>Phone Number</th>
-                                    <th>Start date</th>
                                     <th>Role</th>
                                     <th>Tools</th>
                                 </tr>
@@ -50,19 +47,38 @@
                                 @foreach ($users as $user)
                                 <tr>
                                     <td>{{$user->fullname}}</td>
-                                    <td>{{$user->username}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->phoneNumber}}</td>
-                                    <td>{{$user->created_at}}</td>
-                                    <td>{{$user->role->name}}</td>
+                                    <td>
+                                        <form action="#" method="post">
+                                            <div class="box-body">
+                                                <div class="form-group">
+                                                    <div class="col-sm-12">
+                                                        <select class="form-control" name="role">
+                                                            @foreach ($roles as $role)
+                                                                <option value="{{$role->id}}" 
+                                                                    @if ($user->role->id == $role->id)
+                                                                        selected
+                                                                    @endif
+                                                                    > {{$role->name}}
+                                                                </option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     <td>
                                         <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-save"></i> Save </a>
+                                                <i class="fa fa-folder"></i> View </a>
+                                        <button type="submit" class="btn btn-success btn-xs" target="_blank">
+                                            <i class="fa fa-save"></i> Save </button>
                                         <a href="#" class="btn btn-warning btn-xs">
                                             <i class="fa fa-ban"></i> Ban </a>
                                         <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="far fa-trash-alt"></i> Delete </button>
+                                            <i class="far fa-trash-alt"></i> Delete </a>
                                     </td>
+                                </form>
                                 </tr>
                                 @endforeach 
                             </tbody>

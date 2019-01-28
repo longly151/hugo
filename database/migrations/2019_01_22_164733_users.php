@@ -20,6 +20,10 @@ class Users extends Migration
             $table->string('email')->unique();
             $table->string('phoneNumber')->unique();
             $table->string('address')->unique();
+            $table->string('description')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
             $table->string('password');
             $table->string('avatar')->default('http://s3.amazonaws.com/37assets/svn/765-default-avatar.png');
             $table->string('status')->default('active');

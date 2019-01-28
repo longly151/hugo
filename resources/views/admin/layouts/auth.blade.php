@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
     @include('admin.partials.head')
+    @section('pageStylesheet')
+    @show
+</head>
+    
 
 <body>
     <!-- ============================================================== -->
