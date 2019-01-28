@@ -31,120 +31,43 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Data Table</h4>
-                    <h6 class="card-subtitle">Data table example</h6>
+                    <h4 class="card-title">Manage User</h4>
+                    <h6 class="card-subtitle">User List</h6>
                     <div class="table-responsive m-t-40">
                         <table id="myTable" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
+                                    <th>Fullname</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
                                     <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Role</th>
                                     <th>Tools</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fa fa-trash-o"></i> Delete </button>
-                                    </td>
-                                </tr>
+                                @foreach ($users as $user)
                                 <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
+                                    <td>{{$user->fullname}}</td>
+                                    <td>{{$user->username}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->phoneNumber}}</td>
+                                    <td>{{$user->created_at}}</td>
+                                    <td>{{$user->role->name}}</td>
                                     <td>
                                         <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-folder"></i> View </a>
+                                            <i class="fas fa-folder"></i> View </a>
                                         <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fa fa-pencil"></i> Edit </a>
+                                            <i class="fas fa-pencil"></i> Edit </a>
                                         <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fa fa-trash-o"></i> Delete </button>
+                                            <i class="fas fa-trash-o"></i> Delete </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>$86,000</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fa fa-trash-o"></i> Delete </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                    <td>22</td>
-                                    <td>2012/03/29</td>
-                                    <td>$433,060</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fa fa-trash-o"></i> Delete </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td>$162,700</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fa fa-trash-o"></i> Delete </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Brielle Williamson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>New York</td>
-                                    <td>61</td>
-                                    <td>2012/12/02</td>
-                                    <td>$372,000</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-xs" target="_blank">
-                                            <i class="fa fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs">
-                                            <i class="fa fa-pencil"></i> Edit </a>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="fa fa-trash-o"></i> Delete </button>
-                                    </td>
-                                </tr>
+                                @endforeach 
                             </tbody>
                         </table>
+                        {{ $users->links() }}
                     </div>
                 </div>
             </div>
@@ -236,7 +159,10 @@
 <!-- end - This is for export functionality only -->
 <script>
     $(document).ready(function () {
-        $('#myTable').DataTable();
+        $('#myTable').DataTable({
+            'paging': false,
+            'info': false,
+        });
         $(document).ready(function () {
             var table = $('#example').DataTable({
                 "columnDefs": [{

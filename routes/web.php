@@ -31,9 +31,8 @@ Route::group(['prefix' => '/'], function () {
     });    
 });
 
-
 Route::group(['prefix' => 'admin','namespace' => 'Auth'], function () {
-    Route::get('login','LoginController@getLogin');
+    Route::get('login','LoginController@getLogin')->name('login');
     Route::post('login','LoginController@postLogin');
 
     Route::get('register','RegisterController@getRegister');
@@ -41,7 +40,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Auth'], function () {
 
     Route::get('logout','LoginController@logout');
 });
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
     Route::get('/', function () {
         return view('admin.body.home');
     });
@@ -79,6 +78,15 @@ Route::group(['prefix' => 'admin'], function () {
         });
         Route::get('bin', function () {
             return view('admin.body.tag.recycle_bin');
+        });
+    });
+    Route::group(['prefix' => 'user','middleware' => 'adminRole'], function() {
+        Route::get('manage','UserController@index');
+        Route::get('inactive', function () {
+            return view('admin.body.user.inactive');
+        });
+        Route::get('bin', function () {
+            return view('admin.body.user.recycle_bin');
         });
     });
     Route::group(['prefix' => 'profile'], function() {

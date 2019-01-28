@@ -5,8 +5,10 @@
         {{ csrf_field() }}
         <h3 class="box-title m-b-20">Sign In</h3>
 
-        @if(session('deny')) 
-            <h5>{{session('deny')}}</h5>
+        @if(session('deny'))
+        <div class="alert alert-danger" role="alert">
+            {{session('deny')}}
+        </div>
         @endif
         @if(session('login_error'))
         <div class="alert alert-danger" role="alert">
