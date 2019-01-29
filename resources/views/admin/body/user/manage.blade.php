@@ -69,7 +69,7 @@
                                             </div>
                                         </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary btn-xs" target="_blank">
+                                        <a href="/admin/user/view/{{$user->id}}" class="btn btn-primary btn-xs" target="_blank">
                                                 <i class="fa fa-folder"></i> View </a>
                                         <button type="submit" class="btn btn-success btn-xs" target="_blank">
                                             <i class="fa fa-save"></i> Save </button>

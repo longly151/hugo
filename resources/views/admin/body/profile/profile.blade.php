@@ -374,7 +374,6 @@
                 }
             });
             var coordinate = await data.results[0].geometry.location;
-            console.log(coordinate);
             var map = new google.maps.Map(document.getElementById('map'), {
                     center: coordinate,
                     zoom: 15
@@ -384,7 +383,7 @@
                 var marker = new google.maps.Marker({
                     map: map,
                     position: coordinate,
-                    title: 'Hello World!'
+                    title: 'Your address'
                 });
         } catch (error) {
             throw error;
@@ -392,5 +391,5 @@
     }
   </script>
   
-<script src="{{ "https://maps.googleapis.com/maps/api/js?key=".env('MAP_API','')."&callback=initasync defer></script>
+<script src="{{ "https://maps.googleapis.com/maps/api/js?key=".env('MAP_API','')."&callback=initMap"}}" async defer></script></script>
 @endsection
