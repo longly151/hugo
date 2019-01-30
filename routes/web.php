@@ -32,7 +32,7 @@ Route::group(['prefix' => '/'], function () {
 });
 
 Route::group(['prefix' => 'admin','namespace' => 'Auth'], function () {
-    Route::get('login','LoginController@getLogin')->name('login');
+    Route::get('login','LoginController@getLogin');
     Route::post('login','LoginController@postLogin');
 
     Route::get('register','RegisterController@getRegister');
@@ -82,6 +82,9 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
     });
     Route::group(['prefix' => 'user','middleware' => 'adminRole'], function() {
         Route::get('manage','UserController@index');
+        Route::get('view/{id}','UserController@show');
+        Route::post('manage/{id}','UserController@update');
+        
         Route::get('inactive', function () {
             return view('admin.body.user.inactive');
         });

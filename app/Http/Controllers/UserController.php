@@ -49,7 +49,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        
+        $user = User::where('id',$id)->first();
+        return view('admin.body.user.view',['user' => $user]);
     }
 
     /**
@@ -72,7 +73,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $role = $request->input('role');
+
+        User::where('id',$id)->update(['role_id'=>$role]);
+        return redirect()->back()->with('success','Change role successfully');
     }
 
     /**
