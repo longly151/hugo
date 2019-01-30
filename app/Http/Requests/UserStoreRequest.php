@@ -36,7 +36,7 @@ class UserStoreRequest extends BaseFormRequest
             'email' => 'required|email|unique:users,email',
             'phoneNumber' => [
                 'required',
-                'regex:/^(0|\+84|84)(16[^01][0-9]{7}$|12[0-9]{8}$|18[68][0-9]{7}$|19[9][0-9]{7}$|8[689][0-9]{7}$|9[^5][0-9]{7}$)/',
+                'regex:/^(0|\+84|84)(3[^01][0-9]{7}$|7[0-9]{8}$|5[68][0-9]{7}$|5[9][0-9]{7}$|8[689][0-9]{7}$|9[^5][0-9]{7}$)/',
                 'unique:users,phoneNumber',
             ],
             'password'   => 'required|min:3|max:32',

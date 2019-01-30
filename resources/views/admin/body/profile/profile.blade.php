@@ -221,7 +221,7 @@
                                 <div class="form-group">
                                     <label for="email" class="col-md-12">Email</label>
                                         <div class="col-md-12">
-                                        <input type="text" value="{{ session()->get('admin')['email']}}" class="form-control form-control-line"
+                                        <input type="text" value="{{ null !== old('email')? old('email') : session()->get('admin')['email']}}" class="form-control form-control-line"
                                             name="email" id="email">
                                         @if($errors->has('email'))
                                         <small class="form-control-feedback text-danger">
@@ -233,7 +233,7 @@
                                 <div class="form-group">
                                     <label for="phoneNumber" class="col-md-12">Phone Number</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ session()->get('admin')['phoneNumber']}}" class="form-control form-control-line"
+                                        <input type="text" value="{{ null !== old('phoneNumber')? old('phoneNumber') : session()->get('admin')['phoneNumber']}}" class="form-control form-control-line"
                                             name="phoneNumber" id="phoneNumber">
                                         @if($errors->has('phoneNumber'))
                                         <small class="form-control-feedback text-danger">
@@ -245,7 +245,7 @@
                                 <div class="form-group">
                                     <label for="address" class="col-md-12">Address</label>
                                     <div class="col-md-12">
-                                        <input type="text" value="{{ session()->get('admin')['address']}}" class="form-control form-control-line"
+                                        <input type="text" value="{{ null !== old('address')? old('address') : session()->get('admin')['address']}}" class="form-control form-control-line"
                                             name="address" id="address">
                                         @if($errors->has('address'))
                                         <small class="form-control-feedback text-danger">
@@ -258,7 +258,7 @@
                                     <label for="description" class="col-md-12">Description</label>
                                     <div class="col-md-12">
                                         <textarea rows="5" class="form-control form-control-line"
-                                    name="description" id="description">{{session()->get('admin')['description']}}</textarea>
+                                    name="description" id="description">{{ null !== old('description')? old('description') : session()->get('admin')['description'] }}</textarea>
                                         @if($errors->has('description'))
                                         <small class="form-control-feedback text-danger">
                                             {{$errors->first('description')}}
@@ -344,68 +344,6 @@
     <!-- ============================================================== -->
     <!-- End PAge Content -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Right sidebar -->
-    <!-- ============================================================== -->
-    <!-- .right-sidebar -->
-    <div class="right-sidebar">
-        <div class="slimscrollright">
-            <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
-            <div class="r-panel-body">
-                <ul id="themecolors" class="m-t-20">
-                    <li><b>With Light sidebar</b></li>
-                    <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
-                    <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
-                    <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
-                    <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
-                    <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
-                    <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
-                    <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-                    <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
-                    <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
-                    <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
-                    <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme working">10</a></li>
-                    <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
-                    <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme">12</a></li>
-                </ul>
-                <ul class="m-t-20 chatonline">
-                    <li><b>Chat option</b></li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/1.jpg" alt="user-img" class="img-circle">
-                            <span>Varun Dhavan <small class="text-success">online</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/2.jpg" alt="user-img" class="img-circle">
-                            <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/3.jpg" alt="user-img" class="img-circle">
-                            <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/4.jpg" alt="user-img" class="img-circle">
-                            <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/5.jpg" alt="user-img" class="img-circle">
-                            <span>Govinda Star <small class="text-success">online</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/6.jpg" alt="user-img" class="img-circle">
-                            <span>John Abraham<small class="text-success">online</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/7.jpg" alt="user-img" class="img-circle">
-                            <span>Hritik Roshan<small class="text-success">online</small></span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><img src="images/users/8.jpg" alt="user-img" class="img-circle">
-                            <span>Pwandeep rajan <small class="text-success">online</small></span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 @endsection
 

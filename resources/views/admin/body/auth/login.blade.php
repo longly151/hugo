@@ -22,7 +22,7 @@
         @endif
         <div class="form-group ">
             <div class="col-xs-12">
-                <input class="form-control" type="text" placeholder="Username" name="username">
+                <input class="form-control" type="text" placeholder="Username" name="username" value={{ old('username') }}>
                 @if($errors->has('username'))
                 <small class="form-control-feedback text-danger">
                     {{$errors->first('username')}}

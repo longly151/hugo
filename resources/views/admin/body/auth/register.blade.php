@@ -6,7 +6,7 @@
         <h3 class="box-title m-b-20">Sign Up</h3>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" placeholder="Full Name" name="fullname">
+            <input class="form-control" type="text" placeholder="Full Name" name="fullname" value="{{ old('fullname') }}">
                 @if($errors->has('fullname'))
                 <small class="form-control-feedback text-danger">
                     {{$errors->first('fullname')}}
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" placeholder="Username" name="username">
+                <input class="form-control" type="text" placeholder="Username" name="username" value="{{ old('username') }}">
                 @if($errors->has('username'))
                 <small class="form-control-feedback text-danger">
                     {{$errors->first('username')}}
@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" placeholder="Email" name="email">
+                <input class="form-control" type="text" placeholder="Email" name="email" value="{{ old('email') }}">
                 @if($errors->has('email'))
                 <small class="form-control-feedback text-danger">
                     {{$errors->first('email')}}
@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
             <div class="col-xs-12">
-                <input class="form-control" type="text" placeholder="Phone Number" name="phoneNumber">
+                <input class="form-control" type="text" placeholder="Phone Number" name="phoneNumber" value="{{ old('phoneNumber') }}">
                 @if($errors->has('phoneNumber'))
                 <small class="form-control-feedback text-danger">
                     {{$errors->first('phoneNumber')}}
