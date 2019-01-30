@@ -307,7 +307,7 @@
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{{ url('admin/profile') }}"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li><a href="{{ url('admin/profile/change-info') }}"><i class="ti-settings"></i> Account Setting</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{{ url('admin/logout') }}"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>

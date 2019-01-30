@@ -19,7 +19,7 @@ class Users extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('phoneNumber')->unique();
-            $table->string('address')->unique();
+            $table->string('address')->nullable();
             $table->string('description')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();

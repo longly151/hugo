@@ -18,7 +18,7 @@
                     <!-- text-->
                     <a href="{{ url('admin/profile') }}" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                     <!-- text-->
-                    <a href="{{ url('admin/login') }}" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="{{ url('admin/logout') }}" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
                     <!-- text-->
                 </div>
             </div>

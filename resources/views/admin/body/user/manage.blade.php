@@ -38,7 +38,6 @@
                                 <tr>
                                     <th>Fullname</th>
                                     <th>Email</th>
-                                    <th>Phone Number</th>
                                     <th>Role</th>
                                     <th>Tools</th>
                                 </tr>
@@ -48,7 +47,6 @@
                                 <tr>
                                     <td>{{$user->fullname}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>{{$user->phoneNumber}}</td>
                                     <td>
                                         <form action="#" method="post">
                                             <div class="box-body">
@@ -69,10 +67,10 @@
                                             </div>
                                         </td>
                                     <td>
-                                        <a href="/admin/user/view/{{$user->id}}" class="btn btn-primary btn-xs" target="_blank">
-                                                <i class="fa fa-folder"></i> View </a>
                                         <button type="submit" class="btn btn-success btn-xs" target="_blank">
                                             <i class="fa fa-save"></i> Save </button>
+                                        <a href="/admin/user/view/{{$user->id}}" class="btn btn-primary btn-xs" target="_blank">
+                                            <i class="fa fa-folder"></i> View </a>
                                         <a href="#" class="btn btn-warning btn-xs">
                                             <i class="fa fa-ban"></i> Ban </a>
                                         <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">

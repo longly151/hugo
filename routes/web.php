@@ -90,9 +90,15 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         });
     });
     Route::group(['prefix' => 'profile'], function() {
-        Route::get('/', function () {
-            return view('admin.body.profile.profile');
+        Route::get('/', 'ProfileController@index');
+        Route::get('change-info', function () {
+            return redirect('admin/profile')->with(['active'=>'changeInfo']);
         });
+        Route::post('change-info', 'ProfileController@updateInfo');
+        Route::get('change-password', function () {
+            return redirect('admin/profile')->with(['active'=>'changePassword']);
+        });
+        Route::post('change-password', 'ProfileController@updatePassword');
     });
     Route::group(['prefix' => 'error'], function() {
         Route::get('400', function () {

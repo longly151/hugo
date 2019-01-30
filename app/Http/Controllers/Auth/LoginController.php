@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UserLoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -38,25 +39,11 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    protected function validateLogin (Request $request) {
-        $this->validate($request,[
-            'username'   => 'required|min:3',
-            'password'   => 'required|min:3|max:32',
-        ],[
-            'username.required'   => 'Username cannot be blank',
-            'username.min'        => 'Username must be at least 3 characters',
-
-            'password.required'   => 'Password cannot be blank',
-            'password.min'        => 'Password must be at least 3 characters',
-            'password.max'        => 'Password cannot exceed 32 characters',
-        ]);
-    }
-
     public function getLogin() {
         return view('admin.body.auth.login');
     }
-    public function postLogin(Request $request){
-        $this->validateLogin($request);
+    public function postLogin(UserLoginRequest $request){
+        $validated = $request->validated();
       
         if(Auth::attempt(['username'=>$request->username,'password'=>$request->password])) {
             if(Auth::user()->role_id == '4') {
@@ -80,6 +67,7 @@ class LoginController extends Controller
                         'email' => Auth::user()->email,
                         'phoneNumber' => Auth::user()->phoneNumber,
                         'address' => Auth::user()->address,
+                        'description' => Auth::user()->description,
                         'avatar' => Auth::user()->avatar,
                         'role' => Auth::user()->role()->select('name as role')->get()->first()->role,
                     ]);
