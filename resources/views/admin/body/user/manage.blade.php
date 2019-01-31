@@ -42,7 +42,7 @@
                             <thead>
                                 <tr>
                                     <th>Fullname</th>
-                                    <th>Email</th>
+                                    <th>Username</th>
                                     <th>Role</th>
                                     <th>Registration Date</th>
                                     <th>Tools</th>
@@ -52,7 +52,7 @@
                                 @foreach ($users as $user)
                                 <tr>
                                     <td>{{$user->fullname}}</td>
-                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->username}}</td>
                                     <td>
                                     <form action="{{ url('admin/user/manage').'/'.$user->id }}" method="post">
                                         {{ csrf_field() }}
@@ -73,9 +73,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
-                                        {{$user->created_at}}
-                                    </td>
+                                    <td>{{$user->created_at}}</td>
                                     <td>
                                         <button type="submit" class="btn btn-success btn-xs" target="_blank">
                                             <i class="fa fa-save"></i> Save </button>

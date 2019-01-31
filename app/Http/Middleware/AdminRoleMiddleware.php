@@ -10,7 +10,7 @@ class AdminRoleMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminap\Request  $request
      * @param  \Closure  $next
      * @return mixed
      */
@@ -20,7 +20,7 @@ class AdminRoleMiddleware
         if ($user->role_id == 1) {
             return $next($request);
         } else {
-            return redirect('/admin/error/403');
+            abort(403);
         }
     }
 }

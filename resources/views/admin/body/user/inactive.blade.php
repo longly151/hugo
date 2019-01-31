@@ -42,8 +42,9 @@
                             <thead>
                                 <tr>
                                     <th>Fullname</th>
-                                    <th>Email</th>
+                                    <th>Username</th>
                                     <th>Role</th>
+                                    <th>Status</th>
                                     <th>Banned At</th>
                                     <th>Tools</th>
                                 </tr>
@@ -52,8 +53,9 @@
                                 @foreach ($users as $user)
                                 <tr>
                                     <td>{{$user->fullname}}</td>
-                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->username}}</td>
                                     <td>{{$user->role->name}}</td>
+                                    <td>{{$user->status}}</td>
                                     <td>{{$user->updated_at}}</td>
                                     <td>
                                         <a href="{{ url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">

@@ -46,9 +46,14 @@
                 <div>
                     <hr>
                 </div>
-                <div class="card-body"> <small class="text-muted">Email</small>
-                    <h6>{{ session()->get('admin')['email'] }}</h6> <small class="text-muted p-t-30 db">Phone Number</small>
-                    <h6>{{ session()->get('admin')['phoneNumber'] }}</h6> <small class="text-muted p-t-30 db">Address</small>
+                <div class="card-body">
+                    <small class="text-muted">Username</small>
+                    <h6>{{ session()->get('admin')['username'] }}</h6>
+                    <small class="text-muted">Email</small>
+                    <h6>{{ session()->get('admin')['email'] }}</h6>
+                    <small class="text-muted">Phone Number</small>
+                    <h6>{{ session()->get('admin')['phoneNumber'] }}</h6>
+                    <small class="text-muted">Address</small>
                     <h6>{{ session()->get('admin')['address'] }}</h6>
                     <div id="map"></div>
                     <small class="text-muted p-t-30 db">Social Profile</small>
