@@ -81,16 +81,20 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         });
     });
     Route::group(['prefix' => 'user','middleware' => 'adminRole'], function() {
-        Route::get('manage','UserController@index');
         Route::get('view/{id}','UserController@show');
         Route::post('manage/{id}','UserController@update');
-        
+
+        Route::get('manage','UserController@index');
         Route::get('inactive', function () {
             return view('admin.body.user.inactive');
         });
         Route::get('bin', function () {
             return view('admin.body.user.recycle_bin');
         });
+        Route::post('delete', 'UserController@destroy');
+        
+        
+        
     });
     Route::group(['prefix' => 'profile'], function() {
         Route::get('/', 'ProfileController@index');

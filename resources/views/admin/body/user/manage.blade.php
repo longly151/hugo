@@ -78,9 +78,9 @@
                                     </form>
                                         <a href="{{ url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">
                                             <i class="fa fa-folder"></i> View </a>
-                                        <button data-id="<%= e._id %>" class="btn btn-warning btn-xs">
+                                        <button data-id="{{ $user->id }}" class="btn btn-warning btn-xs banUser">
                                             <i class="fa fa-ban"></i> Ban </button>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
+                                        <button data-id="{{ $user->id }}" type="button" class="btn btn-danger btn-xs deleteUser">
                                             <i class="far fa-trash-alt"></i> Delete </button>
                                     </td>
 
@@ -166,4 +166,5 @@
     });
 
 </script>
+
 @endsection

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     @include('admin.partials.head')
+    @include('sweetalert::alert')
     @section('pageStylesheet')
         @show
 </head>

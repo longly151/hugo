@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Role;
+use Symfony\Component\HttpFoundation\Response;
+
 class UserController extends Controller
 {
     /**
@@ -38,7 +40,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
     }
 
     /**
@@ -85,8 +87,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->json()->all();
+        User::where('id',$id)->update(['deleted_at'=>now()]);
+        return response()->json([
+            'messages' => 'success'
+        ]);
     }
 }
