@@ -32,7 +32,21 @@
                     <p class="m-t-30" style="text-align: center"><img src="{{ $user->avatar }}" class="img-circle"
                             width="150" />
                         <h4 class="card-title m-t-10">{{ $user->fullname }}</h4>
-                        <h6 class="card-subtitle text-uppercase small">{{ $user->role->name }}</h6>
+                        <h6 class="card-subtitle text-uppercase text-primary">{{ $user->role->name }}</h6>
+                        @if ($user->deleted_at)
+                            <h5 class="card-subtitle text-uppercase font-weight-bold text-danger">Deleted</h5>
+                        @else
+                            @if ($user->status == "active")
+                            <h5 class="card-subtitle text-uppercase font-weight-bold text-success">{{ $user->status }}</h5>
+                            @elseif ($user->status == "inactive")
+                            <h5 class="card-subtitle text-uppercase font-weight-bold text-secondary">{{ $user->status }}</h5>
+                            @elseif ($user->status == "pending")
+                            <h5 class="card-subtitle text-uppercase font-weight-bold text-warning">{{ $user->status }}</h5>
+                            @else
+                            <h5 class="card-subtitle text-uppercase font-weight-bold">{{ $user->status }}</h5>
+                            @endif
+                        @endif
+                        
                         <div class="row text-center justify-content-md-center">
                             <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i>
                                     <p class="font-medium">254</p>

@@ -44,6 +44,7 @@
                                     <th>Fullname</th>
                                     <th>Email</th>
                                     <th>Role</th>
+                                    <th>Deleted At</th>
                                     <th>Tools</th>
                                 </tr>
                             </thead>
@@ -52,37 +53,17 @@
                                 <tr>
                                     <td>{{$user->fullname}}</td>
                                     <td>{{$user->email}}</td>
+                                    <td>{{$user->role->name}}</td>
+                                    <td>{{$user->deleted_at}}</td>
                                     <td>
-                                    <form action="{{ url('admin/user/manage').'/'.$user->id }}" method="post">
-                                        {{ csrf_field() }}
-                                        <div class="box-body">
-                                            <div class="form-group">
-                                                <div class="col-sm-12">
-                                                    <select class="form-control" name="role">
-                                                        @foreach ($roles as $role)
-                                                            <option value="{{$role->id}}" 
-                                                                @if ($user->role->id == $role->id)
-                                                                    selected
-                                                                @endif
-                                                                > {{$role->name}}
-                                                            </option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button type="submit" class="btn btn-success btn-xs" target="_blank">
-                                            <i class="fa fa-save"></i> Save </button>
                                         <a href="{{ url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">
                                             <i class="fa fa-folder"></i> View </a>
-                                        <button data-id="<%= e._id %>" class="btn btn-warning btn-xs">
-                                            <i class="fa fa-ban"></i> Ban </button>
-                                        <button data-id="<%= e._id %>" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="far fa-trash-alt"></i> Delete </button>
+                                        <button data-id="{{ $user->id }}" class="btn btn-success btn-xs restoreUser">
+                                                <i class="fas fa-recycle"></i> Restore </button>
+                                        <button data-id="{{ $user->id }}" type="button" class="btn btn-danger btn-xs completedDeleteUser">
+                                            <i class="far fa-trash-alt"></i> Completely Delete </button>
                                     </td>
-                                </form>
+
                                 </tr>
                                 @endforeach 
                             </tbody>
@@ -165,4 +146,5 @@
     });
 
 </script>
+
 @endsection

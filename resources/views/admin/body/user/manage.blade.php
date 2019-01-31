@@ -44,6 +44,7 @@
                                     <th>Fullname</th>
                                     <th>Email</th>
                                     <th>Role</th>
+                                    <th>Registration Date</th>
                                     <th>Tools</th>
                                 </tr>
                             </thead>
@@ -71,6 +72,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </td>
+                                    <td>
+                                        {{$user->created_at}}
                                     </td>
                                     <td>
                                         <button type="submit" class="btn btn-success btn-xs" target="_blank">

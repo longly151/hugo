@@ -17,9 +17,21 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::where(['status' => 'active',['role_id','!=','1'],'deleted_at' => NULL])->paginate(5);
+        $users = User::where(['status' => 'active',['role_id','!=','1']])->paginate(5);
         $roles = Role::where('name','!=','admin')->get();
         return view('admin.body.user.manage',['users' => $users,'roles' => $roles]);
+    }
+    public function inactive()
+    {
+        $users = User::where([['status','!=','active']])->paginate(5);
+        $roles = Role::where('name','!=','admin')->get();
+        return view('admin.body.user.inactive',['users' => $users,'roles' => $roles]);
+    }
+    public function bin()
+    {
+        $users = User::onlyTrashed()->paginate(5);
+        $roles = Role::where('name','!=','admin')->get();
+        return view('admin.body.user.bin',['users' => $users,'roles' => $roles]);
     }
 
     /**
@@ -51,7 +63,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::where('id',$id)->first();
+        $user = User::withTrashed()->where('id',$id)->first();
         return view('admin.body.user.view',['user' => $user]);
     }
 
@@ -87,10 +99,42 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function ban(Request $request)
+    {
+        $id = $request->json()->all();
+        User::where('id',$id)->update(['status'=>'inactive']);
+        return response()->json([
+            'messages' => 'success'
+        ]);
+    }
+    public function active(Request $request)
+    {
+        $id = $request->json()->all();
+        User::where('id',$id)->update(['status'=>'active']);
+        return response()->json([
+            'messages' => 'success'
+        ]);
+    }
+    public function delete(Request $request)
     {
         $id = $request->json()->all();
         User::where('id',$id)->delete();
+        return response()->json([
+            'messages' => 'success'
+        ]);
+    }
+    public function restore(Request $request)
+    {
+        $id = $request->json()->all();
+        User::where('id',$id)->restore();
+        return response()->json([
+            'messages' => 'success'
+        ]);
+    }
+    public function destroy(Request $request)
+    {
+        $id = $request->json()->all();
+        User::where('id',$id)->forceDelete();
         return response()->json([
             'messages' => 'success'
         ]);

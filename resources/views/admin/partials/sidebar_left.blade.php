@@ -42,7 +42,7 @@
                         <li><a href="{{ url('admin/post/add') }}">Add Post</a></li>
                         <li><a href="{{ url('admin/post/manage') }}">Manage Posts</a></li>
                         <li><a href="{{ url('admin/post/manage-by-author') }}">My Posts</a></li>
-                        <li><a href="{{ url('admin/post/bin') }}">Recycle</a></li>
+                        <li><a href="{{ url('admin/post/bin') }}">Trash</a></li>
                     </ul>
                 </li>
 
@@ -51,7 +51,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{ url('admin/category/add') }}">Add Category</a></li>
                         <li><a href="{{ url('admin/category/manage') }}">Manage Categories</a></li>
-                        <li><a href="{{ url('admin/category/bin') }}">Recycle</a></li>
+                        <li><a href="{{ url('admin/category/bin') }}">Trash</a></li>
                     </ul>
                 </li>
 
@@ -60,7 +60,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{ url('admin/tag/add') }}">Add Tag</a></li>
                         <li><a href="{{ url('admin/tag/manage') }}">Manage Tags</a></li>
-                        <li><a href="{{ url('admin/tag/bin') }}">Recycle</a></li>
+                        <li><a href="{{ url('admin/tag/bin') }}">Trash</a></li>
                     </ul>
                 </li>
                 @if(session('admin'))
@@ -70,7 +70,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{ url('admin/user/manage') }}">Manage Users</a></li>
                         <li><a href="{{ url('admin/user/inactive') }}">Inactive Users</a></li>
-                        <li><a href="{{ url('admin/user/bin') }}">Recycle</a></li>
+                        <li><a href="{{ url('admin/user/bin') }}">Trash</a></li>
                     </ul>
                 </li>
                 @endif

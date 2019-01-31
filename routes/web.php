@@ -55,7 +55,7 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
             return view('admin.body.post.manage-by-author');
         });
         Route::get('bin', function () {
-            return view('admin.body.post.recycle_bin');
+            return view('admin.body.post.bin');
         });
     });
     Route::group(['prefix' => 'category'], function() {
@@ -66,7 +66,7 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
             return view('admin.body.category.manage');
         });
         Route::get('bin', function () {
-            return view('admin.body.category.recycle_bin');
+            return view('admin.body.category.bin');
         });
     });
     Route::group(['prefix' => 'tag'], function() {
@@ -77,24 +77,23 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
             return view('admin.body.tag.manage');
         });
         Route::get('bin', function () {
-            return view('admin.body.tag.recycle_bin');
+            return view('admin.body.tag.bin');
         });
     });
     Route::group(['prefix' => 'user','middleware' => 'adminRole'], function() {
         Route::get('view/{id}','UserController@show');
-        Route::post('manage/{id}','UserController@update');
-
+        
         Route::get('manage','UserController@index');
-        Route::get('inactive', function () {
-            return view('admin.body.user.inactive');
-        });
-        Route::get('bin', function () {
-            return view('admin.body.user.recycle_bin');
-        });
-        Route::post('delete', 'UserController@destroy');
-        
-        
-        
+        Route::post('manage/{id}','UserController@update');
+        Route::post('ban', 'UserController@ban');
+        Route::post('delete', 'UserController@delete');
+
+        Route::get('inactive', 'UserController@inactive');
+        Route::post('active', 'UserController@active');
+
+        Route::get('bin', 'UserController@bin');
+        Route::post('restore', 'UserController@restore');
+        Route::post('completed-delete', 'UserController@destroy');
     });
     Route::group(['prefix' => 'profile'], function() {
         Route::get('/', 'ProfileController@index');
@@ -125,66 +124,3 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         });
     });
 });
-
-
-
-Route::get('/schema/create', function(){
-    Schema::create('roles',function($table){
-        $table->increments('id');
-        $table->string('name')->unique();
-    });
-    // Schema::create('users',function($table){
-    //     $table->increments('id');
-    //     $table->string('fullname');
-    //     $table->string('username')->unique();
-    //     $table->string('email')->unique();
-    //     $table->string('phoneNumber')->unique();
-    //     $table->string('password');
-    //     $table->string('avatar')->default('http://s3.amazonaws.com/37assets/svn/765-default-avatar.png');
-    //     $table->string('status')->default('active');
-    //     $table->integer('roleId');
-    //     $table->foreign('roleId')->references('id')->on('roles')->onDelete('cascade');
-    //     $table->timestamp('created_at')->useCurrent();
-    //     $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-    //     $table->dateTime('deleted_at')->nullable();
-    // });
-    // Schema::create('posts',function($table){
-    //     $table->increments('id');
-    //     $table->string('title');
-    //     $table->text('description')->nullable();
-    //     $table->string('content');
-    //     $table->string('cover');
-    //     $table->integer('author');
-    //     $table->string('avatar');
-    //     $table->string('status');
-    //     $table->timestamps();
-    //     $table->dateTime('deleted_at');
-    // });
-});
-
-// Route::get('/schema/change', function(){
-//     Schema::table('users',function($table){
-//         $table->string('abc',50);
-//     });
-//     Schema::table('users',function($table){
-//         $table->dropColumn('abc');
-//     });
-// });
-
-
-// Route::get('/schema/drop', function(){
-//     Schema::dropIfExists('roles');
-//     Schema::dropIfExists('users');
-//     Schema::dropIfExists('posts');
-// });
-
-// Route::get('model/select-all',function() {
-//     $data = App\Role::find(2)->firstOrFail()->select('name')->get()->toArray();
-//     // $data = App\Role::all()->last();
-//     // $data->name ='a';
-//     // $data->save();
-//     // $data->destroy();
-//     echo "<pre>";
-//     print_r($data);
-//     echo "</pre>";
-// });

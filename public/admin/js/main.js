@@ -10,13 +10,13 @@ const alertDeleteTag = (tag) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/tag/delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/tag/delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -50,13 +50,13 @@ const alertDeleteCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/category/delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/category/delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -90,13 +90,13 @@ const alertDeletePost = (post) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/post/delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/post/delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -111,46 +111,6 @@ const alertDeletePost = (post) => {
                             swal({
                                 title: 'Error',
                                 text: 'Fail to delete the post, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
-const alertBanUser = (user) => {
-    const id = $(user).data('id');
-    
-    swal({
-            title: 'Ban User ?',
-            text: 'After being banned, the user cannot access the system. Posts, categories and tags remain the same',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/admin/user/ban', {
-                        method: 'DELETE',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Banned',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            swal({
-                                title: 'Error',
-                                text: 'Could not ban the user, please try again',
                             });
                         }
                     });
@@ -196,6 +156,241 @@ const alertDeleteUser = (user) => {
             }
         });
 };
+const alertBanUser = (user) => {
+    const id = $(user).data('id');
+    swal({
+            title: 'Ban User ?',
+            text: 'After being banned, the user cannot access the system. Posts, categories and tags remain the same',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+        })
+        .then((result) => {
+            if (result.value) {
+                fetch('/hugo/admin/user/ban', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            id,
+                        }),
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                    })
+                    .then((value) => {
+                        if (value.status === 200) {
+                            location.reload();
+                            Swal(
+                                'Banned',
+                                '',
+                                'success',
+                            )
+                        } else {
+                            swal({
+                                title: 'Error',
+                                text: 'Fail to ban the user, please try again',
+                            });
+                        }
+                    });
+            }
+        });
+};
+
+
+const alertRestoreTag = (tag) => {
+    const id = $(tag).data('id');
+    swal({
+            title: 'Restore tag ?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+        })
+        .then((result) => {
+            if (result.value) {
+                fetch('/hugo/admin/tag/restore', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            id,
+                        }),
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                    })
+                    .then((value) => {
+                        if (value.status === 200) {
+                            location.reload();
+                            Swal(
+                                'Success',
+                                '',
+                                'success',
+                            )
+                        } else {
+                            location.reload();
+                            swal({
+                                title: 'Error',
+                                text: 'Fail to restore the tag, please try again',
+                            });
+                        }
+                    });
+            }
+        });
+};
+const alertRestoreCategory = (category) => {
+    const id = $(category).data('id');
+    swal({
+            title: 'Restore Category ?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+        })
+        .then((result) => {
+            if (result.value) {
+                fetch('/hugo/admin/category/restore', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            id,
+                        }),
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                    })
+                    .then((value) => {
+                        if (value.status === 200) {
+                            location.reload();
+                            Swal(
+                                'Success',
+                                '',
+                                'success',
+                            )
+                        } else {
+                            location.reload();
+                            swal({
+                                title: 'Error',
+                                text: 'Fail to restore the category, please try again',
+                            });
+                        }
+                    });
+            }
+        });
+};
+const alertRestorePost = (post) => {
+    const id = $(post).data('id');
+    swal({
+            title: 'Restore Post ?',
+            text: '',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+        })
+        .then((result) => {
+            if (result.value) {
+                fetch('/hugo/admin/post/restore', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            id,
+                        }),
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                    })
+                    .then((value) => {
+                        if (value.status === 200) {
+                            location.reload();
+                            Swal(
+                                'Success',
+                                '',
+                                'success',
+                            )
+                        } else {
+                            swal({
+                                title: 'Error',
+                                text: 'Fail to restore the post, please try again',
+                            });
+                        }
+                    });
+            }
+        });
+};
+const alertRestoreUser = (user) => {
+    const id = $(user).data('id');
+    swal({
+            title: 'Restore User ?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+        })
+        .then((result) => {
+            if (result.value) {
+                fetch('/hugo/admin/user/restore', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            id,
+                        }),
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                    })
+                    .then((value) => {
+                        if (value.status === 200) {
+                            location.reload();
+                            Swal(
+                                'Success',
+                                '',
+                                'success',
+                            )
+                        } else {
+                            swal({
+                                title: 'Error',
+                                text: 'Fail to restore the user, please try again',
+                            });
+                        }
+                    });
+            }
+        });
+};
+const alertActiveUser = (user) => {
+    const id = $(user).data('id');
+    swal({
+            title: 'Active User ?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+        })
+        .then((result) => {
+            if (result.value) {
+                fetch('/hugo/admin/user/active', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            id,
+                        }),
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                    })
+                    .then((value) => {
+                        if (value.status === 200) {
+                            location.reload();
+                            Swal(
+                                'Success',
+                                '',
+                                'success',
+                            )
+                        } else {
+                            swal({
+                                title: 'Error',
+                                text: 'Fail to active the user, please try again',
+                            });
+                        }
+                    });
+            }
+        });
+};
+
 const alertCompletedDeleteTag = (tag) => {
     const id = $(tag).data('id');
     swal({
@@ -208,13 +403,13 @@ const alertCompletedDeleteTag = (tag) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/tag/bin/completed-delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/tag/completed-delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -247,13 +442,13 @@ const alertCompletedDeleteCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/category/bin/completed-delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/category/completed-delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -286,13 +481,13 @@ const alertCompletedDeletePost = (post) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/post/bin/completed-delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/post/completed-delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -325,13 +520,13 @@ const alertCompletedDeleteUser = (user) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/admin/user/bin/completed-delete', {
-                        method: 'DELETE',
+                fetch('/hugo/admin/user/completed-delete', {
+                        method: 'POST',
                         body: JSON.stringify({
                             id,
                         }),
                         headers: {
-                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                     })
                     .then((value) => {
@@ -360,7 +555,7 @@ const postImageMain = (file) => {
     const formData = new FormData();
     formData.append('file', fileData);
     $.ajax({
-        url: '/admin/post/image',
+        url: '/hugo/admin/post/image',
         type: 'POST',
         dataType: 'json',
         data: formData,
@@ -390,14 +585,36 @@ $(document).ready(() => {
         const post = this;
         alertDeletePost(post);
     });
-    $('.banUser').click(function handle() {
-        const user = this;
-        alertBanUser(user);
-    });
     $('.deleteUser').click(function handle() {
         const user = this;
         alertDeleteUser(user);
     });
+    $('.banUser').click(function handle() {
+        const user = this;
+        alertBanUser(user);
+    });
+
+    $('.restoreTag').click(function handle() {
+        const tag = this;
+        alertRestoreTag(tag);
+    });
+    $('.restoreCategory').click(function handle() {
+        const category = this;
+        alertRestoreCategory(category);
+    });
+    $('.restorePost').click(function handle() {
+        const post = this;
+        alertRestorePost(post);
+    });
+    $('.restoreUser').click(function handle() {
+        const user = this;
+        alertRestoreUser(user);
+    });
+    $('.activeUser').click(function handle() {
+        const user = this;
+        alertActiveUser(user);
+    });
+
     $('.completedDeleteTag').click(function handle() {
         const tag = this;
         alertCompletedDeleteTag(tag);
@@ -414,6 +631,7 @@ $(document).ready(() => {
         const user = this;
         alertCompletedDeleteUser(user);
     });
+
     // file
     $('#file').change(function handle() {
         const file = this;
