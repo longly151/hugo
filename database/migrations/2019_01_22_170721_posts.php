@@ -23,7 +23,7 @@ class Posts extends Migration
             $table->string('avatar');
             $table->string('status');
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

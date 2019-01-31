@@ -31,7 +31,7 @@ class Users extends Migration
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('CASCADE');
             $table->rememberToken();
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

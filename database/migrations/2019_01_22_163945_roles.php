@@ -17,7 +17,7 @@ class Roles extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

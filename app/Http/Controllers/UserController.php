@@ -90,7 +90,7 @@ class UserController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->json()->all();
-        User::where('id',$id)->update(['deleted_at'=>now()]);
+        User::where('id',$id)->delete();
         return response()->json([
             'messages' => 'success'
         ]);

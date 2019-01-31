@@ -119,7 +119,6 @@ const alertDeletePost = (post) => {
 };
 const alertBanUser = (user) => {
     const id = $(user).data('id');
-    console.log('TCL: alertBanUser -> id', id);
     
     swal({
             title: 'Ban User ?',
@@ -160,7 +159,6 @@ const alertBanUser = (user) => {
 };
 const alertDeleteUser = (user) => {
     const id = $(user).data('id');
-    console.log('5')
     swal({
             title: 'Delete User ?',
             text: 'The user\'s posts, categories and tags will be erased and cannot be restored. The categories and tags used in the article are owned by the administrator',
@@ -182,8 +180,7 @@ const alertDeleteUser = (user) => {
                     })
                     .then((value) => {
                         if (value.status === 200) {
-                            // console.log(value);
-                            // location.reload();
+                            location.reload();
                             Swal(
                                 'Deleted',
                                 '',
@@ -380,4 +377,64 @@ const postImageMain = (file) => {
     });
 };
 
+$(document).ready(() => {
+    $('.deleteTag').click(function handle() {
+        const tag = this;
+        alertDeleteTag(tag);
+    });
+    $('.deleteCategory').click(function handle() {
+        const category = this;
+        alertDeleteCategory(category);
+    });
+    $('.deletePost').click(function handle() {
+        const post = this;
+        alertDeletePost(post);
+    });
+    $('.banUser').click(function handle() {
+        const user = this;
+        alertBanUser(user);
+    });
+    $('.deleteUser').click(function handle() {
+        const user = this;
+        alertDeleteUser(user);
+    });
+    $('.completedDeleteTag').click(function handle() {
+        const tag = this;
+        alertCompletedDeleteTag(tag);
+    });
+    $('.completedDeleteCategory').click(function handle() {
+        const category = this;
+        alertCompletedDeleteCategory(category);
+    });
+    $('.completedDeletePost').click(function handle() {
+        const post = this;
+        alertCompletedDeletePost(post);
+    });
+    $('.completedDeleteUser').click(function handle() {
+        const user = this;
+        alertCompletedDeleteUser(user);
+    });
+    // file
+    $('#file').change(function handle() {
+        const file = this;
+        postImageMain(file);
+    });
+    $('#closeImg').click(function handle() {
+        $('#imageMain').val('');
+        $('#closeImg').attr('hidden', true);
+    });
+    if($('#imageMain').val()){
+        const link = $('#imageMain').val();
+        $("img[id='demo']").remove();
+        $('#closeImg').removeAttr('hidden');
+        $('#demoImg').append(`<img id="demo" src="${link}" alt="">`);
+    }
+    $('#imageMain').keyup(function handle() {
+        const link = $('#imageMain').val();
+        $("img[id='demo']").remove();
+        $('#closeImg').removeAttr('hidden');
+        $('#demoImg').append(`<img id="demo" src="${link}" alt="">`);
+    })
 
+
+});
