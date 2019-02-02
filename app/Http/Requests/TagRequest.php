@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Tag;
 class TagRequest extends BaseFormRequest
@@ -24,7 +25,10 @@ class TagRequest extends BaseFormRequest
     public function rules()
     {
         return [
-            'name'   => 'required',
+            'name'=> [
+                'required',
+                Rule::unique('tags','name')->ignore($this->id)
+            ],
         ];
     }
 
@@ -32,6 +36,7 @@ class TagRequest extends BaseFormRequest
     {
         return [
             'name.required'   => 'Tag cannot be blank',
+            'name.unique'   => 'Tag already exists',
         ];
     }
 
@@ -43,13 +48,13 @@ class TagRequest extends BaseFormRequest
     public function filters()
     {
         return [
-            'name'=>'trim|lowercase',
+            'name'=>'trim',
         ];
     }
     public function withValidator($validator) {
         $validator->after(function ($validator) {
-            if (Tag::where('url',str_slug($this->name))){
-                $validator->errors()->add('name', 'Tag already exists');
+            if (Tag::where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
+                $validator->errors()->add('name','Tag already exists due to duplicate url');
             }
         });
     }

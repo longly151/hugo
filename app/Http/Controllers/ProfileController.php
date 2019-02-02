@@ -24,33 +24,38 @@ class ProfileController extends Controller
     {
         // get request
         $info = $request->except('_token');
-        $info["remember_token"] = $request->input('_token');
+        array_add($info,"remember_token",$request->input('_token'));
         // update database
         $id = session()->get('admin')['id'];
-        User::where('id', $id)->update($info);
+        $user = User::find($id);
+        
+        $user->email = $info['email'];
+        $user->phoneNumber = $info['phoneNumber'];
+        $user->address = $info['address'];
+        $user->description = $info['description'];
+        $user->save();
         // get session data
-        $data = User::where('id', $id)->select(['email','phoneNumber','address','description'])->first()->toArray();;
-        $user = $request->session()->get('admin');
+        $info = User::where('id', $id)->select(['email','phoneNumber','address','description'])->first()->toArray();;
+        $cUser = $request->session()->get('admin');
 
-        $user['email'] = $data['email'];
-        $user['phoneNumber'] = $data['phoneNumber'];
-        $user['address'] = $data['address'];
-        $user['description'] = $data['description'];
+        $cUser['email'] = $info['email'];
+        $cUser['phoneNumber'] = $info['phoneNumber'];
+        $cUser['address'] = $info['address'];
+        $cUser['description'] = $info['description'];
         // notification 
-        if($user==$request->session()->get('admin')) $messages = "Nothing changes";
+        if($cUser==$request->session()->get('admin')) $messages = "Nothing changes";
         else $messages="Change profile successfully";
         // update session
-        $request->session()->put('admin',$user);
+        $request->session()->put('admin',$cUser);
 
         return redirect('admin/profile')->with(['success' => $messages,'active'=>'changeInfo']);
     }
-    public function updatePassword(UserPasswordRequest $request)
-    {   // get request
-        $info = ['password'=>bcrypt($request->input('password'))];
-        $info["remember_token"] = $request->input('_token');
-        // update database
+    public function updatePassword(UserPasswordRequest $request){
+        $password = $request->input('password');
         $id = session()->get('admin')['id'];
-        User::where('id', $id)->update($info);
+        $user = User::find($id);
+        $user->password = $password;
+        $user->save();
         return redirect('admin/profile')->with(['success' => 'Change password successfully','active'=>'changePassword']);
     }
 }

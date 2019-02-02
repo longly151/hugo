@@ -20,4 +20,10 @@ class Tag extends Model
     public function user() {
         return $this->belongsTo('App\User','author_id','id');
     }
+    public static function boot() {
+        parent::boot();
+        self::saving(function ($tag) {
+            $tag['url'] = str_slug($tag['name']);
+        });
+    }
 }

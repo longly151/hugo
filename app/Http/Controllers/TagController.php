@@ -79,8 +79,10 @@ class TagController extends Controller
      */
     public function update(TagRequest $request, $id)
     {
-        $info = $request->except('_token');
-        $tag = Tag::where('id',$id)->update($info);
+        $name = $request->input('name');
+        $tag = Tag::find($id);
+        $tag->name = $name;
+        $tag->save();
         return redirect('admin/tag/manage')->with('success','Update tag successfully');
     }
 

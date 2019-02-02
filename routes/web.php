@@ -73,7 +73,7 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         Route::get('add', 'TagController@create');
         Route::post('add', 'TagController@store');
         Route::get('edit/{id}', 'TagController@edit');
-        Route::post('edit/{id}', 'TagController@store');
+        Route::post('edit/{id}', 'TagController@update');
         Route::get('manage', 'TagController@index');
         Route::get('bin', 'TagController@bin');
 

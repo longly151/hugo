@@ -54,7 +54,7 @@
                                     <td>{{$tag->user['fullname']}}</td>
                                     <td>{{$tag->created_at}}</td>
                                     <td>
-                                        <a href="{{ url('admin/tag/edit').'/'.$tag->id }}" class="btn btn-primary btn-xs" target="_blank">
+                                        <a href="{{ url('admin/tag/edit').'/'.$tag->id }}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $tag->id }}" type="button" class="btn btn-danger btn-xs deleteTag">
                                             <i class="far fa-trash-alt"></i> Delete </button>
