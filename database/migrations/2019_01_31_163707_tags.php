@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Posts extends Migration
+class Tags extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create('posts',function(Blueprint $table){
+        Schema::create('tags', function(Blueprint $table){
             $table->increments('id');
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->string('content');
-            $table->string('cover');
-            $table->integer('author');
-            $table->string('avatar');
+            $table->string('name')->unique();
+            $table->integer('author_id')->unsigned();
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->string('url');
             $table->timestamps();
             $table->softDeletes();
@@ -34,6 +31,6 @@ class Posts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('tags');
     }
 }

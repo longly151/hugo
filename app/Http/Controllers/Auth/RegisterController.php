@@ -58,7 +58,6 @@ class RegisterController extends Controller
     {
         $validated = $request->validated();
         $user = $request->all();
-        $user['password'] = bcrypt($request->password);
         $user['role_id'] = 3;
         User::create($user);
         return redirect('admin/login')->with('success','Register successfully. Please login');

@@ -2,7 +2,7 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h3 class="text-themecolor">Add Tag</h3>
+        <h3 class="text-themecolor">Edit Tag</h3>
     </div>
     <div class="col-md-7 align-self-center">
         <ol class="breadcrumb">
@@ -27,11 +27,11 @@
                     {{session('success')}}
                 </div>
                 @endif
-            <form class="form-horizontal m-t-40" ation="{{ url('admin/tag/add') }}" method="post">
+            <form class="form-horizontal m-t-40" ation="{{ url('admin/tag/edit').'/'.$tag->id }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Tag Name" value="{{ old('name') }}">
+                    <input type="text" class="form-control" name="name" placeholder="Tag Name" value="{{ null !== old('name')? old('name'): $tag->name }}">
                     @if($errors->has('name'))
                     <small class="form-control-feedback text-danger">
                         {{$errors->first('name')}}

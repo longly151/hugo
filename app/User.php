@@ -33,5 +33,17 @@ class User extends Authenticatable
     public function role() {
         return $this->hasOne('App\Role','id','role_id');
     }
+    public static function boot() {
+        parent::boot();
+        self::creating(function ($user) {
+            if(strpos($user['phoneNumber'],'+84') === 0) {
+                $user['phoneNumber'] = str_replace('+84','0',$user['phoneNumber']);
+            } elseif (strpos($user['phoneNumber'],'84') === 0) {
+                $user['phoneNumber'] = str_replace('84','0',$user['phoneNumber']);
+            }
+            $user['password'] = bcrypt($user['password']);
+        });
+    }
+
 
 }

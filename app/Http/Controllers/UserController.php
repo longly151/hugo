@@ -23,13 +23,13 @@ class UserController extends Controller
     }
     public function inactive()
     {
-        $users = User::where([['status','!=','active']])->paginate(5);
+        $users = User::where([['status','!=','active']])->paginate(15);
         $roles = Role::where('name','!=','admin')->get();
         return view('admin.body.user.inactive',['users' => $users,'roles' => $roles]);
     }
     public function bin()
     {
-        $users = User::onlyTrashed()->paginate(5);
+        $users = User::onlyTrashed()->paginate(15);
         $roles = Role::where('name','!=','admin')->get();
         return view('admin.body.user.bin',['users' => $users,'roles' => $roles]);
     }
@@ -88,7 +88,6 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $role = $request->input('role');
-
         User::where('id',$id)->update(['role_id'=>$role]);
         return redirect()->back()->with('success','Change role successfully');
     }
@@ -102,7 +101,7 @@ class UserController extends Controller
     public function ban(Request $request)
     {
         $id = $request->json()->all();
-        User::where('id',$id)->update(['status'=>'inactive']);
+        User::where('id',$id)->update(['status'=>'banned']);
         return response()->json([
             'messages' => 'success'
         ]);

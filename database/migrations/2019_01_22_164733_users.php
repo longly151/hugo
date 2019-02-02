@@ -26,7 +26,7 @@ class Users extends Migration
             $table->string('youtube')->nullable();
             $table->string('password');
             $table->string('avatar')->default('http://s3.amazonaws.com/37assets/svn/765-default-avatar.png');
-            $table->string('status')->default('active');
+            $table->string('status')->default('pending');
             $table->integer('role_id')->unsigned();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('CASCADE');
             $table->rememberToken();

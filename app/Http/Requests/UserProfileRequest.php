@@ -59,7 +59,6 @@ class UserProfileRequest extends BaseFormRequest
     {
         return [
             'email'         =>  'trim|escape|lowercase',
-            'phoneNumber'   =>  'digit',
             // 'description'   =>  'strip_tags',
         ];
     }

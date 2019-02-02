@@ -90,7 +90,6 @@ class UserStoreRequest extends BaseFormRequest
             'email'         =>  'trim|escape|lowercase',
             'jsonVar'       =>  'cast:array',
             'description'   =>  'strip_tags',
-            'phoneNumber'   =>  'digit',
         ];
     }
 }
