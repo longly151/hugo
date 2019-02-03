@@ -44,7 +44,17 @@
                 @endif
             </div>
         </div>
-        <div class="form-group ">
+        <div class="form-group">
+                <div class="col-xs-12">
+                    <input class="form-control" type="text" placeholder="Address" name="address" value="{{ old('address') }}">
+                    @if($errors->has('address'))
+                    <small class="form-control-feedback text-danger">
+                        {{$errors->first('address')}}
+                    </small>
+                    @endif
+                </div>
+            </div>
+        <div class="form-group">
             <div class="col-xs-12">
                 <input class="form-control" type="password" placeholder="Password" name="password">
                 @if($errors->has('password'))

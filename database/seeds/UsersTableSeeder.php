@@ -75,7 +75,7 @@ class UsersTableSeeder extends Seeder
                 'email' => $faker->unique()->email,
                 'avatar' => 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
                 'status' =>  $faker->randomElement($array = array ('active','banned','pending')),
-                'phoneNumber' => $faker->unique()->regexify('/^(0)(3[0-9^01][0-9]{7}|8[0-9]{8}|5[68][0-9]{7}|5[9][0-9]{7}|8[689][0-9]{7}|9[0-9^5][0-9]{7})$/'),
+                'phoneNumber' => $faker->unique()->regexify("/(0)(3[2-9][0-9]{7}|8[0-9]{8}|5[68][0-9]{7}|5[9][0-9]{7}|8[689][0-9]{7}|9[0-9][0-9]{7})$/"),
                 'address' => $faker->unique()->streetAddress,
                 'password' =>  bcrypt('admin'),
                 'role_id' => rand(2,4),

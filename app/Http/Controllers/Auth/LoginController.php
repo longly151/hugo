@@ -70,7 +70,7 @@ class LoginController extends Controller
                         'avatar' => Auth::user()->avatar,
                         'role' => Auth::user()->role()->select('name as role')->get()->first()->role,
                     ]);
-                return redirect('/admin')->with('loginSuccess','Hello '. $request->username .', your are logged in');
+                return redirect('/admin')->with('loginSuccess','Hello '. Auth::user()->fullname);
             }
         } 
         else {

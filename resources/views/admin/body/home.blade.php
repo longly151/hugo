@@ -24,6 +24,17 @@
     <!-- Row -->
     <!-- Row -->
     <div class="row">
+        <div class="col-lg-12">
+            @if (session('loginSuccess'))
+            <div class="alert alert-success" role="alert">
+                {{ session('loginSuccess') }}
+            </div>
+            @endif
+        </div>
+    </div>
+    <!-- Row -->
+    <!-- Row -->
+    <div class="row">
         <div class="col-lg-9 col-xlg-9">
             <div class="card">
                 <div class="card-body">

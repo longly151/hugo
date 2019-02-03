@@ -38,8 +38,8 @@
                         @else
                             @if ($user->status == "active")
                             <h5 class="card-subtitle text-uppercase font-weight-bold text-success">{{ $user->status }}</h5>
-                            @elseif ($user->status == "inactive")
-                            <h5 class="card-subtitle text-uppercase font-weight-bold text-secondary">{{ $user->status }}</h5>
+                            @elseif ($user->status == "banned")
+                            <h5 class="card-subtitle text-uppercase font-weight-bold text-danger">{{ $user->status }}</h5>
                             @elseif ($user->status == "pending")
                             <h5 class="card-subtitle text-uppercase font-weight-bold text-warning">{{ $user->status }}</h5>
                             @else
