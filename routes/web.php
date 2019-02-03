@@ -72,14 +72,15 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
     Route::group(['prefix' => 'tag'], function() {
         Route::get('add', 'TagController@create');
         Route::post('add', 'TagController@store');
-        Route::get('edit/{id}', 'TagController@edit');
-        Route::post('edit/{id}', 'TagController@update');
         Route::get('manage', 'TagController@index');
         Route::get('bin', 'TagController@bin');
-
-        Route::post('delete', 'TagController@delete');
-        Route::post('restore', 'TagController@restore');
-        Route::post('completed-delete', 'TagController@destroy');
+        Route::group(['middleware' => 'authorRole'], function () {
+            Route::get('edit/{id}', 'TagController@edit');
+            Route::post('edit/{id}', 'TagController@update');
+            Route::post('delete', 'TagController@delete');
+            Route::post('restore', 'TagController@restore');
+            Route::post('completed-delete', 'TagController@destroy');
+        });
     });
     Route::group(['prefix' => 'user','middleware' => 'adminRole'], function() {
         Route::get('view/{id}','UserController@show');

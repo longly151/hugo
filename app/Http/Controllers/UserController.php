@@ -104,7 +104,7 @@ class UserController extends Controller
         User::where('id',$id)->update(['status'=>'banned']);
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
     public function active(Request $request)
     {
@@ -112,7 +112,7 @@ class UserController extends Controller
         User::where('id',$id)->update(['status'=>'active']);
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
     public function delete(Request $request)
     {
@@ -120,7 +120,7 @@ class UserController extends Controller
         User::where('id',$id)->delete();
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
     public function restore(Request $request)
     {
@@ -128,7 +128,7 @@ class UserController extends Controller
         User::where('id',$id)->restore();
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
     public function destroy(Request $request)
     {
@@ -136,6 +136,6 @@ class UserController extends Controller
         User::where('id',$id)->forceDelete();
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
 }

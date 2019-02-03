@@ -44,7 +44,6 @@ class LoginController extends Controller
     }
     public function postLogin(UserLoginRequest $request){
         $validated = $request->validated();
-      
         if(Auth::attempt(['username'=>$request->username,'password'=>$request->password])) {
             if(Auth::user()->role_id == '4') {
                 $request->session()->put(

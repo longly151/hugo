@@ -35,7 +35,7 @@ class User extends Authenticatable
     }
     public static function boot() {
         parent::boot();
-        self::saving(function ($user) {
+        self::creating(function ($user) {
             if(strpos($user['phoneNumber'],'+84') === 0) {
                 $user['phoneNumber'] = str_replace('+84','0',$user['phoneNumber']);
             } elseif (strpos($user['phoneNumber'],'84') === 0) {
@@ -43,6 +43,14 @@ class User extends Authenticatable
             }
             $user['password'] = bcrypt($user['password']);
         });
+        self::updating(function ($user) {
+            if(strpos($user['phoneNumber'],'+84') === 0) {
+                $user['phoneNumber'] = str_replace('+84','0',$user['phoneNumber']);
+            } elseif (strpos($user['phoneNumber'],'84') === 0) {
+                $user['phoneNumber'] = str_replace('84','0',$user['phoneNumber']);
+            }
+        });
+        
     }
 
 

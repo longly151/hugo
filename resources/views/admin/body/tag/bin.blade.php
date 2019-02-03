@@ -54,10 +54,12 @@
                                     <td>{{$tag->user['fullname']}}</td>
                                     <td>{{$tag->deleted_at}}</td>
                                     <td>
-                                            <button data-id="{{ $tag->id }}" class="btn btn-success btn-xs restoreTag">
-                                                    <i class="fas fa-recycle"></i> Restore </button>
-                                            <button data-id="{{ $tag->id }}" type="button" class="btn btn-danger btn-xs completedDeleteTag">
-                                                <i class="far fa-trash-alt"></i> Completely Delete </button>
+                                        @if ($tag->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
+                                        <button data-id="{{ $tag->id }}" class="btn btn-success btn-xs restoreTag">
+                                                <i class="fas fa-recycle"></i> Restore </button>
+                                        <button data-id="{{ $tag->id }}" type="button" class="btn btn-danger btn-xs completedDeleteTag">
+                                            <i class="far fa-trash-alt"></i> Completely Delete </button>
+                                        @endif
                                     </td>
 
                                 </tr>

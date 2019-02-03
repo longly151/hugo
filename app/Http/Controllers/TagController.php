@@ -98,7 +98,7 @@ class TagController extends Controller
         Tag::where('id',$id)->delete();
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
     public function restore(Request $request)
     {
@@ -106,7 +106,7 @@ class TagController extends Controller
         Tag::where('id',$id)->restore();
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
     public function destroy(Request $request)
     {
@@ -114,6 +114,6 @@ class TagController extends Controller
         Tag::where('id',$id)->forceDelete();
         return response()->json([
             'messages' => 'success'
-        ]);
+        ],200);
     }
 }

@@ -423,7 +423,7 @@ const alertCompletedDeleteTag = (tag) => {
                         } else {
                             swal({
                                 title: 'Error',
-                                text: 'Fail to delete the post, please try again',
+                                text: 'Fail to delete the tag, please try again',
                             });
                         }
                     });

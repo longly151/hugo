@@ -28,16 +28,14 @@ class ProfileController extends Controller
         // update database
         $id = session()->get('admin')['id'];
         $user = User::find($id);
-        
         $user->email = $info['email'];
         $user->phoneNumber = $info['phoneNumber'];
         $user->address = $info['address'];
         $user->description = $info['description'];
         $user->save();
-        // get session data
         $info = User::where('id', $id)->select(['email','phoneNumber','address','description'])->first()->toArray();;
+        // get cUser
         $cUser = $request->session()->get('admin');
-
         $cUser['email'] = $info['email'];
         $cUser['phoneNumber'] = $info['phoneNumber'];
         $cUser['address'] = $info['address'];
@@ -51,11 +49,9 @@ class ProfileController extends Controller
         return redirect('admin/profile')->with(['success' => $messages,'active'=>'changeInfo']);
     }
     public function updatePassword(UserPasswordRequest $request){
-        $password = $request->input('password');
+        $password = bcrypt($request->input('password'));
         $id = session()->get('admin')['id'];
-        $user = User::find($id);
-        $user->password = $password;
-        $user->save();
+        $user = User::find($id)->update(['password' => $password]);
         return redirect('admin/profile')->with(['success' => 'Change password successfully','active'=>'changePassword']);
     }
 }
