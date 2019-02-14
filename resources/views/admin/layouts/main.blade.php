@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     @include('admin.partials.head')
-    @include('sweetalert::alert')
     @section('pageStylesheet')
         @show
 </head>
@@ -45,10 +44,12 @@
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
+    
     @include('admin.partials.scripts')
     @section('pageScript')
-        
+
     @show
+    <script src="js/main.js"></script>
 
 </body>
 

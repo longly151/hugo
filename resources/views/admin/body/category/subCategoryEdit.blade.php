@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h3 class="text-themecolor">Add Tag</h3>
+        <h3 class="text-themecolor">Edit Sub Category</h3>
     </div>
     <div class="col-md-7 align-self-center">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
             <li class="breadcrumb-item">Forms</li>
-            <li class="breadcrumb-item active">Add Tag</li>
+            <li class="breadcrumb-item active">Edit Sub Category</li>
         </ol>
     </div>
     <div class="">
@@ -21,22 +21,37 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card card-body">
-                <h4 class="card-title">Tag Info</h4>
+                <h4 class="card-title">Category Info</h4>
                 @if(session('success'))
                 <div class="alert alert-success" role="alert">
                     {{session('success')}}
                 </div>
                 @endif
-                <form class="form-horizontal m-t-40" ation="{{ url('admin/tag/add') }}" method="post">
+            <form class="form-horizontal m-t-40" ation="{{ url('admin/category/add') }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Tag Name" value="{{ old('name') }}">
+                    <input type="text" class="form-control" name="name" placeholder="Category Name" value="{{ null !== old('name')? old('name'): $subCategory->name }}">
                     @if($errors->has('name'))
                     <small class="form-control-feedback text-danger">
                         {{$errors->first('name')}}
                     </small>
                     @endif
+                </div>
+                <div class="form-group" id="topCategoriesForm">
+                    <h4 id="topCategoriesLabel" class="card-title">Top Category</h4>
+                    <select id="topCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="topCategory">
+                        @foreach ($topCategories as $topCategory)
+                            <option value="{{ $topCategory->id }}"
+                            {{null !== old('name')? ($topCategory->id == old('topCategory') ? 'selected':''):($topCategory->id == $subCategory->grandParent_id ? 'selected':'')}}>{{$topCategory->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group" id="categoriesForm" style="display:none;">
+                    <h4 id="categoriesLabel" class="card-title" >Parent Category</h4>
+                    <select id="categories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category">
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Author</label>
@@ -60,4 +75,32 @@
 <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
 <script src="plugins/dff/dff.js" type="text/javascript"></script>
 <script type="text/javascript" src="plugins/multiselect/js/jquery.multi-select.js"></script>
+<script>
+    $(document).ready(function () {
+        // for old value
+        $("#categoriesForm").show();
+        let id = $("#topCategories").val();
+        if (id == "0") {
+            $("#categoriesForm").hide();
+        } else {
+            $.get("/hugo/admin/ajax/category/"+id,function(categories) {
+                var data = categories;
+                $("#categories").html(data);
+                $("#categories").val({{null!=old('category')?old('category'):($subCategory->parent_id)}});
+            });
+        }
+        // for changed value
+        $("#topCategories").change(function() {
+            $("#categoriesForm").show()
+            let id = $(this).val();
+            if (id == "0") {
+                $("#categoriesForm").hide();
+            }
+            $.get("/hugo/admin/ajax/category/"+id, function(categories) {
+                let data = categories;
+                $("#categories").html(data);
+            });
+        });
+    });
+</script>
 @endsection

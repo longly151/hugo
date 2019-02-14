@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <base href="{{url('/public/admin')}}/">
     <meta charset="utf-8">
@@ -44,5 +43,4 @@
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
 </body>
-
 </html>

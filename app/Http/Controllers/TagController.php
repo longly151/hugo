@@ -86,12 +86,6 @@ class TagController extends Controller
         return redirect('admin/tag/manage')->with('success','Update tag successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function delete(Request $request)
     {
         $id = $request->json()->all();
@@ -108,6 +102,12 @@ class TagController extends Controller
             'messages' => 'success'
         ],200);
     }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy(Request $request)
     {
         $id = $request->json()->all();

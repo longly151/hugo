@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h3 class="text-themecolor">Add Tag</h3>
+        <h3 class="text-themecolor">Edit Category</h3>
     </div>
     <div class="col-md-7 align-self-center">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
             <li class="breadcrumb-item">Forms</li>
-            <li class="breadcrumb-item active">Add Tag</li>
+            <li class="breadcrumb-item active">Edit Category</li>
         </ol>
     </div>
     <div class="">
@@ -21,23 +21,34 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card card-body">
-                <h4 class="card-title">Tag Info</h4>
+                <h4 class="card-title">Category Info</h4>
                 @if(session('success'))
                 <div class="alert alert-success" role="alert">
                     {{session('success')}}
                 </div>
                 @endif
-                <form class="form-horizontal m-t-40" ation="{{ url('admin/tag/add') }}" method="post">
+            <form class="form-horizontal m-t-40" ation="{{ url('admin/category/add') }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Tag Name" value="{{ old('name') }}">
+                    <input type="text" class="form-control" name="name" placeholder="Category Name" value="{{ null !== old('name')? old('name'): $category->name }}">
+                    <input type="hidden" name="category" value="0">
                     @if($errors->has('name'))
                     <small class="form-control-feedback text-danger">
                         {{$errors->first('name')}}
                     </small>
                     @endif
                 </div>
+                <div class="form-group" id="topCategoriesForm">
+                    <h4 id="topCategoriesLabel" class="card-title">Top Category</h4>
+                    <select id="topCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="topCategory">
+                        @foreach ($topCategories as $topCategory)
+                            <option value="{{ $topCategory->id }}"
+                            {{null !== old('name')? ($topCategory->id == old('topCategory') ? 'selected':''):($topCategory->id == $category->parent_id ? 'selected':'')}}>{{$topCategory->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label>Author</label>
                     <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>

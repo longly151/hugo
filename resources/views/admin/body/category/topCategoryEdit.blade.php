@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h3 class="text-themecolor">Add Tag</h3>
+        <h3 class="text-themecolor">Edit Top Category</h3>
     </div>
     <div class="col-md-7 align-self-center">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
             <li class="breadcrumb-item">Forms</li>
-            <li class="breadcrumb-item active">Add Tag</li>
+            <li class="breadcrumb-item active">Edit Top Category</li>
         </ol>
     </div>
     <div class="">
@@ -21,17 +21,18 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card card-body">
-                <h4 class="card-title">Tag Info</h4>
+                <h4 class="card-title">Category Info</h4>
                 @if(session('success'))
                 <div class="alert alert-success" role="alert">
                     {{session('success')}}
                 </div>
                 @endif
-                <form class="form-horizontal m-t-40" ation="{{ url('admin/tag/add') }}" method="post">
+            <form class="form-horizontal m-t-40" ation="{{ url('admin/category/add') }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Tag Name" value="{{ old('name') }}">
+                    <input type="text" class="form-control" name="name" placeholder="Category Name" value="{{ null !== old('name')? old('name'): $topCategory->name }}">
+                    <input type="hidden" name="topCategory" value="0">
                     @if($errors->has('name'))
                     <small class="form-control-feedback text-danger">
                         {{$errors->first('name')}}
@@ -60,4 +61,5 @@
 <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
 <script src="plugins/dff/dff.js" type="text/javascript"></script>
 <script type="text/javascript" src="plugins/multiselect/js/jquery.multi-select.js"></script>
+
 @endsection

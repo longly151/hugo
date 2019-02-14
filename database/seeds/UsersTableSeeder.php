@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        $limit = 100;
+        $limit = 50;
         
         DB::table('users')->insert([
             [

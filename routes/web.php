@@ -45,9 +45,7 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         return view('admin.body.home');
     });
     Route::group(['prefix' => 'post'], function() {
-        Route::get('add', function () {
-            return view('admin.body.post.add');
-        });
+        Route::get('add', 'PostController@create');
         Route::get('manage', function () {
             return view('admin.body.post.manage');
         });
@@ -59,14 +57,32 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         });
     });
     Route::group(['prefix' => 'category'], function() {
-        Route::get('add', function () {
-            return view('admin.body.category.add');
+        Route::get('add', 'CategoryController@create');
+        Route::post('add', 'CategoryController@store');
+        Route::get('manage', 'CategoryController@index');
+        Route::get('bin', 'CategoryController@bin');
+        Route::group(['prefix' => 'edit'], function () {
+            Route::get('topcate/{id}', 'CategoryController@topCategoryEdit');
+            Route::post('topcate/{id}', 'CategoryController@topCategoryUpdate');
+            Route::get('cate/{id}', 'CategoryController@categoryEdit');
+            Route::post('cate/{id}', 'CategoryController@categoryUpdate');
+            Route::get('subcate/{id}', 'CategoryController@subCategoryEdit');
+            Route::post('subcate/{id}', 'CategoryController@subCategoryUpdate');
         });
-        Route::get('manage', function () {
-            return view('admin.body.category.manage');
+        Route::group(['prefix' => 'delete'], function () {
+            Route::post('topcate', 'CategoryController@topCategoryDelete');
+            Route::post('cate', 'CategoryController@categoryDelete');
+            Route::post('subcate', 'CategoryController@subCategoryDelete');
         });
-        Route::get('bin', function () {
-            return view('admin.body.category.bin');
+        Route::group(['prefix' => 'restore'], function () {
+            Route::post('topcate', 'CategoryController@topCategoryRestore');
+            Route::post('cate', 'CategoryController@categoryRestore');
+            Route::post('subcate', 'CategoryController@subCategoryRestore');
+        });
+        Route::group(['prefix' => 'completed-delete'], function () {
+            Route::post('topcate', 'CategoryController@topCategoryDestroy');
+            Route::post('cate', 'CategoryController@categoryDestroy');
+            Route::post('subcate', 'CategoryController@subCategoryDestroy');
         });
     });
     Route::group(['prefix' => 'tag'], function() {
@@ -124,5 +140,8 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         Route::get('503', function () {
             return view('admin.body.error.503');
         });
+    });
+    Route::group(['prefix' => 'ajax'], function() {
+        Route::get('category/{id}', 'AjaxController@getCategories');
     });
 });

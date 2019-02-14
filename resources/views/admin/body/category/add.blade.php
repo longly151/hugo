@@ -22,19 +22,45 @@
         <div class="col-sm-12">
             <div class="card card-body">
                 <h4 class="card-title">Category Info</h4>
-                <form class="form-horizontal m-t-40">
-                    <div class="form-group">
-                        <label for="title">Name</label>
-                        <input type="text" class="form-control" name="title" placeholder="Title" value="">
-                    </div>
-                    <div class="form-group">
-                        <fieldset disabled>
-                            <label for="disabledTextInput">Disabled input</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Viet Long Le">
-                        </fieldset>
-                    </div>
-                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                @if(session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{session('success')}}
+                </div>
+                @endif
+            <form class="form-horizontal m-t-40" ation="{{ url('admin/category/add') }}" method="post">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="title">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Category Name" value="{{ old('name') }}">
+                    @if($errors->has('name'))
+                    <small class="form-control-feedback text-danger">
+                        {{$errors->first('name')}}
+                    </small>
+                    @endif
+                </div>
+                <div class="form-group" id="topCategoriesForm">
+                    <h4 id="topCategoriesLabel" class="card-title">Top Category</h4>
+                    <select id="topCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="topCategory">
+                        <option value="0">-- Select Category --</option>
+                        @foreach ($topCategories as $topCategory)
+                            <option value="{{ $topCategory->id }}"
+                            {{$topCategory->id == old('topCategory') ? 'selected':''}}>{{$topCategory->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group" id="categoriesForm" style="display:none;">
+                    <h4 id="categoriesLabel" class="card-title" >Parent Category</h4>
+                    <select id="categories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>
+                    <input type="hidden" name="author_id" value="{{ session()->get('admin')['id'] }}">
+                </div>
+                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
                 </form>
             </div>
         </div>
@@ -50,4 +76,32 @@
 <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
 <script src="plugins/dff/dff.js" type="text/javascript"></script>
 <script type="text/javascript" src="plugins/multiselect/js/jquery.multi-select.js"></script>
+<script>
+    $(document).ready(function () {
+        // for old value
+        $("#categoriesForm").show();
+        let id = $("#topCategories").val();
+        if (id == "0") {
+            $("#categoriesForm").hide();
+        } else {
+            $.get("/hugo/admin/ajax/category/"+id,function(categories) {
+                var data = '<option value="0">-- Select Category --</option>'+categories;
+                $("#categories").html(data);
+                $("#categories").val({{null!=old('category')?old('category'):'0'}});
+            });
+        }
+        // for changed value
+        $("#topCategories").change(function() {
+            $("#categoriesForm").show()
+            let id = $(this).val();
+            if (id == "0") {
+                $("#categoriesForm").hide();
+            }
+            $.get("/hugo/admin/ajax/category/"+id, function(categories) {
+                let data = '<option value="0">-- Select Category --</option>'+categories;
+                $("#categories").html(data);
+            });
+        });
+    });
+</script>
 @endsection
