@@ -3,9 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\TopCategory;
 use App\Category;
-use App\SubCategory;
 class CategoryRequest extends FormRequest
 {
     /**
@@ -44,7 +42,7 @@ class CategoryRequest extends FormRequest
     public function withValidator($validator) {
         $validator->after(function ($validator) {
             if ($this->topCategory == "0"){
-                if (TopCategory::where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
+                if (Category::where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
                     $validator->errors()->add('name','Top Category already exists');
                 }
             } else {
@@ -54,7 +52,7 @@ class CategoryRequest extends FormRequest
                     }
                 }
                 else {
-                    if (SubCategory::where([['id','!=',$this->id],'url'=>str_slug($this->name),'parent_id'=>$this->category])->first()){
+                    if (Category::where([['id','!=',$this->id],'url'=>str_slug($this->name),'parent_id'=>$this->category])->first()){
                         $validator->errors()->add('name','Sub Category already exists');
                     }
                 }

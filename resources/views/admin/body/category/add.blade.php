@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="form-group" id="categoriesForm" style="display:none;">
-                    <h4 id="categoriesLabel" class="card-title" >Parent Category</h4>
+                    <h4 id="categoriesLabel" class="card-title">Parent Category</h4>
                     <select id="categories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category">
                     </select>
                 </div>

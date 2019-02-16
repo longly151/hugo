@@ -7,6 +7,7 @@ use App\Http\Requests\UserLoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -81,9 +82,17 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
+        $user = Auth::user();
+        $dbUser = User::where('id',$user->id)->first();
+        $msg = '';
+        if($dbUser->status == 'banned'){
+            $msg = 'Your account has been banned by Admin';
+        } else if ($dbUser->status == 'pending') {
+            $msg = 'Your account is waiting for review from admin. Please try again later';
+        }
         Auth::logout();
         $request->session()->flush();
         $request->session()->regenerate();
-        return redirect('/admin/login');
+        return redirect('/admin/login')->with('deny',$msg);
     }
 }

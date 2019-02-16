@@ -18,8 +18,8 @@ class Categories extends Migration
             $table->string('name');
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->integer('parent_id')->unsigned();
-            $table->foreign('parent_id')->references('id')->on('top_categories')->onDelete('CASCADE');
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on('categories')->onDelete('CASCADE');
             $table->string('url');
             $table->timestamps();
             $table->softDeletes();

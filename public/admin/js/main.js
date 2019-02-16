@@ -38,46 +38,6 @@ const alertDeleteTag = (tag) => {
             }
         });
 };
-const alertDeleteTopCategory = (category) => {
-    const id = $(category).data('id');
-    swal({
-            title: 'Delete Top Category ?',
-            text: 'Categories and Subcategories related will be erased',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/hugo/admin/category/delete/topcate', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Deleted',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            location.reload();
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to delete the category, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
 const alertDeleteCategory = (category) => {
     const id = $(category).data('id');
     swal({
@@ -90,47 +50,7 @@ const alertDeleteCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/category/delete/cate', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Deleted',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            location.reload();
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to delete the category, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
-const alertDeleteSubCategory = (category) => {
-    const id = $(category).data('id');
-    swal({
-            title: 'Delete Sub Category ?',
-            text: '',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/hugo/admin/category/delete/subcate', {
+                fetch('/hugo/admin/category/delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -316,45 +236,6 @@ const alertRestoreTag = (tag) => {
             }
         });
 };
-const alertRestoreTopCategory = (category) => {
-    const id = $(category).data('id');
-    swal({
-            title: 'Restore Top Category ?',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/hugo/admin/category/restore/topcate', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Success',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            location.reload();
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to restore the category, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
 const alertRestoreCategory = (category) => {
     const id = $(category).data('id');
     swal({
@@ -366,46 +247,7 @@ const alertRestoreCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/category/restore/cate', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Success',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            location.reload();
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to restore the category, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
-const alertRestoreSubCategory = (category) => {
-    const id = $(category).data('id');
-    swal({
-            title: 'Restore Sub Category ?',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/hugo/admin/category/restore/subcate', {
+                fetch('/hugo/admin/category/restore', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -588,45 +430,6 @@ const alertCompletedDeleteTag = (tag) => {
             }
         });
 };
-const alertCompletedDeleteTopCategory = (category) => {
-    const id = $(category).data('id');
-    swal({
-            title: 'Delete the top category completely ?',
-            text: 'The category cannot be restored',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/hugo/admin/category/completed-delete/topcate', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Deleted',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to delete the category, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
 const alertCompletedDeleteCategory = (category) => {
     const id = $(category).data('id');
     swal({
@@ -639,46 +442,7 @@ const alertCompletedDeleteCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/category/completed-delete/cate', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            id,
-                        }),
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                    })
-                    .then((value) => {
-                        if (value.status === 200) {
-                            location.reload();
-                            Swal(
-                                'Deleted',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to delete the category, please try again',
-                            });
-                        }
-                    });
-            }
-        });
-};
-const alertCompletedDeleteSubCategory = (category) => {
-    const id = $(category).data('id');
-    swal({
-            title: 'Delete the sub category completely ?',
-            text: 'The category cannot be restored',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-        })
-        .then((result) => {
-            if (result.value) {
-                fetch('/hugo/admin/category/completed-delete/subcate', {
+                fetch('/hugo/admin/category/completed-delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -813,17 +577,9 @@ $(document).ready(() => {
         const tag = this;
         alertDeleteTag(tag);
     });
-    $('.deleteTopCategory').click(function handle() {
-        const category = this;
-        alertDeleteTopCategory(category);
-    });
     $('.deleteCategory').click(function handle() {
         const category = this;
         alertDeleteCategory(category);
-    });
-    $('.deleteSubCategory').click(function handle() {
-        const category = this;
-        alertDeleteSubCategory(category);
     });
     $('.deletePost').click(function handle() {
         const post = this;
@@ -842,17 +598,9 @@ $(document).ready(() => {
         const tag = this;
         alertRestoreTag(tag);
     });
-    $('.restoreTopCategory').click(function handle() {
-        const category = this;
-        alertRestoreTopCategory(category);
-    });
     $('.restoreCategory').click(function handle() {
         const category = this;
         alertRestoreCategory(category);
-    });
-    $('.restoreSubCategory').click(function handle() {
-        const category = this;
-        alertRestoreSubCategory(category);
     });
     $('.restorePost').click(function handle() {
         const post = this;
@@ -871,17 +619,9 @@ $(document).ready(() => {
         const tag = this;
         alertCompletedDeleteTag(tag);
     });
-    $('.completedDeleteTopCategory').click(function handle() {
-        const category = this;
-        alertCompletedDeleteTopCategory(category);
-    });
     $('.completedDeleteCategory').click(function handle() {
         const category = this;
         alertCompletedDeleteCategory(category);
-    });
-    $('.completedDeleteSubCategory').click(function handle() {
-        const category = this;
-        alertCompletedDeleteSubCategory(category);
     });
     $('.completedDeletePost').click(function handle() {
         const post = this;
@@ -915,4 +655,3 @@ $(document).ready(() => {
     })
     
 });
-

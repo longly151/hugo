@@ -55,7 +55,7 @@
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
                                         <button data-id="{{ $topCategory['id'] }}" class="btn btn-success btn-xs restoreTopCategory">
                                             <i class="fas fa-recycle"></i> Restore </button>
-                                        <button data-id="{{ $topCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteTopCategory">
+                                        <button data-id="{{ $topCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
                                         @endif
                                     </td>
@@ -75,7 +75,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Parent Category</th>
+                                    <th>Parent Cate</th>
                                     <th>Author</th>
                                     <th>Created At</th>
                                     <th>Tools</th>
@@ -85,8 +85,7 @@
                                 @foreach ($categories as $category)
                                 <tr>
                                     <td>{{$category['name']}}</td>
-                                    {{-- <td>{{$topCategory['name']}}</td> --}}
-                                    <td></td>
+                                    <td>{{array_key_exists("topCategory",$category) ? $category['topCategory']['name']:''}}</td>
                                     <td>{{$category['author_fullname']}}</td>
                                     <td>{{$category['created_at']}}</td>
                                     <td>
@@ -125,9 +124,8 @@
                                 @foreach ($subCategories as $subCategory)
                                 <tr>
                                     <td>{{$subCategory['name']}}</td>
-                                    {{-- <td>{{$category['name']}}</td>
-                                    <td>{{$topCategory['name']}}</td> --}}
-                                    <td></td><td></td>
+                                    <td>{{array_key_exists('category', $subCategory) ? $subCategory['category']['name']:''}}</td>
+                                    <td>{{array_key_exists('category', $topCategory) ? $subCategory['topCategory']['name']:''}}</td>
                                     <td>{{$subCategory['author_fullname']}}</td>
                                     <td>{{$subCategory['created_at']}}</td>
                                     <td>
