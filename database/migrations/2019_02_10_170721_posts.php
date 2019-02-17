@@ -15,18 +15,18 @@ class Posts extends Migration
     {
         Schema::create('posts',function(Blueprint $table){
             $table->increments('id');
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->text('content');
+            $table->mediumText('title',500000);
+            $table->mediumText('description')->nullable();
+            $table->longText('content');
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->integer('tag_id')->unsigned()->nullable();
-            $table->foreign('tag_id')->references('id')->on('tags');
             $table->string('cover')->nullable();
+            $table->bigInteger('views')->default(0);
             $table->string('url');
             $table->timestamps();
+            $table->datetime('public_at')->nullable()->default(now());
             $table->softDeletes();
         });
     }

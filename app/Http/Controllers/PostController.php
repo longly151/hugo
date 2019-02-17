@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use App\Tag;
-use App\TopCategory;
 use App\Category;
-use App\SubCategory;
 use App\Post;
 
 class PostController extends Controller
@@ -30,7 +28,7 @@ class PostController extends Controller
     public function create()
     {
         $tags = Tag::select('id','name')->get();
-        $topCategories = TopCategory::select('id','name')->get();
+        $topCategories = Category::where('parent_id',NULL)->select('id','name')->get();
         return view('admin.body.post.add',['topCategories'=>$topCategories,'tags'=>$tags]);
     }
 

@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label for="area">Content</label>
-                        <textarea id="mymce" name="content">{{ old('content') }}</textarea>
+                        <textarea id="editor1" name="content" rows="10" cols="80">{{ old('content') }}</textarea>
                         @if($errors->has('content'))
                         <small class="form-control-feedback text-danger">
                             {{$errors->first('content')}}
@@ -59,7 +59,7 @@
                     
                     <div class="form-group">
                         <h4 id="topCategoriesLabel" class="card-title">Top Category</h4>
-                        <select id="topCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="topcategory_id">
+                        <select id="topCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="topCategory">
                             <option value="0">-- Select Category --</option>
                             @foreach ($topCategories as $topCategory)
                                 <option value="{{ $topCategory->id }}"
@@ -74,7 +74,7 @@
                     </div>
                     <div class="form-group" id="categoriesForm" style="display:none;">
                         <h4 id="categoriesLabel" class="card-title">Parent Category</h4>
-                        <select id="categories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category_id">
+                        <select id="categories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category">
                         </select>
                         @if($errors->has('category'))
                         <small class="form-control-feedback text-danger">
@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group" id="subCategoriesForm" style="display:none;">
                         <h4 id="subCategoriesLabel" class="card-title">Child Category</h4>
-                        <select id="subCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="subcategory_id">
+                        <select id="subCategories" class="select2 form-control custom-select" style="width: 100%; height:36px;" name="subCategory">
                         </select>
                         @if($errors->has('subCategory'))
                         <small class="form-control-feedback text-danger">
@@ -95,10 +95,15 @@
 
                     <div class="form-group">
                         <h4 class="m-t-20">Tag</h4>
-                        <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose" name="tag_id[]">
+                        <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose" name="tags[]">
                             @foreach ($tags as $tag)
                             <option value="{{ $tag->id }}"
-                            {{$tag->id == old('tag') ? 'selected':''}}>{{$tag->name}}</option>
+                                @if (is_array(old('tags')))
+                                @foreach (old('tags') as $oldTag)
+                                {{$tag->id == $oldTag ? 'selected':''}}
+                                @endforeach
+                                @endif
+                            >{{$tag->name}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('tag'))
@@ -237,7 +242,7 @@ jQuery(document).ready(function () {
 });
 </script>
 
-<script src="plugins/tinymce/tinymce.min.js"></script>
+{{-- <script src="plugins/tinymce/tinymce.min.js"></script>
 <script>
 $(document).ready(function() {
     if ($("#mymce").length > 0) {
@@ -255,6 +260,14 @@ $(document).ready(function() {
         });
     }
 });
+</script> --}}
+
+<script src="{{asset('public/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('public/ckfinder/ckfinder.js')}}"></script>
+<script>
+    CKEDITOR.replace('editor1', {
+    filebrowserBrowseUrl: "{{asset('public/ckfinder/ckfinder.html')}}",
+    filebrowserUploadUrl: "{{asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
 </script>
 <script>
     $(document).ready(function () {
@@ -265,35 +278,36 @@ $(document).ready(function() {
             $("#categoriesForm").hide();
             $("#subCategoriesForm").hide();
         } else {
-            $.get("/hugo/admin/ajax/category/topcate/"+topCategoryId,function(categories) {
+            $.get("/hugo/admin/ajax/category/"+topCategoryId,function(categories) {
                 var data = '<option value="0">-- Select Category --</option>'+categories;
                 $("#categories").html(data);
                 $("#categories").val({{null!=old('category')?old('category'):'0'}});
             });
             $("#subCategoriesForm").show();
-            let categoryId= $("#categories").val();
-            if (categoryId== "0") {
+            let categoryId = '{{ old('category') }}';
+            if (!categoryId||categoryId == "0") {
                 $("#subCategoriesForm").hide();
             } else {
-                $.get("/hugo/admin/ajax/category/cate/"+categoryId,function(categories) {
+                $.get("/hugo/admin/ajax/category/"+categoryId,function(categories) {
                     var data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#subCategories").html(data);
-                    $("#subCategories").val({{null!=old('category')?old('category'):'0'}});
+                    $("#subCategories").val({{null!=old('subCategory')?old('subCategory'):'0'}});
                 });
             }
         }
         // for changed value
         $("#topCategories").change(function() {
             $("#categoriesForm").show()
+            $("#subCategoriesForm").hide()
+            $("#subCategories").val("0");
             let topCategoryId= $(this).val();
             if (topCategoryId== "0") {
                 $("#categoriesForm").hide();
                 $("#subCategoriesForm").hide();
             } else {
-                    $.get("/hugo/admin/ajax/category/topcate/"+topCategoryId, function(categories) {
+                    $.get("/hugo/admin/ajax/category/"+topCategoryId, function(categories) {
                     let data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#categories").html(data);
-
                 });
             }
         });
@@ -303,13 +317,14 @@ $(document).ready(function() {
             if (categoryId== "0") {
                 $("#subCategoriesForm").hide();
             } else {
-                    $.get("/hugo/admin/ajax/category/cate/"+categoryId, function(categories) {
+                    $.get("/hugo/admin/ajax/category/"+categoryId, function(categories) {
                     let data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#subCategories").html(data);
                 });
             }
         });
-        
     });
 </script>
+
+
 @endsection
