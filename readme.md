@@ -3,10 +3,10 @@
 <p>composer install</p>
 <p>#Copy .env.example and rename it to “.env”</p>
 ------- For MacOS -------
-<p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo/storage (use your own project link instead of this example)</p>
-<p>chmod -R 777 ./logs</p>
-<p>chmod -R 777 ./framework</p>
 <p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo (use your own project link instead of this example)</p>
+<p>chmod -R 777 ./storage/logs</p>
+<p>chmod -R 777 ./storage/framework</p>
+
 -------------------------
 <p>php artisan key:generate</p>
 <p>#Create database name "hugo"</p>
