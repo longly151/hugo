@@ -1,6 +1,6 @@
 ## How to clone my project
 
-<p style="font-weight: bold;">------- For Windows ------- </p>
+-------------------- For Windows --------------------
 <p>git clone https://github.com/longly151/hugo</p>
 <p>composer install</p>
 <p>#Copy .env.example and rename it to “.env”</p>
@@ -9,7 +9,7 @@
 <p>php artisan migrate</p>
 <p>php artisan db:seed</p>
 
-------- For MacOS -------
+-------------------- For MacOS --------------------
 
 <p>git clone https://github.com/longly151/hugo</p>
 <p>composer install</p>
