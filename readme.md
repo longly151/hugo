@@ -13,6 +13,20 @@
 <p>php artisan migrate</p>
 <p>php artisan db:seed</p>
 <p>Go to the browser to enter the link http://localhost/hugo/admin and enjoy this shit</p>
+<pre>Admin account: ([
+        [
+            username: admin,
+            password: admin
+        ],
+        [
+            username: admin2,
+            password: admin
+        ],
+        [
+            username: admin3,
+            password: admin
+        ],
+    ]) </pre>
 
 -------------------- For MacOS --------------------
 <p>#open terminal</p>
@@ -45,7 +59,7 @@
             password: admin
         ],
     ]) </pre>
--------------------------
+--------------------------------------------------
 
 ## That's it
 
