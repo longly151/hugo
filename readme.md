@@ -1,6 +1,6 @@
 ## How to clone my project
 
-------- For Windows -------
+<p style="font-weight: bold;">------- For Windows ------- </p>
 <p>git clone https://github.com/longly151/hugo</p>
 <p>composer install</p>
 <p>#Copy .env.example and rename it to “.env”</p>
