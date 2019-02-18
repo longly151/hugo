@@ -4,6 +4,8 @@
 <p>#open cmd</p>
 <p>cd C:\xampp\htdocs</p>
 <p>git clone https://github.com/longly151/hugo</p>
+<p>#Open my project by Visual Code</p>
+<p>#Open terminal in Visual Code</p>
 <p>composer install</p>
 <p>#Copy .env.example and rename it to “.env”</p>
 <p>php artisan key:generate</p>
@@ -15,6 +17,8 @@
 <p>#open terminal</p>
 <p>cd /Applications/XAMPP/htdocs</p>
 <p>git clone https://github.com/longly151/hugo</p>
+<p>#Open my project by Visual Code</p>
+<p>#Open terminal in Visual Code</p>
 <p>composer install</p>
 <p>#Copy .env.example and rename it to “.env”</p>
 <p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo</p>
