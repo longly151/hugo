@@ -6,6 +6,7 @@
 <p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo (use your own project link instead of this example)</p>
 <p>chmod -R 777 ./storage/logs</p>
 <p>chmod -R 777 ./storage/framework</p>
+<p>chmod -R 777 ./public/ckfinder</p>
 
 -------------------------
 <p>php artisan key:generate</p>
