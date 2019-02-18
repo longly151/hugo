@@ -57,9 +57,9 @@ class Handler extends ExceptionHandler
                 case 403:
                     return redirect('/admin/error/403');
                     break;
-                // case 404:
-                //     return redirect('/admin/error/404');
-                //     break;
+                case 404:
+                    return redirect('/admin/error/404');
+                    break;
                 case 500:
                     return redirect('/admin/error/500');
                     break;

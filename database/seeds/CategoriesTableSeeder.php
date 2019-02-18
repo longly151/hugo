@@ -32,6 +32,7 @@ class CategoriesTableSeeder extends Seeder
             ['name' => 'Financial','url' => 'financial','parent_id'=>6,'author_id' => 2,'created_at' => now(),'updated_at' => now()],
             ['name' => 'Champion League','url' => 'champion-league','parent_id'=>9,'author_id' => 2,'created_at' => now(),'updated_at' => now()],
             ['name' => 'Europe','url' => 'europe','parent_id'=>9,'author_id' => 2,'created_at' => now(),'updated_at' => now()],
+            ['name' => 'V-League','url' => 'v-league','parent_id'=>9,'author_id' => 2,'created_at' => now(),'updated_at' => now()],
         ]);
     }
 }

@@ -17,7 +17,18 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::orderBy('created_at','desc')->paginate(5);
+        return view('admin.body.post.manage',['posts'=>$posts]);
+    }
+    public function manageByAuthor()
+    {
+        $posts = Post::where('author_id',session('admin')['id'])->paginate(5);
+        return view('admin.body.post.manage',['posts'=>$posts]);
+    }
+    public function bin()
+    {
+        $posts = Post::onlyTrashed()->orderBy('created_at','desc')->paginate(5);
+        return view('admin.body.post.bin',['posts'=>$posts]);
     }
 
     /**
@@ -40,8 +51,38 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $post = $request->except('_token');
-        Post::create($post);
+        $post = $request->except('_token','tags');
+        // handle category
+        if($post['topCategory'] == '0') {
+            unset($post['topCategory']);
+            unset($post['category']);
+            unset($post['subCategory']);
+        } else {
+            if ($post['category'] == 0) {
+                $post['category'] = $post['topCategory'];
+                unset($post['topCategory']);
+                unset($post['subCategory']);
+            } else {
+                if ($post['subCategory'] == 0) {
+                    unset($post['topCategory']);
+                    unset($post['subCategory']);
+                } else {
+                    
+                    $post['category'] = $post['subCategory'];
+                    unset($post['topCategory']);
+                    unset($post['subCategory']);
+                }
+            }
+        }
+        
+        $dbPost = new Post;
+        $dbPost->title = $post['title'];
+        $dbPost->description = $post['description'];
+        $dbPost->content = $post['content'];
+        $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
+        $dbPost->author_id = $post['author_id'];
+        $dbPost->save();
+        $dbPost->tags()->sync($request->tags);  
         return redirect('/admin/post/manage')->with('success','Add post successfully');
     }
 
@@ -64,7 +105,24 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::where('id',$id)->first();
+        $tags = Tag::select('id','name')->get();
+        $topCategories = Category::where('parent_id',NULL)->select('id','name')->get();
+        if ($post->category){
+            if($post->category->categoryType() == 'topCategory') {
+                $post->topCategory = $post->category;
+                $post->category = '';
+            } else {
+                if($post->category->categoryType() == 'category') {
+                    $post->topCategory = Category::where('id',$post->category['parent_id'])->first();
+                } else {
+                    $post->subCategory = $post->category;
+                    $post->category = Category::where('id',$post->subCategory['parent_id'])->first();
+                    $post->topCategory = Category::where('id',$post->category['parent_id'])->first();
+                }
+            }
+        }
+        return view('admin.body.post.edit',['post'=>$post,'topCategories'=>$topCategories,'tags'=>$tags]);
     }
 
     /**
@@ -76,7 +134,39 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = $request->except('_token','tags');
+        // handle category
+        if($post['topCategory'] == '0') {
+            unset($post['topCategory']);
+            unset($post['category']);
+            unset($post['subCategory']);
+        } else {
+            if ($post['category'] == 0) {
+                $post['category'] = $post['topCategory'];
+                unset($post['topCategory']);
+                unset($post['subCategory']);
+            } else {
+                if ($post['subCategory'] == 0) {
+                    unset($post['topCategory']);
+                    unset($post['subCategory']);
+                } else {
+                    
+                    $post['category'] = $post['subCategory'];
+                    unset($post['topCategory']);
+                    unset($post['subCategory']);
+                }
+            }
+        }
+        
+        $dbPost = Post::find($id);
+        $dbPost->title = $post['title'];
+        $dbPost->description = $post['description'];
+        $dbPost->content = $post['content'];
+        $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
+        $dbPost->author_id = $post['author_id'];
+        $dbPost->save();
+        $dbPost->tags()->sync($request->tags);  
+        return redirect('/admin/post/manage')->with('success','Add post successfully');
     }
 
     /**
@@ -85,8 +175,29 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        $id = $request->json()->all();
+        Post::where('id',$id)->delete();
+        return response()->json([
+            'messages' => 'success'
+        ],200);
     }
+    public function restore(Request $request)
+    {
+        $id = $request->json()->all();
+        Post::where('id',$id)->restore();
+        return response()->json([
+            'messages' => 'success'
+        ],200);
+    }
+    public function destroy(Request $request)
+    {
+        $id = $request->json()->all();
+        Post::where('id',$id)->forceDelete();
+        return response()->json([
+            'messages' => 'success'
+        ],200);
+    }
+    
 }

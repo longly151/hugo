@@ -44,8 +44,6 @@ class CategoryController extends Controller
             }
             
         }
-        // print_r($categories);exit();
-
         foreach($categories as $i => $category){
             $dbTopCategory = Category::where('id',$category['parent_id'])->select('categories.name')->first();
             if($dbTopCategory) $categories[$i] = array_add($category,'topCategory',$dbTopCategory->toArray());
@@ -122,22 +120,25 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $topCategory = Category::where('id',$id)->first();
-        return view('admin.body.category.topCategoryEdit',['topCategory'=>$topCategory]);
-    }
-    public function categoryEdit($id)
-    {
-        $topCategories = Category::select('id','name')->get();
-        $category = Category::where('id',$id)->first();
-        return view('admin.body.category.categoryEdit',['category'=>$category,'topCategories'=>$topCategories]);
-    }
-    public function subCategoryEdit($id)
-    {
-        $topCategories = Category::select('id','name')->get();
-        $subCategory = Category::where('id',$id)->first();
-        $category = Category::where('id',$subCategory->parent_id)->select('parent_id')->first();
-        $subCategory->grandParent_id = Category::where('id',$category->parent_id)->select('id')->first()->id;
-        return view('admin.body.category.subCategoryEdit',['subCategory'=>$subCategory,'topCategories'=>$topCategories]);
+        $topCategories = Category::where('parent_id',NULL)->get();
+        $dbCategory = Category::where('id',$id)->first();
+        $type = $dbCategory->categoryType();
+        if ($type == 'topCategory') {
+            $subCategory = '';
+            $category = '';
+            $topCategory = $dbCategory;
+        } else {
+            if ($type == 'category') {
+                $subCategory = '';
+                $category = $dbCategory;
+                $topCategory = Category::where('id',$dbCategory->parent_id)->first();
+            } else if ($type == 'subCategory') {
+                $subCategory = $dbCategory;
+                $category = Category::where('id',$dbCategory->parent_id)->first();
+                $topCategory = Category::where('id',$category->parent_id)->first();
+            }
+        }
+        return view('admin.body.category.edit',['topCategories'=>$topCategories,'currentTopCategory'=>$topCategory,'currentCategory'=>$category,'currentSubCategory'=>$subCategory,'type'=>$type]);
     }
 
     /**
@@ -147,39 +148,26 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function topCategoryUpdate(CategoryRequest $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
-        $name = $request->input('name');
-        $topCategory = Category::find($id);
-        $topCategory->name = $name;
-        $topCategory->save();
-        return redirect('admin/category/manage')->with('success','Update Top Category successfully');
-    }
-    public function categoryUpdate(CategoryRequest $request, $id)
-    {
-        $name = $request->input('name');
-        $topCategory = $request->input('topCategory');
+        // print_r($request->all());exit();
         $dbCategory = Category::find($id);
-        $dbCategory->name = $name;
-        $dbCategory->parent_id = $topCategory;
-        $dbCategory->save();
-        return redirect('/admin/category/manage')->with('success','Update category successfully');
-    }
-    public function subCategoryUpdate(CategoryRequest $request, $id)
-    {
-        $name = $request->input('name');
-        $topCategory = $request->input('topCategory');
-        $category = $request->input('category');
-        if ($category){
-            $dbCategory = Category::find($id);
-            $dbCategory->name = $name;
-            $dbCategory->parent_id = $category;
+        $dbCategory->name = $request->input('name');
+        $type = $dbCategory->categoryType();
+        if ($type == 'topCategory') {
             $dbCategory->save();
-            return redirect('/admin/category/manage')->with('success','Update Sub Category successfully');
         } else {
-            return redirect('/admin/category/manage')->with('error','Update Sub Category Fail due to empty "Parent Category". Please create new Category');
+            if ($type == 'category') {
+                $dbCategory->parent_id = $request->input('topCategory');
+                $dbCategory->save();
+            } else if ($type == 'subCategory') {
+                if (!$request->input('category')||$request->input('category') == '0')
+                    return redirect('/admin/category/manage')->with('error','Update category fail due to empty Category. Please create new Category and try again');
+                $dbCategory->parent_id = $request->input('category');
+                $dbCategory->save();
+            }
         }
-        
+        return redirect('/admin/category/manage')->with('success','Update category successfully');
     }
 
     public function delete(Request $request)

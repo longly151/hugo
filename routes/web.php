@@ -47,15 +47,14 @@ Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
     Route::group(['prefix' => 'post'], function() {
         Route::get('add', 'PostController@create');
         Route::post('add', 'PostController@store');
-        Route::get('manage', function () {
-            return view('admin.body.post.manage');
-        });
-        Route::get('manage-by-author', function () {
-            return view('admin.body.post.manage-by-author');
-        });
-        Route::get('bin', function () {
-            return view('admin.body.post.bin');
-        });
+        Route::get('manage', 'PostController@index');
+        Route::get('manage-by-author', 'PostController@manageByAuthor');
+        Route::get('edit/{id}', 'PostController@edit');
+        Route::post('edit/{id}', 'PostController@update');
+        Route::get('bin', 'PostController@bin');
+        Route::post('delete', 'PostController@delete');
+        Route::post('completed-delete', 'PostController@destroy');
+        Route::post('restore', 'PostController@restore');
     });
     Route::group(['prefix' => 'category'], function() {
         Route::get('add', 'CategoryController@create');

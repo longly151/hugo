@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Posts extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,15 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create('posts',function(Blueprint $table){
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->mediumText('title',500000);
-            $table->mediumText('description')->nullable();
-            $table->longText('content');
+            $table->string('name');
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->integer('category_id')->unsigned()->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->string('cover')->nullable();
-            $table->bigInteger('views')->default(0);
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on('categories')->onDelete('CASCADE');
             $table->string('url');
             $table->timestamps();
-            $table->datetime('public_at')->nullable()->default(now());
             $table->softDeletes();
         });
     }
@@ -38,6 +33,6 @@ class Posts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('categories');
     }
 }

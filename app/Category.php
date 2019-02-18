@@ -16,8 +16,14 @@ class Category extends Model
     public function author() {
         return $this->belongsTo('App\User', 'author_id', 'id');
     }
-    public function topCategory() {
-        return $this->belongsTo('App\TopCategory',  'parent_id', 'id');
+    public function categoryType() {
+        $dbCategory = Category::where('id',$this->id)->select('id','parent_id')->first();
+        if(!$dbCategory->parent_id) return 'topCategory';
+        else {
+            $parentCate = Category::where('id',$this->parent_id)->select('id','parent_id')->first();
+            if (!$parentCate->parent_id) return 'category';
+            else return 'subCategory';
+        }
     }
     public static function boot() {
         parent::boot();
