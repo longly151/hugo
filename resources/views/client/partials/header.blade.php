@@ -5,7 +5,7 @@
 			<div id="logo">
 				<h1>
 					<a href="{{ url('/') }}"><img src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/logo-o.png"
-						 alt="Soledad Coffee Blog" /></a>
+							alt="Soledad Coffee Blog" /></a>
 				</h1>
 			</div>
 		</div>

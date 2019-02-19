@@ -790,7 +790,7 @@
 
 <div id="fb-root"></div>
 <div id="penci-demobar" class="penci-main-demobar hide-demos-bar">
-	<div class="style-toggle">Open</div>
+	{{-- <div class="style-toggle">Open</div> --}}
 	<div id="penci-demobar-container">
 		<div class="penci-demobar-wrapper">
 			<div class="demobar-content demobar-content-first clearfix">
