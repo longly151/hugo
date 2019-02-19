@@ -1,18 +1,65 @@
 ## How to clone my project
+
+---------------------------------------- For Windows ----------------------------------------
+<p>#open cmd</p>
+<p>cd C:\xampp\htdocs</p>
 <p>git clone https://github.com/longly151/hugo</p>
+<p>#Open my project by Visual Code</p>
+<p>#Open terminal in Visual Code</p>
 <p>composer install</p>
 <p>#Copy .env.example and rename it to “.env”</p>
-------- For MacOS -------
-<p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo (use your own project link instead of this example)</p>
-<p>chmod -R 777 ./storage/logs</p>
-<p>chmod -R 777 ./storage/framework</p>
-<p>chmod -R 777 ./public/ckfinder</p>
-
--------------------------
 <p>php artisan key:generate</p>
 <p>#Create database name "hugo"</p>
 <p>php artisan migrate</p>
 <p>php artisan db:seed</p>
+<p>Go to the browser to enter the link http://localhost/hugo/admin and enjoy this shit</p>
+<pre>Admin account: ([
+        [
+            username: admin,
+            password: admin
+        ],
+        [
+            username: admin2,
+            password: admin
+        ],
+        [
+            username: admin3,
+            password: admin
+        ],
+    ]) </pre>
+
+---------------------------------------- For MacOS ----------------------------------------
+<p>#open terminal</p>
+<p>cd /Applications/XAMPP/htdocs</p>
+<p>git clone https://github.com/longly151/hugo</p>
+<p>#Open my project by Visual Code</p>
+<p>#Open terminal in Visual Code</p>
+<p>composer install</p>
+<p>#Copy .env.example and rename it to “.env”</p>
+<p>cd /Applications/XAMPP/xamppfiles/htdocs/hugo</p>
+<p>chmod -R 777 ./storage/logs</p>
+<p>chmod -R 777 ./storage/framework</p>
+<p>chmod -R 777 ./public/ckfinder</p>
+<p>php artisan key:generate</p>
+<p>#Create database name "hugo"</p>
+<p>php artisan migrate</p>
+<p>php artisan db:seed</p>
+<p>Go to the browser to enter the link http://localhost/hugo/admin and enjoy this shit</p>
+<pre>Admin account: ([
+        [
+            username: admin,
+            password: admin
+        ],
+        [
+            username: admin2,
+            password: admin
+        ],
+        [
+            username: admin3,
+            password: admin
+        ],
+    ]) </pre>
+------------------------------------------------------------------------------------------
 
 ## That's it
 
