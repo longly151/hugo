@@ -19,16 +19,21 @@ class AdminLoginMiddleware
     {
         if(Auth::check()) {
             $user = Auth::user();
-            $dbUser = User::where('id',$user->id)->select('status')->first();
+            $dbUser = User::where('id',$user->id)->first();
             if($dbUser->status == 'active'){
                 if($user->role_id != 4) {
-                    return $next($request);
+                    if(session('admin')['role_id'] != $dbUser->role_id) {
+                        return redirect('/admin/logout');
+                    } else {
+                        return $next($request);
+                    }
                 } else {
                     abort(403);
                 }
             } else {
                 return redirect('/admin/logout');
             }
+            
         }
         return redirect('/admin/login')->with('deny','Please login to access this page');
     }

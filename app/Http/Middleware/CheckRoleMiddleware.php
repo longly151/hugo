@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminRoleMiddleware
+class CheckRoleMiddleware
 {
     /**
      * Handle an incoming request.
@@ -14,10 +14,10 @@ class AdminRoleMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next,$role)
     {
         $user = Auth::user();
-        if ($user->role_id == 1) {
+        if ($user->role['name'] == $role) {
             return $next($request);
         } else {
             abort(403);

@@ -69,6 +69,7 @@ class LoginController extends Controller
                         'address' => Auth::user()->address,
                         'description' => Auth::user()->description,
                         'avatar' => Auth::user()->avatar,
+                        'role_id' => Auth::user()->role_id,
                         'role' => Auth::user()->role()->select('name as role')->get()->first()->role,
                     ]);
                 return redirect('/admin')->with('loginSuccess','Hello '. Auth::user()->fullname);
@@ -88,7 +89,10 @@ class LoginController extends Controller
         if($dbUser->status == 'banned'){
             $msg = 'Your account has been banned by Admin';
         } else if ($dbUser->status == 'pending') {
-            $msg = 'Your account is waiting for review from admin. Please try again later';
+            $msg = 'Your account is waiting for review from Admin. Please try again later';
+        }
+        if ($dbUser->role_id != session('admin')['role_id']) {
+            $msg = 'Your account has changed. Please log in again';
         }
         Auth::logout();
         $request->session()->flush();
