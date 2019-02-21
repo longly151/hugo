@@ -8,6 +8,7 @@
         alt="Soledad Coffee Blog" /></a>
   </div>
 
+{{-- Left Navigate --}}
 
   <ul id="menu-menu-1" class="menu">
     <li id="menu-item-7" class="megamenu menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-7"><a

@@ -48,7 +48,7 @@ class PostRequest extends FormRequest
     {
         return [
             'title'=>'trim',
-            'content'=>'trim',
+            'content'=>'trim|escape|strip_tags',
         ];
     }
     // public function withValidator($validator) {
