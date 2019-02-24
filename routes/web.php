@@ -10,26 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['prefix' => '/'], function () {
-    Route::get('/', function () {
-        return view('client.body.home');
-    });
-    Route::get('/post', function () {
-        return view('client.body.post');
-    });
-    Route::get('/gallery', function () {
-        return view('client.body.gallery');
-    });
-    Route::get('/contact', function () {
-        return view('client.body.contact');
-    });
-    Route::get('/about', function () {
-        return view('client.body.about');
-    });
-    Route::get('/404', function () {
-        return view('client.body.404');
-    });    
-});
 
 Route::group(['prefix' => 'admin','namespace' => 'Auth'], function () {
     Route::get('login','LoginController@getLogin');
@@ -131,5 +111,25 @@ Route::group(['namespace' => 'Admin'], function () {
         Route::get('503', function () {
             return view('admin.body.error.503');
         });
+    });
+});
+Route::group(['namespace' => 'Client'],function() {
+    Route::get('/', function () {
+        return view('client.body.home');
+    });
+    Route::get('/post', function () {
+        return view('client.body.post');
+    });
+    Route::get('/gallery', function () {
+        return view('client.body.gallery');
+    });
+    Route::get('/contact', function () {
+        return view('client.body.contact');
+    });
+    Route::get('/about', function () {
+        return view('client.body.about');
+    });
+    Route::get('/404', function () {
+        return view('client.body.404');
     });
 });
