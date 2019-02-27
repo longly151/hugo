@@ -8,6 +8,7 @@ use App\Http\Requests\PostRequest;
 use App\Tag;
 use App\Category;
 use App\Post;
+use Illuminate\Support\Facades\Redis;
 
 class PostController extends Controller
 {

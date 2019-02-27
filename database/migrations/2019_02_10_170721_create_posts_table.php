@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->string('cover')->nullable();
+            $table->string('cover')->nullable()->default('https://s3.us-east-2.amazonaws.com/hugoenglishclub/default_cover.png');
             $table->bigInteger('views')->default(0);
             $table->mediumText('url');
             $table->timestamps();

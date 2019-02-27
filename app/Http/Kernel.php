@@ -63,6 +63,7 @@ class Kernel extends HttpKernel
         'adminLogin' =>\App\Http\Middleware\AdminLoginMiddleware::class,
         'checkRole' =>\App\Http\Middleware\CheckRoleMiddleware::class,
         'authorRole' =>\App\Http\Middleware\AuthorRoleMiddleware::class,
+        'redisClient' =>\App\Http\Middleware\RedisClient::class,
     ];
 
     /**

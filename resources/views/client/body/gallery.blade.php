@@ -5,7 +5,7 @@
     <article id="post-528" class="post-528 page type-page status-publish hentry">
 
         <div class="penci-page-header">
-            <h1>Portfolio 3 Columns</h1>
+            <h1>Album ảnh Hugo</h1>
         </div>
 
         <div class="post-entry page-has-margin blockquote-style-2">
@@ -295,6 +295,7 @@
                         </div>
 
                     </div>
+
                     <script type="text/javascript">
                         portfolioDataJs.push({
                             "instanceId": "penci-portfolio--90052",

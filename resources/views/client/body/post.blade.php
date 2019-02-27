@@ -8,22 +8,17 @@
 
 
                 <div class="header-standard header-classic single-header">
-                    <div class="penci-standard-cat"><span class="cat"><a class="penci-cat-name" href="../category/coffee-update/coffee-tips/index.html"
-                                rel="category tag">Coffee Tips</a><a class="penci-cat-name" href="../category/featured/index.html"
-                                rel="category tag">Featured</a></span></div>
+                    <div class="penci-standard-cat"><span class="cat"><a class="penci-cat-name" href="{{$post->category['url']}}"
+                                rel="category tag">{{$post->category['name']}}</a></span></div>
 
-                    <h1 class="post-title single-post-title entry-title">Enjoy Coffee Alone</h1>
+                    <h1 class="post-title single-post-title entry-title">{{$post->title}}</h1>
                     <div class="penci-hide-tagupdated">
-                        <span class="author-italic author vcard">by <a class="url fn n" href="../author/admin/index.html">Penci</a></span>
-                        <time class="entry-date published" datetime="2018-09-04T02:04:05+00:00">September 4, 2018</time><time
-                            class="penci-hide-tagupdated updated" datetime="2018-09-04T04:10:58+00:00">September 4,
-                            2018</time> </div>
+                        <span class="author-italic author vcard">by <a class="url fn n" href="#">{{$post->author['fullname']}}</a></span>
+                        <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
                     <div class="post-box-meta-single">
                         <span class="author-post byline"><span class="author vcard">written by <a class="author-url url fn n"
-                                    href="../author/admin/index.html">Penci</a></span></span>
-                        <span><time class="entry-date published" datetime="2018-09-04T02:04:05+00:00">September 4,
-                                2018</time><time class="penci-hide-tagupdated updated" datetime="2018-09-04T04:10:58+00:00">September
-                                4, 2018</time></span>
+                                    href="#">{{$post->author['fullname']}}</a></span></span>
+                        <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
                     </div>
                 </div>
 
@@ -31,10 +26,10 @@
 
 
                 <div class="post-image">
-                    <a href="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p7.jpg"
+                <a href="{{$post->cover}}"
                         data-rel="penci-gallery-image-content"> <img class="attachment-penci-full-thumb size-penci-full-thumb penci-lazy wp-post-image"
-                            src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci2-holder.png"
-                            alt="Enjoy Coffee Alone" title="p7" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p7-1170x1647.jpg">
+                            src="{{$post->cover}}"
+                            alt="Enjoy Coffee Alone" title="p7" data-src="{{$post->cover}}">
                     </a> </div>
 
 
@@ -43,7 +38,7 @@
 
                 <div class="post-entry blockquote-style-2">
                     <div class="inner-post-entry entry-content">
-                        <p>Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus et magnis dis
+                        {{-- <p>Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus et magnis dis
                             parturient montes lorem,
                             ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                             Nulla onsequat massa quis
@@ -81,19 +76,24 @@
                             pretium. Integer cidunt.
                             Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
                             leo ligula, porttitor
-                            eu.</p>
-
+                            eu.</p> --}}
+                        {!!$post->content!!}
                         <div class="penci-single-link-pages">
                         </div>
 
                         <div class="post-tags">
-                            <a href="../tag/blog/index.html" rel="tag">blog</a><a href="../tag/coffee/index.html" rel="tag">coffee</a><a
-                                href="../tag/soledad/index.html" rel="tag">soledad</a> </div>
+                            @foreach ($post->tags as $tag)
+                            <a href="#" rel="tag">{{$tag['name']}}</a>
+                            @endforeach
+                            
+                            {{-- <a href="../tag/coffee/index.html" rel="tag">coffee</a>
+                            <a href="../tag/soledad/index.html" rel="tag">soledad</a>  --}}
+                        </div>
                     </div>
                 </div>
 
 
-                <div class="tags-share-box center-box">
+                {{-- <div class="tags-share-box center-box">
 
                     <span class="single-comment-o"><i class="fa fa-comment-o"></i>0 comment</span>
 
@@ -109,9 +109,9 @@
                                 data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/enjoy-coffee-alone/&amp;media=http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p7.jpg&amp;description=Enjoy%20Coffee%20Alone"><i
                                     class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a></div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="post-author">
+                {{-- <div class="post-author">
                     <div class="author-img">
                         <img alt='' src='http://2.gravatar.com/avatar/8612232278edda9fe1d495399d2a552d?s=100&amp;d=mm&amp;r=g'
                             srcset="http://2.gravatar.com/avatar/8612232278edda9fe1d495399d2a552d?s=200&#038;d=mm&#038;r=g 2x"
@@ -130,8 +130,9 @@
                         <a target="_blank" class="author-social" href="http://pinterest.com/pencidesign"><i class="fa fa-pinterest"></i></a>
                         <a target="_blank" class="author-social" href="http://pencidesign.tumblr.com/"><i class="fa fa-tumblr"></i></a>
                     </div>
-                </div>
-                <div class="post-pagination">
+                </div> --}}
+
+                {{-- <div class="post-pagination">
 
                     <div class="next-post">
                         <div class="next-post-inner">
@@ -145,8 +146,10 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="post-related">
+                </div> --}}
+
+                <!-- post-related -->
+                {{-- <div class="post-related">
                     <div class="post-title-box">
                         <h4 class="post-box-title">You may also like</h4>
                     </div>
@@ -198,8 +201,9 @@
                             <span class="date">September 4, 2018</span>
                         </div>
                     </div>
-                </div>
-                <div class="post-comments no-comment-yet" id="comments">
+                </div> --}}
+
+                {{-- <div class="post-comments no-comment-yet" id="comments">
                     <div id="respond" class="comment-respond">
                         <h3 id="reply-title" class="comment-reply-title"><span>Leave a Comment</span> <small><a rel="nofollow"
                                     id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel
@@ -223,7 +227,7 @@
                             </p>
                         </form>
                     </div><!-- #respond -->
-                </div> <!-- end comments div -->
+                </div> <!-- end comments div --> --}}
 
             </article>
         </div>

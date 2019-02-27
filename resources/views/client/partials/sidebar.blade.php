@@ -1,16 +1,13 @@
 <div id="sidebar" class="penci-sidebar-content style-5 pcalign-left penci-sticky-sidebar col-lg-4 col-md-12">
 				<div class="theiaStickySidebar">
 					<aside id="penci_about_widget-2" class="widget penci_about_widget">
-						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">About Me</span></h4>
+						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Về Hugo</span></h4>
 						<div class="about-widget pc_alignleft">
-							<img class="penci-widget-about-image holder-square penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci2-holder.png"
-							 data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/ava.jpg"
-							 alt="About Me" />
+							<a href="about"><img class="penci-widget-about-image holder-square penci-lazy" src="{{asset('public/client/images/about_hugo.jpg')}}" alt="About Me" /></a>
 
-							<h2 class="about-me-heading">Coffee Lover</h2>
+							<h2 class="about-me-heading">Hugo English Club</h2>
 
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-								sociis natoque.</p>
+							<p>Hugo English Club là câu lạc bộ tiếng anh chính thức của trường Đại học Bách Khoa Đà Nẵng.</p>
 
 						</div>
 
@@ -32,44 +29,44 @@
 
 					</aside>
 					<aside id="search-2" class="widget widget_search">
-						<form role="search" method="get" id="searchform" action="http://soledad.pencidesign.com/soledad-coffee-blog/">
+						<form role="search" method="get" id="searchform" action="#">
 							<div>
 								<input type="text" class="search-input" placeholder="Type and hit enter..." name="s" id="s" />
 							</div>
 						</form>
 					</aside>
 					<aside id="penci_insta_slider-2" class="widget penci-insta-slider">
-						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">On Instagram</span></h4>
+						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Album ảnh</span></h4>
 						<div class='jr-insta-thumb'>
 							<ul class='no-bullet thumbnails jr_col_2'>
-								<li><a href="https://www.instagram.com/p/BsETNxpB1xX/" target="_blank" title="see y’all next year"><img class="instagram-square-lazy penci-lazy"
-										 src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-soledad-instagram/assets/images/penci-holder.png"
-										 data-src="https://scontent-sjc3-1.cdninstagram.com/vp/308d1147416b19f73e88325f384d000c/5CC8B669/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/45886219_616428408813365_4804331477063263784_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com"
-										 alt="see y’all next year" /></a></li>
-								<li><a href="https://www.instagram.com/p/BryTPFPB_Z9/" target="_blank" title="got myself a prism, merry Christmas Eve!"><img
-										 class="instagram-square-lazy penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-soledad-instagram/assets/images/penci-holder.png"
-										 data-src="https://scontent-sjc3-1.cdninstagram.com/vp/8b6892fe958a0bdb907ae95e5b97a953/5CC8B19D/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/47477924_316365682541577_4397557047503763847_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com"
-										 alt="got myself a prism, merry Christmas Eve!" /></a></li>
-								<li><a href="https://www.instagram.com/p/Bp4uv9dBCyE/" target="_blank" title="happy hump day"><img class="instagram-square-lazy penci-lazy"
-										 src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-soledad-instagram/assets/images/penci-holder.png"
-										 data-src="https://scontent-sjc3-1.cdninstagram.com/vp/b416f124a408074b640b28b2a77843e6/5CB6A0E5/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/44634031_727511147616334_2682238867664658569_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com"
-										 alt="happy hump day" /></a></li>
-								<li><a href="https://www.instagram.com/p/Bqp9qqLhXVZ/" target="_blank" title="Third Wave Water @thirdwavewater #thirdwavewater"><img
-										 class="instagram-square-lazy penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-soledad-instagram/assets/images/penci-holder.png"
-										 data-src="https://scontent-sjc3-1.cdninstagram.com/vp/eae07e407c11a91950ed1b40854bef44/5CD0EB67/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/46234034_382105435870307_4140279994447876460_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com"
-										 alt="Third Wave Water @thirdwavewater #thirdwavewater" /></a></li>
-								<li><a href="https://www.instagram.com/p/BrBLJtyBYbP/" target="_blank" title="takahiro over a melodrip over a woodneck over a chemex&hellip;"><img
-										 class="instagram-square-lazy penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-soledad-instagram/assets/images/penci-holder.png"
-										 data-src="https://scontent-sjc3-1.cdninstagram.com/vp/0a2a9e8cb021485448429a2f7fef68b8/5CD33DD7/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/46842135_377526876155565_6401318050827419790_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com"
+								<li><a href="https://www.instagram.com/p/BsV8kUin1-X/" target="_blank" title="see y’all next year"><img class="instagram-square-lazy penci-lazy"
+										 src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/77d55f9990c3ec2daa3ca7a1c84c6813/5D0A8E18/t51.2885-15/e35/47692470_581093359000814_62646722466209901_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 data-src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/77d55f9990c3ec2daa3ca7a1c84c6813/5D0A8E18/t51.2885-15/e35/47692470_581093359000814_62646722466209901_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 alt="" /></a></li>
+								<li><a href="https://www.instagram.com/p/BsTVgfuHOk0/" target="_blank" title="got myself a prism, merry Christmas Eve!"><img
+										 class="instagram-square-lazy penci-lazy" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/f18729be6d04c189fa6abf3de90405b5/5D25C501/t51.2885-15/e35/47586114_159465258358991_6686907281725400968_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 data-src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/f18729be6d04c189fa6abf3de90405b5/5D25C501/t51.2885-15/e35/47586114_159465258358991_6686907281725400968_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 alt="" /></a></li>
+								<li><a href="https://www.instagram.com/p/BsI8rR_nFzM/" target="_blank" title="happy hump day"><img class="instagram-square-lazy penci-lazy"
+										 src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/0a48148be11d83e767baaa94286361a4/5D062634/t51.2885-15/e35/47692783_2311461549087188_960453061581413740_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 data-src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/0a48148be11d83e767baaa94286361a4/5D062634/t51.2885-15/e35/47692783_2311461549087188_960453061581413740_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 alt="" /></a></li>
+								<li><a href="https://www.instagram.com/p/BrvKKCSHgX0/" target="_blank" title="Third Wave Water @thirdwavewater #thirdwavewater"><img
+										 class="instagram-square-lazy penci-lazy" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/6252314d7a69b620d267affa2bf51e1a/5D286FA1/t51.2885-15/e35/46922786_270442690309847_1611326522164546994_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 data-src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/6252314d7a69b620d267affa2bf51e1a/5D286FA1/t51.2885-15/e35/46922786_270442690309847_1611326522164546994_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 alt="" /></a></li>
+								<li><a href="https://www.instagram.com/p/Brkv-O_lfvU/" target="_blank" title="takahiro over a melodrip over a woodneck over a chemex&hellip;"><img
+										 class="instagram-square-lazy penci-lazy" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/d67af5030f58b5ac3c0996a4c2d0392f/5D12262E/t51.2885-15/e35/47584953_2552381451469135_3693202844030876729_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 data-src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/d67af5030f58b5ac3c0996a4c2d0392f/5D12262E/t51.2885-15/e35/47584953_2552381451469135_3693202844030876729_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
 										 alt="takahiro over a melodrip over a woodneck over a chemex&hellip;" /></a></li>
-								<li><a href="https://www.instagram.com/p/BqCtCocBlcm/" target="_blank" title="part 2: @thegabi_official “master b”"><img
-										 class="instagram-square-lazy penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-soledad-instagram/assets/images/penci-holder.png"
-										 data-src="https://scontent-sjc3-1.cdninstagram.com/vp/d2ab9649e29588e4afa9e825366a4cf5/5CD8DA9A/t51.2885-15/sh0.08/e35/c0.134.1080.1080/s640x640/44518845_138893460423295_3361473647732317709_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com"
-										 alt="part 2: @thegabi_official “master b”" /></a></li>
+								<li><a href="https://www.instagram.com/p/BrSovX6neLb/" target="_blank" title="part 2: @thegabi_official “master b”"><img
+										 class="instagram-square-lazy penci-lazy" src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/221e62c0597b4664abcaf069b78be4a5/5CEF0D90/t51.2885-15/e35/45720170_348468152608776_8938119686022827310_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 data-src="https://instagram.fsgn2-1.fna.fbcdn.net/vp/221e62c0597b4664abcaf069b78be4a5/5CEF0D90/t51.2885-15/e35/45720170_348468152608776_8938119686022827310_n.jpg?_nc_ht=instagram.fsgn2-1.fna.fbcdn.net"
+										 alt="" /></a></li>
 							</ul>
 						</div>
 					</aside>
-					<aside id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
+					{{-- <aside id="mc4wp_form_widget-2" class="widget widget_mc4wp_form_widget">
 						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Subscribe Newsletter</span></h4>
 						<script type="text/javascript">
 							(function () {
@@ -100,8 +97,8 @@
 							</div>
 							<div class="mc4wp-response"></div>
 						</form><!-- / MailChimp for WordPress Plugin -->
-					</aside>
-					<aside id="categories-2" class="widget widget_categories">
+					</aside> --}}
+					{{-- <aside id="categories-2" class="widget widget_categories">
 						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Categories</span></h4>
 						<ul>
 							<li class="cat-item cat-item-10"><a href="category/coffee-update/coffee-makers/index.html">Coffee Makers <span
@@ -114,6 +111,10 @@
 							<li class="cat-item cat-item-8"><a href="category/coffee-update/recipes/index.html">Recipes <span class="category-item-count">(7)</span></a>
 							</li>
 						</ul>
+					</aside> --}}
+					<aside id="categories-2" class="widget widget_categories">
+						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Địa chỉ</span></h4>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.839692533178!2d108.14772551457378!3d16.0738064435854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218d68e8ccb03%3A0x64dc2cb3e38bbdaf!2zNTQgTmd1eeG7hW4gTMawxqFuZyBC4bqxbmcsIEhvw6AgS2jDoW5oIELhuq9jLCBMacOqbiBDaGnhu4N1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1551110401502" width="auto" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</aside>
 				</div>
 			</div>

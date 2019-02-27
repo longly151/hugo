@@ -8,12 +8,12 @@
 			</div>
 			<p class="sub-heading-text-404">OOPS! Page you&#039;re looking for doesn&#039;t exist. Please use
 					search for help</p>
-			<form role="search" method="get" id="searchform" action="http://soledad.pencidesign.com/soledad-coffee-blog/">
+			<form role="search" method="get" id="searchform" action="#">
 					<div>
 							<input type="text" class="search-input" placeholder="Type and hit enter..." name="s" id="s" />
 					</div>
 			</form>
-			<p class="go-back-home"><a href="http://soledad.pencidesign.com/soledad-coffee-blog/">Back to Home Page</a></p>
+			<p class="go-back-home"><a href="/">Back to Home Page</a></p>
 	</div>
 </div>
 @endsection

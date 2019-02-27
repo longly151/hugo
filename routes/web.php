@@ -113,23 +113,12 @@ Route::group(['namespace' => 'Admin'], function () {
         });
     });
 });
-Route::group(['namespace' => 'Client'],function() {
-    Route::get('/', function () {
-        return view('client.body.home');
-    });
-    Route::get('/post', function () {
-        return view('client.body.post');
-    });
-    Route::get('/gallery', function () {
-        return view('client.body.gallery');
-    });
-    Route::get('/contact', function () {
-        return view('client.body.contact');
-    });
-    Route::get('/about', function () {
-        return view('client.body.about');
-    });
-    Route::get('/404', function () {
-        return view('client.body.404');
-    });
+Route::group(['namespace' => 'Client','middleware'=>'redisClient'],function() {
+    Route::get('/', 'PageController@home');
+    Route::get('/gallery', 'PageController@gallery');
+    Route::get('/contact', 'PageController@contact');
+    Route::get('/about', 'PageController@about');
+    Route::get('/404', 'PageController@error_404');
+    Route::get('/{url}', 'PageController@post');
+    
 });

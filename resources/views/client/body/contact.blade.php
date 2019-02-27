@@ -7,9 +7,9 @@
             <article id="post-1693" class="post-1693 page type-page status-publish hentry">
 
                 <div class="penci-page-header">
-                    <h1 class="entry-title">Contact</h1>
+                    <h1 class="entry-title">Liên hệ</h1>
                     <div class="penci-hide-tagupdated">
-                        <span class="author-italic author vcard">by <a class="url fn n" href="../author/admin/index.html">Penci</a></span>
+                        <span class="author-italic author vcard">by <a class="url fn n" href="#">Penci</a></span>
                         <time class="entry-date published" datetime="2018-08-24T03:50:19+00:00">August 24, 2018</time><time
                             class="penci-hide-tagupdated updated" datetime="2018-09-17T20:30:10+00:00">September
                             17, 2018</time> </div>
@@ -18,23 +18,21 @@
 
                 <div class="post-entry blockquote-style-2">
                     <div class="inner-post-entry entry-content">
-                        <p><img class="alignnone size-full wp-image-1713" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15.jpg"
-                                alt="" width="1200" height="800" srcset="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15.jpg 1200w, http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15-300x200.jpg 300w, http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15-768x512.jpg 768w, http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15-1024x683.jpg 1024w, http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15-1170x780.jpg 1170w, http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15-585x390.jpg 585w, http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2015/11/15-263x175.jpg 263w"
+                        {{-- <p><img class="alignnone size-full wp-image-1713" src="public/client/images/contact.jpg"
+                                alt="" width="1200" height="800" srcset="public/client/images/contact.jpg 263w"
                                 sizes="(max-width: 1200px) 100vw, 1200px" />Have a question, a comment? Want to
                             collaborate in some way? Just have something nice to say? I’d love to hear from
                             you! Shoot me a message below and I’ll be sure to get back to you as soon as I can.
-                            Thanks! Lommodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-                            magnis dis <a href="#" target="_blank" rel="noopener">parturient montes lorem</a>,
-                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                            quis, sem. Nulla onsequat massa quis.</p>
+                            Thanks!</p>
                         <ul>
-                            <li><strong>Adress:</strong>  123 Beverly Hill, New York, USA</li>
-                            <li><strong>Phone:</strong>  0123 456 789</li>
-                            <li><strong>Email:</strong>  pencidesign@gmail.com</li>
-                        </ul>
+                            <li><strong>Adress:</strong><a href="https://goo.gl/maps/xWaKtt3FK8Q2" target="_blank"> 54 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu </a></li>
+                            <li><strong>Phone:</strong><a href="tel:01626772020"> 0162 677 2020</a></li>
+                            <li><strong>Email:</strong><a href="mailto:hugoclub.dut@gmail.com"> hugoclub.dut@gmail.com</a></li>
+                        </ul> --}}
+                        {!! $contact->content!!}
                         <div role="form" class="wpcf7" id="wpcf7-f1724-p1693-o1" lang="en-US" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="http://soledad.pencidesign.com/soledad-coffee-blog/contact/#wpcf7-f1724-p1693-o1"
+                            <form action="#"
                                 method="post" class="wpcf7-form" novalidate="novalidate">
                                 <div style="display: none;">
                                     <input type="hidden" name="_wpcf7" value="1724" />

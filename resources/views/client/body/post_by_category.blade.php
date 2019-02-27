@@ -1,100 +1,13 @@
 @extends('client.layouts.main')
 @section('content')
-<!-- CAROUSEL -->
-<div class="featured-area featured-style-8 penci-flat-overlay">
-    <div class="container">
-        <div class="penci-owl-carousel penci-owl-featured-area" data-item="4" data-desktop="4" data-tablet="2"
-            data-tabsmall="1" data-style="style-8" data-auto="true" data-autotime="4000" data-speed="600" data-loop="true">
-            @foreach ($posts as $index => $post)
-            @if ($index < 6)
-            <div class="item">
-                <div class="wrapper-item wrapper-item-classess">
-                    <div class="penci-item-mag penci-item-1">
-                        <a class="penci-image-holder owl-lazy" data-src="{{$post->cover}}"
-                            href="{{$post->url}}" title="{{$post->title}}"></a>
-                        <div class="penci-slide-overlay penci-slider7-overlay">
-                            <a class="overlay-link" href="{{$post->url}}"></a>
-                            <div class="penci-mag-featured-content">
-                                <div class="feat-text slider-hide-date">
-                                    <h3><a title="Enjoy Coffee Alone" href="{{$post->url}}">{{$post->title}}</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endif
-            @endforeach
-        </div>
-    </div>
-</div>
-
 <!-- CONTENT -->
 <div class="container penci_sidebar right-sidebar">
     <div id="main" class="penci-layout-standard-grid penci-main-sticky-sidebar col-md-12 col-lg-8">
-        
         <div class="theiaStickySidebar">
-            <div class="penci-border-arrow penci-homepage-title penci-home-latest-posts style-5 pcalign-left">
-                <h3 class="inner-arrow">Bài viết mới nhất</h3>
-            </div>
             <div class="penci-wrapper-posts-content">
                 @if (count($posts)>0)
                 <ul class="penci-wrapper-data penci-grid">
-                    <article id="post-218" class="post-218 post type-post status-publish format-standard has-post-thumbnail hentry category-recipes tag-blog tag-coffee tag-soledad">
-                        <div class="standard-post-image">
-                        <a href="{{$posts[0]->url}}">
-                                <img class="attachment-penci-full-thumb size-penci-full-thumb penci-lazy wp-post-image"
-                                    src="{{$posts[0]->cover}}"
-                                    alt="{{$posts[0]->title}}" title="p1" data-src="{{$posts[0]->cover}}">
-                            </a>
-                        </div>
-
-
-                        <div class="header-standard">
-                            <div class="penci-standard-cat"><span><i class="fa fa-clock-o"></i> <time class="entry-date published" datetime="{{$posts[0]->public_at}}">{{$posts[0]->public_at}}</time>
-                            </span></div>
-                            <h2 class="entry-title entry-title"><a href="{{$posts[0]->url}}">{{$posts[0]->title}}</a></h2>
-                            <div class="penci-hide-tagupdated">
-                                    {{-- <span class="author-italic author vcard">by <a class="url fn n" href="author/admin/index.html">Penci</a></span> --}}
-                                    <time class="entry-date published" datetime="2018-09-04T02:24:31+00:00">September 4,
-                                        2018</time><time class="penci-hide-tagupdated updated" datetime="2018-09-04T04:09:39+00:00">September
-                                        4, 2018</time> </div>
-                            <div class="author-post byline"><span class="author vcard">Được đăng bởi <a class="url fn n"
-                                        href="#">{{$posts[0]->author['fullname']}}</a></span></div>
-                        </div>
-
-                        <div class="standard-content">
-                            <div class="standard-main-content entry-content">
-                                <div class="post-entry standard-post-entry classic-post-entry blockquote-style-2">
-                                    <p>{{$posts[0]->description}}</p>
-                                    <div class="penci-more-link penci-more-link-button"> <a href="{{$posts[0]->url}}"
-                                            class="more-link">Continue Reading</a></div>
-                                </div>
-                            </div>
-
-                            {{-- <div class="penci-post-box-meta">
-                                <div class="penci-box-meta">
-                                    <span><i class="fa fa-clock-o"></i><time class="entry-date published" datetime="{{$posts[0]->public_at}}">{{$posts[0]->public_at}}</time>
-                                    </span>
-                                </div>
-                                <div class="penci-post-share-box">
-                                    <a class="penci-post-like" data-post_id="218" title="Like" data-like="Like"
-                                        data-unlike="Unlike"><i class="fa fa-heart-o"></i><span class="dt-share">0</span></a>
-                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/"><i
-                                            class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a><a
-                                        target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article:%20How%20To%20The%20Best%20Milk%20Coffee%20-%20http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/"><i
-                                            class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a
-                                        target="_blank" href="https://plus.google.com/share?url=http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/"><i
-                                            class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a><a
-                                        data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/&amp;media=http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1.jpg&amp;description=How%20To%20The%20Best%20Milk%20Coffee"><i
-                                            class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a>
-                                </div>
-                            </div> --}}
-                        </div>
-
-                    </article>
                     @foreach ($posts as $index => $post)
-                    @if ($index>0 && $index<=4)
                         <li class="grid-style">
                             <article id="post-217" class="item hentry">
                                 <div class="thumbnail">
@@ -128,7 +41,6 @@
     
                             </article>
                         </li>
-                    @endif
                     @endforeach
                     
                     {{-- <li class="grid-style">

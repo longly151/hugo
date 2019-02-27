@@ -289,14 +289,6 @@
         topCategories.forEach(function (topCategory, index) {
             var topCategoriesCount = topCategory['categories'].length;
             var option = '';
-            // if (topCategory['author_id'] == sessionId || sessionRole == 'admin' || sessionRole ==
-            //     'moderator')
-                // option = `
-                // <a href="{{ url('admin/category/edit').'/'.$category['id'] }}" class="btn btn-primary btn-xs">
-                // <i class="fa fa-folder"></i> Edit </a>
-                // <button data-id="{{ $category['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
-                // <i class="far fa-trash-alt"></i> Delete </button>
-                // `
                 var topCategoryData = {
                     text: `<span> ${topCategory['name']}</span>`,
                     href: '#parent' + (index + 1),
