@@ -21,6 +21,11 @@ class UserController extends Controller
         $roles = Role::where('name','!=','admin')->get();
         return view('admin.body.user.manage',['users' => $users,'roles' => $roles]);
     }
+    public function list()
+    {
+        $users = User::where(['status' => 'active'])->select('id','fullname','email','avatar','role_id')->paginate(10);
+        return view('admin.body.user.list',['users' => $users]);
+    }
     public function inactive()
     {
         $users = User::where([['status','!=','active']])->paginate(15);

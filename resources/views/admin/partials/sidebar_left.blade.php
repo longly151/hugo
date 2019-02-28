@@ -11,7 +11,18 @@
             <!-- User profile text-->
             <div class="profile-text">
                 <h4>{{ session()->get('admin')['fullname']}}</h4>
-                <p class="text-primary text-uppercase small">{{ session()->get('admin')['role'] }}</p>
+                <p class="
+                @if (session()->get('admin')['role'] == 'admin')
+                text-primary font-weight-bold
+                @elseif (session()->get('admin')['role'] == 'moderator')
+                text-warning
+                @elseif (session()->get('admin')['role'] == 'poster')
+                text-success
+                @elseif (session()->get('admin')['role'] == 'customer')
+                text-secondary
+                @endif
+                text-uppercase small">{{ session()->get('admin')['role'] }}</p>
+
                 <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                 <div class="dropdown-menu animated flipInY">

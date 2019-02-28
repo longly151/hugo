@@ -68,21 +68,21 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => now(),
             ]
         ]);
-        // for ($i=0; $i<$limit; $i++) {
-        //     DB::table('users')->insert([
-        //         'fullname' => $faker->name,
-        //         'username' => $faker->username,
-        //         'email' => $faker->unique()->email,
-        //         'avatar' => 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
-        //         'status' =>  $faker->randomElement($array = array ('active','banned','pending')),
-        //         'phoneNumber' => $faker->unique()->regexify("/(0)(3[2-9][0-9]{7}|8[0-9]{8}|5[68][0-9]{7}|5[9][0-9]{7}|8[689][0-9]{7}|9[0-9][0-9]{7})$/"),
-        //         'address' => $faker->unique()->streetAddress,
-        //         'password' =>  bcrypt('admin'),
-        //         'role_id' => rand(2,4),
-        //         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 year', $timezone = null),
-        //         'updated_at' => $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
-        //         // 'deleted_at' => $faker->randomElement($array = array (now(),NULL))
-        //     ]);
-        // }
+        for ($i=0; $i<$limit; $i++) {
+            DB::table('users')->insert([
+                'fullname' => $faker->name,
+                'username' => $faker->username,
+                'email' => $faker->unique()->email,
+                'avatar' => 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
+                'status' =>  $faker->randomElement($array = array ('active','banned','pending')),
+                'phoneNumber' => $faker->unique()->regexify("/(0)(3[2-9][0-9]{7}|8[0-9]{8}|5[68][0-9]{7}|5[9][0-9]{7}|8[689][0-9]{7}|9[0-9][0-9]{7})$/"),
+                'address' => $faker->unique()->streetAddress,
+                'password' =>  bcrypt('admin'),
+                'role_id' => rand(2,4),
+                'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 year', $timezone = null),
+                'updated_at' => $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
+                // 'deleted_at' => $faker->randomElement($array = array (now(),NULL))
+            ]);
+        }
     }
 }

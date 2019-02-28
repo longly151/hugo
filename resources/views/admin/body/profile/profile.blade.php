@@ -29,10 +29,20 @@
         <div class="col-lg-4 col-xlg-3 col-md-5">
             <div class="card">
                 <div class="card-body">
-                    <p class="m-t-30" style="text-align: center"><img src="{{ session()->get('admin')['avatar'] }}" class="img-circle"
+                    <h6 class="m-t-30" style="text-align: center"><img src="{{ session()->get('admin')['avatar'] }}" class="img-circle"
                             width="150" />
                         <h4 class="card-title m-t-10">{{ session()->get('admin')['fullname'] }}</h4>
-                        <h6 class="card-subtitle text-uppercase small">{{ session()->get('admin')['role'] }}</h6>
+                        <h6 class="
+                        @if (session()->get('admin')['role'] == 'admin')
+                        text-primary font-weight-bold
+                        @elseif (session()->get('admin')['role'] == 'moderator')
+                        text-warning
+                        @elseif (session()->get('admin')['role'] == 'poster')
+                        text-success
+                        @elseif (session()->get('admin')['role'] == 'customer')
+                        text-secondary
+                        @endif
+                        card-subtitle text-uppercase small">{{ session()->get('admin')['role'] }}</h6>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i>
                                     <p class="font-medium">254</p>

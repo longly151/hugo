@@ -65,20 +65,23 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::post('completed-delete', 'TagController@destroy');
             });
         });
+
         Route::group(['prefix' => 'user','middleware' => 'checkRole:admin'], function() {
-            Route::get('view/{id}','UserController@show');
-            
-            Route::get('manage','UserController@index');
-            Route::post('manage/{id}','UserController@update');
-            Route::post('ban', 'UserController@ban');
-            Route::post('delete', 'UserController@delete');
-    
-            Route::get('inactive', 'UserController@inactive');
-            Route::post('active', 'UserController@active');
-    
-            Route::get('bin', 'UserController@bin');
-            Route::post('restore', 'UserController@restore');
-            Route::post('completed-delete', 'UserController@destroy');
+            Route::get('/list', 'UserController@list');
+            Route::get('/view/{id}','UserController@show');
+            Route::group(['middleware' => 'checkRole:admin'], function () {
+                Route::get('manage','UserController@index');
+                Route::post('manage/{id}','UserController@update');
+                Route::post('ban', 'UserController@ban');
+                Route::post('delete', 'UserController@delete');
+        
+                Route::get('inactive', 'UserController@inactive');
+                Route::post('active', 'UserController@active');
+        
+                Route::get('bin', 'UserController@bin');
+                Route::post('restore', 'UserController@restore');
+                Route::post('completed-delete', 'UserController@destroy');
+            });
         });
         Route::group(['prefix' => 'profile'], function() {
             Route::get('/', 'ProfileController@index');

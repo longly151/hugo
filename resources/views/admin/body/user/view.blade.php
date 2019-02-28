@@ -32,18 +32,29 @@
                     <p class="m-t-30" style="text-align: center"><img src="{{ $user->avatar }}" class="img-circle"
                             width="150" />
                         <h4 class="card-title m-t-10">{{ $user->fullname }}</h4>
-                        <h6 class="card-subtitle text-uppercase text-primary">{{ $user->role->name }}</h6>
+                        {{-- <h6 class="card-subtitle text-uppercase text-primary">{{ $user->role->name }}</h6> --}}
+                        <h6 class="
+                        @if ($user->role->name == 'admin')
+                        text-primary font-weight-bold
+                        @elseif ($user->role->name == 'moderator')
+                        text-warning
+                        @elseif ($user->role->name == 'poster')
+                        text-success
+                        @elseif ($user->role->name == 'customer')
+                        text-secondary
+                        @endif
+                        card-subtitle text-uppercase">{{ $user->role->name }}</h6>
                         @if ($user->deleted_at)
                             <h5 class="card-subtitle text-uppercase font-weight-bold text-danger">Deleted</h5>
                         @else
                             @if ($user->status == "active")
-                            <h5 class="card-subtitle text-uppercase font-weight-bold text-success">{{ $user->status }}</h5>
+                            <h6 class="card-subtitle text-uppercase font-weight-bold text-success">{{ $user->status }}</h6>
                             @elseif ($user->status == "banned")
-                            <h5 class="card-subtitle text-uppercase font-weight-bold text-danger">{{ $user->status }}</h5>
+                            <h6 class="card-subtitle text-uppercase font-weight-bold text-danger">{{ $user->status }}</h6>
                             @elseif ($user->status == "pending")
-                            <h5 class="card-subtitle text-uppercase font-weight-bold text-warning">{{ $user->status }}</h5>
+                            <h6 class="card-subtitle text-uppercase font-weight-bold text-warning">{{ $user->status }}</h6>
                             @else
-                            <h5 class="card-subtitle text-uppercase font-weight-bold">{{ $user->status }}</h5>
+                            <h6 class="card-subtitle text-uppercase font-weight-bold">{{ $user->status }}</h6>
                             @endif
                         @endif
                         
