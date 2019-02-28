@@ -42,7 +42,7 @@
                     <div class="form-group">
                         <label>Author</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>
-                        <input type="hidden" name="author_id" value="{{ session()->get('admin')['id'] }}">
+                        
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
@@ -75,7 +75,6 @@
                     <div class="form-group">
                         <label>Author</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>
-                        <input type="hidden" name="author_id" value="{{ session()->get('admin')['id'] }}">
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
@@ -111,7 +110,7 @@
                     <div class="form-group">
                         <label>Author</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>
-                        <input type="hidden" name="author_id" value="{{ session()->get('admin')['id'] }}">
+                        
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
@@ -147,7 +146,7 @@
                     <div class="form-group">
                         <label>Author</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>
-                        <input type="hidden" name="author_id" value="{{ session()->get('admin')['id'] }}">
+                        
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>

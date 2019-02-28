@@ -54,6 +54,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $post = $request->except('_token','tags');
+        $post['author_id'] = session()->get('admin')['id'];
         // handle category
         if($post['topCategory'] == '0') {
             unset($post['topCategory']);
@@ -137,6 +138,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = $request->except('_token','tags');
+        $post['author_id'] = session()->get('admin')['id'];
         // handle category
         if($post['topCategory'] == '0') {
             unset($post['topCategory']);

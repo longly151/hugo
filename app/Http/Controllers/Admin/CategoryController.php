@@ -78,6 +78,7 @@ class CategoryController extends Controller
     public function store(CategoryRequest $request)
     {
         $category = $request->except('_token');
+        $category['author_id'] = session()->get('admin')['id'];
         if ($category['topCategory'] == "0"){
             Category::create([
                 'name' => $category['name'],
@@ -154,6 +155,7 @@ class CategoryController extends Controller
         // print_r($request->all());exit();
         $dbCategory = Category::find($id);
         $dbCategory->name = $request->input('name');
+        $dbCategory['author_id'] = session()->get('admin')['id'];
         $type = $dbCategory->categoryType();
         if ($type == 'topCategory') {
             $dbCategory->save();

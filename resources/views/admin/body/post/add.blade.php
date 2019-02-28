@@ -54,7 +54,6 @@
                     <div class="form-group">
                         <label>Author</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ session()->get('admin')['fullname'] }}" disabled>
-                        <input type="hidden" name="author_id" value="{{ session()->get('admin')['id'] }}">
                     </div>
                     
                     <div class="form-group">

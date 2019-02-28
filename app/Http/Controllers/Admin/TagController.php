@@ -44,6 +44,7 @@ class TagController extends Controller
     public function store(TagRequest $request)
     {
         $tag = $request->all();
+        $tag['author_id'] = session()->get('admin')['id'];
         Tag::create($tag);
         return redirect('/admin/tag/add')->with('success','Add tag successfully');
     }
@@ -82,6 +83,7 @@ class TagController extends Controller
     {
         $name = $request->input('name');
         $tag = Tag::find($id);
+        $tag->author_id = session()->get('admin')['id'];
         $tag->name = $name;
         $tag->save();
         return redirect('admin/tag/manage')->with('success','Update tag successfully');
