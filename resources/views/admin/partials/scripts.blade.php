@@ -1,4 +1,4 @@
-<base href="{{url('/public/admin')}}/">
+<base href="{{asset('/public/admin')}}/">
 <!-- All Jquery -->
 <!-- ============================================================== -->
 <script src="plugins/jquery/jquery.min.js"></script>
