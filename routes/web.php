@@ -66,7 +66,7 @@ Route::group(['namespace' => 'Admin'], function () {
             });
         });
 
-        Route::group(['prefix' => 'user','middleware' => 'checkRole:admin'], function() {
+        Route::group(['prefix' => 'user'], function() {
             Route::get('/list', 'UserController@list');
             Route::get('/view/{id}','UserController@show');
             Route::group(['middleware' => 'checkRole:admin'], function () {

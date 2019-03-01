@@ -75,16 +75,17 @@
                     </ul>
                 </li>
                 @if(session('admin'))
-                @if(session()->get('admin')['role'] === 'admin')
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span
-                            class="hide-menu">User</span></a>
+                    class="hide-menu">User</span></a>
                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{ url('admin/user/list') }}">User List</a></li>
+                @if(session()->get('admin')['role'] === 'admin')
                         <li><a href="{{ url('admin/user/manage') }}">Manage Users</a></li>
                         <li><a href="{{ url('admin/user/inactive') }}">Inactive Users</a></li>
                         <li><a href="{{ url('admin/user/bin') }}">Trash</a></li>
+                @endif
                     </ul>
                 </li>
-                @endif
                 @endif
             </ul>
         </nav>

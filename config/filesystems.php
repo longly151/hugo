@@ -42,7 +42,7 @@ return [
     */
 
     'disks' => [
-
+        'default' => 's3',
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

@@ -19,6 +19,16 @@ class AuthorRoleMiddleware
      */
     public function handle($request, Closure $next,$type)
     {
+        function checkAuthen($data) {
+            if ($data->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator') {
+                if (session()->get('admin')['role']=='moderator') {
+                    if($data->author['role_id'] != 1) return true;
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        }
         if ($type =='tag') {
             $id = null !== ($request->route('id'))? $request->route('id'):$request->json()->all();
             $tag = Tag::withTrashed()->where('id',$id)->first();
@@ -26,7 +36,7 @@ class AuthorRoleMiddleware
                 abort(404);
             }
             else {
-                if ($tag->author_id !== session()->get('admin')['id']&&session()->get('admin')['role']!=='admin'&&session()->get('admin')['role']!=='moderator') {
+                if (!checkAuthen($tag)) {
                     if (null !== ($request->route('id'))) {
                         abort(403);
                     }
@@ -35,7 +45,7 @@ class AuthorRoleMiddleware
                     ],403);
                 }
                 return $next($request);
-            }
+            };
         } else if ($type == 'category') {
             $id = null !== ($request->route('id'))? $request->route('id'):$request->json()->all();
             $category = Category::withTrashed()->where('id',$id)->first();
@@ -43,7 +53,7 @@ class AuthorRoleMiddleware
                 abort(404);
             }
             else {
-                if ($category->author_id !== session()->get('admin')['id']&&session()->get('admin')['role']!=='admin'&&session()->get('admin')['role']!=='moderator') {
+                if (!checkAuthen($category)) {
                     if (null !== ($request->route('id'))) {
                         abort(403);
                     }
@@ -52,7 +62,7 @@ class AuthorRoleMiddleware
                     ],403);
                 }
                 return $next($request);
-            }
+            };
         } else if ($type == 'post') {
             $id = null !== ($request->route('id'))? $request->route('id'):$request->json()->all();
             $post = Post::withTrashed()->where('id',$id)->first();
@@ -60,7 +70,7 @@ class AuthorRoleMiddleware
                 abort(404);
             }
             else {
-                if ($post->author_id !== session()->get('admin')['id']&&session()->get('admin')['role']!=='admin'&&session()->get('admin')['role']!=='moderator') {
+                if (!checkAuthen($post)) {
                     if (null !== ($request->route('id'))) {
                         abort(403);
                     }
@@ -69,7 +79,7 @@ class AuthorRoleMiddleware
                     ],403);
                 }
                 return $next($request);
-            }
+            };
         }
     }
 }

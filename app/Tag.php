@@ -17,7 +17,7 @@ class Tag extends Model
     protected $table = 'tags';
     public $timestamp = true;
     
-    public function user() {
+    public function author() {
         return $this->belongsTo('App\User','author_id','id');
     }
     public function posts() {
