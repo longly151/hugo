@@ -3,7 +3,7 @@
 					<aside id="penci_about_widget-2" class="widget penci_about_widget">
 						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Về Hugo</span></h4>
 						<div class="about-widget pc_alignleft">
-							<a href="about"><img class="penci-widget-about-image holder-square penci-lazy" src="{{asset('public/client/images/about_hugo.jpg')}}" alt="About Me" /></a>
+							<a href="about"><img class="penci-widget-about-image holder-square penci-lazy" src="{{secure_asset('public/client/images/about_hugo.jpg')}}" alt="About Me" /></a>
 
 							<h2 class="about-me-heading">Hugo English Club</h2>
 

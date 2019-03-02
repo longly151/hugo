@@ -22,7 +22,7 @@
         <div class="col-sm-12">
             <div class="card card-body">
                 <h4 class="card-title">Post Info</h4>
-                <form class="form-horizontal m-t-40" action="{{ url('admin/post/add') }}" method="post">
+                <form class="form-horizontal m-t-40" action="{{ url('admin/post/add') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -112,10 +112,10 @@
                         @endif
                     </div>
 
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label>Default file upload</label>
-                        <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
-                    </div> --}}
+                        <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp" name="cover">
+                    </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                 </form>
@@ -261,12 +261,12 @@ $(document).ready(function() {
 });
 </script> --}}
 
-<script src="{{asset('public/ckeditor/ckeditor.js')}}"></script>
-<script src="{{asset('public/ckfinder/ckfinder.js')}}"></script>
+<script src="{{secure_asset('public/ckeditor/ckeditor.js')}}"></script>
+<script src="{{secure_asset('public/ckfinder/ckfinder.js')}}"></script>
 <script>
     CKEDITOR.replace('editor1', {
-    filebrowserBrowseUrl: "{{asset('public/ckfinder/ckfinder.html')}}",
-    filebrowserUploadUrl: "{{asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
+    filebrowserBrowseUrl: "{{secure_asset('public/ckfinder/ckfinder.html')}}",
+    filebrowserUploadUrl: "{{secure_asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
 </script>
 <script>
     $(document).ready(function () {

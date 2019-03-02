@@ -1,4 +1,4 @@
-<base href="{{asset('/public/admin')}}/">
+<base href="{{secure_asset('/public/admin')}}/">
 <!-- All Jquery -->
 <!-- ============================================================== -->
 <script src="plugins/jquery/jquery.min.js"></script>

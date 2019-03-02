@@ -2,7 +2,7 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h3 class="text-themecolor">Edit Post</h3>
+        <h3 class="text-themecolor">Add Post</h3>
     </div>
     <div class="col-md-7 align-self-center">
         <ol class="breadcrumb">
@@ -22,11 +22,11 @@
         <div class="col-sm-12">
             <div class="card card-body">
                 <h4 class="card-title">Post Info</h4>
-                <form class="form-horizontal m-t-40" action="{{ url('admin/post/edit').'/'.$post->id }}" method="post">
+                <form class="form-horizontal m-t-40" action="{{ url('admin/post/add') }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" name="title" placeholder="Title" value="{{ null !== old('title')? old('title'): $post->title }}">
+                        <input type="text" class="form-control" name="title" placeholder="Title" value="{{ old('title') }}">
                         @if($errors->has('title'))
                         <small class="form-control-feedback text-danger">
                             {{$errors->first('title')}}
@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <input type="text" class="form-control" name="description" placeholder="Description" value="{{ null !== old('description')? old('description'): $post->description }}">
+                        <input type="text" class="form-control" name="description" placeholder="Description" value="{{ old('description') }}">
                         @if($errors->has('description'))
                         <small class="form-control-feedback text-danger">
                             {{$errors->first('description')}}
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label for="area">Content</label>
-                        <textarea id="editor1" name="content" rows="10" cols="80">{{ null !== old('content')? old('content'): $post->content }}</textarea>
+                        <textarea id="editor1" name="content" rows="10" cols="80">{{ old('content') }}</textarea>
                         @if($errors->has('content'))
                         <small class="form-control-feedback text-danger">
                             {{$errors->first('content')}}
@@ -62,8 +62,7 @@
                             <option value="0">-- Select Category --</option>
                             @foreach ($topCategories as $topCategory)
                                 <option value="{{ $topCategory->id }}"
-                                {{null !== old('topCategory')? ($topCategory->id == old('topCategory') ? 'selected':''):($topCategory->id == $post->topCategory['id'] ? 'selected':'')}}
-                                >{{$topCategory->name}}</option>
+                                {{$topCategory->id == old('topCategory') ? 'selected':''}}>{{$topCategory->name }}</option>
                             @endforeach
                         </select>
                         @if($errors->has('topCategory'))
@@ -103,10 +102,6 @@
                                 {{$tag->id == $oldTag ? 'selected':''}}
                                 @endforeach
                                 @endif
-                                
-                                @foreach ($post->tags as $postTag)
-                                {{$tag->id == $postTag['id'] ? 'selected':''}}
-                                @endforeach
                             >{{$tag->name}}</option>
                             @endforeach
                         </select>
@@ -246,6 +241,26 @@ jQuery(document).ready(function () {
 });
 </script>
 
+{{-- <script src="plugins/tinymce/tinymce.min.js"></script>
+<script>
+$(document).ready(function() {
+    if ($("#mymce").length > 0) {
+        tinymce.init({
+            selector: "textarea#mymce",
+            theme: "modern",
+            height: 300,
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality emoticons template paste textcolor"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+
+        });
+    }
+});
+</script> --}}
+
 <script src="{{secure_asset('public/ckeditor/ckeditor.js')}}"></script>
 <script src="{{secure_asset('public/ckfinder/ckfinder.js')}}"></script>
 <script>
@@ -265,17 +280,17 @@ jQuery(document).ready(function () {
             $.get("/hugo/admin/ajax/category/"+topCategoryId,function(categories) {
                 var data = '<option value="0">-- Select Category --</option>'+categories;
                 $("#categories").html(data);
-                $("#categories").val({{null!=old('category')?old('category'):($post->category? $post->category['id']:'0')}});
+                $("#categories").val({{null!=old('category')?old('category'):'0'}});
             });
             $("#subCategoriesForm").show();
-            let categoryId = '{{null!=old('category')?old('category'):($post->category? $post->category['id']:NULL)}}';
+            let categoryId = '{{ old('category') }}';
             if (!categoryId||categoryId == "0") {
                 $("#subCategoriesForm").hide();
             } else {
                 $.get("/hugo/admin/ajax/category/"+categoryId,function(categories) {
                     var data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#subCategories").html(data);
-                    $("#subCategories").val({{null!=old('subCategory')?old('subCategory'):($post->subCategory? $post->subCategory['id']:'0')}});
+                    $("#subCategories").val({{null!=old('subCategory')?old('subCategory'):'0'}});
                 });
             }
         }

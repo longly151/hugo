@@ -1,4 +1,4 @@
-<base href="{{asset('/public/admin')}}/">
+<base href="{{secure_asset('/public/admin')}}/">
 
 <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 {{-- <!-- Timeline CSS -->
