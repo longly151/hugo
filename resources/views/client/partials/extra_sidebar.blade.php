@@ -5,8 +5,8 @@
         <a id="penci-close-hbg"><i class="fa fa-close"></i></a>
         <div class="penci-hbg-header">
             <div class="penci-hbg-logo site-branding">
-                <a href="index.html"><img class="penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci-holder.png"
-                        data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/logo-o.png"
+                <a href="index.html"><img class="penci-lazy" src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci-holder.png"
+                        data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/logo-o.png"
                         alt="Soledad Coffee Blog" /></a>
             </div>
         </div>
@@ -474,7 +474,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/recipes/index.html">Recipes</a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1-585x390.jpg"
                                                         href="how-to-the-best-milk-coffee/index.html" title="How To The Best Milk Coffee">
                                                     </a>
                                                 </div>
@@ -496,7 +496,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-tips/index.html">Coffee
                                                             Tips</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
                                                         href="choosing-best-vegan-milk-for-coffee/index.html" title="Best Vegan Milk For Coffee">
                                                     </a>
                                                 </div>
@@ -518,7 +518,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-makers/index.html">Coffee
                                                             Makers</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-585x390.jpg"
                                                         href="2018-coffee-maker-guide/index.html" title="2018 Coffee Maker Guide">
                                                     </a>
                                                 </div>
@@ -539,7 +539,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/recipes/index.html">Recipes</a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-585x390.jpg"
                                                         href="how-to-make-latte-art/index.html" title="How To Make Latte Art">
                                                     </a>
                                                 </div>
@@ -562,7 +562,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-makers/index.html">Coffee
                                                             Makers</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-585x390.jpg"
                                                         href="2018-coffee-maker-guide/index.html" title="2018 Coffee Maker Guide">
                                                     </a>
                                                 </div>
@@ -583,7 +583,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-makers/index.html">Coffee
                                                             Makers</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p11-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p11-585x390.jpg"
                                                         href="vintage-coffee-makers/index.html" title="Vintage Coffee Makers">
                                                     </a>
                                                 </div>
@@ -604,7 +604,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-makers/index.html">Coffee
                                                             Makers</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p15-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p15-585x390.jpg"
                                                         href="cappuccino-coffee-maker/index.html" title="Cappuccino Coffee Maker">
                                                     </a>
                                                 </div>
@@ -625,7 +625,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-makers/index.html">Coffee
                                                             Makers</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p18-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p18-585x390.jpg"
                                                         href="modern-coffee-maker/index.html" title="Modern Coffee Maker">
                                                     </a>
                                                 </div>
@@ -648,7 +648,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-tips/index.html">Coffee
                                                             Tips</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
                                                         href="choosing-best-vegan-milk-for-coffee/index.html" title="Best Vegan Milk For Coffee">
                                                     </a>
                                                 </div>
@@ -670,7 +670,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-tips/index.html">Coffee
                                                             Tips</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-585x390.jpg"
                                                         href="how-to-make-latte-art-c-c-c-c-c-c-c-c-c-c-c-c-c-c/index.html"
                                                         title="How To Make Latte Art">
                                                     </a>
@@ -693,7 +693,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-tips/index.html">Coffee
                                                             Tips</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-585x390.jpg"
                                                         href="making-morning-coffee/index.html" title="Making Morning Coffee">
                                                     </a>
                                                 </div>
@@ -714,7 +714,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/coffee-tips/index.html">Coffee
                                                             Tips</a> </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-585x390.jpg"
                                                         href="coffee-sop-bakery-in-cali/index.html" title="Coffee Sop &#038; Bakery in Cali">
                                                     </a>
                                                 </div>
@@ -738,7 +738,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/recipes/index.html">Recipes</a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1-585x390.jpg"
                                                         href="how-to-the-best-milk-coffee/index.html" title="How To The Best Milk Coffee">
                                                     </a>
                                                 </div>
@@ -760,7 +760,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/recipes/index.html">Recipes</a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-585x390.jpg"
                                                         href="how-to-make-latte-art/index.html" title="How To Make Latte Art">
                                                     </a>
                                                 </div>
@@ -781,7 +781,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/recipes/index.html">Recipes</a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p13-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p13-585x390.jpg"
                                                         href="almond-milk-iced-coffee/index.html" title="Almond Milk Iced Coffee">
                                                     </a>
                                                 </div>
@@ -802,7 +802,7 @@
                                                     <span class="mega-cat-name">
                                                         <a href="category/coffee-update/recipes/index.html">Recipes</a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p16-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p16-585x390.jpg"
                                                         href="master-the-art-of-coffee/index.html" title="Master The Art Of Coffee">
                                                     </a>
                                                 </div>
@@ -841,7 +841,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
                                                         href="choosing-best-vegan-milk-for-coffee/index.html" title="Best Vegan Milk For Coffee">
                                                     </a>
                                                 </div>
@@ -864,7 +864,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-585x390.jpg"
                                                         href="how-to-make-latte-art-c-c-c-c-c-c-c-c-c-c-c-c-c-c/index.html"
                                                         title="How To Make Latte Art">
                                                     </a>
@@ -888,7 +888,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-585x390.jpg"
                                                         href="making-morning-coffee/index.html" title="Making Morning Coffee">
                                                     </a>
                                                 </div>
@@ -910,7 +910,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-585x390.jpg"
                                                         href="coffee-sop-bakery-in-cali/index.html" title="Coffee Sop &#038; Bakery in Cali">
                                                     </a>
                                                 </div>
@@ -933,7 +933,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p20-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p20-585x390.jpg"
                                                         href="how-to-make-good-latte/index.html" title="How To Make Good Latte">
                                                     </a>
                                                 </div>

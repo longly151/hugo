@@ -46,7 +46,7 @@
                     {{-- <li class="grid-style">
                         <article id="post-216" class="item hentry">
                             <div class="thumbnail">
-                                <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-480x650.jpg"
+                                <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-480x650.jpg"
                                     href="2018-coffee-maker-guide/index.html" title="2018 Coffee Maker Guide">
                                 </a>
 
@@ -90,11 +90,11 @@
                                 <div class="penci-owl-carousel penci-owl-carousel-slider penci-nav-visible" data-auto="true">
 
 
-                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-480x650.jpg">
+                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-480x650.jpg">
                                     </figure>
 
 
-                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/gallery-480x650.jpg">
+                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/gallery-480x650.jpg">
                                     </figure>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@
                     <li class="grid-style">
                         <article id="post-214" class="item hentry">
                             <div class="thumbnail">
-                                <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p11-480x650.jpg"
+                                <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p11-480x650.jpg"
                                     href="vintage-coffee-makers/index.html" title="Vintage Coffee Makers">
                                 </a>
 

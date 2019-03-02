@@ -3,7 +3,7 @@
 <div class="container page-404">
 	<div class="error-404">
 			<div class="error-image">
-					<img src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/404.png"
+					<img src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/404.png"
 							alt="404" />
 			</div>
 			<p class="sub-heading-text-404">OOPS! Page you&#039;re looking for doesn&#039;t exist. Please use

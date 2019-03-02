@@ -86,7 +86,7 @@
                                             class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a
                                         target="_blank" href="https://plus.google.com/share?url=http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/"><i
                                             class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a><a
-                                        data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/&amp;media=http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1.jpg&amp;description=How%20To%20The%20Best%20Milk%20Coffee"><i
+                                        data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/how-to-the-best-milk-coffee/&amp;media=https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p1.jpg&amp;description=How%20To%20The%20Best%20Milk%20Coffee"><i
                                             class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a>
                                 </div>
                             </div> --}}
@@ -134,7 +134,7 @@
                     {{-- <li class="grid-style">
                         <article id="post-216" class="item hentry">
                             <div class="thumbnail">
-                                <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-480x650.jpg"
+                                <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p9-480x650.jpg"
                                     href="2018-coffee-maker-guide/index.html" title="2018 Coffee Maker Guide">
                                 </a>
 
@@ -178,11 +178,11 @@
                                 <div class="penci-owl-carousel penci-owl-carousel-slider penci-nav-visible" data-auto="true">
 
 
-                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-480x650.jpg">
+                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p10-480x650.jpg">
                                     </figure>
 
 
-                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/gallery-480x650.jpg">
+                                    <figure class="penci-image-holder penci-lazy" alt="How To Make Latte Art" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/gallery-480x650.jpg">
                                     </figure>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                     <li class="grid-style">
                         <article id="post-214" class="item hentry">
                             <div class="thumbnail">
-                                <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p11-480x650.jpg"
+                                <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p11-480x650.jpg"
                                     href="vintage-coffee-makers/index.html" title="Vintage Coffee Makers">
                                 </a>
 

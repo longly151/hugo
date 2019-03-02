@@ -13,11 +13,11 @@
 
   <link rel='https://api.w.org/' href='wp-json/index.html' />
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/wlwmanifest.xml" />
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/wlwmanifest.xml" />
   <meta name="generator" content="WordPress 4.9.9" />
   
-  <script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-  <script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+  <script type='text/javascript' src='https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+  <script type='text/javascript' src='https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
   <script type="application/ld+json">
     {
       "@context": "http:\/\/schema.org\/",

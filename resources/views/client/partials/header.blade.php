@@ -4,7 +4,7 @@
         <div class="container">
             <div id="logo">
                 <h1>
-                <a href="{{ url('/') }}"><img style="opacity:0.9"src="{{asset('public/client/images/logo.png')}}"
+                <a href="{{ url('/') }}"><img style="opacity:0.9"src="{{secure_asset('public/client/images/logo.png')}}"
                             alt="Hugo Blog" /></a>
                 </h1>
             </div>
@@ -110,7 +110,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-585x390.jpg"
                                                         href="choosing-best-vegan-milk-for-coffee/index.html" title="Best Vegan Milk For Coffee">
                                                     </a>
                                                 </div>
@@ -133,7 +133,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-585x390.jpg"
                                                         href="how-to-make-latte-art-c-c-c-c-c-c-c-c-c-c-c-c-c-c/index.html"
                                                         title="How To Make Latte Art">
                                                     </a>
@@ -157,7 +157,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-585x390.jpg"
                                                         href="making-morning-coffee/index.html" title="Making Morning Coffee">
                                                     </a>
                                                 </div>
@@ -179,7 +179,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-585x390.jpg"
                                                         href="coffee-sop-bakery-in-cali/index.html" title="Coffee Sop &#038; Bakery in Cali">
                                                     </a>
                                                 </div>
@@ -202,7 +202,7 @@
                                                         <a href="category/coffee-update/coffee-tips/index.html">
                                                             Coffee Tips </a>
                                                     </span>
-                                                    <a class="penci-image-holder penci-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p20-585x390.jpg"
+                                                    <a class="penci-image-holder penci-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p20-585x390.jpg"
                                                         href="how-to-make-good-latte/index.html" title="How To Make Good Latte">
                                                     </a>
                                                 </div>

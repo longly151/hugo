@@ -106,7 +106,7 @@
                                     class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a target="_blank"
                                 href="https://plus.google.com/share?url=http://soledad.pencidesign.com/soledad-coffee-blog/enjoy-coffee-alone/"><i
                                     class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a><a
-                                data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/enjoy-coffee-alone/&amp;media=http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p7.jpg&amp;description=Enjoy%20Coffee%20Alone"><i
+                                data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/enjoy-coffee-alone/&amp;media=https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p7.jpg&amp;description=Enjoy%20Coffee%20Alone"><i
                                     class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a></div>
                     </div>
                 </div> --}}
@@ -157,7 +157,7 @@
                         data-item="3" data-desktop="3" data-tablet="2" data-tabsmall="2" data-auto="false" data-speed="300"
                         data-dots="true" data-nav="false">
                         <div class="item-related">
-                            <a class="related-thumb penci-image-holder owl-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-480x650.jpg"
+                            <a class="related-thumb penci-image-holder owl-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p8-480x650.jpg"
                                 href="../choosing-best-vegan-milk-for-coffee/index.html" title="Best Vegan Milk For Coffee">
                             </a>
                             <h3><a href="../choosing-best-vegan-milk-for-coffee/index.html">Best Vegan Milk For
@@ -165,35 +165,35 @@
                             <span class="date">September 4, 2018</span>
                         </div>
                         <div class="item-related">
-                            <a class="related-thumb penci-image-holder owl-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p20-480x650.jpg"
+                            <a class="related-thumb penci-image-holder owl-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p20-480x650.jpg"
                                 href="../how-to-make-good-latte/index.html" title="How To Make Good Latte">
                             </a>
                             <h3><a href="../how-to-make-good-latte/index.html">How To Make Good Latte</a></h3>
                             <span class="date">September 4, 2018</span>
                         </div>
                         <div class="item-related">
-                            <a class="related-thumb penci-image-holder owl-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p2-480x650.jpg"
+                            <a class="related-thumb penci-image-holder owl-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p2-480x650.jpg"
                                 href="../the-best-coffee-shop-in-la/index.html" title="Best Coffee Shop In LA">
                             </a>
                             <h3><a href="../the-best-coffee-shop-in-la/index.html">Best Coffee Shop In LA</a></h3>
                             <span class="date">September 4, 2018</span>
                         </div>
                         <div class="item-related">
-                            <a class="related-thumb penci-image-holder owl-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-480x650.jpg"
+                            <a class="related-thumb penci-image-holder owl-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p17-480x650.jpg"
                                 href="../coffee-sop-bakery-in-cali/index.html" title="Coffee Sop &#038; Bakery in Cali">
                             </a>
                             <h3><a href="../coffee-sop-bakery-in-cali/index.html">Coffee Sop &#038; Bakery in Cali</a></h3>
                             <span class="date">September 4, 2018</span>
                         </div>
                         <div class="item-related">
-                            <a class="related-thumb penci-image-holder owl-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-480x650.jpg"
+                            <a class="related-thumb penci-image-holder owl-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p14-480x650.jpg"
                                 href="../making-morning-coffee/index.html" title="Making Morning Coffee">
                             </a>
                             <h3><a href="../making-morning-coffee/index.html">Making Morning Coffee</a></h3>
                             <span class="date">September 4, 2018</span>
                         </div>
                         <div class="item-related">
-                            <a class="related-thumb penci-image-holder owl-lazy" data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-480x650.jpg"
+                            <a class="related-thumb penci-image-holder owl-lazy" data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/p12-480x650.jpg"
                                 href="../how-to-make-latte-art-c-c-c-c-c-c-c-c-c-c-c-c-c-c/index.html" title="How To Make Latte Art">
                             </a>
                             <h3><a href="../how-to-make-latte-art-c-c-c-c-c-c-c-c-c-c-c-c-c-c/index.html">How To

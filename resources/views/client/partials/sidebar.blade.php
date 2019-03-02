@@ -3,7 +3,7 @@
 					<aside id="penci_about_widget-2" class="widget penci_about_widget">
 						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Về Hugo</span></h4>
 						<div class="about-widget pc_alignleft">
-							<a href="about"><img class="penci-widget-about-image holder-square penci-lazy" src="{{asset('public/client/images/about_hugo.jpg')}}" alt="About Me" /></a>
+							<a href="about"><img class="penci-widget-about-image holder-square penci-lazy" src="{{secure_asset('public/client/images/about_hugo.jpg')}}" alt="About Me" /></a>
 
 							<h2 class="about-me-heading">Hugo English Club</h2>
 
@@ -16,8 +16,8 @@
 						<div class="penci-list-banner">
 							<div class="penci-promo-item penci-banner-has-text">
 								<a class="penci-promo-link" href="#"></a>
-								<img class="penci-lazy" src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci-holder.png"
-								 data-src="http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/banner.jpg"
+								<img class="penci-lazy" src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci-holder.png"
+								 data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/banner.jpg"
 								 alt="Promotion Image">
 								<div class="penci-promo-text">
 									<h4>banner ads</h4>
