@@ -261,12 +261,12 @@ $(document).ready(function() {
 });
 </script> --}}
 
-<script src="{{secure_asset('public/ckeditor/ckeditor.js')}}"></script>
-<script src="{{secure_asset('public/ckfinder/ckfinder.js')}}"></script>
+<script src="{{asset('public/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('public/ckfinder/ckfinder.js')}}"></script>
 <script>
     CKEDITOR.replace('editor1', {
-    filebrowserBrowseUrl: "{{secure_asset('public/ckfinder/ckfinder.html')}}",
-    filebrowserUploadUrl: "{{secure_asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
+    filebrowserBrowseUrl: "{{asset('public/ckfinder/ckfinder.html')}}",
+    filebrowserUploadUrl: "{{asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
 </script>
 <script>
     $(document).ready(function () {

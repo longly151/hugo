@@ -995,7 +995,7 @@ Holder.js - client side image placeholders
 				}
 			}
 
-			return canvas.toDataURL('image/png');
+			return canvas.toDataurl('image/png');
 		};
 	})();
 
@@ -1476,7 +1476,7 @@ Holder.js - client side image placeholders
 		var ctx = null;
 
 		if (canvas.getContext) {
-			if (canvas.toDataURL('image/png').indexOf('data:image/png') != -1) {
+			if (canvas.toDataurl('image/png').indexOf('data:image/png') != -1) {
 				App.setup.renderer = 'canvas';
 				ctx = canvas.getContext('2d');
 				App.setup.supportsCanvas = true;

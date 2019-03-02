@@ -2458,7 +2458,7 @@ define('echarts/echarts', [
             if (bgColor && bgColor.replace(' ', '') === 'rgba(0,0,0,0)') {
                 bgColor = '#fff';
             }
-            return this._zr.toDataURL('image/' + imgType, bgColor);
+            return this._zr.toDataurl('image/' + imgType, bgColor);
         },
         getImage: function (imgType) {
             var title = this._optionRestore.title;
@@ -2521,7 +2521,7 @@ define('echarts/echarts', [
             if (bgColor && bgColor.replace(/ /g, '') === 'rgba(0,0,0,0)') {
                 bgColor = '#fff';
             }
-            var image = zrImg.toDataURL('image/png', bgColor);
+            var image = zrImg.toDataurl('image/png', bgColor);
             setTimeout(function () {
                 zrImg.dispose();
                 zrDom.parentNode.removeChild(zrDom);
@@ -4302,7 +4302,7 @@ define('zrender/zrender', [
             }
             var image;
             if (!this.myChart.isConnected()) {
-                image = this.zr.toDataURL('image/' + imgType, this.option.backgroundColor && this.option.backgroundColor.replace(' ', '') === 'rgba(0,0,0,0)' ? '#fff' : this.option.backgroundColor);
+                image = this.zr.toDataurl('image/' + imgType, this.option.backgroundColor && this.option.backgroundColor.replace(' ', '') === 'rgba(0,0,0,0)' ? '#fff' : this.option.backgroundColor);
             } else {
                 image = this.myChart.getConnectedDataURL(imgType);
             }
