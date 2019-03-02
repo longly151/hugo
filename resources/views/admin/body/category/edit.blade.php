@@ -28,7 +28,7 @@
                 </div>
                 @endif
                 @if ($type == 'topCategory')
-                <form class="form-horizontal m-t-40" ation="{{ url('admin/category/edit').'/'.$currentTopCategory->id}}" method="post">
+                <form class="form-horizontal m-t-40" ation="{{ secure_url('admin/category/edit').'/'.$currentTopCategory->id}}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Name</label>
@@ -48,7 +48,7 @@
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
                 </form>
                 @elseif($type == 'category')
-                <form class="form-horizontal m-t-40" ation="{{ url('admin/category/edit').'/'.$currentCategory->id }}" method="post">
+                <form class="form-horizontal m-t-40" ation="{{ secure_url('admin/category/edit').'/'.$currentCategory->id }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Name</label>
@@ -80,7 +80,7 @@
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
                 </form>
                 @elseif($type == 'subCategory')
-                <form class="form-horizontal m-t-40" ation="{{ url('admin/category/edit').'/'.$currentSubCategory->id }}" method="post">
+                <form class="form-horizontal m-t-40" ation="{{ secure_url('admin/category/edit').'/'.$currentSubCategory->id }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Name</label>
@@ -116,7 +116,7 @@
                     <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
                 </form>
                 @endif
-                {{-- <form class="form-horizontal m-t-40" ation="{{ url('admin/category/edit').'/' }}" method="post">
+                {{-- <form class="form-horizontal m-t-40" ation="{{ secure_url('admin/category/edit').'/' }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Name</label>

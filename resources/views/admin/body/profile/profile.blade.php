@@ -231,7 +231,7 @@
                     <div class="tab-pane @if(session('active')=='changeInfo'||$errors->has('email')||$errors->has('phoneNumber')||$errors->has('address')||$errors->has('description'))
                         active @endif" id="change-info" role="tabpanel">
                         <div class="card-body">
-                            <form action="{{ url('admin/profile/change-info') }}" method="post" class="form-horizontal form-material">
+                            <form action="{{ secure_url('admin/profile/change-info') }}" method="post" class="form-horizontal form-material">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="email" class="col-md-12">Email</label>
@@ -304,7 +304,7 @@
                     <div class="tab-pane @if(session('active')=='changePassword'||$errors->has('oldPassword')||$errors->has('password')||$errors->has('rePassword'))
                     active @endif" id="change-password" role="tabpanel">
                         <div class="card-body">
-                            <form action="{{ url('admin/profile/change-password') }}" method="post" class="form-horizontal form-material">
+                            <form action="{{ secure_url('admin/profile/change-password') }}" method="post" class="form-horizontal form-material">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="oldPassword" class="col-md-12">Old Password</label>

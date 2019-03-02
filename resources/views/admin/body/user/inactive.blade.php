@@ -58,7 +58,7 @@
                                     <td>{{$user->status}}</td>
                                     <td>{{$user->updated_at}}</td>
                                     <td>
-                                        <a href="{{ url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">
+                                        <a href="{{ secure_url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">
                                             <i class="fa fa-folder"></i> View </a>
                                         <button data-id="{{ $user->id }}" class="btn btn-info btn-xs activeUser">
                                                 <i class="fas fa-check-circle"></i> Active </button>

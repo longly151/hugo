@@ -22,7 +22,7 @@
         <div class="col-sm-12">
             <div class="card card-body">
                 <h4 class="card-title">Post Info</h4>
-                <form class="form-horizontal m-t-40" action="{{ url('admin/post/edit').'/'.$post->id }}" method="post">
+                <form class="form-horizontal m-t-40" action="{{ secure_url('admin/post/edit').'/'.$post->id }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -246,12 +246,12 @@ jQuery(document).ready(function () {
 });
 </script>
 
-<script src="{{asset('public/ckeditor/ckeditor.js')}}"></script>
-<script src="{{asset('public/ckfinder/ckfinder.js')}}"></script>
+<script src="{{ secure_asset('public/ckeditor/ckeditor.js')}}"></script>
+<script src="{{ secure_asset('public/ckfinder/ckfinder.js')}}"></script>
 <script>
     CKEDITOR.replace('editor1', {
-    filebrowserBrowseUrl: "{{asset('public/ckfinder/ckfinder.html')}}",
-    filebrowserUploadUrl: "{{asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
+    filebrowserBrowseUrl: "{{ secure_asset('public/ckfinder/ckfinder.html')}}",
+    filebrowserUploadUrl: "{{ secure_asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}"});
 </script>
 <script>
     $(document).ready(function () {

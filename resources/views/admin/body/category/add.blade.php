@@ -27,7 +27,7 @@
                     {{session('success')}}
                 </div>
                 @endif
-            <form class="form-horizontal m-t-40" ation="{{ url('admin/category/add') }}" method="post">
+            <form class="form-horizontal m-t-40" ation="{{ secure_url('admin/category/add') }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Name</label>

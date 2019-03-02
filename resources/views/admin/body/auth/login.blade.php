@@ -1,7 +1,7 @@
 @extends('admin.layouts.auth')
 @section('content')
 <div class="card-body">
-    <form class="form-horizontal form-material" id="loginform" action="{{ url('admin/login') }}" method="POST">
+    <form class="form-horizontal form-material" id="loginform" action="{{ secure_url('admin/login') }}" method="POST">
         {{ csrf_field() }}
         <h3 class="box-title m-b-20">Sign In</h3>
 
@@ -68,7 +68,7 @@
         </div>
         <div class="form-group m-b-0">
             <div class="col-sm-12 text-center">
-                <div>Don't have an account? <a href="{{ url('admin/register') }}" class="text-info m-l-5"><b>Sign Up</b></a></div>
+                <div>Don't have an account? <a href="{{ secure_url('admin/register') }}" class="text-info m-l-5"><b>Sign Up</b></a></div>
             </div>
         </div>
     </form>

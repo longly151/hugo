@@ -4,7 +4,7 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="{{ url('admin') }} ">
+            <a class="navbar-brand" href="{{ secure_url('admin') }} ">
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
@@ -301,15 +301,15 @@
                                     <div class="u-img"><img src="{{ session()->get('admin')['avatar'] }}" alt="user"></div>
                                     <div class="u-text">
                                             <h4>{{ session()->get('admin')['fullname']}}</h4>
-                                        <p class="text-muted">{{ session()->get('admin')['email'] }}</p><a href="{{ url('admin/profile') }}" class="btn btn-rounded btn-danger btn-sm">View
+                                        <p class="text-muted">{{ session()->get('admin')['email'] }}</p><a href="{{ secure_url('admin/profile') }}" class="btn btn-rounded btn-danger btn-sm">View
                                             Profile</a>
                                     </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{{ url('admin/profile/change-info') }}"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li><a href="{{ secure_url('admin/profile/change-info') }}"><i class="ti-settings"></i> Account Setting</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{{ url('admin/logout') }}"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="{{ secure_url('admin/logout') }}"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </div>
                 </li>

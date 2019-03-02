@@ -55,7 +55,7 @@
                                     <td>{{$tag->created_at}}</td>
                                     <td>
                                         @if ($tag->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <a href="{{ url('admin/tag/edit').'/'.$tag->id }}" class="btn btn-primary btn-xs">
+                                        <a href="{{ secure_url('admin/tag/edit').'/'.$tag->id }}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $tag->id }}" type="button" class="btn btn-danger btn-xs deleteTag">
                                             <i class="far fa-trash-alt"></i> Delete </button>

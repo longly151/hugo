@@ -69,9 +69,9 @@
                                     <td>{{$post->updated_at}}</td>
                                     <td>
                                         @if ($post->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <a href="{{url($post->url)}}" class="btn btn-success btn-xs" target="_blank">
+                                        <a href="{{ secure_url($post->url)}}" class="btn btn-success btn-xs" target="_blank">
                                             <i class="fa fa-folder"></i> View </a>
-                                        <a href="{{ url('admin/post/edit').'/'.$post->id }}" class="btn btn-primary btn-xs">
+                                        <a href="{{ secure_url('admin/post/edit').'/'.$post->id }}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $post->id }}" type="button" class="btn btn-danger btn-xs deletePost">
                                             <i class="far fa-trash-alt"></i> Delete </button>
