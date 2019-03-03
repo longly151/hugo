@@ -3,7 +3,7 @@
 <nav id="sidebar-nav" class="header-2" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
   <div id="sidebar-nav-logo">
-    <a href="/"><img class="penci-lazy" src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/images/penci-holder.png"
+    <a href="/"><img class="penci-lazy" src="/public/client/images/penci-holder.png"
         data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/logo-o.png"
         alt="Soledad Coffee Blog" /></a>
   </div>

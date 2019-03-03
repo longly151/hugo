@@ -64,7 +64,7 @@ class Handler extends ExceptionHandler
                     return redirect('/admin/error/500');
                     break;
                 case 503:
-                    return redirect('/admin/error/500');
+                    return redirect('/admin/error/503');
                     break;
                 default:
                     return parent::render($request, $exception);
