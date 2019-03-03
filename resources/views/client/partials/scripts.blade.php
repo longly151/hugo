@@ -43,7 +43,7 @@
     /* <![CDATA[ */
     var wpcf7 = {
         "apiSettings": {
-            "root": "http:\/\/soledad.pencidesign.com\/soledad-coffee-blog\/wp-json\/contact-form-7\/v1",
+            "root": "https:\/\/soledad.pencidesign.com\/soledad-coffee-blog\/wp-json\/contact-form-7\/v1",
             "namespace": "contact-form-7\/v1"
         },
         "recaptcha": {
