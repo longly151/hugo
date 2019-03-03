@@ -1,6 +1,6 @@
 <a id="close-sidebar-nav" class="header-2"><i class="fa fa-close"></i></a>
 
-<nav id="sidebar-nav" class="header-2" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<nav id="sidebar-nav" class="header-2" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 
   <div id="sidebar-nav-logo">
     <a href="/"><img class="penci-lazy" src="/public/client/images/penci-holder.png"

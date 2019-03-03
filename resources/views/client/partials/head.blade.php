@@ -4,8 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Soledad Coffee Blog &#8211; Multi-Concept Blog/Magazine WordPress Theme Sites site</title>
-  <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-  <link rel='dns-prefetch' href='http://s.w.org/' />
+  <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+  <link rel='dns-prefetch' href='https://s.w.org/' />
   <link rel="alternate" type="application/rss+xml" title="Soledad Coffee Blog &raquo; Feed" href="feed/index.html" />
   <link rel="alternate" type="application/rss+xml" title="Soledad Coffee Blog &raquo; Comments Feed" href="comments/feed/index.html" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">

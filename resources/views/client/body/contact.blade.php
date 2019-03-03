@@ -64,13 +64,13 @@
                     <div class="post-share">
                         <span class="share-title">Share</span>
                         <div class="list-posts-share">
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://soledad.pencidesign.com/soledad-coffee-blog/contact/"><i
+                            <a target="_blank" href="#"><i
                                     class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a><a target="_blank"
-                                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article:%20Contact%20-%20http://soledad.pencidesign.com/soledad-coffee-blog/contact/"><i
+                                href="#"><i
                                     class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a target="_blank"
-                                href="https://plus.google.com/share?url=http://soledad.pencidesign.com/soledad-coffee-blog/contact/"><i
+                                href="#"><i
                                     class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a><a
-                                data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://soledad.pencidesign.com/soledad-coffee-blog/contact/&amp;media=&amp;description=Contact"><i
+                                data-pin-do="none" target="_blank" href="#"><i
                                     class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a>
                         </div>
                     </div>

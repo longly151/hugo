@@ -1,4 +1,4 @@
-<header id="header" class="header-header-2" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<header id="header" class="header-header-2" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
     <!-- #header -->
     <div class="inner-header">
         <div class="container">
@@ -13,7 +13,7 @@
 
     <!-- Navigation -->
     <nav id="navigation" class="header-layout-bottom menu-style-1 header-2 menu-item-padding" role="navigation"
-        itemscope itemtype="http://schema.org/SiteNavigationElement">
+        itemscope itemtype="https://schema.org/SiteNavigationElement">
         <div class="container">
             <div class="button-menu-mobile header-2"><i class="fa fa-bars"></i></div>
             <ul id="menu-menu-2" class="menu">

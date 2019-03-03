@@ -34,7 +34,7 @@
 
 
 <footer id="footer-section" class="penci-footer-social-media penci-lazy footer-social-remove-circle footer-social-drop-line"
- itemscope itemtype="http://schema.org/WPFooter">
+ itemscope itemtype="https://schema.org/WPFooter">
 	<div class="container">
 		<div class="footer-socials-section">
 			<ul class="footer-socials">
@@ -46,7 +46,7 @@
 		<div class="footer-logo-copyright footer-not-logo">
 
 			{{-- <div id="footer-copyright">
-				<p>@2018 - PenciDesign. All Right Reserved. Designed and Developed by <a href="http://themeforest.net/item/soledad-multiconcept-blogmagazine-wp-theme/12945398?ref=PenciDesign"
+				<p>@2018 - PenciDesign. All Right Reserved. Designed and Developed by <a href="https://themeforest.net/item/soledad-multiconcept-blogmagazine-wp-theme/12945398?ref=PenciDesign"
 					target="_blank">PenciDesign</a></p>
 			</div> --}}
 			<div id="footer-copyright">
