@@ -16,7 +16,7 @@
                         <span class="author-italic author vcard">by <a class="url fn n" href="#">{{$post->author['fullname']}}</a></span>
                         <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
                     <div class="post-box-meta-single">
-                        <span class="author-post byline"><span class="author vcard">posted by <a class="author-url url fn n"
+                        <span class="author-post byline"><span class="author vcard">Posted by <a class="author-url url fn n"
                                     href="#">{{$post->author['fullname']}}</a></span></span>
                         <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
                     </div>
