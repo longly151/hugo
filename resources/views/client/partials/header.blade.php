@@ -235,7 +235,7 @@
                                 2 Columns</a></li>
                     </ul>
                 </li> --}}
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/gallery')}}">Album ảnh</a></li>
+            {{-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/gallery')}}">Album ảnh</a></li> --}}
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/contact')}}">Liên hệ</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/about')}}">Giới thiệu</a></li>
             </ul>
