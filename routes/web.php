@@ -121,7 +121,7 @@ Route::group(['namespace' => 'Client','middleware'=>'redisClient'],function() {
     Route::get('/gallery', 'PageController@gallery');
     Route::get('/contact', 'PageController@contact');
     Route::get('/about', 'PageController@about');
-    Route::get('/404', 'PageController@error_404');
+    // Route::get('/404', 'PageController@error_404');
     Route::get('/{url}', 'PageController@post');
     
 });
