@@ -246,7 +246,7 @@
             <div id="top-search">
                 <a class="search-click"><i class="fa fa-search"></i></a>
                 <div class="show-search">
-                    <form role="search" method="get" id="searchform" action="http://soledad.pencidesign.com/soledad-coffee-blog/">
+                    <form role="search" method="get" id="searchform" action="#">
                         <div>
                             <input type="text" class="search-input" placeholder="Type and hit enter..." name="s" id="s" />
                         </div>
