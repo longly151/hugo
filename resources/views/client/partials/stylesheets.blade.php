@@ -8,5 +8,5 @@
   type='text/css' media='all' />
 <link rel='stylesheet' id='penci-instag-slider-css' href='/public/client/css/instag-slider.css'
   type='text/css' media='all' />
-
+<link rel="stylesheet" href="/public/client/css/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/public/client/css/main_style.css">

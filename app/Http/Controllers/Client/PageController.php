@@ -25,7 +25,7 @@ class PageController extends Controller
         }
         else {
             $post = Post::where('url',$url)->first();
-            if(!$post) return redirect('/404');
+            if(!$post) return redirect('404');
             return view('client.body.post',['post'=>$post]);
         }
     }
