@@ -4,7 +4,7 @@
         <div class="container">
             <div id="logo">
                 <h1>
-                <a href="{{ secure_url('/') }}"><img style="opacity:0.9"src="{{ secure_asset('public/client/images/logo.png')}}"
+                <a href="{{ secure_url('/') }}"><img style="opacity:0.9"src="{{ secure_asset('public/client/images/hugo_logo.png')}}"
                             alt="Hugo Blog" /></a>
                 </h1>
             </div>
