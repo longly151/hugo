@@ -1,4 +1,5 @@
 <head>
+  <base href="{{ secure_asset('/public/client')}}/">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +17,8 @@
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/wlwmanifest.xml" />
   <meta name="generator" content="WordPress 4.9.9" />
   
-  <script type='text/javascript' src='https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-  <script type='text/javascript' src='https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+  <script type='text/javascript' src='js/jquery.js'></script>
+  <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
   <script type="application/ld+json">
     {
       "@context": "http:\/\/schema.org\/",
@@ -50,5 +51,5 @@
     var portfolioDataJs = portfolioDataJs || [];
   </script>
 
-  <script type="text/javascript" src="public/client/js/vProject.js"></script>
+  <script type="text/javascript" src="js/vProject.js"></script>
 </head>
