@@ -1,4 +1,4 @@
-<base href="{{ asset('/public/client')}}/">
+<base href="{{ secure_asset('/public/client')}}/">
 <script type="text/javascript">
     (function () {
         function addEventListener(element, event, handler) {
