@@ -4,7 +4,7 @@ window._wpemojiSettings = {
   "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
   "svgExt": ".svg",
   "source": {
-    "concatemoji": "http:\/\/soledad.pencidesign.com\/soledad-coffee-blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.9"
+    "concatemoji": "\/public\/client\/js\/wp-emoji-release.min.js"
   }
 };
 ! function (a, b, c) {
