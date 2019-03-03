@@ -11,12 +11,12 @@
                 <div class="wrapper-item wrapper-item-classess">
                     <div class="penci-item-mag penci-item-1">
                         <a class="penci-image-holder owl-lazy" data-src="{{$post->cover}}"
-                            href="{{$post->url}}" title="{{$post->title}}"></a>
+                            href="/{{$post->url}}" title="{{$post->title}}"></a>
                         <div class="penci-slide-overlay penci-slider7-overlay">
-                            <a class="overlay-link" href="{{$post->url}}"></a>
+                            <a class="overlay-link" href="/{{$post->url}}"></a>
                             <div class="penci-mag-featured-content">
                                 <div class="feat-text slider-hide-date">
-                                    <h3><a title="Enjoy Coffee Alone" href="{{$post->url}}">{{$post->title}}</a></h3>
+                                    <h3><a title="Enjoy Coffee Alone" href="/{{$post->url}}">{{$post->title}}</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                 <ul class="penci-wrapper-data penci-grid">
                     <article id="post-218" class="post-218 post type-post status-publish format-standard has-post-thumbnail hentry category-recipes tag-blog tag-coffee tag-soledad">
                         <div class="standard-post-image">
-                        <a href="{{$posts[0]->url}}">
+                        <a href="/{{$posts[0]->url}}">
                                 <img class="attachment-penci-full-thumb size-penci-full-thumb penci-lazy wp-post-image"
                                     src="{{$posts[0]->cover}}"
                                     alt="{{$posts[0]->title}}" title="p1" data-src="{{$posts[0]->cover}}">
@@ -53,7 +53,7 @@
                         <div class="header-standard">
                             <div class="penci-standard-cat"><span><i class="fa fa-clock-o"></i> <time class="entry-date published" datetime="{{$posts[0]->public_at}}">{{$posts[0]->public_at}}</time>
                             </span></div>
-                            <h2 class="entry-title entry-title"><a href="{{$posts[0]->url}}">{{$posts[0]->title}}</a></h2>
+                            <h2 class="entry-title entry-title"><a href="/{{$posts[0]->url}}">{{$posts[0]->title}}</a></h2>
                             <div class="penci-hide-tagupdated">
                                     {{-- <span class="author-italic author vcard">by <a class="url fn n" href="author/admin/index.html">Penci</a></span> --}}
                                     <time class="entry-date published" datetime="2018-09-04T02:24:31+00:00">September 4,
@@ -67,7 +67,7 @@
                             <div class="standard-main-content entry-content">
                                 <div class="post-entry standard-post-entry classic-post-entry blockquote-style-2">
                                     <p>{{$posts[0]->description}}</p>
-                                    <div class="penci-more-link penci-more-link-button"> <a href="{{$posts[0]->url}}"
+                                    <div class="penci-more-link penci-more-link-button"> <a href="/{{$posts[0]->url}}"
                                             class="more-link">Continue Reading</a></div>
                                 </div>
                             </div>
@@ -99,16 +99,16 @@
                             <article id="post-217" class="item hentry">
                                 <div class="thumbnail">
                                 <a class="penci-image-holder penci-lazy" data-src="{{$post->cover}}"
-                                        href="{{$post->url}}" title="{{$post->title}}">
+                                        href="/{{$post->url}}" title="{{$post->title}}">
                                     </a>
     
                                 </div>
     
                                 <div class="grid-header-box">
-                                    <span class="cat"><a class="penci-cat-name" href="{{$post->category['url']}}"
+                                    <span class="cat"><a class="penci-cat-name" href="/{{$post->category['url']}}"
                                             rel="category tag">{{$post->category['name']}}</a></span>
     
-                                    <h2 class="entry-title grid-title"><a href="{{$post->url}}">{{$post->title}}</a></h2>
+                                    <h2 class="entry-title grid-title"><a href="/{{$post->url}}">{{$post->title}}</a></h2>
                                     <div class="penci-hide-tagupdated">
                                         <span class="author-italic author vcard">by <a class="url fn n" href="#">{{$post->author['fullname']}}</a></span>
                                         <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
@@ -122,7 +122,7 @@
                                 </div>
     
                                 <div class="penci-readmore-btn penci-btn-make-button penci-btn-align-center">
-                                    <a class="penci-btn-readmore" href="{{$post->url}}">Read
+                                    <a class="penci-btn-readmore" href="/{{$post->url}}">Read
                                         more<i class="fa fa-angle-double-right"></i></a>
                                 </div>
     

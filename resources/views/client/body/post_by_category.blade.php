@@ -12,16 +12,16 @@
                             <article id="post-217" class="item hentry">
                                 <div class="thumbnail">
                                 <a class="penci-image-holder penci-lazy" data-src="{{$post->cover}}"
-                                        href="{{$post->url}}" title="{{$post->title}}">
+                                        href="/{{$post->url}}" title="{{$post->title}}">
                                     </a>
     
                                 </div>
     
                                 <div class="grid-header-box">
-                                    <span class="cat"><a class="penci-cat-name" href="{{$post->category['url']}}"
+                                    <span class="cat"><a class="penci-cat-name" href="/{{$post->category['url']}}"
                                             rel="category tag">{{$post->category['name']}}</a></span>
     
-                                    <h2 class="entry-title grid-title"><a href="{{$post->url}}">{{$post->title}}</a></h2>
+                                    <h2 class="entry-title grid-title"><a href="/{{$post->url}}">{{$post->title}}</a></h2>
                                     <div class="penci-hide-tagupdated">
                                         <span class="author-italic author vcard">by <a class="url fn n" href="#">{{$post->author['fullname']}}</a></span>
                                         <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
@@ -35,7 +35,7 @@
                                 </div>
     
                                 <div class="penci-readmore-btn penci-btn-make-button penci-btn-align-center">
-                                    <a class="penci-btn-readmore" href="{{$post->url}}">Read
+                                    <a class="penci-btn-readmore" href="/{{$post->url}}">Read
                                         more<i class="fa fa-angle-double-right"></i></a>
                                 </div>
     
