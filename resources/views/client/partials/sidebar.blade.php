@@ -17,7 +17,7 @@
 							<div class="penci-promo-item penci-banner-has-text">
 								<a class="penci-promo-link" href="#"></a>
 								<img class="penci-lazy" src="/public/client/images/penci-holder.png"
-								 data-src="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/uploads/sites/69/2018/09/banner.jpg"
+								 data-src="/public/client/images/banner.jpg"
 								 alt="Promotion Image">
 								<div class="penci-promo-text">
 									<h4>banner ads</h4>
