@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/public/client/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/client/images/favicon-32x32.png">
   <title>Soledad Coffee Blog &#8211; Multi-Concept Blog/Magazine WordPress Theme Sites site</title>
   
   <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
