@@ -59,7 +59,7 @@
                                     <time class="entry-date published" datetime="2018-09-04T02:24:31+00:00">September 4,
                                         2018</time><time class="penci-hide-tagupdated updated" datetime="2018-09-04T04:09:39+00:00">September
                                         4, 2018</time> </div>
-                            <div class="author-post byline"><span class="author vcard">Được đăng bởi <a class="url fn n"
+                            <div class="author-post byline"><span class="author vcard">Posted by <a class="url fn n"
                                         href="#">{{$posts[0]->author['fullname']}}</a></span></div>
                         </div>
 
