@@ -3,7 +3,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
   <title>Soledad Coffee Blog &#8211; Multi-Concept Blog/Magazine WordPress Theme Sites site</title>
+  
   <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
   <link rel='dns-prefetch' href='https://s.w.org/' />
   <link rel="alternate" type="application/rss+xml" title="Soledad Coffee Blog &raquo; Feed" href="feed/index.html" />
