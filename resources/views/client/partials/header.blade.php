@@ -28,10 +28,10 @@
                                 @foreach ($topCategories as $index => $topCategory)
                                 @if($index <4)
                                 @if($index == 0 )
-                                <a class="mega-cat-child cat-active all-style" href="{{$topCategory['url']}}"
+                                <a class="mega-cat-child cat-active all-style" href="/{{$topCategory['url']}}"
                                 data-id="penci-mega-{{$index}}"><span>{{$topCategory['name']}}</span></a>
                                 @else
-                                <a class="mega-cat-child" href="{{$topCategory['url']}}"
+                                <a class="mega-cat-child" href="/{{$topCategory['url']}}"
                                 data-id="penci-mega-{{$index}}"><span>{{$topCategory['name']}}</span></a>
                                 @endif
                                 @endif
@@ -47,15 +47,15 @@
                                         <div class="penci-mega-post">
                                             <div class="penci-mega-thumbnail">
                                                 <span class="mega-cat-name">
-                                                <a href="{{$menuPost->url}}">{{$topCategory['name']}}</a>
+                                                <a href="/{{$menuPost->url}}">{{$topCategory['name']}}</a>
                                                 </span>
                                             <a class="penci-image-holder penci-lazy" data-src="{{$menuPost->cover}}"
-                                                href="{{$menuPost->url}}" title="{{$menuPost->title}}">
+                                                href="/{{$menuPost->url}}" title="{{$menuPost->title}}">
                                                 </a>
                                             </div>
                                             <div class="penci-mega-meta">
                                                 <h3 class="post-mega-title">
-                                                    <a href="{{$menuPost->url}}" title="{{$menuPost->title}}">{{$menuPost->title}}</a>
+                                                    <a href="/{{$menuPost->url}}" title="{{$menuPost->title}}">{{$menuPost->title}}</a>
                                                 </h3>
                                                 <p class="penci-mega-date"><time class="entry-date published"
                                                         datetime="{{$menuPost->public_at}}">{{$menuPost->public_at}}</time>
@@ -82,12 +82,12 @@
                     <ul class="sub-menu">
                         @foreach ($topCategories as $topCategory)
                             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134"><a
-                            href="{{$topCategory['url']}}">{{$topCategory['name']}}</a>
+                            href="/{{$topCategory['url']}}">{{$topCategory['name']}}</a>
                             @if ($topCategory['categories'])
                             @foreach ($topCategory['categories'] as $category)
                                 <ul class="sub-menu">
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a
-                                    href="{{$category['url']}}">{{$category['name']}}</a></li>
+                                    href="/{{$category['url']}}">{{$category['name']}}</a></li>
                                 </ul>
                             @endforeach
                             @endif
