@@ -10,7 +10,7 @@
 
 {{-- Left Navigate --}}
 
-  <ul id="menu-menu-1" class="menu">
+  {{-- <ul id="menu-menu-1" class="menu">
     <li id="menu-item-7" class="megamenu menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-7"><a
         href="index.html">Home</a>
       <ul class="sub-menu">
@@ -820,5 +820,5 @@
     </li>
     <li id="menu-item-119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a target="_blank"
         href="http://soledad.pencidesign.com/shop/">Shop</a></li>
-  </ul>
+  </ul> --}}
 </nav>
