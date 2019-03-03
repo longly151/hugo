@@ -1,3 +1,4 @@
+<base href="{{ secure_asset('/public/client')}}/">
 <script type="text/javascript">
     (function () {
         function addEventListener(element, event, handler) {
@@ -56,9 +57,9 @@
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.2'></script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/penci-demo-select//js/demobar.js?ver=1.0'></script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/js/libs-script.min.js?ver=6.0'></script>
+<script type='text/javascript' src='js/scripts.js'></script>
+<script type='text/javascript' src='js/demobar.js'></script>
+<script type='text/javascript' src='js/libs-script.min.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var ajax_var_more = {
@@ -68,7 +69,7 @@
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/js/main.js?ver=6.0'></script>
+<script type='text/javascript' src='js/main.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var ajax_var = {
@@ -78,15 +79,15 @@
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/themes/soledad/js/post-like.js?ver=6.0'></script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/js/wp-embed.min.js?ver=4.9.9'></script>
+<script type='text/javascript' src='js/post-like.js'></script>
+<script type='text/javascript' src='js/wp-embed.min.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var mc4wp_forms_config = [];
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='http://max.soledad.pencidesign.com/soledad-coffee-blog/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min.js?ver=4.1.6'></script>
+<script type='text/javascript' src='js/forms-api.min.js'></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103837940-1"></script>
 <script>
