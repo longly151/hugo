@@ -7,6 +7,7 @@
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
+    <base href="/">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
