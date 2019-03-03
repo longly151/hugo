@@ -1,4 +1,3 @@
-<base href="{{ secure_asset('/public/client')}}/">
 <script type="text/javascript">
     (function () {
         function addEventListener(element, event, handler) {
@@ -57,9 +56,9 @@
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='js/scripts.js'></script>
-<script type='text/javascript' src='js/demobar.js'></script>
-<script type='text/javascript' src='js/libs-script.min.js'></script>
+<script type='text/javascript' src='/public/client/js/scripts.js'></script>
+<script type='text/javascript' src='/public/client/js/demobar.js'></script>
+<script type='text/javascript' src='/public/client/js/libs-script.min.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var ajax_var_more = {
@@ -69,7 +68,7 @@
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='js/main.js'></script>
+<script type='text/javascript' src='/public/client/js/main.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var ajax_var = {
@@ -79,15 +78,15 @@
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='js/post-like.js'></script>
-<script type='text/javascript' src='js/wp-embed.min.js'></script>
+<script type='text/javascript' src='/public/client/js/post-like.js'></script>
+<script type='text/javascript' src='/public/client/js/wp-embed.min.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var mc4wp_forms_config = [];
     /* ]]> */
 
 </script>
-<script type='text/javascript' src='js/forms-api.min.js'></script>
+<script type='text/javascript' src='/public/client/js/forms-api.min.js'></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103837940-1"></script>
 <script>
