@@ -5,11 +5,11 @@
 
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/public/client/images/main_favicon.png">
-  @if($post)
+  @if(isset($post))
   <title>{{$post->title}}</title>
-  @elseif ($about)
+  @elseif (isset($about))
   <title>About Hugo English Club</title>
-  @elseif ($contact)
+  @elseif (isset($contact))
   <title>Contact Us</title>
   @else
   <title>Hugo English Club &#8211; English Club for Da Nang Students</title>
