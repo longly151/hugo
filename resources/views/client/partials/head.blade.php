@@ -5,7 +5,7 @@
 
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/public/client/images/main_favicon.png">
-  <title>Soledad Coffee Blog &#8211; Multi-Concept Blog/Magazine WordPress Theme Sites site</title>
+  <title>Hugo English Club &#8211; English Club for Da Nang Students</title>
   
   <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
   <link rel='dns-prefetch' href='https://s.w.org/' />
