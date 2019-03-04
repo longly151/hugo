@@ -5,15 +5,7 @@
 
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/public/client/images/main_favicon.png">
-  @if(isset($post))
-  <title>{{$post->title}}</title>
-  @elseif (isset($about))
-  <title>About Hugo English Club</title>
-  @elseif (isset($contact))
-  <title>Contact Us</title>
-  @else
   <title>Hugo English Club &#8211; English Club for Da Nang Students</title>
-  @endif
   <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
   <link rel='dns-prefetch' href='https://s.w.org/' />
   <link rel="alternate" type="application/rss+xml" title="Soledad Coffee Blog &raquo; Feed" href="feed/index.html" />
