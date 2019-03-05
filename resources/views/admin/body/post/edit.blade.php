@@ -262,7 +262,7 @@ jQuery(document).ready(function () {
             $("#categoriesForm").hide();
             $("#subCategoriesForm").hide();
         } else {
-            $.get("/hugo/admin/ajax/category/"+topCategoryId,function(categories) {
+            $.get("/admin/ajax/category/"+topCategoryId,function(categories) {
                 var data = '<option value="0">-- Select Category --</option>'+categories;
                 $("#categories").html(data);
                 $("#categories").val({{null!=old('category')?old('category'):($post->category? $post->category['id']:'0')}});
@@ -272,7 +272,7 @@ jQuery(document).ready(function () {
             if (!categoryId||categoryId == "0") {
                 $("#subCategoriesForm").hide();
             } else {
-                $.get("/hugo/admin/ajax/category/"+categoryId,function(categories) {
+                $.get("/admin/ajax/category/"+categoryId,function(categories) {
                     var data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#subCategories").html(data);
                     $("#subCategories").val({{null!=old('subCategory')?old('subCategory'):($post->subCategory? $post->subCategory['id']:'0')}});
@@ -289,7 +289,7 @@ jQuery(document).ready(function () {
                 $("#categoriesForm").hide();
                 $("#subCategoriesForm").hide();
             } else {
-                    $.get("/hugo/admin/ajax/category/"+topCategoryId, function(categories) {
+                    $.get("/admin/ajax/category/"+topCategoryId, function(categories) {
                     let data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#categories").html(data);
                 });
@@ -301,7 +301,7 @@ jQuery(document).ready(function () {
             if (categoryId== "0") {
                 $("#subCategoriesForm").hide();
             } else {
-                    $.get("/hugo/admin/ajax/category/"+categoryId, function(categories) {
+                    $.get("/admin/ajax/category/"+categoryId, function(categories) {
                     let data = '<option value="0">-- Select Category --</option>'+categories;
                     $("#subCategories").html(data);
                 });

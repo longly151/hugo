@@ -12,7 +12,7 @@
 <p>#Create database name "hugo"</p>
 <p>php artisan migrate</p>
 <p>php artisan db:seed</p>
-<p>Go to the browser to enter the link http://localhost/hugo/admin and enjoy this shit</p>
+<p>Go to the browser to enter the link http://localhost/admin and enjoy this shit</p>
 <pre>Admin account: ([
         [
             username: admin,
@@ -44,7 +44,7 @@
 <p>#Create database name "hugo"</p>
 <p>php artisan migrate</p>
 <p>php artisan db:seed</p>
-<p>Go to the browser to enter the link http://localhost/hugo/admin and enjoy this shit</p>
+<p>Go to the browser to enter the link http://localhost/admin and enjoy this shit</p>
 <pre>Admin account: ([
         [
             username: admin,

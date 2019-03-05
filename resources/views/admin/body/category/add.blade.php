@@ -83,7 +83,7 @@
         if (id == "0") {
             $("#categoriesForm").hide();
         } else {
-            $.get("/hugo/admin/ajax/category/"+id,function(categories) {
+            $.get("/admin/ajax/category/"+id,function(categories) {
                 var data = '<option value="0">-- Select Category --</option>'+categories;
                 $("#categories").html(data);
                 $("#categories").val({{null!=old('category')?old('category'):'0'}});
@@ -96,7 +96,7 @@
             if (id == "0") {
                 $("#categoriesForm").hide();
             }
-            $.get("/hugo/admin/ajax/category/"+id, function(categories) {
+            $.get("/admin/ajax/category/"+id, function(categories) {
                 let data = '<option value="0">-- Select Category --</option>'+categories;
                 $("#categories").html(data);
             });

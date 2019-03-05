@@ -10,7 +10,7 @@ const alertDeleteTag = (tag) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/tag/delete', {
+                fetch('/admin/tag/delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -50,7 +50,7 @@ const alertDeleteCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/category/delete', {
+                fetch('/admin/category/delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -90,7 +90,7 @@ const alertDeletePost = (post) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/post/delete', {
+                fetch('/admin/post/delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -129,7 +129,7 @@ const alertDeleteUser = (user) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/user/delete', {
+                fetch('/admin/user/delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -168,7 +168,7 @@ const alertBanUser = (user) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/user/ban', {
+                fetch('/admin/user/ban', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -208,7 +208,7 @@ const alertRestoreTag = (tag) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/tag/restore', {
+                fetch('/admin/tag/restore', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -247,7 +247,7 @@ const alertRestoreCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/category/restore', {
+                fetch('/admin/category/restore', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -287,7 +287,7 @@ const alertRestorePost = (post) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/post/restore', {
+                fetch('/admin/post/restore', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -325,7 +325,7 @@ const alertRestoreUser = (user) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/user/restore', {
+                fetch('/admin/user/restore', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -363,7 +363,7 @@ const alertActiveUser = (user) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/user/active', {
+                fetch('/admin/user/active', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -403,7 +403,7 @@ const alertCompletedDeleteTag = (tag) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/tag/completed-delete', {
+                fetch('/admin/tag/completed-delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -442,7 +442,7 @@ const alertCompletedDeleteCategory = (category) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/category/completed-delete', {
+                fetch('/admin/category/completed-delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -481,7 +481,7 @@ const alertCompletedDeletePost = (post) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/post/completed-delete', {
+                fetch('/admin/post/completed-delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -520,7 +520,7 @@ const alertCompletedDeleteUser = (user) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch('/hugo/admin/user/completed-delete', {
+                fetch('/admin/user/completed-delete', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -555,7 +555,7 @@ const postImageMain = (file) => {
     const formData = new FormData();
     formData.append('file', fileData);
     $.ajax({
-        url: '/hugo/admin/post/image',
+        url: '/admin/post/image',
         type: 'POST',
         dataType: 'json',
         data: formData,
