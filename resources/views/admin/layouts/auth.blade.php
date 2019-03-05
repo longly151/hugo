@@ -19,7 +19,7 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper">
-        <div class="login-register" style="background-image:url(images/background/login-register.jpg);">
+        <div class="login-register" style="background-image:url(/public/admin/images/background/login-register.jpg);">
             <div class="login-box card">
 
             @yield('content')

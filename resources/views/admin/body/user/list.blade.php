@@ -38,7 +38,7 @@
                 <div class="el-card-avatar el-overlay-1"> <img src="{{$user->avatar}}" alt="user" />
                         <div class="el-overlay">
                             <ul class="el-info">
-                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="{{ secure_url('admin/user/view').'/'.$user->id}}"><i class="icon-user"></i></a></li>
+                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="/admin/user/view/{{$user->id}}"><i class="icon-user"></i></a></li>
                                 {{-- <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li> --}}
                             </ul>
                         </div>

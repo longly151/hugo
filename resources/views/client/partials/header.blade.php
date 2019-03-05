@@ -4,7 +4,7 @@
         <div class="container">
             <div id="logo">
                 <h1>
-                <a href="{{ secure_url('/') }}"><img style="opacity:0.9;width:50%"src="{{ secure_asset('public/client/images/main_logo.png')}}"
+                <a href="/"><img style="opacity:0.9;width:50%"src="/public/client/images/main_logo.png"
                             alt="Hugo Blog" /></a>
                 </h1>
             </div>
@@ -18,7 +18,7 @@
             <div class="button-menu-mobile header-2"><i class="fa fa-bars"></i></div>
             <ul id="menu-menu-2" class="menu">
                 <li class="megamenu menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a
-                        href="{{ secure_url('/')}}">Trang chủ</a>
+                        href="/">Trang chủ</a>
                 </li>
                 <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-243"><a href="#">Blog</a>
                 <ul class="sub-menu">
@@ -235,9 +235,9 @@
                                 2 Columns</a></li>
                     </ul>
                 </li> --}}
-            {{-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/gallery')}}">Album ảnh</a></li> --}}
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/contact')}}">Liên hệ</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="{{ secure_url('/about')}}">Giới thiệu</a></li>
+            {{-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="/gallery">Album ảnh</a></li> --}}
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="/contact">Liên hệ</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="/about">Giới thiệu</a></li>
             </ul>
 
 

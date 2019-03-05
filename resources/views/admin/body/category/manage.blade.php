@@ -92,7 +92,7 @@
                                     <td>
                                         @if ($topCategory['author_id'] ==
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <a href="{{ secure_url('admin/category/edit/').'/'.$topCategory['id'] }}" class="btn btn-primary btn-xs">
+                                        <a href="/admin/category/edit/{{$topCategory['id']}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $topCategory['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
@@ -131,7 +131,7 @@
                                     <td>
                                         @if ($category['author_id'] ==
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <a href="{{ secure_url('admin/category/edit').'/'.$category['id'] }}" class="btn btn-primary btn-xs">
+                                        <a href="/admin/category/edit/{{$category['id']}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $category['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
@@ -174,7 +174,7 @@
                                     <td>
                                         @if ($subCategory['author_id'] ==
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <a href="{{ secure_url('admin/category/edit').'/'.$subCategory['id'] }}" class="btn btn-primary btn-xs">
+                                        <a href="/admin/category/edit/{{$subCategory['id']}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $subCategory['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
@@ -201,7 +201,7 @@
 
 @section('pageScript')
 <!-- This is data table -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/public/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- Treeview Plugin JavaScript -->
 <script src="plugins/bootstrap-treeview-master/dist/bootstrap-treeview.min.js"></script>
 
@@ -398,7 +398,7 @@
             // onNodeUnselected: function (event, node) {
             //     $('#search-output').html('<p>' + node.text + ' was unselected</p>');
             // }
-            // <a style="z-index:1000;"href="{{ secure_url('admin/category/edit').'/'.${topCategory["id"]}" class="btn btn-primary btn-xs">
+            // <a style="z-index:1000;"href="/admin/category/edit/{{${topCategory["id"]}}" class="btn btn-primary btn-xs">
             //         <i class="fa fa-folder"></i> Edit </a>
             //     <button data-id="${topCategory["id"]}" type="button" class="btn btn-danger btn-xs deleteTag">
             //         <i class="far fa-trash-alt"></i> Delete </button>

@@ -55,7 +55,7 @@
                                     <td>{{$tag->created_at}}</td>
                                     <td>
                                         @if ($tag->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <a href="{{ secure_url('admin/tag/edit').'/'.$tag->id }}" class="btn btn-primary btn-xs">
+                                        <a href="/admin/tag/edit/{{$tag->id}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
                                         <button data-id="{{ $tag->id }}" type="button" class="btn btn-danger btn-xs deleteTag">
                                             <i class="far fa-trash-alt"></i> Delete </button>
@@ -80,7 +80,7 @@
 
 @section('pageScript')
     <!-- This is data table -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/public/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- start - This is for export functionality only -->
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>

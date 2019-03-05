@@ -102,19 +102,19 @@
                         <div class="card-body">
                             <div class="profiletimeline">
                                 <div class="sl-item">
-                                    <div class="sl-left"> <img src="images/users/1.jpg" alt="user" class="img-circle" />
+                                    <div class="sl-left"> <img src="/public/admin/images/users/1.jpg" alt="user" class="img-circle" />
                                     </div>
                                     <div class="sl-right">
                                         <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
                                             <p>assign a new task <a href="#"> Design weblayout</a></p>
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="images/big/img1.jpg"
+                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="/public/admin/images/big/img1.jpg"
                                                         class="img-responsive radius" /></div>
-                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="images/big/img2.jpg"
+                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="/public/admin/images/big/img2.jpg"
                                                         class="img-responsive radius" /></div>
-                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="images/big/img3.jpg"
+                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="/public/admin/images/big/img3.jpg"
                                                         class="img-responsive radius" /></div>
-                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="images/big/img4.jpg"
+                                                <div class="col-lg-3 col-md-6 m-b-20"><img src="/public/admin/images/big/img4.jpg"
                                                         class="img-responsive radius" /></div>
                                             </div>
                                             <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2
@@ -125,12 +125,12 @@
                                 </div>
                                 <hr>
                                 <div class="sl-item">
-                                    <div class="sl-left"> <img src="images/users/2.jpg" alt="user" class="img-circle" />
+                                    <div class="sl-left"> <img src="/public/admin/images/users/2.jpg" alt="user" class="img-circle" />
                                     </div>
                                     <div class="sl-right">
                                         <div> <a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
                                             <div class="m-t-20 row">
-                                                <div class="col-md-3 col-xs-12"><img src="images/big/img1.jpg"
+                                                <div class="col-md-3 col-xs-12"><img src="/public/admin/images/big/img1.jpg"
                                                         alt="user" class="img-responsive radius" /></div>
                                                 <div class="col-md-9 col-xs-12">
                                                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -147,7 +147,7 @@
                                 </div>
                                 <hr>
                                 <div class="sl-item">
-                                    <div class="sl-left"> <img src="images/users/3.jpg" alt="user" class="img-circle" />
+                                    <div class="sl-left"> <img src="/public/admin/images/users/3.jpg" alt="user" class="img-circle" />
                                     </div>
                                     <div class="sl-right">
                                         <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
@@ -163,7 +163,7 @@
                                 </div>
                                 <hr>
                                 <div class="sl-item">
-                                    <div class="sl-left"> <img src="images/users/4.jpg" alt="user" class="img-circle" />
+                                    <div class="sl-left"> <img src="/public/admin/images/users/4.jpg" alt="user" class="img-circle" />
                                     </div>
                                     <div class="sl-right">
                                         <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
@@ -231,7 +231,7 @@
                     <div class="tab-pane @if(session('active')=='changeInfo'||$errors->has('email')||$errors->has('phoneNumber')||$errors->has('address')||$errors->has('description'))
                         active @endif" id="change-info" role="tabpanel">
                         <div class="card-body">
-                            <form action="{{ secure_url('admin/profile/change-info') }}" method="post" class="form-horizontal form-material">
+                            <form action="/admin/profile/change-info" method="post" class="form-horizontal form-material">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="email" class="col-md-12">Email</label>
@@ -304,7 +304,7 @@
                     <div class="tab-pane @if(session('active')=='changePassword'||$errors->has('oldPassword')||$errors->has('password')||$errors->has('rePassword'))
                     active @endif" id="change-password" role="tabpanel">
                         <div class="card-body">
-                            <form action="{{ secure_url('admin/profile/change-password') }}" method="post" class="form-horizontal form-material">
+                            <form action="/admin/profile/change-password" method="post" class="form-horizontal form-material">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="oldPassword" class="col-md-12">Old Password</label>

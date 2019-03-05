@@ -49,7 +49,7 @@
     @section('pageScript')
 
     @show
-    <script src="js/main.js"></script>
+    <script src="/public/admin/js/main.js"></script>
 
 </body>
 

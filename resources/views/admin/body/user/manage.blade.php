@@ -54,7 +54,7 @@
                                     <td>{{$user->fullname}}</td>
                                     <td>{{$user->username}}</td>
                                     <td>
-                                    <form action="{{ secure_url('admin/user/manage').'/'.$user->id }}" method="post">
+                                    <form action="/admin/user/manage/{{$user->id}}" method="post">
                                         {{ csrf_field() }}
                                         <div class="box-body">
                                             <div class="form-group">
@@ -78,7 +78,7 @@
                                         <button type="submit" class="btn btn-success btn-xs" target="_blank">
                                             <i class="fa fa-save"></i> Save </button>
                                     </form>
-                                        <a href="{{ secure_url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">
+                                        <a href="/admin/user/view/{{$user->id}}" class="btn btn-primary btn-xs" target="_blank">
                                             <i class="fa fa-folder"></i> View </a>
                                         <button data-id="{{ $user->id }}" class="btn btn-warning btn-xs banUser">
                                             <i class="fa fa-ban"></i> Ban </button>
@@ -105,7 +105,7 @@
 
 @section('pageScript')
     <!-- This is data table -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/public/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- start - This is for export functionality only -->
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>

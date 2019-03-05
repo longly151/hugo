@@ -58,7 +58,7 @@
                                     <td>{{$user->status}}</td>
                                     <td>{{$user->deleted_at}}</td>
                                     <td>
-                                        <a href="{{ secure_url('admin/user/view').'/'.$user->id }}" class="btn btn-primary btn-xs" target="_blank">
+                                        <a href="/admin/user/view/{{$user->id}}" class="btn btn-primary btn-xs" target="_blank">
                                             <i class="fa fa-folder"></i> View </a>
                                         <button data-id="{{ $user->id }}" class="btn btn-success btn-xs restoreUser">
                                                 <i class="fas fa-recycle"></i> Restore </button>
@@ -85,7 +85,7 @@
 
 @section('pageScript')
     <!-- This is data table -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/public/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- start - This is for export functionality only -->
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>

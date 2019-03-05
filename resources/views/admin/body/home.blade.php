@@ -236,32 +236,32 @@
                     <table class="table browser m-t-30 no-border">
                         <tbody>
                             <tr>
-                                <td style="width:40px"><img src="images/browser/chrome-logo.png" alt=logo /></td>
+                                <td style="width:40px"><img src="/public/admin/images/browser/chrome-logo.png" alt=logo /></td>
                                 <td>Google Chrome</td>
                                 <td class="text-right"><span class="label label-light-info">23%</span></td>
                             </tr>
                             <tr>
-                                <td><img src="images/browser/firefox-logo.png" alt=logo /></td>
+                                <td><img src="/public/admin/images/browser/firefox-logo.png" alt=logo /></td>
                                 <td>Mozila Firefox</td>
                                 <td class="text-right"><span class="label label-light-success">15%</span></td>
                             </tr>
                             <tr>
-                                <td><img src="images/browser/safari-logo.png" alt=logo /></td>
+                                <td><img src="/public/admin/images/browser/safari-logo.png" alt=logo /></td>
                                 <td>Apple Safari</td>
                                 <td class="text-right"><span class="label label-light-primary">07%</span></td>
                             </tr>
                             <tr>
-                                <td><img src="images/browser/internet-logo.png" alt=logo /></td>
+                                <td><img src="/public/admin/images/browser/internet-logo.png" alt=logo /></td>
                                 <td>Internet Explorer</td>
                                 <td class="text-right"><span class="label label-light-warning">09%</span></td>
                             </tr>
                             <tr>
-                                <td><img src="images/browser/opera-logo.png" alt=logo /></td>
+                                <td><img src="/public/admin/images/browser/opera-logo.png" alt=logo /></td>
                                 <td>Opera mini</td>
                                 <td class="text-right"><span class="label label-light-danger">23%</span></td>
                             </tr>
                             <tr>
-                                <td><img src="images/browser/internet-logo.png" alt=logo /></td>
+                                <td><img src="/public/admin/images/browser/internet-logo.png" alt=logo /></td>
                                 <td>Microsoft edge</td>
                                 <td class="text-right"><span class="label label-light-megna">09%</span></td>
                             </tr>
