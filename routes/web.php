@@ -35,8 +35,8 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::get('edit/{id}', 'PostController@edit');
                 Route::post('edit/{id}', 'PostController@update');
                 Route::post('delete', 'PostController@delete');
-                Route::post('completed-delete', 'PostController@destroy');
                 Route::post('restore', 'PostController@restore');
+                Route::post('completed-delete', 'PostController@destroy');
             });
         });
         Route::group(['prefix' => 'category'], function() {
@@ -49,7 +49,7 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::post('edit/{id}', 'CategoryController@update');
                 Route::post('delete', 'CategoryController@delete');
                 Route::post('restore', 'CategoryController@restore');
-                Route::post('complete-delete', 'CategoryController@destroy');
+                Route::post('completed-delete', 'CategoryController@destroy');
             });
         });
         Route::group(['prefix' => 'tag'], function() {
