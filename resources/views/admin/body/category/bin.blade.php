@@ -53,7 +53,7 @@
                                     <td>
                                         @if ($topCategory['author_id'] ==
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <button data-id="{{ $topCategory['id'] }}" class="btn btn-success btn-xs restoreTopCategory">
+                                        <button data-id="{{ $topCategory['id'] }}" class="btn btn-success btn-xs restoreCategory">
                                             <i class="fas fa-recycle"></i> Restore </button>
                                         <button data-id="{{ $topCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
@@ -130,9 +130,9 @@
                                     <td>{{$subCategory['created_at']}}</td>
                                     <td>
                                         @if ($subCategory['author_id'] == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
-                                        <button data-id="{{ $subCategory['id'] }}" class="btn btn-success btn-xs restoreSubCategory">
+                                        <button data-id="{{ $subCategory['id'] }}" class="btn btn-success btn-xs restoreCategory">
                                             <i class="fas fa-recycle"></i> Restore </button>
-                                        <button data-id="{{ $subCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteSubCategory">
+                                        <button data-id="{{ $subCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
                                         @endif
                                     </td>
