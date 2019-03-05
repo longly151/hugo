@@ -94,7 +94,7 @@
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
                                         <a href="/admin/category/edit/{{$topCategory['id']}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
-                                        <button data-id="{{ $topCategory['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
+                                        <button data-id="{{$topCategory['id']}}" type="button" class="btn btn-danger btn-xs deleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
                                         @endif
                                     </td>
@@ -133,7 +133,7 @@
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
                                         <a href="/admin/category/edit/{{$category['id']}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
-                                        <button data-id="{{ $category['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
+                                        <button data-id="{{$category['id']}}" type="button" class="btn btn-danger btn-xs deleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
                                         @endif
                                     </td>
@@ -176,7 +176,7 @@
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
                                         <a href="/admin/category/edit/{{$subCategory['id']}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
-                                        <button data-id="{{ $subCategory['id'] }}" type="button" class="btn btn-danger btn-xs deleteCategory">
+                                        <button data-id="{{$subCategory['id']}}" type="button" class="btn btn-danger btn-xs deleteCategory">
                                             <i class="far fa-trash-alt"></i> Delete </button>
                                         @endif
                                     </td>
@@ -392,16 +392,6 @@
             collapseIcon: 'ti-minus',
             nodeIcon: 'fa fa-folder',
             data: defaultData,
-            // onNodeSelected: function (event, node) {
-            //         $('#search-output').html('<p>' + node.text + ' was selected</p>');
-            //     },
-            // onNodeUnselected: function (event, node) {
-            //     $('#search-output').html('<p>' + node.text + ' was unselected</p>');
-            // }
-            // <a style="z-index:1000;"href="/admin/category/edit/{{${topCategory["id"]}}" class="btn btn-primary btn-xs">
-            //         <i class="fa fa-folder"></i> Edit </a>
-            //     <button data-id="${topCategory["id"]}" type="button" class="btn btn-danger btn-xs deleteTag">
-            //         <i class="far fa-trash-alt"></i> Delete </button>
         });
 
         var search = function (e) {
