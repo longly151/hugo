@@ -23,8 +23,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Auth'], function () {
 Route::group(['namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'admin','middleware' => 'adminLogin'], function () {
         Route::get('/', function () {
-            phpinfo();
-            // return view('admin.body.home');
+            return view('admin.body.home');
         });
         Route::group(['prefix' => 'post'], function() {
             Route::get('add', 'PostController@create');
