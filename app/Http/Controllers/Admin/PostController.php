@@ -80,9 +80,9 @@ class PostController extends Controller
         }
         
         // dd(Storage::disk('s3')->url('default_cover.png'));
-        print_r($request->file('cover'));exit();
-        $path = Storage::disk('s3')->put('/posts', $request->file('cover'));
-        dd($path);
+        // print_r($request->file('cover'));exit();
+        // $path = Storage::disk('s3')->put('/posts', $request->file('cover'));
+        // dd($path);
         $dbPost = new Post;
         $dbPost->title = $post['title'];
         $dbPost->description = $post['description'];
