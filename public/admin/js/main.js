@@ -10,7 +10,8 @@ const alertDeleteTag = (tag) => {
         })
         .then((result) => {
             if (result.value) {
-                fetch(location.protocol + '//' + location.hostname + '/admin/tag/delete', {
+                console.log(location.protocol + '//' + location.hostname + '/admin/tag/delete');
+                fetch(location.protocol + '//' + location.hostname + '/admin/tag/deletes', {
                         method: 'POST',
                         body: JSON.stringify({
                             id,
@@ -21,14 +22,14 @@ const alertDeleteTag = (tag) => {
                     })
                     .then((value) => {
                         if (value.status === 200) {
-                            location.reload();
+                            // location.reload();
                             Swal(
                                 'Deleted',
                                 '',
                                 'success',
                             )
                         } else {
-                            location.reload();
+                            // location.reload();
                             swal({
                                 title: 'Error',
                                 text: 'Fail to delete the tag, please try again',
