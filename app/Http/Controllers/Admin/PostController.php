@@ -10,6 +10,7 @@ use App\Tag;
 use App\Category;
 use App\Post;
 use Illuminate\Support\Facades\Redis;
+use App\Helpers\Helper;
 
 class PostController extends Controller
 {
@@ -78,17 +79,13 @@ class PostController extends Controller
                 }
             }
         }
-        
-        // dd(Storage::disk('s3')->url('default_cover.png'));
-        // print_r($request->file('cover'));exit();
-        // $path = Storage::disk('s3')->put('/posts', $request->file('cover'));
-        // dd($path);
         $dbPost = new Post;
         $dbPost->title = $post['title'];
         $dbPost->description = $post['description'];
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
+        $dbPost->cover = Helper::handleFile($request->file('cover'));
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);
         return redirect('/admin/post/manage')->with('success','Add post successfully');

@@ -113,7 +113,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Default file upload</label>
+                        <h4 class="m-t-20">Cover Photo</h4>
                         <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp" name="cover">
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
