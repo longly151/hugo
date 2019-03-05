@@ -21,20 +21,8 @@ const alertDeleteTag = (tag) => {
                         },
                     })
                     .then((value) => {
-                        if (value.status === 200) {
-                            // location.reload();
-                            Swal(
-                                'Deleted',
-                                '',
-                                'success',
-                            )
-                        } else {
-                            // location.reload();
-                            swal({
-                                title: 'Error',
-                                text: 'Fail to delete the tag, please try again',
-                            });
-                        }
+                        
+
                     });
             }
         });
