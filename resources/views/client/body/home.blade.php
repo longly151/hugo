@@ -94,7 +94,7 @@
 
                     </article>
                     @foreach ($posts as $index => $post)
-                    @if ($index>0 && $index<=4)
+                    @if ($index>0)
                         <li class="grid-style">
                             <article id="post-217" class="item hentry">
                                 <div class="thumbnail">

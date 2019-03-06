@@ -8,6 +8,7 @@ use App\Http\Requests\UserProfileRequest;
 use App\Http\Requests\UserPasswordRequest;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use App\Helpers\Helper;
 
 class ProfileController extends Controller
 {
@@ -33,14 +34,16 @@ class ProfileController extends Controller
         $user->phoneNumber = $info['phoneNumber'];
         $user->address = $info['address'];
         $user->description = $info['description'];
+        if ($request->file('avatar')) $user->avatar = Helper::handleFile($request->file('avatar'),'/avatar');
         $user->save();
-        $info = User::where('id', $id)->select(['email','phoneNumber','address','description'])->first()->toArray();;
+        $info = User::where('id', $id)->select(['email','phoneNumber','address','description','avatar'])->first()->toArray();;
         // get cUser
         $cUser = $request->session()->get('admin');
         $cUser['email'] = $info['email'];
         $cUser['phoneNumber'] = $info['phoneNumber'];
         $cUser['address'] = $info['address'];
         $cUser['description'] = $info['description'];
+        $cUser['avatar'] = $info['avatar'];
         // notification 
         if($cUser==$request->session()->get('admin')) $messages = "Nothing changes";
         else $messages="Change profile successfully";

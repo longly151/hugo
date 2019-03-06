@@ -4,10 +4,10 @@ namespace App\Helpers;
 use Illuminate\Support\Facades\Storage;
 
 class Helper {
-  public static function handleFile($file) {
+  public static function handleFile($file,$path) {
     if($file) {
       $fileInfo = pathinfo($file->getClientOriginalName());
-      $path = Storage::disk('s3')->putFileAs('/posts', $file,$fileInfo['filename'].'-'.date('YmdHis').'.'.$fileInfo['extension']);
+      $path = Storage::disk('s3')->putFileAs($path, $file, $fileInfo['filename'].'-'.date('YmdHis').'.'.$fileInfo['extension']);
       return (env('AWS_URL').'/'.$path);
     }
   }

@@ -42,7 +42,7 @@
                         @elseif (session()->get('admin')['role'] == 'customer')
                         text-secondary
                         @endif
-                        card-subtitle text-uppercase small">{{ session()->get('admin')['role'] }}</h6>
+                        card-subtitle text-uppercase small">{{ session()->get('admin')['role'] }} </h6>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i>
                                     <p class="font-medium">254</p>
@@ -231,7 +231,7 @@
                     <div class="tab-pane @if(session('active')=='changeInfo'||$errors->has('email')||$errors->has('phoneNumber')||$errors->has('address')||$errors->has('description'))
                         active @endif" id="change-info" role="tabpanel">
                         <div class="card-body">
-                            <form action="/admin/profile/change-info" method="post" class="form-horizontal form-material">
+                            <form action="/admin/profile/change-info" method="post" class="form-horizontal form-material" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="email" class="col-md-12">Email</label>
@@ -279,6 +279,12 @@
                                             {{$errors->first('description')}}
                                         </small>
                                         @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="avatar" class="col-md-12">Change Avatar</label>
+                                    <div class="col-md-12">
+                                        <input type="file" class="form-control-file" name="avatar" id="avatar" placeholder="" aria-describedby="fileHelpId">
                                     </div>
                                 </div>
                                 {{-- <div class="form-group">

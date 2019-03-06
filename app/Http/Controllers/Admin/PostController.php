@@ -85,7 +85,7 @@ class PostController extends Controller
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
-        $dbPost->cover = Helper::handleFile($request->file('cover'));
+        $dbPost->cover = Helper::handleFile($request->file('cover'),'/posts');
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);
         return redirect('/admin/post/manage')->with('success','Add post successfully');
