@@ -270,6 +270,8 @@ class PostsTableSeeder extends Seeder
         //     ],
         // ]);
 
+        // Old seeder
+
         DB::table('posts')->insert([
             [
                 'title' => 'HUGO ENGLISH CLUB - MỘT CHẶNG ĐƯỜNG DÀI',
@@ -280,7 +282,7 @@ class PostsTableSeeder extends Seeder
                 V&agrave; đ&aacute;m lửa cứ bập b&ugrave;ng...</p>',
                 'author_id' => 1,
                 'category_id' => 1,
-                'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/home-20190306142623.jpg',
+                'cover' => 'https://hugoenglishclub.github.io/images/home.jpg',
                 'url' => str_slug('HUGO ENGLISH CLUB - MỘT CHẶNG ĐƯỜNG DÀI').'-'.date('Ymdhis'),
                 'created_at' => now(),
                 'updated_at' => now()
@@ -297,7 +299,7 @@ class PostsTableSeeder extends Seeder
                 <p>C&aacute;i &ocirc;m l&agrave; một nguồn lực c&oacute; nhiều sức mạnh kỳ diệu. Khi ch&uacute;ng ta mở rộng tr&aacute;i tim v&agrave; v&ograve;ng tay của m&igrave;nh cũng ch&iacute;nh l&agrave; l&uacute;c ch&uacute;ng ta động vi&ecirc;n người kh&aacute;c cũng l&agrave;m như vậy. H&atilde;y nghĩ đến những người bạn y&ecirc;u mến trong cuộc đời m&igrave;nh. Bạn c&oacute; điều g&igrave; muốn n&oacute;i với họ? Bạn c&oacute; muốn chia sẻ v&ograve;ng tay của m&igrave;nh cho họ? Hay l&agrave; bạn đang chờ đợi v&agrave; hy vọng người ấy sẽ chủ động điều đ&oacute;? Đừng chờ đợi! H&atilde;y l&agrave; người khởi đầu! Biết đ&acirc;u người đ&oacute; cũng đang chờ đợi y&ecirc;u thương từ bạn.</p>',
                 'author_id' => 1,
                 'category_id' => 1,
-                'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/51936831_403916770413597_4446592973127286784_n-20190306142847.jpg',
+                'cover' => 'https://hugoenglishclub.github.io/images/img_post/51936831_403916770413597_4446592973127286784_n.jpg',
                 'url' => str_slug('CÂU CHUYỆN VỀ NHỮNG CÁI ÔM').'-'.date('Ymdhis'),
                 'created_at' => now(),
                 'updated_at' => now()
@@ -318,7 +320,7 @@ class PostsTableSeeder extends Seeder
                 <p>-Hoa D&acirc;m Bụt-</p>',
                 'author_id' => 1,
                 'category_id' => 2,
-                'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/00-20190306142941.jpg',
+                'cover' => 'https://hugoenglishclub.github.io/images/img_post/170119/00.jpg',
                 'url' => str_slug('VỀ HUGO STAFF').'-'.date('Ymdhis'),
                 'created_at' => now(),
                 'updated_at' => now()
@@ -328,16 +330,16 @@ class PostsTableSeeder extends Seeder
                 'description' => 'Khoảnh khắc lửa trại bắn lên những tia than sáng lên như pháo hoa, thật sự đẹp vô cùng (Không biết có ai lợi dụng thời cơ ngay lúc ấy để đứng cạnh crush không nhỉ, vì nó lãng mạn thật sự đó).',
                 'content' => '<p>Trại của Hugo thật sự tuyệt vời, v&agrave; đối với một đứa từ nhỏ đến lớn rất &iacute;t khi ra khỏi nh&agrave; như t&ocirc;i th&igrave; n&oacute; c&agrave;ng giống như một điều g&igrave; đ&oacute; mới mẻ vậy. Lửa trại đ&atilde; t&agrave;n, qua một (v&agrave;i) giấc ngủ v&agrave; đợi ăn s&aacute;ng, về lều ngồi nghe c&aacute;c anh chị em n&oacute;i chuyện, t&ocirc;i tranh thủ viết mấy d&ograve;ng, ph&ograve;ng khi t&ocirc;i c&oacute; ham vui rồi lại qu&ecirc;n mất. T&ocirc;i c&oacute; v&agrave;i quan s&aacute;t nhỏ cho lần đi trại n&agrave;y, đặc biệt về kiểu người khi đi trại:</p>
 
-                <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/01-20190306143215.jpg" /></p>
+                <p><img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/01.jpg" /></p>
                 
                 <ol>
-                    <li>Loại người d&agrave;nh cả thanh xu&acirc;n để đi t&igrave;m đồ. Mỗi lần t&ocirc;i thấy chủ nhiệm của Hugo l&agrave; một lần chị ấy đi t&igrave;m một m&oacute;n đồ g&igrave; đấy, l&uacute;c th&igrave; m&aacute;y ảnh, l&uacute;c th&igrave; &aacute;o, c&oacute; khi l&agrave; d&ugrave;,&hellip; (h&igrave;nh như chỉ c&ograve;n thiếu mỗi c&acirc;u hỏi chị ấy để người y&ecirc;u ở đ&acirc;u th&ocirc;i). Ơn trời, sau tất cả, mọi m&oacute;n đồ đều trở về với Hương.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143216.jpg" /></li>
+                    <li>Loại người d&agrave;nh cả thanh xu&acirc;n để đi t&igrave;m đồ. Mỗi lần t&ocirc;i thấy chủ nhiệm của Hugo l&agrave; một lần chị ấy đi t&igrave;m một m&oacute;n đồ g&igrave; đấy, l&uacute;c th&igrave; m&aacute;y ảnh, l&uacute;c th&igrave; &aacute;o, c&oacute; khi l&agrave; d&ugrave;,&hellip; (h&igrave;nh như chỉ c&ograve;n thiếu mỗi c&acirc;u hỏi chị ấy để người y&ecirc;u ở đ&acirc;u th&ocirc;i). Ơn trời, sau tất cả, mọi m&oacute;n đồ đều trở về với Hương.<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/02.jpg" /></li>
                     <li>Loại người bất chấp h&ocirc;m sau l&aacute;i xe tối h&ocirc;m trước vẫn quẩy tới bến. 4 giờ s&aacute;ng, t&ocirc;i vẫn c&ograve;n nghe tiếng đ&agrave;n h&aacute;t văng vẳng b&ecirc;n tai. 10 giờ s&aacute;ng h&ocirc;m sau, c&oacute; một người anh đi xe song song với t&ocirc;i trong cơn mưa ảnh hưởng bởi b&atilde;o t&aacute;p, đ&atilde; n&oacute;i rằng: &ldquo;M&igrave;nh đ&atilde; buồn ngủ đ&atilde; đ&agrave;nh, mưa c&ograve;n ưng đ&aacute;nh v&agrave;o mặt như thể m&igrave;nh vừa chia tay người y&ecirc;u xong&rdquo;. T&ocirc;i đ&atilde; lo rằng &ocirc;ng anh đấy c&oacute; khi c&ograve;n kh&ocirc;ng về được tới nh&agrave;, nhưng rồi mọi chuyện đều ổn.</li>
-                    <li>Loại người rảnh qu&aacute; kh&ocirc;ng c&oacute; chuyện g&igrave; để l&agrave;m n&ecirc;n kiếm chuyện để l&agrave;m. T&ocirc;i bị đứa bạn A nằm cạnh l&agrave;m thức giấc l&uacute;c 2h s&aacute;ng. 30 ph&uacute;t sau đứa bạn B dậy v&agrave; mọi người biết n&oacute; rủ t&ocirc;i l&agrave;m g&igrave; kh&ocirc;ng? Đi đ&aacute;nh răng. Sau đấy ch&uacute;ng t&ocirc;i về lại lều rồi nằm kiểu g&igrave; lại ngủ thiếp đi mất. Rảnh thật sự.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143217.jpg" /></li>
-                    <li>Loại người an nh&agrave;n hưởng trại, sinh hoạt đ&uacute;ng giờ giấc. Đứa bạn A của t&ocirc;i bảo rằng: &ldquo;Đi trại th&igrave; đi trại, ta quyết t&acirc;m rồi, ăn uống no đủ ngủ nghỉ đ&uacute;ng l&uacute;c&rdquo;. V&agrave; c&oacute; lẽ n&oacute; cũng h&agrave;o hứng qu&aacute; n&ecirc;n vừa kết th&uacute;c t&acirc;m sự tuổi hồng với Hugo th&igrave; n&oacute; lặng lẽ đi ngủ từ 11 giờ khuya đến gần 3 giờ s&aacute;ng dậy lục đục ra h&oacute;ng mọi người đ&agrave;n h&aacute;t với nhau, v&agrave; tất nhi&ecirc;n, khi n&oacute; quay lại th&igrave; chỗ của n&oacute; bị người kh&aacute;c nằm v&agrave;o rồi.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/04-20190306143218.jpg" /></li>
-                    <li>Loại người đi trại về rồi mới xin ph&eacute;p phụ huynh đi trại. Vẫn l&agrave; bạn A. Tới s&aacute;ng n&oacute; đang ngủ lơ mơ vất vưởng ở đ&acirc;u đấy th&igrave; c&oacute; người bảo mẹ n&oacute; gọi. Ẻm lật đật bật dậy rồi đi kiếm điện thoại b&aacute;o phụ huynh ngay v&agrave; lu&ocirc;n. (Kh&ocirc;ng sao, mọi chuyện đ&atilde; tốt hơn rồi, A bảo vậy).<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/05-20190306143219.jpg" /></li>
-                    <li>Loại người high mọi l&uacute;c mọi nơi. Cơ trưởng trong Hugo nhiều đếm kh&ocirc;ng xuể, mở hẳn mấy lớp dạy Vinahouse tận t&igrave;nh truyền đạt từ động t&aacute;c đến động vi&ecirc;n tinh thần những người kh&ocirc;ng l&agrave;m được. Cứ c&oacute; nhạc l&agrave; quẩy, bất chấp thể loại.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/06-20190306143220.jpg" /></li>
-                    <li>Loại người đợi trại l&agrave; để viết mấy d&ograve;ng t&acirc;m sự tuổi hồng kh&ocirc;ng thể n&oacute;i ra bằng lời. Slogan của trại Hugo năm nay l&agrave; &ldquo;Đi Bồ Bồ về c&oacute; bồ&rdquo;, t&ocirc;i tự hỏi c&oacute; đ&ocirc;i n&agrave;o th&agrave;nh chưa. Nhưng m&agrave; theo những quan s&aacute;t t&igrave;nh h&igrave;nh sau trại, ai cũng đ&ograve;i bắt đền chủ nhiệm th&igrave; phải&hellip; L&uacute;c về lều, c&oacute; một &ocirc;ng anh trong nh&oacute;m t&ocirc;i c&ograve;n bảo &ldquo;Năm ni &iacute;t confession thả th&iacute;nh qu&aacute;, nhớ năm ngo&aacute;i m&igrave;nh anh solo 8 b&agrave;i, nay chỉ cần viết gộp lại cho team m&igrave;nh th&ocirc;i, đỡ dễ sợ&rdquo;.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/07-20190306143221.jpg" /></li>
+                    <li>Loại người rảnh qu&aacute; kh&ocirc;ng c&oacute; chuyện g&igrave; để l&agrave;m n&ecirc;n kiếm chuyện để l&agrave;m. T&ocirc;i bị đứa bạn A nằm cạnh l&agrave;m thức giấc l&uacute;c 2h s&aacute;ng. 30 ph&uacute;t sau đứa bạn B dậy v&agrave; mọi người biết n&oacute; rủ t&ocirc;i l&agrave;m g&igrave; kh&ocirc;ng? Đi đ&aacute;nh răng. Sau đấy ch&uacute;ng t&ocirc;i về lại lều rồi nằm kiểu g&igrave; lại ngủ thiếp đi mất. Rảnh thật sự.<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/03.jpg" /></li>
+                    <li>Loại người an nh&agrave;n hưởng trại, sinh hoạt đ&uacute;ng giờ giấc. Đứa bạn A của t&ocirc;i bảo rằng: &ldquo;Đi trại th&igrave; đi trại, ta quyết t&acirc;m rồi, ăn uống no đủ ngủ nghỉ đ&uacute;ng l&uacute;c&rdquo;. V&agrave; c&oacute; lẽ n&oacute; cũng h&agrave;o hứng qu&aacute; n&ecirc;n vừa kết th&uacute;c t&acirc;m sự tuổi hồng với Hugo th&igrave; n&oacute; lặng lẽ đi ngủ từ 11 giờ khuya đến gần 3 giờ s&aacute;ng dậy lục đục ra h&oacute;ng mọi người đ&agrave;n h&aacute;t với nhau, v&agrave; tất nhi&ecirc;n, khi n&oacute; quay lại th&igrave; chỗ của n&oacute; bị người kh&aacute;c nằm v&agrave;o rồi.<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/04.jpg" /></li>
+                    <li>Loại người đi trại về rồi mới xin ph&eacute;p phụ huynh đi trại. Vẫn l&agrave; bạn A. Tới s&aacute;ng n&oacute; đang ngủ lơ mơ vất vưởng ở đ&acirc;u đấy th&igrave; c&oacute; người bảo mẹ n&oacute; gọi. Ẻm lật đật bật dậy rồi đi kiếm điện thoại b&aacute;o phụ huynh ngay v&agrave; lu&ocirc;n. (Kh&ocirc;ng sao, mọi chuyện đ&atilde; tốt hơn rồi, A bảo vậy).<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/05.jpg" /></li>
+                    <li>Loại người high mọi l&uacute;c mọi nơi. Cơ trưởng trong Hugo nhiều đếm kh&ocirc;ng xuể, mở hẳn mấy lớp dạy Vinahouse tận t&igrave;nh truyền đạt từ động t&aacute;c đến động vi&ecirc;n tinh thần những người kh&ocirc;ng l&agrave;m được. Cứ c&oacute; nhạc l&agrave; quẩy, bất chấp thể loại.<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/06.jpg" /></li>
+                    <li>Loại người đợi trại l&agrave; để viết mấy d&ograve;ng t&acirc;m sự tuổi hồng kh&ocirc;ng thể n&oacute;i ra bằng lời. Slogan của trại Hugo năm nay l&agrave; &ldquo;Đi Bồ Bồ về c&oacute; bồ&rdquo;, t&ocirc;i tự hỏi c&oacute; đ&ocirc;i n&agrave;o th&agrave;nh chưa. Nhưng m&agrave; theo những quan s&aacute;t t&igrave;nh h&igrave;nh sau trại, ai cũng đ&ograve;i bắt đền chủ nhiệm th&igrave; phải&hellip; L&uacute;c về lều, c&oacute; một &ocirc;ng anh trong nh&oacute;m t&ocirc;i c&ograve;n bảo &ldquo;Năm ni &iacute;t confession thả th&iacute;nh qu&aacute;, nhớ năm ngo&aacute;i m&igrave;nh anh solo 8 b&agrave;i, nay chỉ cần viết gộp lại cho team m&igrave;nh th&ocirc;i, đỡ dễ sợ&rdquo;.<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/07.jpg" /></li>
                     <li>Staff. Những con người chạy đ&ocirc;n chạy đ&aacute;o, l&uacute;c n&agrave;o cũng nghĩ cho con d&acirc;n trong Hugo. Nh&igrave;n mọi người chuẩn bị từng ch&uacute;t một để tạo được một buổi trại thế n&agrave;y, thật sự cảm thấy thực sự kỳ c&ocirc;ng. Nghe staff t&acirc;m sự tuổi hồng, &ldquo;C&aacute;c bạn biết kh&ocirc;ng, tụi m&igrave;nh coi dự b&aacute;o thời tiết trước 20 ng&agrave;y hắn k&ecirc;u mưa, coi trước 1 tuần hắn cũng k&ecirc;u mưa, m&agrave; coi 1 ng&agrave;y trước khi đi trại th&igrave; hắn b&aacute;o trời b&atilde;o&rdquo;, nghe mới biết, mọi người đ&atilde; vất vả thế n&agrave;o. Cảm ơn mọi người nhiều nh&eacute;. V&igrave; đ&atilde; g&oacute;p phần kh&ocirc;ng nhỏ để l&agrave;m cho trại Hugo tuyệt vời thật sự.</li>
                 </ol>
                 
@@ -346,7 +348,7 @@ class PostsTableSeeder extends Seeder
                 <p>-CCCT-</p>',
                 'author_id' => 1,
                 'category_id' => 4,
-                'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/01-20190306143107.jpg',
+                'cover' => 'https://hugoenglishclub.github.io/images/img_post/101218/00.jpg',
                 'url' => str_slug('MỘT VÀI GHI CHÚ NHỎ CHO TRẠI HUGO').'-'.date('Ymdhis'),
                 'created_at' => now(),
                 'updated_at' => now()
@@ -358,20 +360,20 @@ class PostsTableSeeder extends Seeder
 
                 <p>Từ nhỏ đến lớn hầu như t&ocirc;i &iacute;t khi n&agrave;o đi ra khỏi nh&agrave;, cho đến khi học đại học cũng chỉ kh&aacute; l&ecirc;n hơn một ch&uacute;t. Ai cũng bảo, phải đi th&igrave; mới biết thế gian rộng lớn chừng n&agrave;o. Cơ m&agrave;, c&acirc;u chuyện đi từ nh&agrave; đến trường của t&ocirc;i hơi buồn cười một ch&uacute;t. T&ocirc;i vốn đi bu&yacute;t đến trường, một phần v&igrave; khoảng c&aacute;ch xa, phần kh&aacute;c v&igrave; bố mẹ bảo đi cho an to&agrave;n. Thời gian mỗi lần đi bu&yacute;t đối với t&ocirc;i cứ như thể mấy thế kỷ tr&ocirc;i qua, mệt mỏi hết sức. Vậy m&agrave; một người bạn của t&ocirc;i học trong HCM từng n&oacute;i rằng: &ldquo;M&agrave;y ơi, tao mất tận ba tiếng để kiếm một c&aacute;i địa chỉ nh&agrave; chỉ ở quận Thủ Đức trong n&agrave;y lận m&agrave;y ạ&rdquo;, thế l&agrave; t&ocirc;i lại ph&igrave; cười v&agrave; đổi ngay suy nghĩ: &ldquo;Quớ l&agrave;ng, m&igrave;nh mất c&oacute; 30 ph&uacute;t đi bu&yacute;t tới trường m&agrave; đi qua hẳn ba quận (Hải Ch&acirc;u, Thanh Kh&ecirc;, Li&ecirc;n Chiểu) lu&ocirc;n &aacute;&rdquo;.</p>
                 
-                <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-2019030614350.jpg" /></p>
+                <p><img alt="" src="https://hugoenglishclub.github.io/images/img_post/191118/02.jpg" /></p>
                 
                 <p>Khi t&ocirc;i viết những d&ograve;ng n&agrave;y, một cậu bạn ngồi chung xe bu&yacute;t đ&atilde; l&ograve; d&ograve; bước đến hỏi t&ocirc;i rằng c&oacute; phải bạn c&ugrave;ng lớp tiểu học của cậu ấy kh&ocirc;ng, v&agrave; c&oacute; một tia suy nghĩ lướt qua đầu t&ocirc;i, cậu ấy (t&ocirc;i nghĩ c&oacute; t&ocirc;i nữa) thay đổi đến ch&oacute;ng mặt tới mức t&ocirc;i kh&ocirc;ng c&ograve;n nhận ra nữa rồi. Bỗng dưng t&ocirc;i lại nhớ ra được từ trong rất nhiều mối quan hệ kh&aacute;c nhau đấy một người bạn cũ-m&agrave;-mới. Sau đ&oacute;, &agrave; kh&ocirc;ng c&oacute; sau đ&oacute; nữa đ&acirc;u, ch&uacute;ng t&ocirc;i từ l&uacute;c ngồi tr&ecirc;n bu&yacute;t đến giờ vẫn chưa gặp lại nhau.</p>
                 
                 <p>Lớp đại học của t&ocirc;i chỉ c&oacute; 6 người Đ&agrave; Nẵng, đo&aacute;n xem, ch&uacute;ng t&ocirc;i ho&agrave;n to&agrave;n biết về nhau theo một c&aacute;ch ri&ecirc;ng. T&ocirc;i l&agrave; bạn của A, của B, của C,&hellip; v&agrave; A, B, C,.. đều l&agrave; bạn của đồng hương c&ugrave;ng lớp. Ngạc nhi&ecirc;n thật sự. V&agrave; t&ocirc;i đ&atilde; c&oacute; t&igrave;nh bạn tuyệt nhất quả đất c&ugrave;ng hai trong số s&aacute;u người đấy, bạn th&acirc;n theo kiểu, th&acirc;n-ai-nấy-lo (đ&uacute;ng rồi đấy, đừng nghĩ g&igrave; s&acirc;u xa).</p>
                 
-                <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-2019030614340.jpg" /></p>
+                <p><img alt="" src="https://hugoenglishclub.github.io/images/img_post/191118/03.jpg" /></p>
                 
                 <p>Sau n&agrave;y, t&ocirc;i l&agrave;m quen được với những người bạn mới, t&ocirc;i lại tiếp tục nhận ra, con người đều c&oacute; một sự kết nối với nhau th&ocirc;ng qua một điều g&igrave; đ&oacute;, thường l&agrave; qua một người n&agrave;o đấy. Nhiều khi t&ocirc;i c&ograve;n nghĩ l&agrave;, c&oacute; lẽ kh&ocirc;ng cần n&oacute;i về người y&ecirc;u th&igrave; mới bảo l&agrave; định mệnh, m&agrave; vốn ch&uacute;ng ta gặp gỡ được bất cứ ai cũng đ&atilde; l&agrave; một c&aacute;i duy&ecirc;n số rồi. Đ&agrave; Nẵng l&agrave;m t&ocirc;i hết lần n&agrave;y đến lần kh&aacute;c phải thốt l&ecirc;n rằng: &ldquo;Tr&aacute;i Đất kh&ocirc;ng hề nhỏ, chỉ c&oacute; Đ&agrave; Nẵng mới nhỏ m&agrave; th&ocirc;i&rdquo;. Nhưng m&agrave;, n&oacute; cũng l&agrave;m bạn thấy được rằng, nhiều khi bạn đ&atilde; v&ocirc; t&igrave;nh để vụt mất một mối quan hệ n&agrave;o đấy, như t&ocirc;i v&agrave; cậu bạn tiểu học kia chẳng hạn. Bỗng dưng cắt đứt li&ecirc;n lạc rồi b&acirc;y giờ lại t&igrave;nh cờ gặp lại được. C&oacute; thể sau n&agrave;y lại tiếp tục mất li&ecirc;n lạc chăng? Con người l&agrave; vậy, bạn gặp được những người bạn mới, rồi lại sẽ qu&ecirc;n mất m&igrave;nh từng c&oacute; người bạn X,Y thế n&agrave;y thế kia. C&oacute; thể ch&uacute;ng ta sẽ gặp lại. Rồi ch&uacute;ng ta lại lướt qua nhau.</p>
                 
                 <p>-CCCT-</p>',
                 'author_id' => 1,
                 'category_id' => 1,
-                'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143212.jpg',
+                'cover' => 'https://hugoenglishclub.github.io/images/img_post/191118/01.jpg',
                 'url' => str_slug('THẨN THƠ TRÊN XE BUÝT: CHUYỆN SỐ 1').'-'.date('Ymdhis'),
                 'created_at' => now(),
                 'updated_at' => now()
@@ -381,15 +383,15 @@ class PostsTableSeeder extends Seeder
                 'description' => 'Chuyện đi trại là chuyện của những dòng tâm sự giữa 2 người nào đó, hoặc là 2 người nào đó khác, trong khoảnh khắc chung nhịp điệu, hoà cùng nhịp đập, trò chuyện với nhau vài ba câu to nhỏ, gieo rắc những gì mà tâm hồn sâu ẩn họ muốn giãi bày.',
                 'content' => '<p>Cứ độ th&aacute;ng 11 về, l&agrave; l&uacute;c trời bắt đầu trở lạnh, gi&oacute; r&iacute;t thổi r&aacute;t đỏ những đ&ocirc;i g&ograve; m&aacute;, gi&oacute; luồn qua từng lớp &aacute;o, khẽ chạm v&agrave;o từng lớp da, từng thớ thịt, gi&oacute; khiến con người ta phải bật run l&ecirc;n, co r&uacute;m lại, ngồi thật s&aacute;t b&ecirc;n nhau, san sẻ ch&uacute;t hơi ấm của ri&ecirc;ng m&igrave;nh. V&agrave; tr&ecirc;n hết, vượt l&ecirc;n tất cả, ở đ&acirc;u đ&oacute; giữa những con người ấy, những t&acirc;m t&igrave;nh, chuyện tr&ograve; thủ thỉ của ng&agrave;y xưa, sẽ l&agrave; miền k&yacute; ức của tuổi thanh xu&acirc;n kh&ocirc;ng bao giờ qu&ecirc;n. Th&aacute;ng 11, l&agrave; th&aacute;ng của những chuyến đi xa, cả Hugo h&aacute;o hức chờ đợi đ&uacute;ng 1 ng&agrave;y. Ng&agrave;y m&agrave; cả Hugo l&ecirc;n đường đặt ch&acirc;n l&ecirc;n v&ugrave;ng đất mới, tay x&aacute;ch tay mang, d&igrave;u nhau l&ecirc;n rừng xuống biển, d&igrave;u nhau qua mưa gi&oacute; b&atilde;o b&ugrave;ng.</p>
 
-                <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143270.jpg" /></p>
+                <p><img alt="" src="https://hugoenglishclub.github.io/images/img_post/021218/02.jpg" /></p>
                 
                 <p>V&agrave; dường như, n&oacute; đ&atilde; trở th&agrave;nh một thứ văn h&oacute;a kh&ocirc;ng thể thiếu của Hugo, thứ văn h&oacute;a được vun v&eacute;n từ năm n&agrave;y qua năm kh&aacute;c, sưởi ấm biết bao nhi&ecirc;u thế hệ. Lứa n&agrave;y đi, lứa kh&aacute;c tới, nhưng kỉ niệm vẫn c&ograve;n lưu m&atilde;i nơi đ&acirc;y. &ldquo;Trại M&ugrave;a Đ&ocirc;ng&rdquo; - Thắp ngọn lửa, ch&aacute;y bập b&ugrave;ng&hellip; Trại l&agrave; t&acirc;m huyết của cả một thế hệ dựng x&acirc;y. Những điệu nhảy, tr&ograve; chơi, những đờn ca tiếng h&aacute;t, anh chị em cứ thế m&agrave; &ocirc;m chầm quấn qu&yacute;t lấy nhau. Chẳng trại năm n&agrave;o giống nhau, mỗi trại một dư vị ri&ecirc;ng, mang đến cho Hugoer những cảm nhận của ri&ecirc;ng m&igrave;nh, l&agrave; vui vẻ, hạnh ph&uacute;c, l&agrave; ấm &aacute;p, y&ecirc;u thương.</p>
                 
-                <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143280.jpg" /></p>
+                <p><img alt="" src="https://hugoenglishclub.github.io/images/img_post/021218/03.jpg" /></p>
                 
                 <p>Chuyện đi trại l&agrave; chuyện của những d&ograve;ng t&acirc;m sự giữa 2 người n&agrave;o đ&oacute;, hoặc l&agrave; 2 người n&agrave;o đ&oacute; kh&aacute;c, trong khoảnh khắc chung nhịp điệu, ho&agrave; c&ugrave;ng nhịp đập, tr&ograve; chuyện với nhau v&agrave;i ba c&acirc;u to nhỏ, gieo rắc những g&igrave; m&agrave; t&acirc;m hồn s&acirc;u ẩn họ muốn gi&atilde;i b&agrave;y. V&agrave; cứ như thế, họ từ những người xa lạ, rẽ ngang cuộc đời nhau, tạo ra đoạn đường gấp kh&uacute;c nhiều h&igrave;nh th&ugrave;, th&ecirc;m th&uacute; vị, th&ecirc;m đẹp cho bức tranh to&agrave;n cảnh. Dẫu tất cả họ, đều quay về con đường ch&iacute;nh, v&agrave; c&oacute; thể kh&ocirc;ng cắt ngang qua nhau th&ecirc;m một lần nữa, nhưng những k&iacute; ức về nhau, về Trại M&ugrave;a Đ&ocirc;ng năm ấy, sẽ chẳng bao giờ phai nho&agrave;.</p>
                 
-                <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/04-20190306143290.jpg" /></p>
+                <p><img alt="" src="https://hugoenglishclub.github.io/images/img_post/021218/04.jpg" /></p>
                 
                 <p>Một m&ugrave;a trại đang về ngay trước cửa<br />
                 T&ocirc;i h&aacute;o hức y hệt những ng&agrave;y xưa<br />
@@ -404,11 +406,153 @@ class PostsTableSeeder extends Seeder
                 <p>-Hoa D&acirc;m Bụt-</p>',
                 'author_id' => 1,
                 'category_id' => 4,
-                'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143255.jpg',
+                'cover' => 'https://hugoenglishclub.github.io/images/img_post/021218/00.jpg',
                 'url' => str_slug('TRẠI MÙA ĐÔNG').'-'.date('Ymdhis'),
                 'created_at' => now(),
                 'updated_at' => now()
             ],
         ]);
+
+        // S3 seeder
+        // DB::table('posts')->insert([
+        //     [
+        //         'title' => 'HUGO ENGLISH CLUB - MỘT CHẶNG ĐƯỜNG DÀI',
+        //         'description' => 'Ngọn lửa ấy vẫn sẽ cháy mãi như thế ...',
+        //         'content' => '<p>Ch&uacute;ng t&ocirc;i đang ngồi trước đ&aacute;m lửa bập b&ugrave;ng. H&ocirc;m nay Hugo c&oacute; trại. Cũng kh&aacute; l&acirc;u rồi c&aacute;c thế hệ th&agrave;nh vi&ecirc;n mới c&oacute; thời gian qu&acirc;y quần c&ugrave;ng nhau nướng ch&uacute;t thịt, nhấm nh&aacute;p ch&uacute;t Strongbow thủ thỉ t&acirc;m t&igrave;nh qu&ecirc;n thời gian, bỏ lại đằng sau thực tại bộn bề học tập c&ocirc;ng việc v&agrave; deadline.</p>
+
+        //         <p>Cạnh nhau ch&uacute;ng t&ocirc;i c&ugrave;ng ngắm nh&igrave;n những kỉ niệm đẹp đ&atilde; qua. Nhớ những buổi đầu ch&iacute; ch&oacute;e quyết định t&ecirc;n c&acirc;u lạc bộ. Nhớ những h&ocirc;m meeting cười b&ograve;, nhờ mấy tr&ograve; &aacute;c &ocirc;n m&agrave; nhớ được từ vựng, mới biết Hugo-ers c&oacute; mấy bạn n&oacute;i tiếng Anh pro phết. Nhớ mấy khi thức khuya nghĩ kế hoạch tổ chức sự kiện. Nhớ chết đi được những hoạt động ngoại kh&oacute;a m&igrave;nh l&agrave;m c&ugrave;ng nhau, quẩy như chưa từng được quẩy, quen được nhiều bạn mới, học được v&agrave;i thứ hay ho. Nhớ hội b&agrave; t&aacute;m l&uacute;a mạch g&igrave; cũng chia sẻ được với nhau rồi t&agrave;n tiệc &ocirc;m nhau m&agrave; cảm, m&agrave; kh&oacute;c. Nhớ Hugo c&oacute; l&uacute;c thịnh l&uacute;c suy cơ m&agrave; ai cũng cố gắng duy tr&igrave; v&agrave; x&acirc;y dựng. Hugo-ers đi đ&acirc;y đi đ&oacute;, th&agrave;nh đạt v&agrave; hạnh ph&uacute;c, c&ograve;n Hugo cứ lớp n&agrave;y tiếp lớp kia cứ thế ph&aacute;t triển v&agrave; bền vững. Ấy thế m&agrave; cũng 11 năm rồi. Nhắm mắt thấy Hugo vẫn đang thắp lửa. Hugo, một chặng đường d&agrave;i, v&agrave; đường c&ograve;n d&agrave;i, c&ograve;n d&agrave;i lắm&hellip;&nbsp;<br />
+        //         V&agrave; đ&aacute;m lửa cứ bập b&ugrave;ng...</p>',
+        //         'author_id' => 1,
+        //         'category_id' => 1,
+        //         'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/home-20190306142623.jpg',
+        //         'url' => str_slug('HUGO ENGLISH CLUB - MỘT CHẶNG ĐƯỜNG DÀI').'-'.date('Ymdhis'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'title' => 'CÂU CHUYỆN VỀ NHỮNG CÁI ÔM',
+        //         'description' => 'Tạm biệt Đà Nẵng để về quê ăn tết. Giữa cái tiết se lạnh của mùa xuân miền Bắc, tôi lại nhớ đến những cái ôm ấm áp của Hugo.',
+        //         'content' => '<p>Tạm biệt Đ&agrave; Nẵng để về qu&ecirc; ăn tết. Giữa c&aacute;i tiết se lạnh của m&ugrave;a xu&acirc;n miền Bắc, t&ocirc;i lại nhớ đến những c&aacute;i &ocirc;m ấm &aacute;p của Hugo.</p>
+
+        //         <p>Kh&ocirc;ng biết từ bao giờ, &ocirc;m đ&atilde; l&agrave; văn h&oacute;a của Hugo . Cứ mỗi cuối tuần, ch&uacute;ng t&ocirc;i lại trao cho nhau những c&aacute;i &ocirc;m sau buổi meeting. Hugo &ocirc;m cũng đủ kiểu lắm. C&oacute; những &ldquo;th&aacute;nh nghiệp&rdquo; &ocirc;m nhau cũng tranh thủ nh&eacute;o ph&aacute;t tạo nghiệp nữa. Một số người &ocirc;m nhau c&ograve;n giả vờ kh&oacute;c huhu như thể sắp chia xa vậy trong khi miệng vẫn cười toe to&eacute;t. Cũng c&oacute; những c&aacute;i &ocirc;m &ldquo;tập thể&rdquo;, ban đầu l&agrave; ba người, rồi năm người, rồi&hellip; kh&ocirc;ng biết bao nhi&ecirc;u người x&uacute;m lại &ocirc;m nhau loạn xạ. Cũng c&oacute; những c&aacute;i &ocirc;m ngại ng&ugrave;ng khi Hugo đ&atilde; tạo điều kiện để được &ocirc;m &ldquo;cờ rớt&rdquo;. M&agrave; cũng th&iacute;ch lắm cơ. Nhiều l&uacute;c chỉ cần nh&igrave;n mọi người &ocirc;m nhau cũng cảm thấy vui l&acirc;y. Kh&ocirc;ng chỉ những buổi sinh hoạt, khi ch&uacute;ng t&ocirc;i chiến thắng cuộc thi, khi ch&uacute;ng t&ocirc;i v&ocirc; t&igrave;nh gặp nhau sau thời gian d&agrave;i xa c&aacute;ch, hay cả l&uacute;c sắp phải n&oacute;i lời chia tay với th&agrave;nh vi&ecirc;n n&agrave;o đ&oacute;, ch&uacute;ng t&ocirc;i cũng trao nhau những c&aacute;i &ocirc;m như vậy, ấm &aacute;p v&agrave; y&ecirc;u thương.</p>
+                
+        //         <p>Những c&aacute;i &ocirc;m của Hugo chứa đầy t&igrave;nh cảm. &Ocirc;m để gần nhau hơn, xua tan mệt mỏi của cả tuần v&agrave; để bắt đầu một tuần mới đầy năng động. C&oacute; những c&aacute;i &ocirc;m để l&agrave;m quen, cũng c&oacute; những c&aacute;i &ocirc;m l&agrave; nỗi nhớ sau khoảng thời gian d&agrave;i kh&ocirc;ng gặp. C&oacute; những c&aacute;i &ocirc;m để trao nhau niềm vui, cũng c&oacute; những c&aacute;i &ocirc;m để chia sẻ nỗi buồn. Sau những c&aacute;i &ocirc;m đ&oacute; l&agrave; những khu&ocirc;n mặt rạng rỡ, tr&agrave;n đầy niềm vui v&agrave; sức sống. Mọi người mang đến buổi sinh hoạt những nụ cười v&agrave; trở về bằng nhiều nụ cười hơn nữa. Ở Hugo, những c&aacute;i &ocirc;m cứ thế tự nhi&ecirc;n m&agrave; đến, rất ch&acirc;n th&agrave;nh, kh&ocirc;ng toan t&iacute;nh, kh&ocirc;ng ngại ngần. Bỗng chốc khoảng c&aacute;ch được ph&aacute; vỡ, ch&uacute;ng t&ocirc;i x&iacute;ch lại gần nhau hơn. Ngọn lửa Hugo cũng v&igrave; thế m&agrave; ch&aacute;y m&atilde;i&hellip;</p>
+                
+        //         <p>C&aacute;i &ocirc;m l&agrave; một nguồn lực c&oacute; nhiều sức mạnh kỳ diệu. Khi ch&uacute;ng ta mở rộng tr&aacute;i tim v&agrave; v&ograve;ng tay của m&igrave;nh cũng ch&iacute;nh l&agrave; l&uacute;c ch&uacute;ng ta động vi&ecirc;n người kh&aacute;c cũng l&agrave;m như vậy. H&atilde;y nghĩ đến những người bạn y&ecirc;u mến trong cuộc đời m&igrave;nh. Bạn c&oacute; điều g&igrave; muốn n&oacute;i với họ? Bạn c&oacute; muốn chia sẻ v&ograve;ng tay của m&igrave;nh cho họ? Hay l&agrave; bạn đang chờ đợi v&agrave; hy vọng người ấy sẽ chủ động điều đ&oacute;? Đừng chờ đợi! H&atilde;y l&agrave; người khởi đầu! Biết đ&acirc;u người đ&oacute; cũng đang chờ đợi y&ecirc;u thương từ bạn.</p>',
+        //         'author_id' => 1,
+        //         'category_id' => 1,
+        //         'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/51936831_403916770413597_4446592973127286784_n-20190306142847.jpg',
+        //         'url' => str_slug('CÂU CHUYỆN VỀ NHỮNG CÁI ÔM').'-'.date('Ymdhis'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'title' => 'VỀ HUGO STAFF',
+        //         'description' => 'Ở tuổi 19, chàng trai ấy đã có một giấc mơ, nói đúng hơn là một ao ước, nhỏ bé thôi nhưng đẹp đẽ. Ước mơ một ngày nào đó, được trở thành staff của Hugo.',
+        //         'content' => '<p>Lỡ hẹn một giấc mơ&hellip;</p>
+
+        //         <p>Ở tuổi 19, ch&agrave;ng trai ấy đ&atilde; c&oacute; một giấc mơ, n&oacute;i đ&uacute;ng hơn l&agrave; một ao ước, nhỏ b&eacute; th&ocirc;i nhưng đẹp đẽ. Ước mơ một ng&agrave;y n&agrave;o đ&oacute;, được trở th&agrave;nh staff của Hugo. Staff Hugo vất vả, khổ cực lắm. Hy sinh thời gian, sức lực, chạy đ&ocirc;n chạy đ&aacute;o, lo trước lo sau, &acirc;m thầm lặng lẽ&hellip; C&oacute; những người ấy vậy m&agrave; xơ x&aacute;c, gầy g&ograve; tr&ocirc;ng thấy, họ trầm lắng đi giữa những lo toan, bộn bề. Nhưng vất vả, đắng cay, khổ cực ấy c&oacute; hề g&igrave;, hy sinh th&ecirc;m nữa c&oacute; hề chi, khi tuổi trẻ c&ograve;n đương sung sức, v&agrave; khi ch&uacute;ng ta chẳng c&oacute; g&igrave; để mất. Vả chăng nữa, để được trao trọn y&ecirc;u thương, cống hiến hết m&igrave;nh cho Gia Đ&igrave;nh, ắt hẳn đ&oacute; c&ograve;n l&agrave; một niềm vinh dự to lớn, rất đỗi tự h&agrave;o. Họ ch&iacute;nh l&agrave; những người &ldquo;đưa đ&ograve;&rdquo; cho cả một thế hệ Hugo, cho cả thanh xu&acirc;n của ch&uacute;ng ta. D&atilde;i gi&oacute; dầm sương, &ocirc;m mưa đội nắng Lặng lẽ đưa đ&ograve;, t&ocirc; vẽ thanh xu&acirc;n.</p>
+                
+        //         <p>Hugo trong tr&aacute;i tim mỗi người mang một dư vị, từ ch&agrave;ng trai tuổi 19 sợ l&atilde;ng qu&ecirc;n m&agrave; y&ecirc;u vội, đến một thanh ni&ecirc;n sương gi&oacute; y&ecirc;u s&acirc;u đắm, nhẹ nh&agrave;ng. Ch&agrave;ng trai xưa kia sợ rằng, rồi ch&agrave;ng sẽ bị l&atilde;ng qu&ecirc;n, ch&agrave;ng chẳng biết m&igrave;nh l&agrave; ai, chẳng biết gặp ai khi quay lại m&aacute;i nh&agrave; xưa cũ. Nhưng rồi, thời gian qua đi, ai rồi cũng sẽ lớn, những kỉ niệm nơi đ&acirc;y, c&ugrave;ng nhau, sẽ kh&ocirc;ng bao giờ l&atilde;ng qu&ecirc;n như ch&agrave;ng nghĩ. Sống trọn cho cả một thanh xu&acirc;n c&ugrave;ng nhau, Hugo l&agrave; nh&agrave;, l&agrave; m&aacute;i ấm, l&agrave; nơi anh chị em m&atilde;i m&atilde;i l&agrave; anh chị em.</p>
+                
+        //         <p>Một đợt tuyển staff mới lại về, ch&agrave;ng ngậm ng&ugrave;i lỡ hẹn một giấc mơ&hellip;</p>
+                
+        //         <p>Hugo English Club - Light Up Your Fire!!!</p>
+                
+        //         <p>-Hoa D&acirc;m Bụt-</p>',
+        //         'author_id' => 1,
+        //         'category_id' => 2,
+        //         'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/00-20190306142941.jpg',
+        //         'url' => str_slug('VỀ HUGO STAFF').'-'.date('Ymdhis'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'title' => 'MỘT VÀI GHI CHÚ NHỎ CHO TRẠI HUGO',
+        //         'description' => 'Khoảnh khắc lửa trại bắn lên những tia than sáng lên như pháo hoa, thật sự đẹp vô cùng (Không biết có ai lợi dụng thời cơ ngay lúc ấy để đứng cạnh crush không nhỉ, vì nó lãng mạn thật sự đó).',
+        //         'content' => '<p>Trại của Hugo thật sự tuyệt vời, v&agrave; đối với một đứa từ nhỏ đến lớn rất &iacute;t khi ra khỏi nh&agrave; như t&ocirc;i th&igrave; n&oacute; c&agrave;ng giống như một điều g&igrave; đ&oacute; mới mẻ vậy. Lửa trại đ&atilde; t&agrave;n, qua một (v&agrave;i) giấc ngủ v&agrave; đợi ăn s&aacute;ng, về lều ngồi nghe c&aacute;c anh chị em n&oacute;i chuyện, t&ocirc;i tranh thủ viết mấy d&ograve;ng, ph&ograve;ng khi t&ocirc;i c&oacute; ham vui rồi lại qu&ecirc;n mất. T&ocirc;i c&oacute; v&agrave;i quan s&aacute;t nhỏ cho lần đi trại n&agrave;y, đặc biệt về kiểu người khi đi trại:</p>
+
+        //         <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/01-20190306143215.jpg" /></p>
+                
+        //         <ol>
+        //             <li>Loại người d&agrave;nh cả thanh xu&acirc;n để đi t&igrave;m đồ. Mỗi lần t&ocirc;i thấy chủ nhiệm của Hugo l&agrave; một lần chị ấy đi t&igrave;m một m&oacute;n đồ g&igrave; đấy, l&uacute;c th&igrave; m&aacute;y ảnh, l&uacute;c th&igrave; &aacute;o, c&oacute; khi l&agrave; d&ugrave;,&hellip; (h&igrave;nh như chỉ c&ograve;n thiếu mỗi c&acirc;u hỏi chị ấy để người y&ecirc;u ở đ&acirc;u th&ocirc;i). Ơn trời, sau tất cả, mọi m&oacute;n đồ đều trở về với Hương.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143216.jpg" /></li>
+        //             <li>Loại người bất chấp h&ocirc;m sau l&aacute;i xe tối h&ocirc;m trước vẫn quẩy tới bến. 4 giờ s&aacute;ng, t&ocirc;i vẫn c&ograve;n nghe tiếng đ&agrave;n h&aacute;t văng vẳng b&ecirc;n tai. 10 giờ s&aacute;ng h&ocirc;m sau, c&oacute; một người anh đi xe song song với t&ocirc;i trong cơn mưa ảnh hưởng bởi b&atilde;o t&aacute;p, đ&atilde; n&oacute;i rằng: &ldquo;M&igrave;nh đ&atilde; buồn ngủ đ&atilde; đ&agrave;nh, mưa c&ograve;n ưng đ&aacute;nh v&agrave;o mặt như thể m&igrave;nh vừa chia tay người y&ecirc;u xong&rdquo;. T&ocirc;i đ&atilde; lo rằng &ocirc;ng anh đấy c&oacute; khi c&ograve;n kh&ocirc;ng về được tới nh&agrave;, nhưng rồi mọi chuyện đều ổn.</li>
+        //             <li>Loại người rảnh qu&aacute; kh&ocirc;ng c&oacute; chuyện g&igrave; để l&agrave;m n&ecirc;n kiếm chuyện để l&agrave;m. T&ocirc;i bị đứa bạn A nằm cạnh l&agrave;m thức giấc l&uacute;c 2h s&aacute;ng. 30 ph&uacute;t sau đứa bạn B dậy v&agrave; mọi người biết n&oacute; rủ t&ocirc;i l&agrave;m g&igrave; kh&ocirc;ng? Đi đ&aacute;nh răng. Sau đấy ch&uacute;ng t&ocirc;i về lại lều rồi nằm kiểu g&igrave; lại ngủ thiếp đi mất. Rảnh thật sự.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143217.jpg" /></li>
+        //             <li>Loại người an nh&agrave;n hưởng trại, sinh hoạt đ&uacute;ng giờ giấc. Đứa bạn A của t&ocirc;i bảo rằng: &ldquo;Đi trại th&igrave; đi trại, ta quyết t&acirc;m rồi, ăn uống no đủ ngủ nghỉ đ&uacute;ng l&uacute;c&rdquo;. V&agrave; c&oacute; lẽ n&oacute; cũng h&agrave;o hứng qu&aacute; n&ecirc;n vừa kết th&uacute;c t&acirc;m sự tuổi hồng với Hugo th&igrave; n&oacute; lặng lẽ đi ngủ từ 11 giờ khuya đến gần 3 giờ s&aacute;ng dậy lục đục ra h&oacute;ng mọi người đ&agrave;n h&aacute;t với nhau, v&agrave; tất nhi&ecirc;n, khi n&oacute; quay lại th&igrave; chỗ của n&oacute; bị người kh&aacute;c nằm v&agrave;o rồi.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/04-20190306143218.jpg" /></li>
+        //             <li>Loại người đi trại về rồi mới xin ph&eacute;p phụ huynh đi trại. Vẫn l&agrave; bạn A. Tới s&aacute;ng n&oacute; đang ngủ lơ mơ vất vưởng ở đ&acirc;u đấy th&igrave; c&oacute; người bảo mẹ n&oacute; gọi. Ẻm lật đật bật dậy rồi đi kiếm điện thoại b&aacute;o phụ huynh ngay v&agrave; lu&ocirc;n. (Kh&ocirc;ng sao, mọi chuyện đ&atilde; tốt hơn rồi, A bảo vậy).<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/05-20190306143219.jpg" /></li>
+        //             <li>Loại người high mọi l&uacute;c mọi nơi. Cơ trưởng trong Hugo nhiều đếm kh&ocirc;ng xuể, mở hẳn mấy lớp dạy Vinahouse tận t&igrave;nh truyền đạt từ động t&aacute;c đến động vi&ecirc;n tinh thần những người kh&ocirc;ng l&agrave;m được. Cứ c&oacute; nhạc l&agrave; quẩy, bất chấp thể loại.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/06-20190306143220.jpg" /></li>
+        //             <li>Loại người đợi trại l&agrave; để viết mấy d&ograve;ng t&acirc;m sự tuổi hồng kh&ocirc;ng thể n&oacute;i ra bằng lời. Slogan của trại Hugo năm nay l&agrave; &ldquo;Đi Bồ Bồ về c&oacute; bồ&rdquo;, t&ocirc;i tự hỏi c&oacute; đ&ocirc;i n&agrave;o th&agrave;nh chưa. Nhưng m&agrave; theo những quan s&aacute;t t&igrave;nh h&igrave;nh sau trại, ai cũng đ&ograve;i bắt đền chủ nhiệm th&igrave; phải&hellip; L&uacute;c về lều, c&oacute; một &ocirc;ng anh trong nh&oacute;m t&ocirc;i c&ograve;n bảo &ldquo;Năm ni &iacute;t confession thả th&iacute;nh qu&aacute;, nhớ năm ngo&aacute;i m&igrave;nh anh solo 8 b&agrave;i, nay chỉ cần viết gộp lại cho team m&igrave;nh th&ocirc;i, đỡ dễ sợ&rdquo;.<img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/07-20190306143221.jpg" /></li>
+        //             <li>Staff. Những con người chạy đ&ocirc;n chạy đ&aacute;o, l&uacute;c n&agrave;o cũng nghĩ cho con d&acirc;n trong Hugo. Nh&igrave;n mọi người chuẩn bị từng ch&uacute;t một để tạo được một buổi trại thế n&agrave;y, thật sự cảm thấy thực sự kỳ c&ocirc;ng. Nghe staff t&acirc;m sự tuổi hồng, &ldquo;C&aacute;c bạn biết kh&ocirc;ng, tụi m&igrave;nh coi dự b&aacute;o thời tiết trước 20 ng&agrave;y hắn k&ecirc;u mưa, coi trước 1 tuần hắn cũng k&ecirc;u mưa, m&agrave; coi 1 ng&agrave;y trước khi đi trại th&igrave; hắn b&aacute;o trời b&atilde;o&rdquo;, nghe mới biết, mọi người đ&atilde; vất vả thế n&agrave;o. Cảm ơn mọi người nhiều nh&eacute;. V&igrave; đ&atilde; g&oacute;p phần kh&ocirc;ng nhỏ để l&agrave;m cho trại Hugo tuyệt vời thật sự.</li>
+        //         </ol>
+                
+        //         <p>Thật ra th&igrave;, t&ocirc;i cũng muốn viết mấy d&ograve;ng cho trại năm nay. Khoảnh khắc lửa trại bắn l&ecirc;n những tia than s&aacute;ng l&ecirc;n như ph&aacute;o hoa, thật sự đẹp v&ocirc; c&ugrave;ng (Kh&ocirc;ng biết c&oacute; ai lợi dụng thời cơ ngay l&uacute;c ấy để đứng cạnh crush kh&ocirc;ng nhỉ, v&igrave; n&oacute; l&atilde;ng mạn thật sự đ&oacute;). Mọi thời điểm ở trại đều thật sự qu&yacute; gi&aacute;, mỗi năm l&agrave; một cảm x&uacute;c kh&aacute;c nhau, cũng như l&agrave; h&igrave;nh ảnh ta nh&igrave;n thấy được cũng kh&aacute;c nhau qua từng năm. Nh&igrave;n từ lều ra ngo&agrave;i lửa trại đ&atilde; tắt, trong l&ograve;ng cũng hụt hẫng phần n&agrave;o. Hy vọng rằng, trại Hugo trong tương lại c&ograve;n th&agrave;nh c&ocirc;ng hơn thế n&agrave;y nhiều hơn nữa, lửa nhiệt huyết m&agrave; tất cả c&aacute;c th&agrave;nh vi&ecirc;n mang lại cũng lớn lao hơn nữa, v&agrave; mọi người đều đọng lại trong m&igrave;nh những kỷ niệm kh&ocirc;ng-g&igrave;-c&oacute;-thể-đổi-được c&ugrave;ng nhau. Cảm ơn Hugo v&igrave; mọi thứ.<img alt="" src="https://hugoenglishclub.github.io/images/img_post/101218/08.jpg" /></p>
+                
+        //         <p>-CCCT-</p>',
+        //         'author_id' => 1,
+        //         'category_id' => 4,
+        //         'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/01-20190306143107.jpg',
+        //         'url' => str_slug('MỘT VÀI GHI CHÚ NHỎ CHO TRẠI HUGO').'-'.date('Ymdhis'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'title' => 'THẨN THƠ TRÊN XE BUÝT: CHUYỆN SỐ 1',
+        //         'description' => 'Khi Đà Nẵng là nơi mà bạn lớn lên, có thể đến một ngày bạn sẽ nhận ra: "Thì ra nơi này nhỏ đến thế"...',
+        //         'content' => '<p>Khi Đ&agrave; Nẵng l&agrave; nơi m&agrave; bạn lớn l&ecirc;n, c&oacute; thể đến một ng&agrave;y bạn sẽ nhận ra: &ldquo;Th&igrave; ra nơi n&agrave;y nhỏ đến thế&rdquo;. Từ nghĩa đen cho đến nghĩa b&oacute;ng. T&ocirc;i n&oacute;i thật đấy.</p>
+
+        //         <p>Từ nhỏ đến lớn hầu như t&ocirc;i &iacute;t khi n&agrave;o đi ra khỏi nh&agrave;, cho đến khi học đại học cũng chỉ kh&aacute; l&ecirc;n hơn một ch&uacute;t. Ai cũng bảo, phải đi th&igrave; mới biết thế gian rộng lớn chừng n&agrave;o. Cơ m&agrave;, c&acirc;u chuyện đi từ nh&agrave; đến trường của t&ocirc;i hơi buồn cười một ch&uacute;t. T&ocirc;i vốn đi bu&yacute;t đến trường, một phần v&igrave; khoảng c&aacute;ch xa, phần kh&aacute;c v&igrave; bố mẹ bảo đi cho an to&agrave;n. Thời gian mỗi lần đi bu&yacute;t đối với t&ocirc;i cứ như thể mấy thế kỷ tr&ocirc;i qua, mệt mỏi hết sức. Vậy m&agrave; một người bạn của t&ocirc;i học trong HCM từng n&oacute;i rằng: &ldquo;M&agrave;y ơi, tao mất tận ba tiếng để kiếm một c&aacute;i địa chỉ nh&agrave; chỉ ở quận Thủ Đức trong n&agrave;y lận m&agrave;y ạ&rdquo;, thế l&agrave; t&ocirc;i lại ph&igrave; cười v&agrave; đổi ngay suy nghĩ: &ldquo;Quớ l&agrave;ng, m&igrave;nh mất c&oacute; 30 ph&uacute;t đi bu&yacute;t tới trường m&agrave; đi qua hẳn ba quận (Hải Ch&acirc;u, Thanh Kh&ecirc;, Li&ecirc;n Chiểu) lu&ocirc;n &aacute;&rdquo;.</p>
+                
+        //         <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-2019030614350.jpg" /></p>
+                
+        //         <p>Khi t&ocirc;i viết những d&ograve;ng n&agrave;y, một cậu bạn ngồi chung xe bu&yacute;t đ&atilde; l&ograve; d&ograve; bước đến hỏi t&ocirc;i rằng c&oacute; phải bạn c&ugrave;ng lớp tiểu học của cậu ấy kh&ocirc;ng, v&agrave; c&oacute; một tia suy nghĩ lướt qua đầu t&ocirc;i, cậu ấy (t&ocirc;i nghĩ c&oacute; t&ocirc;i nữa) thay đổi đến ch&oacute;ng mặt tới mức t&ocirc;i kh&ocirc;ng c&ograve;n nhận ra nữa rồi. Bỗng dưng t&ocirc;i lại nhớ ra được từ trong rất nhiều mối quan hệ kh&aacute;c nhau đấy một người bạn cũ-m&agrave;-mới. Sau đ&oacute;, &agrave; kh&ocirc;ng c&oacute; sau đ&oacute; nữa đ&acirc;u, ch&uacute;ng t&ocirc;i từ l&uacute;c ngồi tr&ecirc;n bu&yacute;t đến giờ vẫn chưa gặp lại nhau.</p>
+                
+        //         <p>Lớp đại học của t&ocirc;i chỉ c&oacute; 6 người Đ&agrave; Nẵng, đo&aacute;n xem, ch&uacute;ng t&ocirc;i ho&agrave;n to&agrave;n biết về nhau theo một c&aacute;ch ri&ecirc;ng. T&ocirc;i l&agrave; bạn của A, của B, của C,&hellip; v&agrave; A, B, C,.. đều l&agrave; bạn của đồng hương c&ugrave;ng lớp. Ngạc nhi&ecirc;n thật sự. V&agrave; t&ocirc;i đ&atilde; c&oacute; t&igrave;nh bạn tuyệt nhất quả đất c&ugrave;ng hai trong số s&aacute;u người đấy, bạn th&acirc;n theo kiểu, th&acirc;n-ai-nấy-lo (đ&uacute;ng rồi đấy, đừng nghĩ g&igrave; s&acirc;u xa).</p>
+                
+        //         <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-2019030614340.jpg" /></p>
+                
+        //         <p>Sau n&agrave;y, t&ocirc;i l&agrave;m quen được với những người bạn mới, t&ocirc;i lại tiếp tục nhận ra, con người đều c&oacute; một sự kết nối với nhau th&ocirc;ng qua một điều g&igrave; đ&oacute;, thường l&agrave; qua một người n&agrave;o đấy. Nhiều khi t&ocirc;i c&ograve;n nghĩ l&agrave;, c&oacute; lẽ kh&ocirc;ng cần n&oacute;i về người y&ecirc;u th&igrave; mới bảo l&agrave; định mệnh, m&agrave; vốn ch&uacute;ng ta gặp gỡ được bất cứ ai cũng đ&atilde; l&agrave; một c&aacute;i duy&ecirc;n số rồi. Đ&agrave; Nẵng l&agrave;m t&ocirc;i hết lần n&agrave;y đến lần kh&aacute;c phải thốt l&ecirc;n rằng: &ldquo;Tr&aacute;i Đất kh&ocirc;ng hề nhỏ, chỉ c&oacute; Đ&agrave; Nẵng mới nhỏ m&agrave; th&ocirc;i&rdquo;. Nhưng m&agrave;, n&oacute; cũng l&agrave;m bạn thấy được rằng, nhiều khi bạn đ&atilde; v&ocirc; t&igrave;nh để vụt mất một mối quan hệ n&agrave;o đấy, như t&ocirc;i v&agrave; cậu bạn tiểu học kia chẳng hạn. Bỗng dưng cắt đứt li&ecirc;n lạc rồi b&acirc;y giờ lại t&igrave;nh cờ gặp lại được. C&oacute; thể sau n&agrave;y lại tiếp tục mất li&ecirc;n lạc chăng? Con người l&agrave; vậy, bạn gặp được những người bạn mới, rồi lại sẽ qu&ecirc;n mất m&igrave;nh từng c&oacute; người bạn X,Y thế n&agrave;y thế kia. C&oacute; thể ch&uacute;ng ta sẽ gặp lại. Rồi ch&uacute;ng ta lại lướt qua nhau.</p>
+                
+        //         <p>-CCCT-</p>',
+        //         'author_id' => 1,
+        //         'category_id' => 1,
+        //         'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143212.jpg',
+        //         'url' => str_slug('THẨN THƠ TRÊN XE BUÝT: CHUYỆN SỐ 1').'-'.date('Ymdhis'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'title' => 'TRẠI MÙA ĐÔNG',
+        //         'description' => 'Chuyện đi trại là chuyện của những dòng tâm sự giữa 2 người nào đó, hoặc là 2 người nào đó khác, trong khoảnh khắc chung nhịp điệu, hoà cùng nhịp đập, trò chuyện với nhau vài ba câu to nhỏ, gieo rắc những gì mà tâm hồn sâu ẩn họ muốn giãi bày.',
+        //         'content' => '<p>Cứ độ th&aacute;ng 11 về, l&agrave; l&uacute;c trời bắt đầu trở lạnh, gi&oacute; r&iacute;t thổi r&aacute;t đỏ những đ&ocirc;i g&ograve; m&aacute;, gi&oacute; luồn qua từng lớp &aacute;o, khẽ chạm v&agrave;o từng lớp da, từng thớ thịt, gi&oacute; khiến con người ta phải bật run l&ecirc;n, co r&uacute;m lại, ngồi thật s&aacute;t b&ecirc;n nhau, san sẻ ch&uacute;t hơi ấm của ri&ecirc;ng m&igrave;nh. V&agrave; tr&ecirc;n hết, vượt l&ecirc;n tất cả, ở đ&acirc;u đ&oacute; giữa những con người ấy, những t&acirc;m t&igrave;nh, chuyện tr&ograve; thủ thỉ của ng&agrave;y xưa, sẽ l&agrave; miền k&yacute; ức của tuổi thanh xu&acirc;n kh&ocirc;ng bao giờ qu&ecirc;n. Th&aacute;ng 11, l&agrave; th&aacute;ng của những chuyến đi xa, cả Hugo h&aacute;o hức chờ đợi đ&uacute;ng 1 ng&agrave;y. Ng&agrave;y m&agrave; cả Hugo l&ecirc;n đường đặt ch&acirc;n l&ecirc;n v&ugrave;ng đất mới, tay x&aacute;ch tay mang, d&igrave;u nhau l&ecirc;n rừng xuống biển, d&igrave;u nhau qua mưa gi&oacute; b&atilde;o b&ugrave;ng.</p>
+
+        //         <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143270.jpg" /></p>
+                
+        //         <p>V&agrave; dường như, n&oacute; đ&atilde; trở th&agrave;nh một thứ văn h&oacute;a kh&ocirc;ng thể thiếu của Hugo, thứ văn h&oacute;a được vun v&eacute;n từ năm n&agrave;y qua năm kh&aacute;c, sưởi ấm biết bao nhi&ecirc;u thế hệ. Lứa n&agrave;y đi, lứa kh&aacute;c tới, nhưng kỉ niệm vẫn c&ograve;n lưu m&atilde;i nơi đ&acirc;y. &ldquo;Trại M&ugrave;a Đ&ocirc;ng&rdquo; - Thắp ngọn lửa, ch&aacute;y bập b&ugrave;ng&hellip; Trại l&agrave; t&acirc;m huyết của cả một thế hệ dựng x&acirc;y. Những điệu nhảy, tr&ograve; chơi, những đờn ca tiếng h&aacute;t, anh chị em cứ thế m&agrave; &ocirc;m chầm quấn qu&yacute;t lấy nhau. Chẳng trại năm n&agrave;o giống nhau, mỗi trại một dư vị ri&ecirc;ng, mang đến cho Hugoer những cảm nhận của ri&ecirc;ng m&igrave;nh, l&agrave; vui vẻ, hạnh ph&uacute;c, l&agrave; ấm &aacute;p, y&ecirc;u thương.</p>
+                
+        //         <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143280.jpg" /></p>
+                
+        //         <p>Chuyện đi trại l&agrave; chuyện của những d&ograve;ng t&acirc;m sự giữa 2 người n&agrave;o đ&oacute;, hoặc l&agrave; 2 người n&agrave;o đ&oacute; kh&aacute;c, trong khoảnh khắc chung nhịp điệu, ho&agrave; c&ugrave;ng nhịp đập, tr&ograve; chuyện với nhau v&agrave;i ba c&acirc;u to nhỏ, gieo rắc những g&igrave; m&agrave; t&acirc;m hồn s&acirc;u ẩn họ muốn gi&atilde;i b&agrave;y. V&agrave; cứ như thế, họ từ những người xa lạ, rẽ ngang cuộc đời nhau, tạo ra đoạn đường gấp kh&uacute;c nhiều h&igrave;nh th&ugrave;, th&ecirc;m th&uacute; vị, th&ecirc;m đẹp cho bức tranh to&agrave;n cảnh. Dẫu tất cả họ, đều quay về con đường ch&iacute;nh, v&agrave; c&oacute; thể kh&ocirc;ng cắt ngang qua nhau th&ecirc;m một lần nữa, nhưng những k&iacute; ức về nhau, về Trại M&ugrave;a Đ&ocirc;ng năm ấy, sẽ chẳng bao giờ phai nho&agrave;.</p>
+                
+        //         <p><img alt="" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/04-20190306143290.jpg" /></p>
+                
+        //         <p>Một m&ugrave;a trại đang về ngay trước cửa<br />
+        //         T&ocirc;i h&aacute;o hức y hệt những ng&agrave;y xưa<br />
+        //         Trại năm nay th&ecirc;m bao người bạn mới<br />
+        //         G&oacute;p ch&uacute;t vui vang tận m&atilde;i ch&acirc;n trời.</p>
+                
+        //         <p>Nguyện ch&uacute;c cho Trại M&ugrave;a Đ&ocirc;ng năm nay được th&agrave;nh c&ocirc;ng tốt đẹp, ch&uacute;c cho Hugoer c&oacute; những kỉ niệm đẹp đẽ b&ecirc;n nhau, b&ecirc;n gia đ&igrave;nh nhỏ y&ecirc;u thương n&agrave;y.</p>
+                
+        //         <p>Cả Hugo đang chạy đ&agrave; v&agrave; cất c&aacute;nh&hellip;<br />
+        //         Light Up Your Fire!!!</p>
+                
+        //         <p>-Hoa D&acirc;m Bụt-</p>',
+        //         'author_id' => 1,
+        //         'category_id' => 4,
+        //         'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143255.jpg',
+        //         'url' => str_slug('TRẠI MÙA ĐÔNG').'-'.date('Ymdhis'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        // ]);
     }
 }
