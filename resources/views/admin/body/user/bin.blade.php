@@ -85,7 +85,7 @@
 
 @section('pageScript')
     <!-- This is data table -->
-<script src="/public/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- start - This is for export functionality only -->
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>

@@ -9,7 +9,7 @@
                 <div class="penci-page-header">
                     <h1 class="entry-title">Liên hệ</h1>
                     <div class="penci-hide-tagupdated">
-                        <span class="author-italic author vcard">by <a class="url fn n" href="#">Penci</a></span>
+                        <span class="author-italic author vcard">by <a class="url fn n" href="javascript:void(0);">Penci</a></span>
                         <time class="entry-date published" datetime="2018-08-24T03:50:19+00:00">August 24, 2018</time><time
                             class="penci-hide-tagupdated updated" datetime="2018-09-17T20:30:10+00:00">September
                             17, 2018</time> </div>
@@ -18,8 +18,8 @@
 
                 <div class="post-entry blockquote-style-2">
                     <div class="inner-post-entry entry-content">
-                        {{-- <p><img class="alignnone size-full wp-image-1713" src="public/client/images/contact.jpg"
-                                alt="" width="1200" height="800" srcset="public/client/images/contact.jpg 263w"
+                        {{-- <p><img class="alignnone size-full wp-image-1713" src="images/contact.jpg"
+                                alt="" width="1200" height="800" srcset="images/contact.jpg 263w"
                                 sizes="(max-width: 1200px) 100vw, 1200px" />Have a question, a comment? Want to
                             collaborate in some way? Just have something nice to say? I’d love to hear from
                             you! Shoot me a message below and I’ll be sure to get back to you as soon as I can.
@@ -64,13 +64,13 @@
                     <div class="post-share">
                         <span class="share-title">Share</span>
                         <div class="list-posts-share">
-                            <a target="_blank" href="#"><i
+                            <a target="_blank" href="javascript:void(0);"><i
                                     class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a><a target="_blank"
-                                href="#"><i
+                                href="javascript:void(0);"><i
                                     class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a target="_blank"
-                                href="#"><i
+                                href="javascript:void(0);"><i
                                     class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a><a
-                                data-pin-do="none" target="_blank" href="#"><i
+                                data-pin-do="none" target="_blank" href="javascript:void(0);"><i
                                     class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a>
                         </div>
                     </div>

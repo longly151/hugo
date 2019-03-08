@@ -26,13 +26,13 @@
                     <div class="post-share">
                         <span class="share-title">Share</span>
                         <div class="list-posts-share">
-                            <a target="_blank" href="#"><i
+                            <a target="_blank" href="javascript:void(0);"><i
                                     class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a><a target="_blank"
-                                href="#"><i
+                                href="javascript:void(0);"><i
                                     class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a target="_blank"
-                                href="#"><i
+                                href="javascript:void(0);"><i
                                     class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a><a
-                                data-pin-do="none" target="_blank" href="#"><i
+                                data-pin-do="none" target="_blank" href="javascript:void(0);"><i
                                     class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a>
                         </div>
                     </div>

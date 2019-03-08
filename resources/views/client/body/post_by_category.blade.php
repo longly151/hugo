@@ -23,7 +23,7 @@
     
                                     <h2 class="entry-title grid-title"><a href="/{{$post->url}}">{{$post->title}}</a></h2>
                                     <div class="penci-hide-tagupdated">
-                                        <span class="author-italic author vcard">by <a class="url fn n" href="#">{{$post->author['fullname']}}</a></span>
+                                        <span class="author-italic author vcard">by <a class="url fn n" href="javascript:void(0);">{{$post->author['fullname']}}</a></span>
                                         <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
                                     <div class="grid-post-box-meta">
                                         <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
@@ -177,7 +177,7 @@
                         <div class="disable-url"><span><i class="fa fa-angle-left"></i> Newer Posts</span></div>
                     </div>
                     <div class="older">
-                        <a href="#"><span>Older Posts <i class="fa fa-angle-right"></i></span></a>
+                        <a href="javascript:void(0);"><span>Older Posts <i class="fa fa-angle-right"></i></span></a>
                     </div>
                 </div>
 

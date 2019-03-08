@@ -4759,12 +4759,12 @@ Stylish tooltip
   margin: -7px 0 0 -15px;
   width: 30px;
   height: 20px;
-  background: url(/public/admin/images/tooltip/tooltip1.svg) no-repeat center center;
+  background: url(images/tooltip/tooltip1.svg) no-repeat center center;
   background-size: 100%; }
 
 .tooltip-content3 {
   position: absolute;
-  background: url(/public/admin/images/tooltip/shape1.svg) no-repeat center bottom;
+  background: url(images/tooltip/shape1.svg) no-repeat center bottom;
   background-size: 100% 100%;
   z-index: 9999;
   width: 200px;
@@ -6615,7 +6615,7 @@ File: scss
   color: #26c6da; }
 
 .has-success .form-control-success {
-  background-image: url(/public/admin/images/icon/success.svg); }
+  background-image: url(images/icon/success.svg); }
 
 .has-success .form-control {
   border-color: #26c6da; }
@@ -6624,7 +6624,7 @@ File: scss
   color: #ffb22b; }
 
 .has-warning .form-control-warning {
-  background-image: url(/public/admin/images/icon/warning.svg); }
+  background-image: url(images/icon/warning.svg); }
 
 .has-warning .form-control {
   border-color: #ffb22b; }
@@ -6633,7 +6633,7 @@ File: scss
   color: #fc4b6c; }
 
 .has-danger .form-control-danger {
-  background-image: url(/public/admin/images/icon/danger.svg); }
+  background-image: url(images/icon/danger.svg); }
 
 .has-danger .form-control {
   border-color: #fc4b6c; }

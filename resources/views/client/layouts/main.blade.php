@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
+	<base href="/public/client/">
 	@include('client.partials.head')
 
 <body class="home blog">

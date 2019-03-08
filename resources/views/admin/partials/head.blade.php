@@ -8,7 +8,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="author" content="">
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16" href="/public/admin/images/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 <title>Admin Press Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
 
 <!-- Bootstrap Core CSS -->

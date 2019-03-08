@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/public/client/images/main_favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/main_favicon.png">
   <title>Hugo English Club &#8211; English Club for Da Nang Students</title>
   <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
   <link rel='dns-prefetch' href='https://s.w.org/' />
@@ -18,8 +18,8 @@
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/wlwmanifest.xml" />
   <meta name="generator" content="WordPress 4.9.9" />
   
-  <script type='text/javascript' src='/public/client/js/jquery.js'></script>
-  <script type='text/javascript' src='/public/client/js/jquery-migrate.min.js'></script>
+  <script type='text/javascript' src='js/jquery.js'></script>
+  <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
   <script type="application/ld+json">
     {
       "@context": "http:\/\/schema.org\/",
@@ -52,5 +52,5 @@
     var portfolioDataJs = portfolioDataJs || [];
   </script>
 
-  <script type="text/javascript" src="/public/client/js/vProject.js"></script>
+  <script type="text/javascript" src="js/vProject.js"></script>
 </head>

@@ -14,26 +14,26 @@
                     <div class="penci-portfolio-filter">
                         <ul>
                             <li class="all active">
-                                <a data-term="*" data-filter="*" href="#">All</a>
+                                <a data-term="*" data-filter="*" href="javascript:void(0);">All</a>
                             </li>
                             <li>
-                                <a data-filter=".penci-3d" data-term="3d" href="#">3D</a>
+                                <a data-filter=".penci-3d" data-term="3d" href="javascript:void(0);">3D</a>
                             </li>
                             <li>
-                                <a data-filter=".penci-photography" data-term="photography" href="#">Photography</a>
+                                <a data-filter=".penci-photography" data-term="photography" href="javascript:void(0);">Photography</a>
                             </li>
                             <li>
-                                <a data-filter=".penci-prints" data-term="prints" href="#">Prints</a>
+                                <a data-filter=".penci-prints" data-term="prints" href="javascript:void(0);">Prints</a>
                             </li>
                             <li>
-                                <a data-filter=".penci-web-design" data-term="web-design" href="#">Web Design</a>
+                                <a data-filter=".penci-web-design" data-term="web-design" href="javascript:void(0);">Web Design</a>
                             </li>
                             <li>
-                                <a data-filter=".penci-graphic-design" data-term="graphic-design" href="#">Graphic
+                                <a data-filter=".penci-graphic-design" data-term="graphic-design" href="javascript:void(0);">Graphic
                                     Design</a>
                             </li>
                             <li>
-                                <a data-filter=".penci-motion" data-term="motion" href="#">Motion</a>
+                                <a data-filter=".penci-motion" data-term="motion" href="javascript:void(0);">Motion</a>
                             </li>
                         </ul>
                     </div><!-- .portfolio-filter -->

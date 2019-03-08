@@ -68,13 +68,13 @@
 @endsection
 
 @section('pageScript')
-<script src="/public/admin/plugins/switchery/dist/switchery.min.js"></script>
-<script src="/public/admin/plugins/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
-<script src="/public/admin/plugins/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
-<script src="/public/admin/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-<script src="/public/admin/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-<script src="/public/admin/plugins/dff/dff.js" type="text/javascript"></script>
-<script type="text/javascript" src="/public/admin/plugins/multiselect/js/jquery.multi-select.js"></script>
+<script src="plugins/switchery/dist/switchery.min.js"></script>
+<script src="plugins/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+<script src="plugins/dff/dff.js" type="text/javascript"></script>
+<script type="text/javascript" src="plugins/multiselect/js/jquery.multi-select.js"></script>
 <script>
     $(document).ready(function () {
         // for old value

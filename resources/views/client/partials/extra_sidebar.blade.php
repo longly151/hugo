@@ -16,7 +16,7 @@
                         href="index.html">Home</a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10"><a
-                                href="#">Home
+                                href="javascript:void(0);">Home
                                 #1</a>
                             <ul class="sub-menu">
                                 <li class="featured-new menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a
@@ -49,7 +49,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11"><a
-                                href="#">Home
+                                href="javascript:void(0);">Home
                                 #2</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a
@@ -82,7 +82,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12"><a
-                                href="#">Home
+                                href="javascript:void(0);">Home
                                 #3</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a
@@ -115,7 +115,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28"><a
-                                href="#">Home
+                                href="javascript:void(0);">Home
                                 #4</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a
@@ -150,10 +150,10 @@
                     </ul>
                 </li>
                 <li class="featured-new megamenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74"><a
-                        href="#">Sliders</a>
+                        href="javascript:void(0);">Sliders</a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75"><a
-                                href="#">Slider
+                                href="javascript:void(0);">Slider
                                 #1</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a
@@ -186,7 +186,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a
-                                href="#">Slider
+                                href="javascript:void(0);">Slider
                                 #2</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a
@@ -219,7 +219,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85"><a
-                                href="#">Slider
+                                href="javascript:void(0);">Slider
                                 #3</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a
@@ -252,7 +252,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94"><a
-                                href="#">Slider
+                                href="javascript:void(0);">Slider
                                 #4</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a
@@ -287,10 +287,10 @@
                     </ul>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40"><a
-                        href="#">Features</a>
+                        href="javascript:void(0);">Features</a>
                     <ul class="sub-menu">
                         <li class="featured-new menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134"><a
-                                href="#">Post Templates</a>
+                                href="javascript:void(0);">Post Templates</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a
                                         href="how-to-the-best-milk-coffee/indexeca6.html?single_style=style-1&amp;body=boxed-none">Template
@@ -349,7 +349,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41"><a
-                                href="#">Headers</a>
+                                href="javascript:void(0);">Headers</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a
                                         href="index1e69.html?header=header-1">Header
@@ -385,7 +385,7 @@
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"><a href="gallery/index.html">Real
                                 Awesome Gallery</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-147"><a
-                                href="#">Post
+                                href="javascript:void(0);">Post
                                 Formats</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107"><a
@@ -395,7 +395,7 @@
                                         href="how-to-make-latte-art/index.html">Gallery
                                         Post</a></li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51"><a
-                                        href="#">Video
+                                        href="javascript:void(0);">Video
                                         Post</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"><a
@@ -407,7 +407,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52"><a
-                                        href="#">Audio
+                                        href="javascript:void(0);">Audio
                                         Post</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123"><a
@@ -427,7 +427,7 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9"><a
-                                href="#">Pages</a>
+                                href="javascript:void(0);">Pages</a>
                             <ul class="sub-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a
                                         href="about/index.html">About
@@ -958,7 +958,7 @@
                     </ul>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a
-                        href="#">Portfolio</a>
+                        href="javascript:void(0);">Portfolio</a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="portfolio-3-columns/index.html">Masonry
                                 3 Columns</a></li>
@@ -990,12 +990,12 @@
                 <div class="inner-header-social">
                     <a href="https://www.facebook.com/PenciDesign" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a href="https://twitter.com/PenciDesign" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-heart"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-rss"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fa fa-heart"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
+                    <a href="javascript:void(0);" target="_blank"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
 

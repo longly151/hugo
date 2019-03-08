@@ -60,7 +60,7 @@
                                         2018</time><time class="penci-hide-tagupdated updated" datetime="2018-09-04T04:09:39+00:00">September
                                         4, 2018</time> </div>
                             <div class="author-post byline"><span class="author vcard">Posted by <a class="url fn n"
-                                        href="#">{{$posts[0]->author['fullname']}}</a></span></div>
+                                        href="javascript:void(0);">{{$posts[0]->author['fullname']}}</a></span></div>
                         </div>
 
                         <div class="standard-content">
@@ -110,7 +110,7 @@
     
                                     <h2 class="entry-title grid-title"><a href="/{{$post->url}}">{{$post->title}}</a></h2>
                                     <div class="penci-hide-tagupdated">
-                                        <span class="author-italic author vcard">by <a class="url fn n" href="#">{{$post->author['fullname']}}</a></span>
+                                        <span class="author-italic author vcard">by <a class="url fn n" href="javascript:void(0);">{{$post->author['fullname']}}</a></span>
                                         <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
                                     <div class="grid-post-box-meta">
                                         <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
@@ -265,7 +265,7 @@
                         <div class="disable-url"><span><i class="fa fa-angle-left"></i> Newer Posts</span></div>
                     </div>
                     <div class="older">
-                        <a href="#"><span>Older Posts <i class="fa fa-angle-right"></i></span></a>
+                        <a href="javascript:void(0);"><span>Older Posts <i class="fa fa-angle-right"></i></span></a>
                     </div>
                 </div>
 

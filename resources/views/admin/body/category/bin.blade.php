@@ -155,7 +155,7 @@
 
 @section('pageScript')
 <!-- This is data table -->
-<script src="/public/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
 
 <script>
     $(document).ready(function () {

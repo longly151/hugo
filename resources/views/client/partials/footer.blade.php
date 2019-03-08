@@ -54,10 +54,10 @@
 						<a href="https://www.facebook.com/HUGOClub/" target="_blank">Hugo Media</a> | 
 						<a href="https://www.facebook.com/sgroup.vn/" target="_blank">S-Group</a>
 						- Designed by
-						<a href="#">PenciDesign</a>
+						<a href="javascript:void(0);">PenciDesign</a>
 					</p>
 				</div>
-			<div class="go-to-top-parent"><a href="#" class="go-to-top"><span><i class="fa fa-angle-up"></i><br>Back To Top</span></a></div>
+			<div class="go-to-top-parent"><a href="javascript:void(0);" class="go-to-top"><span><i class="fa fa-angle-up"></i><br>Back To Top</span></a></div>
 		</div>
 	</div>
 </footer>

@@ -8,16 +8,16 @@
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
-                    <img src="/public/admin/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                    <img src="images/logo-icon.png" alt="homepage" class="dark-logo" />
                     <!-- Light Logo icon -->
-                    <img src="/public/admin/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                    <img src="images/logo-light-icon.png" alt="homepage" class="light-logo" />
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text --><span>
                     <!-- dark Logo text -->
-                    <img src="/public/admin/images/logo-text.png" alt="homepage" class="dark-logo" />
+                    <img src="images/logo-text.png" alt="homepage" class="dark-logo" />
                     <!-- Light Logo text -->
-                    <img src="/public/admin/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                    <img src="images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->
@@ -48,7 +48,7 @@
                             <li>
                                 <div class="message-center">
                                     <!-- Message -->
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
                                         <div class="mail-contnet">
                                             <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span>
@@ -56,7 +56,7 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <div class="btn btn-success btn-circle"><i class="ti-calendar"></i></div>
                                         <div class="mail-contnet">
                                             <h5>Event today</h5> <span class="mail-desc">Just a reminder that you have
@@ -64,7 +64,7 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <div class="btn btn-info btn-circle"><i class="ti-settings"></i></div>
                                         <div class="mail-contnet">
                                             <h5>Settings</h5> <span class="mail-desc">You can customize this template
@@ -72,7 +72,7 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <div class="btn btn-primary btn-circle"><i class="ti-user"></i></div>
                                         <div class="mail-contnet">
                                             <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span>
@@ -107,8 +107,8 @@
                             <li>
                                 <div class="message-center">
                                     <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="/public/admin/images/users/1.jpg" alt="user" class="img-circle">
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img"> <img src="images/users/1.jpg" alt="user" class="img-circle">
                                             <span class="profile-status online pull-right"></span> </div>
                                         <div class="mail-contnet">
                                             <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span>
@@ -116,8 +116,8 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="/public/admin/images/users/2.jpg" alt="user" class="img-circle">
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img"> <img src="images/users/2.jpg" alt="user" class="img-circle">
                                             <span class="profile-status busy pull-right"></span> </div>
                                         <div class="mail-contnet">
                                             <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span>
@@ -125,8 +125,8 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="/public/admin/images/users/3.jpg" alt="user" class="img-circle">
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img"> <img src="images/users/3.jpg" alt="user" class="img-circle">
                                             <span class="profile-status away pull-right"></span> </div>
                                         <div class="mail-contnet">
                                             <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span
@@ -134,8 +134,8 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="/public/admin/images/users/4.jpg" alt="user" class="img-circle">
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img"> <img src="images/users/4.jpg" alt="user" class="img-circle">
                                             <span class="profile-status offline pull-right"></span> </div>
                                         <div class="mail-contnet">
                                             <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span>
@@ -167,15 +167,15 @@
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <div class="container"> <img class="d-block img-fluid" src="/public/admin/images/big/img1.jpg"
+                                            <div class="container"> <img class="d-block img-fluid" src="images/big/img1.jpg"
                                                     alt="First slide"></div>
                                         </div>
                                         <div class="carousel-item">
-                                            <div class="container"><img class="d-block img-fluid" src="/public/admin/images/big/img2.jpg"
+                                            <div class="container"><img class="d-block img-fluid" src="images/big/img2.jpg"
                                                     alt="Second slide"></div>
                                         </div>
                                         <div class="carousel-item">
-                                            <div class="container"><img class="d-block img-fluid" src="/public/admin/images/big/img3.jpg"
+                                            <div class="container"><img class="d-block img-fluid" src="images/big/img3.jpg"
                                                     alt="Third slide"></div>
                                         </div>
                                     </div>

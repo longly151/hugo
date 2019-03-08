@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/public/admin/">
     @include('admin.partials.head')
     @section('pageStylesheet')
         @show
@@ -49,7 +50,7 @@
     @section('pageScript')
 
     @show
-    <script src="/public/admin/js/hugo.js"></script>
+    <script src="js/hugo.js"></script>
 
 </body>
 

@@ -3,7 +3,7 @@
 					<aside id="penci_about_widget-2" class="widget penci_about_widget">
 						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Về Hugo</span></h4>
 						<div class="about-widget pc_alignleft">
-							<a href="about"><img class="penci-widget-about-image holder-square penci-lazy" src="/public/client/images/about_hugo.jpg" alt="About Me" /></a>
+							<a href="/about"><img class="penci-widget-about-image holder-square penci-lazy" src="images/about_hugo.jpg" alt="About Me" /></a>
 
 							<h2 class="about-me-heading">Hugo English Club</h2>
 
@@ -15,9 +15,9 @@
 					<aside id="penci_list_banner_widget-2" class="widget penci_list_banner_widget">
 						<div class="penci-list-banner">
 							<div class="penci-promo-item penci-banner-has-text">
-								<a class="penci-promo-link" href="#"></a>
-								<img class="penci-lazy" src="/public/client/images/penci-holder.png"
-								 data-src="/public/client/images/banner.jpg"
+								<a class="penci-promo-link" href="javascript:void(0);"></a>
+								<img class="penci-lazy" src="images/penci-holder.png"
+								 data-src="images/banner.jpg"
 								 alt="Promotion Image">
 								<div class="penci-promo-text">
 									<h4>banner ads</h4>

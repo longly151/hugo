@@ -3,8 +3,8 @@
 <nav id="sidebar-nav" class="header-2" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 
   <div id="sidebar-nav-logo">
-    <a href="/"><img class="penci-lazy" src="/public/client/images/penci-holder.png"
-        data-src="/public/client/images/logo-o.png"
+    <a href="/"><img class="penci-lazy" src="images/penci-holder.png"
+        data-src="images/logo-o.png"
         alt="Soledad Coffee Blog" /></a>
   </div>
 
@@ -15,7 +15,7 @@
         href="index.html">Home</a>
       <ul class="sub-menu">
         <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10"><a
-            href="#">Home #1</a>
+            href="javascript:void(0);">Home #1</a>
           <ul class="sub-menu">
             <li id="menu-item-73" class="featured-new menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a
                 href="index86ff.html?morescroll=true&amp;morenumber=4">Infinite Scroll Load More</a></li>
@@ -38,7 +38,7 @@
           </ul>
         </li>
         <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11"><a
-            href="#">Home #2</a>
+            href="javascript:void(0);">Home #2</a>
           <ul class="sub-menu">
             <li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="indexb36d.html?demo=grid&amp;sidebar=none">Grid
                 Layout</a></li>
@@ -61,7 +61,7 @@
           </ul>
         </li>
         <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12"><a
-            href="#">Home #3</a>
+            href="javascript:void(0);">Home #3</a>
           <ul class="sub-menu">
             <li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="indexd548.html?demo=mixed&amp;sidebar=none">Mixed
                 Layout</a></li>
@@ -84,7 +84,7 @@
           </ul>
         </li>
         <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28"><a
-            href="#">Home #4</a>
+            href="javascript:void(0);">Home #4</a>
           <ul class="sub-menu">
             <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="indexdec0.html?demo=standard-grid&amp;sidebar=right">1st
                 Standard Grid Sidebar</a></li>
@@ -109,10 +109,10 @@
       </ul>
     </li>
     <li id="menu-item-74" class="featured-new megamenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74"><a
-        href="#">Sliders</a>
+        href="javascript:void(0);">Sliders</a>
       <ul class="sub-menu">
         <li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-75"><a
-            href="#">Slider #1</a>
+            href="javascript:void(0);">Slider #1</a>
           <ul class="sub-menu">
             <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a href="index8bfa.html?slider=style-1">Home
                 with Slider 1</a></li>
@@ -135,7 +135,7 @@
           </ul>
         </li>
         <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a
-            href="#">Slider #2</a>
+            href="javascript:void(0);">Slider #2</a>
           <ul class="sub-menu">
             <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="indexf9be.html?slider=style-10">Home
                 with Slider 10</a></li>
@@ -158,7 +158,7 @@
           </ul>
         </li>
         <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85"><a
-            href="#">Slider #3</a>
+            href="javascript:void(0);">Slider #3</a>
           <ul class="sub-menu">
             <li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a href="index0ed2.html?slider=style-19">Home
                 with Slider 19</a></li>
@@ -181,7 +181,7 @@
           </ul>
         </li>
         <li id="menu-item-94" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94"><a
-            href="#">Slider #4</a>
+            href="javascript:void(0);">Slider #4</a>
           <ul class="sub-menu">
             <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a href="index5312.html?slider=style-28&amp;body=boxed-none">Home
                 with Slider 28</a></li>
@@ -213,10 +213,10 @@
       </ul>
     </li>
     <li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40"><a
-        href="#">Features</a>
+        href="javascript:void(0);">Features</a>
       <ul class="sub-menu">
         <li id="menu-item-134" class="featured-new menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134"><a
-            href="#">Post Templates</a>
+            href="javascript:void(0);">Post Templates</a>
           <ul class="sub-menu">
             <li id="menu-item-135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a
                 href="how-to-the-best-milk-coffee/indexeca6.html?single_style=style-1&amp;body=boxed-none">Template
@@ -275,7 +275,7 @@
           </ul>
         </li>
         <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41"><a
-            href="#">Headers</a>
+            href="javascript:void(0);">Headers</a>
           <ul class="sub-menu">
             <li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a href="index1e69.html?header=header-1">Header
                 Style 1</a></li>
@@ -305,7 +305,7 @@
         <li id="menu-item-106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"><a href="gallery/index.html">Real
             Awesome Gallery</a></li>
         <li id="menu-item-147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-147"><a
-            href="#">Post Formats</a>
+            href="javascript:void(0);">Post Formats</a>
           <ul class="sub-menu">
             <li id="menu-item-107" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107"><a
                 href="how-to-the-best-milk-coffee/index.html">Standard
@@ -314,7 +314,7 @@
                 href="how-to-make-latte-art/index.html">Gallery
                 Post</a></li>
             <li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51"><a
-                href="#">Video Post</a>
+                href="javascript:void(0);">Video Post</a>
               <ul class="sub-menu">
                 <li id="menu-item-121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"><a
                     href="master-the-art-of-coffee/index.html">Youtube
@@ -325,7 +325,7 @@
               </ul>
             </li>
             <li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52"><a
-                href="#">Audio Post</a>
+                href="javascript:void(0);">Audio Post</a>
               <ul class="sub-menu">
                 <li id="menu-item-123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123"><a
                     href="modern-coffee-maker/index.html">Soundcloud
@@ -344,7 +344,7 @@
           </ul>
         </li>
         <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9"><a
-            href="#">Pages</a>
+            href="javascript:void(0);">Pages</a>
           <ul class="sub-menu">
             <li id="menu-item-111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a
                 href="about/index.html">About
@@ -800,7 +800,7 @@
       </ul>
     </li>
     <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a
-        href="#">Portfolio</a>
+        href="javascript:void(0);">Portfolio</a>
       <ul class="sub-menu">
         <li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="portfolio-3-columns/index.html">Masonry
             3 Columns</a></li>

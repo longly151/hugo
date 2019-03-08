@@ -54,8 +54,8 @@ class PagesTableSeeder extends Seeder
             // ],
             [
                 'name' => 'about',
-                'content' => '<img class="alignnone size-full wp-image-1710" src="public/client/images/about.jpg"
-                alt="" width="1200" height="800" srcset="public/client/images/about.jpg 263w"
+                'content' => '<img class="alignnone size-full wp-image-1710" src="images/about.jpg"
+                alt="" width="1200" height="800" srcset="images/about.jpg 263w"
                 sizes="(max-width: 1200px) 100vw, 1200px" />
                 <p>C&acirc;u lạc bộ Tiếng Anh HUGO CLUB - L&agrave; 1 trong 15 đơn vị ch&iacute;nh thống trực thuộc Hội sinh vi&ecirc;n Trường Đại học B&aacute;ch khoa &ndash; Đại học Đ&agrave; Nẵng.</p>
 
@@ -83,8 +83,8 @@ class PagesTableSeeder extends Seeder
             ],
             [
                 'name' => 'contact',
-                'content' => '<p><img class="alignnone size-full wp-image-1713" src="public/client/images/contact.jpg"
-                alt="" width="1200" height="800" srcset="public/client/images/contact.jpg 263w"
+                'content' => '<p><img class="alignnone size-full wp-image-1713" src="images/contact.jpg"
+                alt="" width="1200" height="800" srcset="images/contact.jpg 263w"
                 sizes="(max-width: 1200px) 100vw, 1200px" />Have a question, a comment? Want to
                 collaborate in some way? Just have something nice to say? I’d love to hear from
                 you! Shoot me a message below and I’ll be sure to get back to you as soon as I can.

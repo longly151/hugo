@@ -23,7 +23,7 @@
                 @endif
                 text-uppercase small">{{ session()->get('admin')['role'] }}</p>
 
-                <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true"
+                <a href="javascript:void(0);" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                 <div class="dropdown-menu animated flipInY">
                     <!-- text-->
@@ -47,7 +47,7 @@
                 <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="mdi mdi-gauge"></i><span
                             class="hide-menu">Dashboard</a>
                 </li>
-                <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span
+                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span
                             class="hide-menu">Post</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="/admin/post/add">Add Post</a></li>
@@ -57,7 +57,7 @@
                     </ul>
                 </li>
 
-                <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-format-list-bulleted"></i><span
+                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"><i class="mdi mdi-format-list-bulleted"></i><span
                             class="hide-menu">Category</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="/admin/category/add">Add Category</a></li>
@@ -66,7 +66,7 @@
                     </ul>
                 </li>
 
-                <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-tag-multiple"></i><span
+                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"><i class="mdi mdi-tag-multiple"></i><span
                             class="hide-menu">Tag</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="/admin/tag/add">Add Tag</a></li>
@@ -75,7 +75,7 @@
                     </ul>
                 </li>
                 @if(session('admin'))
-                <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span
+                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"><i class="mdi mdi-account"></i><span
                     class="hide-menu">User</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="/admin/user/list">User List</a></li>

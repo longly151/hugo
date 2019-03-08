@@ -4,7 +4,7 @@
         <div class="container">
             <div id="logo">
                 <h1>
-                <a href="/"><img style="opacity:0.9;width:50%"src="/public/client/images/main_logo.png"
+                <a href="/"><img style="opacity:0.9;width:50%"src="images/main_logo.png"
                             alt="Hugo Blog" /></a>
                 </h1>
             </div>
@@ -20,7 +20,7 @@
                 <li class="megamenu menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a
                         href="/">Trang chủ</a>
                 </li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-243"><a href="#">Blog</a>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-243"><a href="javascript:void(0);">Blog</a>
                 <ul class="sub-menu">
                     <li class="menu-item-0">
                         <div class="penci-megamenu">
@@ -78,7 +78,7 @@
                 </ul>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40"><a
-                        href="#">Chuyên mục</a>
+                        href="javascript:void(0);">Chuyên mục</a>
                     <ul class="sub-menu">
                         @foreach ($topCategories as $topCategory)
                             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134"><a
@@ -227,7 +227,7 @@
                     </ul>
                 </li> --}}
                 {{-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a
-                        href="#">Portfolio</a>
+                        href="javascript:void(0);">Portfolio</a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="portfolio-3-columns/index.html">Masonry
                                 3 Columns</a></li>
