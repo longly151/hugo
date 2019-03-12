@@ -177,6 +177,7 @@ return [
 
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         App\Providers\HelperServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
     ],
 
     /*
@@ -227,6 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Helper' => App\Helpers\Helper::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 
 ];

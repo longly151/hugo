@@ -427,8 +427,10 @@ class PostsTableSeeder extends Seeder
                 'category_id' => 1,
                 'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/home-20190306142623.jpg',
                 'url' => str_slug('HUGO ENGLISH CLUB - MỘT CHẶNG ĐƯỜNG DÀI').'-'.date('Ymdhis'),
+                'status' => 'public',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'published_at' => now()
             ],
             [
                 'title' => 'CÂU CHUYỆN VỀ NHỮNG CÁI ÔM',
@@ -444,8 +446,10 @@ class PostsTableSeeder extends Seeder
                 'category_id' => 1,
                 'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/51936831_403916770413597_4446592973127286784_n-20190306142847.jpg',
                 'url' => str_slug('CÂU CHUYỆN VỀ NHỮNG CÁI ÔM').'-'.date('Ymdhis'),
+                'status' => 'public',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'published_at' => now()
             ],
             [
                 'title' => 'VỀ HUGO STAFF',
@@ -465,8 +469,10 @@ class PostsTableSeeder extends Seeder
                 'category_id' => 2,
                 'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/00-20190306142941.jpg',
                 'url' => str_slug('VỀ HUGO STAFF').'-'.date('Ymdhis'),
+                'status' => 'public',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'published_at' => now()
             ],
             [
                 'title' => 'MỘT VÀI GHI CHÚ NHỎ CHO TRẠI HUGO',
@@ -493,8 +499,10 @@ class PostsTableSeeder extends Seeder
                 'category_id' => 4,
                 'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/01-20190306143107.jpg',
                 'url' => str_slug('MỘT VÀI GHI CHÚ NHỎ CHO TRẠI HUGO').'-'.date('Ymdhis'),
+                'status' => 'public',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'published_at' => now()
             ],
             [
                 'title' => 'THẨN THƠ TRÊN XE BUÝT: CHUYỆN SỐ 1',
@@ -518,8 +526,10 @@ class PostsTableSeeder extends Seeder
                 'category_id' => 1,
                 'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/02-20190306143212.jpg',
                 'url' => str_slug('THẨN THƠ TRÊN XE BUÝT: CHUYỆN SỐ 1').'-'.date('Ymdhis'),
+                'status' => 'public',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'published_at' => now()
             ],
             [
                 'title' => 'TRẠI MÙA ĐÔNG',
@@ -551,8 +561,10 @@ class PostsTableSeeder extends Seeder
                 'category_id' => 4,
                 'cover' => 'https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/03-20190306143255.jpg',
                 'url' => str_slug('TRẠI MÙA ĐÔNG').'-'.date('Ymdhis'),
+                'status' => 'public',
                 'created_at' => now(),
-                'updated_at' => now()
+                'updated_at' => now(),
+                'published_at' => now()
             ],
         ]);
     }
