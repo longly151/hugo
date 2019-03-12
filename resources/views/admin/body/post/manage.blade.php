@@ -46,6 +46,7 @@
                                     <th>Category</th>
                                     <th>Tags</th>
                                     <th>Author</th>
+                                    <th>Status</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
                                     <th>Tools</th>
@@ -65,7 +66,8 @@
                                     @endforeach
                                     </td>
                                     <td>{{$post->author['fullname']}}</td>
-                                    <td>{{$post->created_at}}</td>
+                                    <td>{{$post->status}}</td>
+                                    <td>{{$post->updated_at}}</td>
                                     <td>{{$post->updated_at}}</td>
                                     <td>
                                         @if ($post->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
@@ -73,8 +75,17 @@
                                             <i class="fa fa-folder"></i> View </a>
                                         <a href="/admin/post/edit/{{$post->id}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
+                                            @if(session('admin')['role']=='admin')
+                                                @if($post->status == 'pending')
+                                                <a href="/admin/post/publish/{{$post->id}}" class="btn btn-info btn-xs">
+                                                    <i class="fa fa-folder"></i> Publish </a>
+                                                @elseif($post->status == 'public')
+                                                <a href="/admin/post/unpublish/{{$post->id}}" class="btn btn-warning btn-xs">
+                                                    <i class="fa fa-folder"></i> Unpublish </a>
+                                                @endif
+                                            @endif
                                         <button data-id="{{ $post->id }}" type="button" class="btn btn-danger btn-xs deletePost">
-                                            <i class="far fa-trash-alt"></i> Delete </button>
+                                                <i class="far fa-trash-alt"></i> Delete </button>
                                         @endif
                                     </td>
 
