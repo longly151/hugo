@@ -58,7 +58,7 @@
                                                     <a href="/{{$menuPost->url}}" title="{{$menuPost->title}}">{{$menuPost->title}}</a>
                                                 </h3>
                                                 <p class="penci-mega-date"><time class="entry-date published"
-                                                        datetime="{{$menuPost->public_at}}">{{$menuPost->public_at}}</time>
+                                                        datetime="{{$menuPost->published_at}}">{{$menuPost->published_at}}</time>
                                                         {{-- <time class="penci-hide-tagupdated updated"
                                                         datetime="2018-09-04T04:09:39+00:00">September
                                                         4, 2018</time> --}}

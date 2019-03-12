@@ -24,9 +24,9 @@
                                     <h2 class="entry-title grid-title"><a href="/{{$post->url}}">{{$post->title}}</a></h2>
                                     <div class="penci-hide-tagupdated">
                                         <span class="author-italic author vcard">by <a class="url fn n" href="javascript:void(0);">{{$post->author['fullname']}}</a></span>
-                                        <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
+                                        <time class="entry-date published" datetime="{{$post->published_at}}">{{$post->published_at}}</time></div>
                                     <div class="grid-post-box-meta">
-                                        <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
+                                        <span><time class="entry-date published" datetime="{{$post->published_at}}">{{$post->published_at}}</time></span>
                                     </div>
                                 </div>
     

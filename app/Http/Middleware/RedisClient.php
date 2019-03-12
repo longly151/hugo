@@ -32,7 +32,7 @@ class RedisClient
         Redis::set('topCategories',json_encode($topCategories));
         $topCategories = json_decode(Redis::get('topCategories'),true);
         // Menu Post
-        $menuPosts = Post::whereRaw('category_id < 5')->select('id','title','public_at','cover','category_id','url')->get();
+        $menuPosts = Post::whereRaw('category_id < 5')->select('id','title','published_at','cover','category_id','url')->get();
         
         View::share(['topCategories'=> $topCategories,'menuPosts'=>$menuPosts]);
         return $next($request);

@@ -51,7 +51,7 @@
 
 
                         <div class="header-standard">
-                            <div class="penci-standard-cat"><span><i class="fa fa-clock-o"></i> <time class="entry-date published" datetime="{{$posts[0]->public_at}}">{{$posts[0]->public_at}}</time>
+                            <div class="penci-standard-cat"><span><i class="fa fa-clock-o"></i> <time class="entry-date published" datetime="{{$posts[0]->published_at}}">{{$posts[0]->published_at}}</time>
                             </span></div>
                             <h2 class="entry-title entry-title"><a href="/{{$posts[0]->url}}">{{$posts[0]->title}}</a></h2>
                             <div class="penci-hide-tagupdated">
@@ -74,7 +74,7 @@
 
                             {{-- <div class="penci-post-box-meta">
                                 <div class="penci-box-meta">
-                                    <span><i class="fa fa-clock-o"></i><time class="entry-date published" datetime="{{$posts[0]->public_at}}">{{$posts[0]->public_at}}</time>
+                                    <span><i class="fa fa-clock-o"></i><time class="entry-date published" datetime="{{$posts[0]->published_at}}">{{$posts[0]->published_at}}</time>
                                     </span>
                                 </div>
                                 <div class="penci-post-share-box">
@@ -111,9 +111,9 @@
                                     <h2 class="entry-title grid-title"><a href="/{{$post->url}}">{{$post->title}}</a></h2>
                                     <div class="penci-hide-tagupdated">
                                         <span class="author-italic author vcard">by <a class="url fn n" href="javascript:void(0);">{{$post->author['fullname']}}</a></span>
-                                        <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
+                                        <time class="entry-date published" datetime="{{$post->published_at}}">{{$post->published_at}}</time></div>
                                     <div class="grid-post-box-meta">
-                                        <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
+                                        <span><time class="entry-date published" datetime="{{$post->published_at}}">{{$post->published_at}}</time></span>
                                     </div>
                                 </div>
     

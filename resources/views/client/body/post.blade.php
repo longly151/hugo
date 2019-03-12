@@ -14,11 +14,11 @@
                     <h1 class="post-title single-post-title entry-title">{{$post->title}}</h1>
                     <div class="penci-hide-tagupdated">
                         <span class="author-italic author vcard">by <a class="url fn n" href="javascript:void(0);">{{$post->author['fullname']}}</a></span>
-                        <time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></div>
+                        <time class="entry-date published" datetime="{{$post->published_at}}">{{$post->published_at}}</time></div>
                     <div class="post-box-meta-single">
                         <span class="author-post byline"><span class="author vcard">Posted by <a class="author-url url fn n"
                                     href="javascript:void(0);">{{$post->author['fullname']}}</a></span></span>
-                        <span><time class="entry-date published" datetime="{{$post->public_at}}">{{$post->public_at}}</time></span>
+                        <span><time class="entry-date published" datetime="{{$post->published_at}}">{{$post->published_at}}</time></span>
                     </div>
                 </div>
 
