@@ -27,7 +27,23 @@ class PostController extends Controller
     public function manageByAuthor()
     {
         $posts = Post::where('author_id',session('admin')['id'])->paginate(5);
-        return view('admin.body.post.manage',['posts'=>$posts]);
+        return view('admin.body.post.manage-by-author',['posts'=>$posts]);
+    }
+    public function publish($id)
+    {
+        $post = Post::find($id);
+        $post->status = 'public';
+        $post->published_at = now();
+        $post->save();
+        return redirect('/admin/post/manage')->with('success','Publish Post successfully ');
+    }
+    public function unpublish($id)
+    {
+        $post = Post::find($id);
+        $post->status = 'pending';
+        $post->published_at = NULL;
+        $post->save();
+        return redirect('/admin/post/manage')->with('success','Unpublish Post successfully ');
     }
     public function bin()
     {
@@ -86,6 +102,7 @@ class PostController extends Controller
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
         $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
+        $dbPost->status = $request->draft == 'on' ? 'draft':'pending';
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);
         return redirect('/admin/post/manage')->with('success','Add post successfully');
@@ -137,7 +154,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
         $post = $request->except('_token','tags');
         $post['author_id'] = session()->get('admin')['id'];
@@ -170,6 +187,8 @@ class PostController extends Controller
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
+        $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
+        $dbPost->status = $request->draft == 'on' ? 'draft':'pending';
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);  
         return redirect('/admin/post/manage')->with('success','Add post successfully');

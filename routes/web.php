@@ -31,6 +31,8 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('manage', 'PostController@index');
             Route::get('manage-by-author', 'PostController@manageByAuthor');
             Route::get('bin', 'PostController@bin');
+            Route::get('publish/{id}', 'PostController@publish')->middleWare('checkRole:admin');
+            Route::get('unpublish/{id}', 'PostController@unpublish')->middleWare('checkRole:admin');
             Route::group(['middleware' => 'authorRole:post'], function () {
                 Route::get('edit/{id}', 'PostController@edit');
                 Route::post('edit/{id}', 'PostController@update');
@@ -38,6 +40,7 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::post('restore', 'PostController@restore');
                 Route::post('completed-delete', 'PostController@destroy');
             });
+
         });
         Route::group(['prefix' => 'category'], function() {
             Route::get('add', 'CategoryController@create');

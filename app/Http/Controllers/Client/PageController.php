@@ -14,17 +14,17 @@ use App\Page;
 class PageController extends Controller
 {
     public function home() {
-        $posts = Post::orderBy('created_at','desc')->get();
+        $posts = Post::orderBy('created_at','desc')->where('status','public')->get();
         return view('client.body.home',['posts'=>$posts]);
     }
     public function post($url) {
         $category = Category::where('url',$url)->select('id')->first();
         if($category) {
-            $posts = Post::where('category_id',$category->id)->get();
+            $posts = Post::where('category_id', $category->id)->get();
             return view('client.body.post_by_category',['posts'=>$posts]);
         }
         else {
-            $post = Post::where('url',$url)->first();
+            $post = Post::where('url', $url)->first();
             if(!$post) return redirect('404');
             return view('client.body.post',['post'=>$post]);
         }
