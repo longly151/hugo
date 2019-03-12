@@ -116,6 +116,10 @@
                         <h4 class="m-t-20">Cover Photo</h4>
                         <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp" name="cover">
                     </div>
+                    <div class="form-group">
+                        <h4 class="m-t-20">Draft</h4>
+                        <input type="checkbox" @if(old('draft')) checked @endif name="draft" class="js-switch" data-color="#009efb" />
+                    </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                 </form>
