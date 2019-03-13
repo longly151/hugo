@@ -8,7 +8,7 @@
 
 
                 <div class="header-standard header-classic single-header">
-                    <div class="penci-standard-cat"><span class="cat"><a class="penci-cat-name" href="{{$post->category['url']}}"
+                    <div class="penci-standard-cat"><span class="cat"><a class="penci-cat-name" href="/{{$post->category['url']}}"
                                 rel="category tag">{{$post->category['name']}}</a></span></div>
 
                     <h1 class="post-title single-post-title entry-title">{{$post->title}}</h1>
