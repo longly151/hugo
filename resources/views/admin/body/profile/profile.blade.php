@@ -101,7 +101,7 @@
                     <div class="tab-pane @if(!session('active')&&!session('errors')) active @endif" id="home" role="tabpanel">
                         <div class="card-body">
                             <div class="profiletimeline">
-                                <div class="sl-item">
+                                {{-- <div class="sl-item">
                                     <div class="sl-left"> <img src="images/users/1.jpg" alt="user" class="img-circle" />
                                     </div>
                                     <div class="sl-right">
@@ -170,6 +170,17 @@
                                             <blockquote class="m-t-10">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                                 eiusmod tempor incididunt
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div> --}}
+                                <div class="sl-item">
+                                    <div class="sl-left"> <img src="https://s3-us-east-2.amazonaws.com/hugoenglishclub/avatar/default-avatar-20190306141537.png" alt="user" class="img-circle" />
+                                    </div>
+                                    <div class="sl-right">
+                                        <div><a href="javascript:void(0);" class="link">Việt Long Lê</a> <span class="sl-date">5 minutes ago</span>
+                                            <blockquote class="m-t-10">
+                                                We are building this feature
                                             </blockquote>
                                         </div>
                                     </div>
