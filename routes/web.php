@@ -31,14 +31,14 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('manage', 'PostController@index');
             Route::get('manage-by-author', 'PostController@manageByAuthor');
             Route::get('bin', 'PostController@bin');
-            Route::get('publish/{id}', 'PostController@publish')->middleWare('checkRole:admin');
-            Route::get('unpublish/{id}', 'PostController@unpublish')->middleWare('checkRole:admin');
+            Route::get('publish/{id}', 'PostController@publish')->middleWare('checkRole:moderator');
+            Route::get('unpublish/{id}', 'PostController@unpublish')->middleWare('checkRole:moderator');
             Route::group(['middleware' => 'authorRole:post'], function () {
                 Route::get('edit/{id}', 'PostController@edit');
                 Route::post('edit/{id}', 'PostController@update');
                 Route::post('delete', 'PostController@delete');
                 Route::post('restore', 'PostController@restore');
-                Route::post('completed-delete', 'PostController@destroy');
+                Route::post('completed-delete', 'PostController@destroy')->middleWare('checkRole:admin');
             });
 
         });
@@ -52,7 +52,7 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::post('edit/{id}', 'CategoryController@update');
                 Route::post('delete', 'CategoryController@delete');
                 Route::post('restore', 'CategoryController@restore');
-                Route::post('completed-delete', 'CategoryController@destroy');
+                Route::post('completed-delete', 'CategoryController@destroy')->middleWare('checkRole:admin');
             });
         });
         Route::group(['prefix' => 'tag'], function() {
@@ -65,7 +65,7 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::post('edit/{id}', 'TagController@update');
                 Route::post('delete', 'TagController@delete');
                 Route::post('restore', 'TagController@restore');
-                Route::post('completed-delete', 'TagController@destroy');
+                Route::post('completed-delete', 'TagController@destroy')->middleWare('checkRole:admin');
             });
         });
 
@@ -83,7 +83,7 @@ Route::group(['namespace' => 'Admin'], function () {
         
                 Route::get('bin', 'UserController@bin');
                 Route::post('restore', 'UserController@restore');
-                Route::post('completed-delete', 'UserController@destroy');
+                Route::post('completed-delete', 'UserController@destroy')->middleWare('checkRole:admin');
             });
         });
         Route::group(['prefix' => 'profile'], function() {

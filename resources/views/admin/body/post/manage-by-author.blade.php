@@ -73,7 +73,7 @@
                                             <i class="fa fa-folder"></i> View </a>
                                         <a href="/admin/post/edit/{{$post->id}}" class="btn btn-primary btn-xs">
                                             <i class="fa fa-folder"></i> Edit </a>
-                                            @if(session('admin')['role']=='admin')
+                                            @if(session('admin')['role']=='admin'||session('admin')['role']=='moderator')
                                                 @if($post->status == 'pending')
                                                 <a href="/admin/post/publish/{{$post->id}}" class="btn btn-info btn-xs">
                                                     <i class="fa fa-folder"></i> Publish </a>

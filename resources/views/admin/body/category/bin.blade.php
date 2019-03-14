@@ -55,8 +55,10 @@
                                         session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
                                         <button data-id="{{ $topCategory['id'] }}" class="btn btn-success btn-xs restoreCategory">
                                             <i class="fas fa-recycle"></i> Restore </button>
+                                        @if(session('admin')['role']=='admin')
                                         <button data-id="{{ $topCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteCategory">
-                                            <i class="far fa-trash-alt"></i> Delete </button>
+                                            <i class="far fa-trash-alt"></i> Completely Delete </button>
+                                        @endif
                                         @endif
                                     </td>
                                 </tr>

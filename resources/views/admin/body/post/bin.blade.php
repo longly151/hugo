@@ -71,8 +71,10 @@
                                         @if ($post->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')
                                         <button data-id="{{ $post->id }}" class="btn btn-success btn-xs restorePost">
                                                 <i class="fas fa-recycle"></i> Restore </button>
+                                        @if(session('admin')['role']=='admin')
                                         <button data-id="{{ $post->id }}" type="button" class="btn btn-danger btn-xs completedDeletePost">
                                             <i class="far fa-trash-alt"></i> Completely Delete </button>
+                                        @endif
                                         @endif
                                     </td>
 

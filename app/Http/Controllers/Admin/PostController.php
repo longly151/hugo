@@ -101,7 +101,7 @@ class PostController extends Controller
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
-        $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
+        if ($request->file('cover')) $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
         $dbPost->status = $request->draft == 'on' ? 'draft':'pending';
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);
@@ -187,10 +187,10 @@ class PostController extends Controller
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
-        $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
+        if ($request->file('cover')) $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
         $dbPost->status = $request->draft == 'on' ? 'draft':'pending';
         $dbPost->save();
-        $dbPost->tags()->sync($request->tags);  
+        $dbPost->tags()->sync($request->tags);
         return redirect('/admin/post/manage')->with('success','Add post successfully');
     }
 
