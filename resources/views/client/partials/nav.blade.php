@@ -3,9 +3,9 @@
 <nav id="sidebar-nav" class="header-2" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 
   <div id="sidebar-nav-logo">
-    <a href="/"><img class="penci-lazy" src="images/penci-holder.png"
-        data-src="images/logo-o.png"
-        alt="Soledad Coffee Blog" /></a>
+    <a href="/"><img class="penci-lazy" src="images/main_logo.png"
+        data-src="images/main_logo.png"
+        alt="Hugo Blog" /></a>
   </div>
 
 {{-- Left Navigate --}}
