@@ -11,6 +11,7 @@ use App\Category;
 use App\Post;
 use Illuminate\Support\Facades\Redis;
 use App\Helpers\Helper;
+use Image;
 
 class PostController extends Controller
 {
@@ -101,13 +102,19 @@ class PostController extends Controller
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
-        if ($request->file('cover')) $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
+        // handle cover
+        if ($request->file('cover')) {
+            $file = $request->file('cover');
+            $path = Helper::createS3Url('post', $file);
+            $img = Helper::resizeImage('675', $file);
+            $dbPost->cover = Helper::s3Upload($path, $img);
+        };
+        // done
         $dbPost->status = $request->draft == 'on' ? 'draft':'pending';
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);
         return redirect('/admin/post/manage')->with('success','Add post successfully');
     }
-
     /**
      * Display the specified resource.
      *
@@ -187,13 +194,19 @@ class PostController extends Controller
         $dbPost->content = $post['content'];
         $dbPost->category_id = array_key_exists("category",$post) ? $post['category']:NULL;
         $dbPost->author_id = $post['author_id'];
-        if ($request->file('cover')) $dbPost->cover = Helper::handleFile('/posts',$request->file('cover'));
+        // handle cover
+        if ($request->file('cover')) {
+            $file = $request->file('cover');
+            $path = Helper::createS3Url('post', $file);
+            $img = Helper::resizeImage('675', $file);
+            $dbPost->cover = Helper::s3Upload($path, $img);
+        };
+        // done
         $dbPost->status = $request->draft == 'on' ? 'draft':'pending';
         $dbPost->save();
         $dbPost->tags()->sync($request->tags);
-        return redirect('/admin/post/manage')->with('success','Add post successfully');
+        return redirect('/admin/post/manage')->with('success','Edit post successfully');
     }
-
     /**
      * Remove the specified resource from storage.
      *

@@ -34,7 +34,12 @@ class ProfileController extends Controller
         $user->phoneNumber = $info['phoneNumber'];
         $user->address = $info['address'];
         $user->description = $info['description'];
-        if ($request->file('avatar')) $user->avatar = Helper::handleFile($request->file('avatar'),'/avatar');
+        if ($request->file('avatar')) {
+            $file = $request->file('avatar');
+            $path = Helper::createS3Url('avatar', $file);
+            $img = Helper::resizeAvatar('330', $file);
+            $user->avatar = Helper::s3Upload($path, $img);
+        };
         $user->save();
         $info = User::where('id', $id)->select(['email','phoneNumber','address','description','avatar'])->first()->toArray();;
         // get cUser

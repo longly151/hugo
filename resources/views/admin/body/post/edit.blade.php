@@ -22,7 +22,7 @@
         <div class="col-sm-12">
             <div class="card card-body">
                 <h4 class="card-title">Post Info</h4>
-                <form class="form-horizontal m-t-40" action="/admin/post/edit/{{$post->id}}" method="post">
+                <form class="form-horizontal m-t-40" action="/admin/post/edit/{{$post->id}}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title">Title</label>
