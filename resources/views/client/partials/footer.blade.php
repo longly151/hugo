@@ -51,7 +51,7 @@
 			</div> --}}
 			<div id="footer-copyright">
 					<p>© Copyright by
-						<a href="https://www.facebook.com/HUGOClub/" target="_blank">Hugo Media</a> | 
+						<a href="https://www.facebook.com/HUGOClub/" target="_blank">Hugo Media</a>
 						{{-- <a href="https://www.facebook.com/sgroup.vn/" target="_blank">S-Group</a> --}}
 						- Designed by
 						<a href="javascript:void(0);">PenciDesign</a>
