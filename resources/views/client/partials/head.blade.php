@@ -16,7 +16,6 @@
   <link rel='https://api.w.org/' href='wp-json/index.html' />
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://max.soledad.pencidesign.com/soledad-coffee-blog/wp-includes/wlwmanifest.xml" />
-  <meta name="generator" content="WordPress 4.9.9" />
   
   <script type='text/javascript' src='js/jquery.js'></script>
   <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
@@ -31,7 +30,7 @@
       },
       "url": "http:\/\/soledad.pencidesign.com\/soledad-coffee-blog\/",
       "name": "Soledad Coffee Blog",
-      "description": "Multi-Concept Blog\/Magazine WordPress Theme Sites site"
+      "description": "Multi-Concept Blog\/Magazine Theme Sites site"
     }
   </script>
   <script type="application/ld+json">
@@ -39,7 +38,7 @@
       "@context": "http:\/\/schema.org\/",
       "@type": "WebSite",
       "name": "Soledad Coffee Blog",
-      "alternateName": "Multi-Concept Blog\/Magazine WordPress Theme Sites site",
+      "alternateName": "Multi-Concept Blog\/Magazine Theme Sites site",
       "url": "http:\/\/soledad.pencidesign.com\/soledad-coffee-blog\/",
       "potentialAction": {
         "@type": "SearchAction",
