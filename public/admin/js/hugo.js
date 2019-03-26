@@ -240,6 +240,7 @@ const alertRestoreCategory = (category) => {
     const id = $(category).data('id');
     swal({
             title: 'Restore Category ?',
+            text: 'Parent Categories related will be restored',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',
@@ -434,7 +435,7 @@ const alertCompletedDeleteCategory = (category) => {
     const id = $(category).data('id');
     swal({
             title: 'Delete the category completely ?',
-            text: 'The category cannot be restored',
+            text: 'The category and subcategories related will be deleted and cannot be restored',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',

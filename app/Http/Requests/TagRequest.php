@@ -53,7 +53,7 @@ class TagRequest extends BaseFormRequest
     }
     public function withValidator($validator) {
         $validator->after(function ($validator) {
-            if (Tag::where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
+            if (Tag::withTrashed()->where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
                 $validator->errors()->add('name','Tag already exists due to duplicate url');
             }
         });

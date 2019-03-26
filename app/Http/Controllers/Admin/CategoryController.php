@@ -39,23 +39,21 @@ class CategoryController extends Controller
                 array_push($topCategories,$dbCategory);
             }
             else {
-                $parentCate = Category::where('id',$dbCategory['parent_id'])->first();
+                $parentCate = Category::withTrashed()->where('id',$dbCategory['parent_id'])->first();
                 if($parentCate['parent_id']) array_push($subCategories,$dbCategory);
                 else array_push($categories,$dbCategory);
             }
-            
         }
         foreach($categories as $i => $category){
-            $dbTopCategory = Category::where('id',$category['parent_id'])->select('categories.name')->first();
+            $dbTopCategory = Category::withTrashed()->where('id',$category['parent_id'])->select('categories.name')->first();
             if($dbTopCategory) $categories[$i] = array_add($category,'topCategory',$dbTopCategory->toArray());
         }
         foreach($subCategories as $i => $subCategory){
-            $dbCategory = Category::where('id',$subCategory['parent_id'])->select('parent_id','name')->first();
+            $dbCategory = Category::withTrashed()->where('id',$subCategory['parent_id'])->select('parent_id','name')->first();
             if ($dbCategory) $subCategories[$i] = array_add($subCategory,'category',$dbCategory->toArray());
-            $dbTopCategory = Category::where('id',$subCategories[$i]['category']['parent_id'])->select('name')->first();
+            $dbTopCategory = Category::withTrashed()->where('id',$subCategories[$i]['category']['parent_id'])->select('name')->first();
             if ($dbTopCategory) $subCategories[$i] = array_add($subCategories[$i],'topCategory',$dbTopCategory->toArray());
         }
-        // print_r($subCategories);exit();
         return view('admin.body.category.bin',['topCategories' => $topCategories,'categories' => $categories,'subCategories' => $subCategories]);
     }
     /**
@@ -65,7 +63,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $topCategories = Category::where('parent_id',NULL)->get();
+        $topCategories = Category::withTrashed()->where('parent_id',NULL)->get();
         return view('admin.body.category.add',['topCategories'=>$topCategories]);
     }
 
@@ -122,8 +120,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $topCategories = Category::where('parent_id',NULL)->get();
-        $dbCategory = Category::where('id',$id)->first();
+        $topCategories = Category::withTrashed()->where('parent_id',NULL)->get();
+        $dbCategory = Category::withTrashed()->where('id',$id)->first();
         $type = $dbCategory->categoryType();
         if ($type == 'topCategory') {
             $subCategory = '';
@@ -133,11 +131,11 @@ class CategoryController extends Controller
             if ($type == 'category') {
                 $subCategory = '';
                 $category = $dbCategory;
-                $topCategory = Category::where('id',$dbCategory->parent_id)->first();
+                $topCategory = Category::withTrashed()->where('id',$dbCategory->parent_id)->first();
             } else if ($type == 'subCategory') {
                 $subCategory = $dbCategory;
-                $category = Category::where('id',$dbCategory->parent_id)->first();
-                $topCategory = Category::where('id',$category->parent_id)->first();
+                $category = Category::withTrashed()->where('id',$dbCategory->parent_id)->first();
+                $topCategory = Category::withTrashed()->where('id',$category->parent_id)->first();
             }
         }
         return view('admin.body.category.edit',['topCategories'=>$topCategories,'currentTopCategory'=>$topCategory,'currentCategory'=>$category,'currentSubCategory'=>$subCategory,'type'=>$type]);
@@ -176,7 +174,19 @@ class CategoryController extends Controller
     public function delete(Request $request)
     {
         $id = $request->json()->all();
-        Category::where('id',$id)->delete();
+        $categories = Category::withTrashed()->where('parent_id',$id)->select('id')->get();
+        if ($categories) {
+            foreach($categories as $category){
+                $subCategories = Category::withTrashed()->where('parent_id',$category->id)->get();
+                if ($subCategories) {
+                    foreach($subCategories as $subCategory){
+                        Category::withTrashed()->where('id',$subCategory->id)->delete();
+                    }
+                }
+                Category::withTrashed()->where('id',$category->id)->delete();
+            }
+        }
+        Category::withTrashed()->where('id',$id)->delete();
         return response()->json([
             'messages' => 'success'
         ],200);
@@ -184,7 +194,17 @@ class CategoryController extends Controller
     public function restore(Request $request)
     {
         $id = $request->json()->all();
-        Category::where('id',$id)->restore();
+        $dbCategory = Category::withTrashed()->where('id',$id)->first();
+        if ($dbCategory->parent_id) {
+            $categories = Category::withTrashed()->where('id',$dbCategory->parent_id)->get();
+            foreach($categories as $category) {
+                if ($category->parent_id) {
+                    Category::withTrashed()->where('id',$category->parent_id)->restore();
+                }
+                Category::withTrashed()->where('id',$category->id)->restore();
+            }
+        }
+        Category::withTrashed()->where('id',$id)->restore();
         return response()->json([
             'messages' => 'success'
         ],200);
@@ -198,7 +218,19 @@ class CategoryController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->json()->all();
-        Category::where('id',$id)->forceDelete();
+        $categories = Category::withTrashed()->where('parent_id',$id)->select('id')->get();
+        if ($categories) {
+            foreach($categories as $category){
+                $subCategories = Category::withTrashed()->where('parent_id',$category->id)->get();
+                if ($subCategories) {
+                    foreach($subCategories as $subCategory){
+                        Category::withTrashed()->where('id',$subCategory->id)->forceDelete();
+                    }
+                }
+                Category::withTrashed()->where('id',$category->id)->forceDelete();
+            }
+        }
+        Category::withTrashed()->where('id',$id)->forceDelete();
         return response()->json([
             'messages' => 'success'
         ],200);

@@ -51,7 +51,7 @@
                                 @foreach ($tags as $tag)
                                 <tr>
                                     <td>{{$tag->name}}</td>
-                                    <td>{{$tag->user['fullname']}}</td>
+                                    <td>{{$tag->author['fullname']}}</td>
                                     <td>{{$tag->deleted_at}}</td>
                                     <td>
                                         @if ($tag->author_id == session()->get('admin')['id']||session()->get('admin')['role']=='admin'||session()->get('admin')['role']=='moderator')

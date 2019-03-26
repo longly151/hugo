@@ -96,7 +96,7 @@
                                         <button data-id="{{ $category['id'] }}" class="btn btn-success btn-xs restoreCategory">
                                             <i class="fas fa-recycle"></i> Restore </button>
                                         <button data-id="{{ $category['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteCategory">
-                                            <i class="far fa-trash-alt"></i> Delete </button>
+                                            <i class="far fa-trash-alt"></i> Completely Delete </button>
                                         @endif
                                     </td>
                                 </tr>
@@ -127,7 +127,7 @@
                                 <tr>
                                     <td>{{$subCategory['name']}}</td>
                                     <td>{{array_key_exists('category', $subCategory) ? $subCategory['category']['name']:''}}</td>
-                                    <td>{{array_key_exists('category', $topCategory) ? $subCategory['topCategory']['name']:''}}</td>
+                                    <td>{{array_key_exists('topCategory', $subCategory) ? $subCategory['topCategory']['name']:''}}</td>
                                     <td>{{$subCategory['author_fullname']}}</td>
                                     <td>{{$subCategory['created_at']}}</td>
                                     <td>
@@ -135,7 +135,7 @@
                                         <button data-id="{{ $subCategory['id'] }}" class="btn btn-success btn-xs restoreCategory">
                                             <i class="fas fa-recycle"></i> Restore </button>
                                         <button data-id="{{ $subCategory['id'] }}" type="button" class="btn btn-danger btn-xs completedDeleteCategory">
-                                            <i class="far fa-trash-alt"></i> Delete </button>
+                                            <i class="far fa-trash-alt"></i> Completely Delete </button>
                                         @endif
                                     </td>
                                 </tr>

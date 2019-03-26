@@ -42,17 +42,17 @@ class CategoryRequest extends FormRequest
     public function withValidator($validator) {
         $validator->after(function ($validator) {
             if (!$this->topCategory||$this->topCategory == "0"){
-                if (Category::where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
+                if (Category::withTrashed()->where([['id','!=',$this->id],'url'=>str_slug($this->name)])->first()){
                     $validator->errors()->add('name','Top Category already exists');
                 }
             } else {
                 if(!$this->category||$this->category == "0"){
-                    if (Category::where([['id','!=',$this->id],'url'=>str_slug($this->name),'parent_id'=>$this->topCategory])->first()){
+                    if (Category::withTrashed()->where([['id','!=',$this->id],'url'=>str_slug($this->name),'parent_id'=>$this->topCategory])->first()){
                         $validator->errors()->add('name','Category already exists');
                     }
                 }
                 else {
-                    if (Category::where([['id','!=',$this->id],'url'=>str_slug($this->name),'parent_id'=>$this->category])->first()){
+                    if (Category::withTrashed()->where([['id','!=',$this->id],'url'=>str_slug($this->name),'parent_id'=>$this->category])->first()){
                         $validator->errors()->add('name','Sub Category already exists');
                     }
                 }
