@@ -2,7 +2,7 @@ const alertDeleteTag = (tag) => {
     const id = $(tag).data('id');
     swal({
             title: 'Delete tag ?',
-            text: 'The tag will be removed from the post',
+            text: 'The tag will be removed from posts. This action does not delete related posts',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',
@@ -42,7 +42,7 @@ const alertDeleteCategory = (category) => {
     const id = $(category).data('id');
     swal({
             title: 'Delete Category ?',
-            text: 'Subcategories related will be erased',
+            text: 'Subcategories related will be erased. The category will be removed from posts. This action does not delete related posts',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',
@@ -395,8 +395,8 @@ const alertActiveUser = (user) => {
 const alertCompletedDeleteTag = (tag) => {
     const id = $(tag).data('id');
     swal({
-            title: 'Delete the tag completely ?',
-            text: 'The tag cannot be restored',
+            title: 'Delete tag completely ?',
+            text: 'The tag cannot be restored. The tag will be completely removed from posts. This action does not delete related posts',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',
@@ -434,8 +434,8 @@ const alertCompletedDeleteTag = (tag) => {
 const alertCompletedDeleteCategory = (category) => {
     const id = $(category).data('id');
     swal({
-            title: 'Delete the category completely ?',
-            text: 'The category and subcategories related will be deleted and cannot be restored',
+            title: 'Delete category completely ?',
+            text: 'The category and subcategories related will be deleted and cannot be restored. The related posts will also be completely deleted ',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',
@@ -473,7 +473,7 @@ const alertCompletedDeleteCategory = (category) => {
 const alertCompletedDeletePost = (post) => {
     const id = $(post).data('id');
     swal({
-            title: 'Delete the post completely ?',
+            title: 'Delete post completely ?',
             text: 'The post cannot be restored',
             type: 'warning',
             showCancelButton: true,

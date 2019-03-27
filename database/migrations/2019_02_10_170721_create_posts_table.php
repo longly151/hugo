@@ -21,7 +21,7 @@ class CreatePostsTable extends Migration
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->integer('category_id')->unsigned()->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('CASCADE');
             $table->string('cover')->default('https://s3.us-east-2.amazonaws.com/hugoenglishclub/posts/default_cover.png');
             $table->string('status')->default('pending');
             $table->integer('views')->default(0);

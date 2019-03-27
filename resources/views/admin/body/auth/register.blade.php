@@ -74,14 +74,14 @@
                 @endif
             </div>
         </div>
-        <div class="form-group row">
+        {{-- <div class="form-group row">
             <div class="col-md-12">
                 <div class="checkbox checkbox-success">
                     <input id="checkbox-signup" type="checkbox">
                     <label for="checkbox-signup"> I agree to all <a href="javascript:void(0);">Terms</a></label>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="form-group text-center m-t-20">
             <div class="col-xs-12">
                 <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Sign
