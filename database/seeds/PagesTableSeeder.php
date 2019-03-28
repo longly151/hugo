@@ -55,7 +55,7 @@ class PagesTableSeeder extends Seeder
             [
                 'name' => 'about',
                 'author_id' => 1,
-                'content' => '<p><img alt="" class="alignnone size-full wp-image-1710" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/page/about.jpg" style="height:400px; width:600px" /></p>
+                'content' => '<p><img alt="" class="alignnone size-full wp-image-1710" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/page/about.jpg" style="height:450px; width:675px" /></p>
 
                 <p>C&acirc;u lạc bộ Tiếng Anh HUGO CLUB - L&agrave; 1 trong 15 đơn vị ch&iacute;nh thống trực thuộc Hội sinh vi&ecirc;n Trường Đại học B&aacute;ch khoa &ndash; Đại học Đ&agrave; Nẵng.</p>
                 
@@ -85,7 +85,7 @@ class PagesTableSeeder extends Seeder
             [
                 'name' => 'contact',
                 'author_id' => 1,
-                'content' => '<p><img alt="" class="alignnone size-full wp-image-1713" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/page/contact.jpg" style="height:550px; width:550px" /></p>
+                'content' => '<p><img alt="" class="alignnone size-full wp-image-1713" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/page/contact.jpg" style="height:675px; width:675px" /></p>
 
                 <p>Have a question, a comment? Want to collaborate in some way? Just have something nice to say? I&rsquo;d love to hear from you! Shoot me a message below and I&rsquo;ll be sure to get back to you as soon as I can. Thanks!</p>
                 
