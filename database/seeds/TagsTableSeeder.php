@@ -17,7 +17,7 @@ class TagsTableSeeder extends Seeder
         // DB::table('tags')->insert([
         //     [
         //         'name' => 'bong da',
-        //         'author_id' => 1,
+        //         'author_id' => rand(1,3),
         //         'url' => 'bong-da',
         //         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 year', $timezone = null),
         //         'updated_at' => $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
@@ -25,7 +25,7 @@ class TagsTableSeeder extends Seeder
         //     ],
         //     [
         //         'name' => 'cong nghe',
-        //         'author_id' => 1,
+        //         'author_id' => rand(1,3),
         //         'url' => 'cong-nghe',
         //         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 year', $timezone = null),
         //         'updated_at' => $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
@@ -33,7 +33,7 @@ class TagsTableSeeder extends Seeder
         //     ],
         //     [
         //         'name' => 'smartphone',
-        //         'author_id' => 1,
+        //         'author_id' => rand(1,3),
         //         'url' => 'smartphone',
         //         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 year', $timezone = null),
         //         'updated_at' => $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
@@ -41,7 +41,7 @@ class TagsTableSeeder extends Seeder
         //     ],
         //     [
         //         'name' => 'laptop',
-        //         'author_id' => 1,
+        //         'author_id' => rand(1,3),
         //         'url' => 'laptop',
         //         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 year', $timezone = null),
         //         'updated_at' => $faker->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
@@ -64,49 +64,49 @@ class TagsTableSeeder extends Seeder
         DB::table('tags')->insert([
             [
                 'name' => 'Blog',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'blog',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Tin tức',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'tin-tuc',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Câu chuyện Hugo',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'cau-chuyen-hugo',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Hoạt động',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'hoat-dong',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Sự kiện',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'su-kien',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Trại Hugo',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'trai-hugo',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'Staff',
-                'author_id' => 1,
+                'author_id' => rand(1,3),
                 'url' => 'staff',
                 'created_at' => now(),
                 'updated_at' => now(),

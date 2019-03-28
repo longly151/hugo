@@ -54,46 +54,47 @@ class PagesTableSeeder extends Seeder
             // ],
             [
                 'name' => 'about',
-                'content' => '<img class="alignnone size-full wp-image-1710" src="images/about.jpg"
-                alt="" width="1200" height="800" srcset="images/about.jpg 263w"
-                sizes="(max-width: 1200px) 100vw, 1200px" />
+                'author_id' => 1,
+                'content' => '<p><img alt="" class="alignnone size-full wp-image-1710" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/page/about.jpg" style="height:400px; width:600px" /></p>
+
                 <p>C&acirc;u lạc bộ Tiếng Anh HUGO CLUB - L&agrave; 1 trong 15 đơn vị ch&iacute;nh thống trực thuộc Hội sinh vi&ecirc;n Trường Đại học B&aacute;ch khoa &ndash; Đại học Đ&agrave; Nẵng.</p>
-
+                
                 <p>- Được th&agrave;nh lập v&agrave;o th&aacute;ng 3 năm 2008 bởi c&aacute;c sinh vi&ecirc;n Trường Đại học B&aacute;ch khoa.</p>
-
+                
                 <p>- Với mục ti&ecirc;u tạo ra m&ocirc;i trường năng động d&agrave;nh cho mọi sinh vi&ecirc;n c&oacute; mong muốn luyện tập Tiếng Anh, n&acirc;ng cao những kĩ năng mới, trải nghiệm những điều mới mẻ.</p>
-
+                
                 <p>- L&agrave; cầu nối giao lưu, kết bạn, học hỏi giữa sinh vi&ecirc;n khắp c&aacute;c trường Đại học, Cao đẳng tại Đ&agrave; Nẵng.</p>
-
+                
                 <p>- Phương ch&acirc;m hoạt động: Luyện tập Tiếng Anh một c&aacute;ch &ldquo;Năng động, vui vẻ, th&uacute; vị, th&acirc;n thiện&rdquo;.</p>
-
+                
                 <p>Đến với Hugo:</p>
-
+                
                 <p>- Được luyện tập kĩ năng Tiếng Anh, trao đổi, chia sẻ, n&acirc;ng cao kiến thức về Tiếng Anh.</p>
-
+                
                 <p>- Được trau dồi nhiều kĩ năng mới.</p>
-
+                
                 <p>- C&oacute; cơ hội giao lưu, kết bạn với c&aacute;c bạn th&agrave;nh vi&ecirc;n từ khắp c&aacute;c trường Đại học tr&ecirc;n to&agrave;n th&agrave;nh phố Đ&agrave; Nẵng.</p>
-
+                
                 <p>- Tham gia c&aacute;c hoạt động kh&aacute;c như: Đi t&igrave;nh nguyện, cắm trại, tr&ograve; chơi lớn&hellip;</p>
-
+                
                 <p>- Được trải nghiệm những khoảng thời gian đ&aacute;ng nhớ thời sinh vi&ecirc;n. HUGO CLUB &ndash; Light up your fire!</p>',
+                'url' => str_slug('about'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'name' => 'contact',
-                'content' => '<p><img class="alignnone size-full wp-image-1713" src="images/contact.jpg"
-                alt="" width="1200" height="800" srcset="images/contact.jpg 263w"
-                sizes="(max-width: 1200px) 100vw, 1200px" />Have a question, a comment? Want to
-                collaborate in some way? Just have something nice to say? I’d love to hear from
-                you! Shoot me a message below and I’ll be sure to get back to you as soon as I can.
-                Thanks!</p>
+                'author_id' => 1,
+                'content' => '<p><img alt="" class="alignnone size-full wp-image-1713" src="https://s3.us-east-2.amazonaws.com/hugoenglishclub/page/contact.jpg" style="height:550px; width:550px" /></p>
+
+                <p>Have a question, a comment? Want to collaborate in some way? Just have something nice to say? I&rsquo;d love to hear from you! Shoot me a message below and I&rsquo;ll be sure to get back to you as soon as I can. Thanks!</p>
+                
                 <ul>
-                    <li><strong>Adress:</strong><a href="https://goo.gl/maps/xWaKtt3FK8Q2" target="_blank"> 54 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu </a></li>
+                    <li><strong>Adress:</strong><a href="https://goo.gl/maps/xWaKtt3FK8Q2" target="_blank"> 54 Nguyễn Lương Bằng, Ho&agrave; Kh&aacute;nh Bắc, Li&ecirc;n Chiểu </a></li>
                     <li><strong>Phone:</strong><a href="tel:01626772020"> 0162 677 2020</a></li>
-                    <li><strong>Email:</strong><a href="mailto:hugoclub.dut@gmail.com"> hugoclub.dut@gmail.com</a></li>
+                    <li><strong>Email:</strong><a href="mailto:hugoclub.dut@gmail.com">&nbsp;hugoclub.dut@gmail.com</a></li>
                 </ul>',
+                'url' => str_slug('contact'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

@@ -121,7 +121,7 @@
                         <input type="checkbox" @if(old('draft')) checked @endif name="draft" class="js-switch" data-color="#009efb" />
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                    <a href="javascript:history.back()" class="btn btn-danger">Cancel</a>
                 </form>
             </div>
         </div>

@@ -41,7 +41,7 @@
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">CLIENT</li>
                 <li> <a class="waves-effect waves-dark" href="/" aria-expanded="false" target="_blank"><i class="mdi mdi-account-multiple"></i><span
-                            class="hide-menu" >View Client Page</a>
+                            class="hide-menu">View Client Page</a>
                 </li>
                 <li class="nav-small-cap">ADMIN</li>
                 <li> <a class="waves-effect waves-dark" href="/admin" aria-expanded="false"><i class="mdi mdi-gauge"></i><span
@@ -85,6 +85,12 @@
                         <li><a href="/admin/user/bin">Trash</a></li>
                 @endif
                     </ul>
+                </li>
+                @endif
+                
+                @if(session()->get('admin')['role'] === 'admin' || session()->get('admin')['role'] === 'moderator')
+                <li> <a class="waves-effect waves-dark" href="/admin/page/manage" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span
+                    class="hide-menu">Manage Page</a>
                 </li>
                 @endif
             </ul>

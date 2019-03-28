@@ -18,7 +18,7 @@ class CreateTagsTable extends Migration
             $table->string('name')->unique();
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->string('url');
+            $table->string('url')->unique();
             $table->timestamps();
             $table->softDeletes();
         });

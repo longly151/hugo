@@ -121,7 +121,7 @@ const alertDeleteUser = (user) => {
     const id = $(user).data('id');
     swal({
             title: 'Delete User ?',
-            text: 'The user\'s posts, categories and tags will be erased and cannot be restored. The categories and tags used in the article are owned by the administrator',
+            text: 'The user\'s posts, categories and tags will be deleted and cannot be restored',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'OK',

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Post;
+use App\Category;
+use App\Tag;
 use App\Role;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -122,6 +125,9 @@ class UserController extends Controller
     public function delete(Request $request)
     {
         $id = $request->json()->all();
+        Tag::where('author_id',$id)->delete();
+        Category::where('author_id',$id)->delete();
+        Post::where('author_id',$id)->delete();
         User::where('id',$id)->delete();
         return response()->json([
             'messages' => 'success'
@@ -130,6 +136,9 @@ class UserController extends Controller
     public function restore(Request $request)
     {
         $id = $request->json()->all();
+        Tag::where('author_id',$id)->restore();
+        Category::where('author_id',$id)->restore();
+        Post::where('author_id',$id)->restore();
         User::where('id',$id)->restore();
         return response()->json([
             'messages' => 'success'

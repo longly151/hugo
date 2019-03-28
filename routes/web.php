@@ -68,7 +68,6 @@ Route::group(['namespace' => 'Admin'], function () {
                 Route::post('completed-delete', 'TagController@destroy')->middleWare('checkRole:admin');
             });
         });
-
         Route::group(['prefix' => 'user'], function() {
             Route::get('/list', 'UserController@list');
             Route::get('/view/{id}','UserController@show');
@@ -96,6 +95,11 @@ Route::group(['namespace' => 'Admin'], function () {
                 return redirect('admin/profile')->with(['active'=>'changePassword']);
             });
             Route::post('change-password', 'ProfileController@updatePassword');
+        });
+        Route::group(['prefix' => 'page','middleware' => 'checkRole:moderator'], function() {
+            Route::get('manage', 'PageController@index');
+            Route::get('edit/{id}', 'PageController@edit');
+            Route::post('edit/{id}', 'PageController@update');
         });
         Route::group(['prefix' => 'ajax'], function() {
             Route::get('category/{id}', 'AjaxController@getCategories');
