@@ -89,6 +89,16 @@
                             {{-- <a href="../tag/coffee/index.html" rel="tag">coffee</a>
                             <a href="../tag/soledad/index.html" rel="tag">soledad</a>  --}}
                         </div>
+                        <div class="tags-share-box hide-tags page-share has-line">
+                            <div class="post-share">
+                                <span class="share-title">Share</span>
+                                <div class="list-posts-share">
+                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u={{url()->current()}}&display=popup&ref=plugin&src=share_button"><i
+                                            class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="fb-comments" data-colorscheme="dark" width="100%" data-href="{{env('APP_URL').'/post/'.$post->id}}" data-numposts="5"></div>
                     </div>
                 </div>
 

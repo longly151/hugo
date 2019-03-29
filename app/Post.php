@@ -26,7 +26,7 @@ class Post extends Model
     }
     public static function boot() {
         parent::boot();
-        self::saving(function ($post) {
+        self::creating(function ($post) {
             $post['url'] = str_slug($post['title']).'-'.date('Ymdhis');
         });
     }

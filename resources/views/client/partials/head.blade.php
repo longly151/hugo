@@ -52,4 +52,7 @@
   </script>
 
   <script type="text/javascript" src="js/vProject.js"></script>
+  {{-- <style>
+      div.fb-comments {color:white!important}
+  </style> --}}
 </head>
