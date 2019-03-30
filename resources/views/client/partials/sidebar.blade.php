@@ -115,11 +115,11 @@
 
 					<aside id="categories-2" class="widget widget_categories">
 							<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Fanpage</span></h4>
-						<div class="fb-page" data-href="https://www.facebook.com/HUGOClub/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/HUGOClub/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/HUGOClub/">Hugo Club</a></blockquote></div>
+						<div class="fb-page" data-href="https://www.facebook.com/HUGOClub/"  data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/HUGOClub/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/HUGOClub/">Hugo Club</a></blockquote></div>
 					</aside>
 					<aside id="categories-2" class="widget widget_categories">
 						<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">Địa chỉ</span></h4>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.839692533178!2d108.14772551457378!3d16.0738064435854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218d68e8ccb03%3A0x64dc2cb3e38bbdaf!2zNTQgTmd1eeG7hW4gTMawxqFuZyBC4bqxbmcsIEhvw6AgS2jDoW5oIELhuq9jLCBMacOqbiBDaGnhu4N1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1551110401502" width="auto" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.839692533178!2d108.14772551457378!3d16.0738064435854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218d68e8ccb03%3A0x64dc2cb3e38bbdaf!2zNTQgTmd1eeG7hW4gTMawxqFuZyBC4bqxbmcsIEhvw6AgS2jDoW5oIELhuq9jLCBMacOqbiBDaGnhu4N1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1551110401502" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</aside>
 				</div>
 			</div>
