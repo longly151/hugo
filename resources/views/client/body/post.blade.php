@@ -100,7 +100,7 @@
                         </div>
                     <div class="fb-comments" data-colorscheme="dark" width="100%" data-href="{{env('APP_URL').'/post/'.$post->id}}" data-numposts="5"></div>
                     </div>
-                    <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                    {{-- <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div> --}}
                 </div>
 
 
